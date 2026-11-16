@@ -23,8 +23,8 @@ The pin is `leanprover/lean4:v4.36.0-rc2`.
 
 | File | Role |
 |---|---|
-| `BachelorsInMeasurementTheory.md` | Report barrel. Markdown Preview Enhanced expands its `@import`s |
-| `report/` | Report sections imported by the barrel |
+| `BachelorsInMeasurementTheory.md` | Report barrel. TOC links into `report/` (phase barrels link into `courses/`) |
+| `report/` | Report sections linked from the barrel |
 | `BachelorsInMeasurementTheory.pdf` | Built report PDF |
 | `docs/CMU_TECH_REPORT.md` | Report-number, build, and release checklist |
 | `courses/` | Per-course English solutions |
@@ -260,6 +260,6 @@ lake build
 bash scripts/build_pdf.sh
 ```
 
-`lake build` typechecks `BachelorsInMeasurementTheory`. The PDF script expands
-the `@import`s in `BachelorsInMeasurementTheory.md`, writes
+`lake build` typechecks `BachelorsInMeasurementTheory`. The PDF script flattens
+the TOC-linked note tree from `BachelorsInMeasurementTheory.md`, writes
 `BachelorsInMeasurementTheory.tex`, and compiles the report PDF.

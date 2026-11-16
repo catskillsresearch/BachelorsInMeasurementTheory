@@ -2,5 +2,5 @@
 
 The infinite extension of Theorem 4.1, and the finite/infinite agreement check.
 
-@import "../courses/21-410-21-599.md"
-@import "../courses/21-322.md"
+- [21-410 / 21-599](../courses/21-410-21-599.md)
+- [21-322](../courses/21-322.md)

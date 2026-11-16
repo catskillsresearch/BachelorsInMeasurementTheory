@@ -2,5 +2,5 @@
 
 Stone representation and Riesz representation.
 
-@import "../courses/21-651.md"
-@import "../courses/21-720.md"
+- [21-651](../courses/21-651.md)
+- [21-720](../courses/21-720.md)

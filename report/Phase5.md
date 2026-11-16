@@ -2,4 +2,4 @@
 
 Hahn--Banach, the step Scott cites and leaves unproved.
 
-@import "../courses/21-640.md"
+- [21-640](../courses/21-640.md)

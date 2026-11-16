@@ -186,9 +186,11 @@ def render_mermaid(code: str, idx: int) -> tuple[str, list[tuple[str, float, flo
 
 
 def extract_title() -> str:
-    first = (ROOT / "BachelorsInMeasurementTheory.md").read_text(encoding="utf-8").splitlines()[0]
-    title = first[2:].strip() if first.startswith("# ") else first.strip()
-    return re.sub(r"\*([^*]+)\*", r"\\emph{\1}", title)
+    text = (ROOT / "BachelorsInMeasurementTheory.md").read_text(encoding="utf-8")
+    for line in text.splitlines():
+        if line.startswith("# "):
+            return re.sub(r"\*([^*]+)\*", r"\\emph{\1}", line[2:].strip())
+    raise RuntimeError("missing top-level # title in BachelorsInMeasurementTheory.md")
 
 
 TITLE = extract_title()
@@ -204,7 +206,7 @@ FIGURE_CAPTION_RE = re.compile(
     re.IGNORECASE | re.DOTALL,
 )
 DEP_IMAGE_RE = re.compile(
-    r"!\[([^\]]*)\]\((figures/deps/[^)\s]+\.(?:svg|pdf|png))\)",
+    r"!\[([^\]]*)\]\((figures/(?:deps/)?[^)\s]+\.(?:svg|pdf|png))\)",
 )
 
 

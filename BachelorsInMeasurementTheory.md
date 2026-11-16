@@ -10,14 +10,14 @@ Research Company; lars.ericson@catskillsresearch.com).
 
 ---
 
-@import "report/Abstract.md"
-@import "report/Introduction.md"
-@import "report/Syllabus.md"
-@import "report/ScottCurriculum.md"
-@import "report/Phase1.md"
-@import "report/Phase2.md"
-@import "report/Phase3.md"
-@import "report/Phase4.md"
-@import "report/Phase5.md"
-@import "report/Phase6.md"
-@import "report/References.md"
+- [Abstract](report/Abstract.md)
+- [Introduction](report/Introduction.md)
+- [Syllabus](report/Syllabus.md)
+- [Scott curriculum](report/ScottCurriculum.md)
+- [Phase 1: Language and linear structure](report/Phase1.md)
+- [Phase 2: Analysis, algebras, and formal proof](report/Phase2.md)
+- [Phase 3: Duality and set theory](report/Phase3.md)
+- [Phase 4: Stone spaces and measures](report/Phase4.md)
+- [Phase 5: The missing extension](report/Phase5.md)
+- [Phase 6: Assembly and consistency check](report/Phase6.md)
+- [References](report/References.md)

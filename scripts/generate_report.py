@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Expand @import directives in BachelorsInMeasurementTheory.md for the PDF build."""
+"""Flatten the report note tree for the PDF build.
+
+Walks TOC markdown links from ``BachelorsInMeasurementTheory.md`` (and nested
+phase barrels), expands remaining ``@import`` directives, and writes
+``report-expanded.md``.
+"""
 
 from __future__ import annotations
 
@@ -11,7 +16,15 @@ GITHUB = "https://github.com/catskillsresearch/BachelorsInMeasurementTheory"
 
 BARREL = ROOT / "BachelorsInMeasurementTheory.md"
 EXPANDED = ROOT / "report-expanded.md"
-IMPORT_RE = re.compile(r'^@import\s+"([^"]+)"[^\n]*$', re.MULTILINE)
+IMPORT_RE = re.compile(
+    r'^@import\s+"([^"]+)"(?:\s*\{([^}]*)\})?[ \t]*$',
+    re.MULTILINE,
+)
+TOC_BULLET_RE = re.compile(
+    r"^(?P<indent>[ \t]*)[-*][ \t]+\[(?P<title>.+?)\]\((?P<href>[^)]+\.md)\)[ \t]*$",
+    re.MULTILINE,
+)
+YAML_FRONTMATTER_RE = re.compile(r"^---\s*\n.*?\n---\s*\n+", re.DOTALL)
 
 def library_lean_files() -> list[str]:
     files = ["BachelorsInMeasurementTheory.lean"]
@@ -357,13 +370,23 @@ def demote_headings(text: str, n: int = 2) -> str:
 
 GEMINI_LINE = re.compile(r"^\*\*Gemini[^*]*\*\*\.?[^\n]*$", re.MULTILINE)
 LEAN_INCLUDE = re.compile(
+    r"(?:\*\*\[[^\]]+\.lean\]\([^)]+\)\*\*\s*)?"
     r"<!--\s*lean:\s*(\S+?)\s*-->(?:\s*```lean\n.*?^```)*",
     re.MULTILINE | re.DOTALL,
 )
 
 
+def lean_source_link(rel: str) -> str:
+    """Markdown Preview Enhanced / editor link just above an inlined Lean file.
+
+    Course notes live under ``courses/``, so the href is one directory up from
+    the note, matching the nowakowska1982 ``**[path](local)`` convention.
+    """
+    return f"**[{rel}](../{rel})**"
+
+
 def expand_lean_includes(text: str) -> str:
-    """Replace `<!-- lean: path -->` with that file's source, as a lean fence."""
+    """Replace `<!-- lean: path -->` with a clickable link and that file's source."""
 
     def repl(match: re.Match[str]) -> str:
         rel = match.group(1)
@@ -371,7 +394,7 @@ def expand_lean_includes(text: str) -> str:
         if not path.is_file():
             raise FileNotFoundError(f"lean include missing: {rel}")
         code = path.read_text(encoding="utf-8").rstrip()
-        return f"<!-- lean: {rel} -->\n\n```lean\n{code}\n```\n"
+        return f"{lean_source_link(rel)}\n\n<!-- lean: {rel} -->\n\n```lean\n{code}\n```\n"
 
     return LEAN_INCLUDE.sub(repl, text)
 
@@ -411,6 +434,12 @@ def strip_part_letters(text: str) -> str:
 
 def prepare_course(text: str) -> str:
     text = rewrite_lean_links(text)
+    # Course notes link Lean sources with ``../``; the flattened report lives at root.
+    text = re.sub(
+        r"\((?:\.\./)+(BachelorsInMeasurementTheory/[^)]+\.lean)\)",
+        r"(\1)",
+        text,
+    )
     text = strip_horizontal_rules(text)
     text = demote_headings(text, 2)
     text = flatten_deep_headings(text)
@@ -419,11 +448,59 @@ def prepare_course(text: str) -> str:
     return text.strip() + "\n"
 
 
+def load_note(path: Path) -> str:
+    text = path.read_text(encoding="utf-8")
+    return YAML_FRONTMATTER_RE.sub("", text, count=1)
+
+
+def expand_svg_import(path: Path, opts: str) -> str:
+    """Turn an SVG ``@import`` into a markdown image (prefer sibling ``.dot`` → PDF)."""
+    import hashlib
+    import shutil
+    import subprocess
+
+    caption = path.stem
+    if opts:
+        cm = re.search(r'caption\s*=\s*"([^"]+)"', opts) or re.search(
+            r"caption\s*=\s*'([^']+)'", opts
+        )
+        if cm:
+            caption = cm.group(1).strip()
+
+    figures = ROOT / "figures"
+    figures.mkdir(parents=True, exist_ok=True)
+    digest = hashlib.sha1(path.read_bytes()).hexdigest()[:10]
+    try:
+        stem = path.relative_to(ROOT).as_posix().replace("/", "-")
+    except ValueError:
+        stem = path.stem
+    if stem.lower().endswith(".svg"):
+        stem = stem[:-4]
+
+    dot_src = path.with_suffix(".dot")
+    pdf = figures / f"{stem}-{digest}.pdf"
+    if dot_src.is_file() and shutil.which("dot"):
+        if not pdf.is_file():
+            proc = subprocess.run(
+                ["dot", "-Tpdf", str(dot_src), "-o", str(pdf)],
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            if proc.returncode != 0 or not pdf.is_file():
+                raise RuntimeError(f"dot→PDF failed for {path.name}")
+        return f"\n\n![{caption}]({pdf.relative_to(ROOT).as_posix()})\n\n"
+
+    rel = path.relative_to(ROOT).as_posix()
+    return f"\n\n![{caption}]({rel})\n\n"
+
+
 def expand_imports(text: str, base: Path, stack: tuple[str, ...] = ()) -> str:
     """Resolve `@import` paths from the importing file, as Markdown Preview Enhanced does."""
 
     def repl(match: re.Match[str]) -> str:
         path = (base / match.group(1)).resolve()
+        opts = match.group(2) or ""
         try:
             rel = path.relative_to(ROOT).as_posix()
         except ValueError as exc:
@@ -432,20 +509,53 @@ def expand_imports(text: str, base: Path, stack: tuple[str, ...] = ()) -> str:
             raise RuntimeError(f"import cycle: {' -> '.join(stack + (rel,))}")
         if not path.is_file():
             raise FileNotFoundError(f"import missing: {rel}")
-        chunk = path.read_text(encoding="utf-8")
+        if path.suffix.lower() == ".svg":
+            return expand_svg_import(path, opts)
+        chunk = load_note(path)
         if rel.startswith("courses/"):
             chunk = prepare_course(chunk)
         else:
-            chunk = expand_imports(chunk, path.parent, stack + (rel,))
+            chunk = expand_note(chunk, path, stack + (rel,))
         return chunk.strip() + "\n\n"
 
     return IMPORT_RE.sub(repl, text)
 
 
+def expand_toc_links(text: str, base: Path, stack: tuple[str, ...] = ()) -> str:
+    """Inline TOC bullet links (nowakowska-style barrels), leaving non-TOC links alone."""
+
+    def repl(match: re.Match[str]) -> str:
+        href = match.group("href")
+        path = (base / href).resolve()
+        try:
+            rel = path.relative_to(ROOT).as_posix()
+        except ValueError as exc:
+            raise FileNotFoundError(f"TOC link escapes the repository: {href}") from exc
+        if rel in stack:
+            raise RuntimeError(f"import cycle: {' -> '.join(stack + (rel,))}")
+        if not path.is_file():
+            raise FileNotFoundError(f"TOC link missing: {rel}")
+        chunk = load_note(path)
+        if rel.startswith("courses/"):
+            chunk = prepare_course(chunk)
+        else:
+            chunk = expand_note(chunk, path, stack + (rel,))
+        return chunk.strip() + "\n\n"
+
+    return TOC_BULLET_RE.sub(repl, text)
+
+
+def expand_note(text: str, path: Path, stack: tuple[str, ...] = ()) -> str:
+    """Expand TOC links then `@import`s for one note."""
+    text = expand_toc_links(text, path.parent, stack)
+    text = expand_imports(text, path.parent, stack)
+    return text
+
+
 def main() -> None:
     if not BARREL.is_file():
         raise SystemExit(f"error: missing {BARREL}")
-    expanded = expand_imports(BARREL.read_text(encoding="utf-8"), BARREL.parent)
+    expanded = expand_note(load_note(BARREL), BARREL)
     parts = [expanded.rstrip(), "\n\n", "## Lean module index\n\n"]
     parts.append(
         f"Checked by `lake build`. Each module is inlined next to the English "

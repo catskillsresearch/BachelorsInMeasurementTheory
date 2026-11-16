@@ -25,7 +25,7 @@ bash scripts/build_pdf.sh
 
 The build produces:
 
-- `BachelorsInMeasurementTheory.md` — report barrel (`@import`s `report/`, including one barrel per phase);
+- `BachelorsInMeasurementTheory.md` — report barrel (TOC links into `report/`, including one barrel per phase);
 - `BachelorsInMeasurementTheory.pdf` — report PDF for the repository;
 - `BachelorsInMeasurementTheory.tex` — generated complete LaTeX source (gitignored);
 - `lean-listings/` — generated report inputs (gitignored);
