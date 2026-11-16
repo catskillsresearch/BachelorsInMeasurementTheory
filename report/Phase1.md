@@ -2,7 +2,7 @@
 
 Calculus, proof language, dual bases, and combinatorial cancellation.
 
-- [21-120 / 21-122](../courses/21-120-21-122.md)
-- [21-127](../courses/21-127.md)
-- [21-241](../courses/21-241.md)
-- [21-228](../courses/21-228.md)
+- [21-120/21-122 — Differential and Integral Calculus / Integration and Approximation](../courses/21-120-21-122.md)
+- [21-127 — Concepts of Mathematics](../courses/21-127.md)
+- [21-241 — Matrices and Linear Transformations](../courses/21-241.md)
+- [21-228 — Discrete Mathematics](../courses/21-228.md)

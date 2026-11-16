@@ -11,8 +11,8 @@ bibliography: references.bib
 
 - [Abstract](report/Abstract.md)
 - [Introduction](report/Introduction.md)
-- [Syllabus](report/Syllabus.md)
-- [Scott curriculum](report/ScottCurriculum.md)
+- [Syllabus derived from the goal of reading Scott 1964](report/Syllabus.md)
+- [How Scott's likely undergraduate curriculum aligns with the proposed syllabus](report/ScottCurriculum.md)
 - [Phase 1: Language and linear structure](report/Phase1.md)
 - [Phase 2: Analysis, algebras, and formal proof](report/Phase2.md)
 - [Phase 3: Duality and set theory](report/Phase3.md)
