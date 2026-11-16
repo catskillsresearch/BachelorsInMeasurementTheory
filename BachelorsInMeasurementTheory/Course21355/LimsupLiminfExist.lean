@@ -3,7 +3,6 @@ module
 public import BachelorsInMeasurementTheory.Course21355.TailExtremes
 public import Mathlib.Topology.MetricSpace.Pseudo.Defs
 import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
-import Mathlib.Topology.Order.MonotoneConvergence
 
 @[expose] public section
 

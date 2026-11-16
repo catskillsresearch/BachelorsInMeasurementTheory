@@ -2,6 +2,7 @@ module
 
 public import Mathlib.Algebra.BigOperators.Group.Finset.Basic -- shake: keep
 public import Mathlib.Data.Fintype.Basic -- shake: keep
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

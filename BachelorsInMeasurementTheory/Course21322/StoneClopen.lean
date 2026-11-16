@@ -1,7 +1,6 @@
 module
 
 public import BachelorsInMeasurementTheory.Course21322.Hom
-import Mathlib.Data.Finset.Attr
 import Mathlib.Tactic.TypeStar
 
 @[expose] public section

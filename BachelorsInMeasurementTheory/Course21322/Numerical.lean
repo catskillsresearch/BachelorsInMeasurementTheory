@@ -1,7 +1,6 @@
 module
 
 public import BachelorsInMeasurementTheory.Course21322.MeasureCollapse
-public import Mathlib.Data.Fintype.Basic
 import Mathlib.Algebra.BigOperators.Fin
 import Mathlib.Data.Rat.Cast.Order
 import Mathlib.Tactic.Lemma

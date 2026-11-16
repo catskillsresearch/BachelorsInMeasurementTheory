@@ -1,7 +1,5 @@
 module
 
-public import Mathlib.Data.Rat.Defs
-public import BachelorsInMeasurementTheory.Course21127.NonzeroDenomInt
 public import BachelorsInMeasurementTheory.Course21127.ToRat -- shake: keep
 import Mathlib.Tactic.NormNum.Abs
 import Mathlib.Tactic.NormNum.DivMod

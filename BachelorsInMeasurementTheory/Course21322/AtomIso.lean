@@ -1,8 +1,6 @@
 module
 
 public import BachelorsInMeasurementTheory.Course21322.Hom
-import Mathlib.Data.Finset.Insert
-import Mathlib.Order.SetNotation
 import Mathlib.Tactic.TypeStar
 
 @[expose] public section

@@ -4,11 +4,10 @@ public import Mathlib.Analysis.Calculus.Deriv.Basic
 public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
 import Mathlib.Tactic.Lemma
-import Mathlib.Tactic.Positivity.Finset
 
 @[expose] public section
 
-open Real intervalIntegral MeasureTheory
+open Real -- gives `sin` and `pow`
 
 namespace Course21120FTC
 
