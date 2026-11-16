@@ -6,7 +6,7 @@ package** for one BS-in-Measurement-Theory course capstone.
 ```
 surfaces/CourseXXXXX/
   Challenge.lean      # Mathlib-only holes (sorry on compared theorems only)
-  Solution.lean       # imports BSinMeasurementTheory.CourseXXXXX
+  Solution.lean       # imports BachelorsInMeasurementTheory.CourseXXXXX
   comparator.json
   formalization.yaml
   PROVENANCE.md

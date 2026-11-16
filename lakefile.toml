@@ -1,7 +1,7 @@
-name = "BSinMeasurementTheory"
+name = "BachelorsInMeasurementTheory"
 version = "0.1.0"
 keywords = ["measurement-theory", "scott-1964", "lean4"]
-defaultTargets = ["BSinMeasurementTheory"]
+defaultTargets = ["BachelorsInMeasurementTheory"]
 
 moreLeanArgs = [
   "-Dbackward.privateInPublic=true",
@@ -18,5 +18,5 @@ scope = "leanprover-community"
 rev = "v4.36.0-rc2"
 
 [[lean_lib]]
-name = "BSinMeasurementTheory"
-globs = ["BSinMeasurementTheory", "BSinMeasurementTheory.+", "BSinMeasurementTheory.+.+"]
+name = "BachelorsInMeasurementTheory"
+globs = ["BachelorsInMeasurementTheory", "BachelorsInMeasurementTheory.+", "BachelorsInMeasurementTheory.+.+"]

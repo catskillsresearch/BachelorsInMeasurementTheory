@@ -18,7 +18,7 @@ scope = "leanprover-community"
 rev = "v4.36.0-rc2"
 
 [[require]]
-name = "BSinMeasurementTheory"
+name = "BachelorsInMeasurementTheory"
 path = "../.."
 
 [[lean_lib]]

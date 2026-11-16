@@ -16,20 +16,20 @@ ROOT = Path(__file__).resolve().parent.parent
 DEPS_DIR = ROOT / "figures" / "deps"
 
 COURSE_LEANS: list[tuple[str, str, str, list[str]]] = [
-    ("21-120-21-122.md", "21-120 / 21-122", "Course21120", ["BSinMeasurementTheory/Course21120.lean"]),
-    ("21-127.md", "21-127", "Course21127", ["BSinMeasurementTheory/Course21127.lean"]),
-    ("21-241.md", "21-241", "Course21241", ["BSinMeasurementTheory/Course21241.lean"]),
-    ("21-228.md", "21-228", "Course21228", ["BSinMeasurementTheory/Course21228.lean"]),
-    ("21-355.md", "21-355", "Course21355", ["BSinMeasurementTheory/Course21355.lean"]),
-    ("21-373.md", "21-373", "Course21373", ["BSinMeasurementTheory/Course21373.lean"]),
-    ("21-321.md", "21-321", "Course21321", ["BSinMeasurementTheory/Course21321.lean"]),
-    ("21-292.md", "21-292", "Course21292", ["BSinMeasurementTheory/Course21292.lean"]),
-    ("21-329.md", "21-329", "Course21329", ["BSinMeasurementTheory/Course21329.lean"]),
-    ("21-651.md", "21-651", "Course21651", ["BSinMeasurementTheory/Course21651.lean"]),
-    ("21-720.md", "21-720", "Course21720", ["BSinMeasurementTheory/Course21720.lean"]),
-    ("21-640.md", "21-640", "Course21640", ["BSinMeasurementTheory/Course21640.lean"]),
-    ("21-410-21-599.md", "21-410 / 21-599", "Course21410", ["BSinMeasurementTheory/Course21410.lean"]),
-    ("21-322.md", "21-322", "Course21322", ["BSinMeasurementTheory/Course21322.lean"]),
+    ("21-120-21-122.md", "21-120 / 21-122", "Course21120", ["BachelorsInMeasurementTheory/Course21120.lean"]),
+    ("21-127.md", "21-127", "Course21127", ["BachelorsInMeasurementTheory/Course21127.lean"]),
+    ("21-241.md", "21-241", "Course21241", ["BachelorsInMeasurementTheory/Course21241.lean"]),
+    ("21-228.md", "21-228", "Course21228", ["BachelorsInMeasurementTheory/Course21228.lean"]),
+    ("21-355.md", "21-355", "Course21355", ["BachelorsInMeasurementTheory/Course21355.lean"]),
+    ("21-373.md", "21-373", "Course21373", ["BachelorsInMeasurementTheory/Course21373.lean"]),
+    ("21-321.md", "21-321", "Course21321", ["BachelorsInMeasurementTheory/Course21321.lean"]),
+    ("21-292.md", "21-292", "Course21292", ["BachelorsInMeasurementTheory/Course21292.lean"]),
+    ("21-329.md", "21-329", "Course21329", ["BachelorsInMeasurementTheory/Course21329.lean"]),
+    ("21-651.md", "21-651", "Course21651", ["BachelorsInMeasurementTheory/Course21651.lean"]),
+    ("21-720.md", "21-720", "Course21720", ["BachelorsInMeasurementTheory/Course21720.lean"]),
+    ("21-640.md", "21-640", "Course21640", ["BachelorsInMeasurementTheory/Course21640.lean"]),
+    ("21-410-21-599.md", "21-410 / 21-599", "Course21410", ["BachelorsInMeasurementTheory/Course21410.lean"]),
+    ("21-322.md", "21-322", "Course21322", ["BachelorsInMeasurementTheory/Course21322.lean"]),
 ]
 
 IMPORT_RE = re.compile(
@@ -168,7 +168,7 @@ def sid(prefix: str, name: str) -> str:
 
 
 def lean_path(imp: str) -> str | None:
-    if not imp.startswith("BSinMeasurementTheory."):
+    if not imp.startswith("BachelorsInMeasurementTheory."):
         return None
     return imp.replace(".", "/") + ".lean"
 

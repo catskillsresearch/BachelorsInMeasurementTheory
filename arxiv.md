@@ -21,7 +21,7 @@ Boolean algebras can be read for understanding after these courses are taken
 and proved end to end. Each course contributes one
 problem that requires the full toolkit of that course rather than a single
 technique in isolation. Solutions are written in English and then formalized
-in Lean 4 / Mathlib. The accompanying library `BSinMeasurementTheory` is
+in Lean 4 / Mathlib. The accompanying library `BachelorsInMeasurementTheory` is
 sorry-free under the pinned toolchain `leanprover/lean4:v4.36.0-rc2` and
 introduces no project axioms beyond Mathlib's classical footprint. Large-language-model
 assistance was used in drafting solutions, but every accepted declaration is
@@ -75,9 +75,9 @@ counting behind Theorems 1.2 and 3.2; and the independent-study problem
 assembles set theory, topology, measure, and functional analysis into the
 infinite extension of Theorem 4.1.
 
-The formalizations live in the Lean library `BSinMeasurementTheory`. Each
+The formalizations live in the Lean library `BachelorsInMeasurementTheory`. Each
 course snippet is a self-contained module. The root file
-`BSinMeasurementTheory.lean` imports all of them. The English arguments occupy the body of this report, in syllabus order,
+`BachelorsInMeasurementTheory.lean` imports all of them. The English arguments occupy the body of this report, in syllabus order,
 with each Lean module inlined next to the claim it proves. The appendix
 is an index of filenames, each linking to the source on GitHub.
 

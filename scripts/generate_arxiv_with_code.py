@@ -15,57 +15,57 @@ PHASES: list[tuple[str, str, list[tuple[str, list[str]]]]] = [
         "Phase 1: Language and linear structure",
         "Calculus, proof language, dual bases, and combinatorial cancellation.",
         [
-            ("21-120-21-122.md", ["BSinMeasurementTheory/Course21120.lean"]),
-            ("21-127.md", ["BSinMeasurementTheory/Course21127.lean"]),
-            ("21-241.md", ["BSinMeasurementTheory/Course21241.lean"]),
-            ("21-228.md", ["BSinMeasurementTheory/Course21228.lean"]),
+            ("21-120-21-122.md", ["BachelorsInMeasurementTheory/Course21120.lean"]),
+            ("21-127.md", ["BachelorsInMeasurementTheory/Course21127.lean"]),
+            ("21-241.md", ["BachelorsInMeasurementTheory/Course21241.lean"]),
+            ("21-228.md", ["BachelorsInMeasurementTheory/Course21228.lean"]),
         ],
     ),
     (
         "Phase 2: Analysis, algebras, and formal proof",
         "Completeness, finite Boolean algebras, and Scott's Theorems 1.1--1.3 in Lean.",
         [
-            ("21-355.md", ["BSinMeasurementTheory/Course21355.lean"]),
-            ("21-373.md", ["BSinMeasurementTheory/Course21373.lean"]),
-            ("21-321.md", ["BSinMeasurementTheory/Course21321.lean"]),
+            ("21-355.md", ["BachelorsInMeasurementTheory/Course21355.lean"]),
+            ("21-373.md", ["BachelorsInMeasurementTheory/Course21373.lean"]),
+            ("21-321.md", ["BachelorsInMeasurementTheory/Course21321.lean"]),
         ],
     ),
     (
         "Phase 3: Duality and set theory",
         "Linear-programming duality and the ultrafilter engine of the infinite case.",
         [
-            ("21-292.md", ["BSinMeasurementTheory/Course21292.lean"]),
-            ("21-329.md", ["BSinMeasurementTheory/Course21329.lean"]),
+            ("21-292.md", ["BachelorsInMeasurementTheory/Course21292.lean"]),
+            ("21-329.md", ["BachelorsInMeasurementTheory/Course21329.lean"]),
         ],
     ),
     (
         "Phase 4: Stone spaces and measures",
         "Stone representation and Riesz representation.",
         [
-            ("21-651.md", ["BSinMeasurementTheory/Course21651.lean"]),
-            ("21-720.md", ["BSinMeasurementTheory/Course21720.lean"]),
+            ("21-651.md", ["BachelorsInMeasurementTheory/Course21651.lean"]),
+            ("21-720.md", ["BachelorsInMeasurementTheory/Course21720.lean"]),
         ],
     ),
     (
         "Phase 5: The missing extension",
         "Hahn--Banach, the step Scott cites and leaves unproved.",
         [
-            ("21-640.md", ["BSinMeasurementTheory/Course21640.lean"]),
+            ("21-640.md", ["BachelorsInMeasurementTheory/Course21640.lean"]),
         ],
     ),
     (
         "Phase 6: Assembly and consistency check",
         "The infinite extension of Theorem 4.1, and the finite/infinite agreement check.",
         [
-            ("21-410-21-599.md", ["BSinMeasurementTheory/Course21410.lean"]),
-            ("21-322.md", ["BSinMeasurementTheory/Course21322.lean"]),
+            ("21-410-21-599.md", ["BachelorsInMeasurementTheory/Course21410.lean"]),
+            ("21-322.md", ["BachelorsInMeasurementTheory/Course21322.lean"]),
         ],
     ),
 ]
 
 def library_lean_files() -> list[str]:
-    files = ["BSinMeasurementTheory.lean"]
-    lib = ROOT / "BSinMeasurementTheory"
+    files = ["BachelorsInMeasurementTheory.lean"]
+    lib = ROOT / "BachelorsInMeasurementTheory"
     files.extend(sorted(p.relative_to(ROOT).as_posix() for p in lib.rglob("*.lean")))
     return files
 
@@ -180,197 +180,197 @@ def _looks_like_identifier(text: str) -> bool:
 
 # Path-keyed first, then basename. Used when module comments are headings or fragments.
 FILE_BLURBS: dict[str, str] = {
-    "BSinMeasurementTheory/Course21120/FTC.lean":
+    "BachelorsInMeasurementTheory/Course21120/FTC.lean":
         "Fundamental theorem of calculus for the Fresnel-type integrand.",
-    "BSinMeasurementTheory/Course21120/Existence.lean":
+    "BachelorsInMeasurementTheory/Course21120/Existence.lean":
         "Comparison bound that gives absolute convergence of the improper integral.",
-    "BSinMeasurementTheory/Course21120/TailBound.lean":
+    "BachelorsInMeasurementTheory/Course21120/TailBound.lean":
         "Arctan comparison bound for the tail integral.",
-    "BSinMeasurementTheory/Course21120/TaylorExpansion.lean":
+    "BachelorsInMeasurementTheory/Course21120/TaylorExpansion.lean":
         "Degree-9 Taylor polynomial of the integrated expansion.",
-    "BSinMeasurementTheory/Course21120/TaylorEstimate.lean":
+    "BachelorsInMeasurementTheory/Course21120/TaylorEstimate.lean":
         "Exact value and four-decimal rounding of T9 at 1/2.",
-    "BSinMeasurementTheory/Course21120/TaylorError.lean":
+    "BachelorsInMeasurementTheory/Course21120/TaylorError.lean":
         "Alternating-series tail bound for the degree-9 truncation.",
-    "BSinMeasurementTheory/Course21120/Summary.lean":
+    "BachelorsInMeasurementTheory/Course21120/Summary.lean":
         "Summary of the four Lean checks for the degree-9 estimate.",
-    "BSinMeasurementTheory/Course21241/PrimalBasis.lean":
+    "BachelorsInMeasurementTheory/Course21241/PrimalBasis.lean":
         "Standard primal basis of three-space: spanning and independence.",
-    "BSinMeasurementTheory/Course21241/DualBasis.lean":
+    "BachelorsInMeasurementTheory/Course21241/DualBasis.lean":
         "Dual basis functionals and the dual expansion of a linear map.",
-    "BSinMeasurementTheory/Course21228/ValidPair.lean":
+    "BachelorsInMeasurementTheory/Course21228/ValidPair.lean":
         "Permutation pairs that make two sequences agree termwise.",
-    "BSinMeasurementTheory/Course21228/Genericity.lean":
+    "BachelorsInMeasurementTheory/Course21228/Genericity.lean":
         "Pairwise distinctness and multiset compatibility of two sequences.",
-    "BSinMeasurementTheory/Course21355/Completeness.lean":
+    "BachelorsInMeasurementTheory/Course21355/Completeness.lean":
         "Least-upper-bound property of the reals.",
-    "BSinMeasurementTheory/Course21355/MonotoneConvergence.lean":
+    "BachelorsInMeasurementTheory/Course21355/MonotoneConvergence.lean":
         "Monotone convergence for bounded real sequences.",
-    "BSinMeasurementTheory/Course21355/PeakPoints.lean":
+    "BachelorsInMeasurementTheory/Course21355/PeakPoints.lean":
         "Peak-point construction of a monotonic subsequence.",
-    "BSinMeasurementTheory/Course21292/StrongDuality.lean":
+    "BachelorsInMeasurementTheory/Course21292/StrongDuality.lean":
         "Strong duality in certificate form from weak duality.",
-    "BSinMeasurementTheory/Course21292/ScottInstance.lean":
+    "BachelorsInMeasurementTheory/Course21292/ScottInstance.lean":
         "The concrete 3x3 Scott-type linear program.",
-    "BSinMeasurementTheory/Course21292/DualFormulation.lean":
+    "BachelorsInMeasurementTheory/Course21292/DualFormulation.lean":
         "Dual objective and dual constraints of the 3x3 instance.",
-    "BSinMeasurementTheory/Course21292/Simplex.lean":
+    "BachelorsInMeasurementTheory/Course21292/Simplex.lean":
         "Optimal primal and dual vertices of the 3x3 instance.",
-    "BSinMeasurementTheory/Course21292/Scott11.lean":
+    "BachelorsInMeasurementTheory/Course21292/Scott11.lean":
         "Scott's Theorem 1.1 from primal feasibility versus a dual witness.",
-    "BSinMeasurementTheory/Course21720/Riesz.lean":
+    "BachelorsInMeasurementTheory/Course21720/Riesz.lean":
         "Comparison and boundedness used by the Riesz representation.",
-    "BSinMeasurementTheory/Course21640/PreciseStatement.lean":
+    "BachelorsInMeasurementTheory/Course21640/PreciseStatement.lean":
         "Precise statement of Hahn-Banach dominated extension.",
-    "BSinMeasurementTheory/Course21640/RoleOfSublinear.lean":
+    "BachelorsInMeasurementTheory/Course21640/RoleOfSublinear.lean":
         "One-step bounds that make the sublinear functional usable.",
-    "BSinMeasurementTheory/Course21640/NormSublinear.lean":
+    "BachelorsInMeasurementTheory/Course21640/NormSublinear.lean":
         "The sublinear functional p(f) = C ||f||.",
-    "BSinMeasurementTheory/Course21640/Dominance.lean":
+    "BachelorsInMeasurementTheory/Course21640/Dominance.lean":
         "Dominance of a positive functional by the norm bound on a subspace.",
-    "BSinMeasurementTheory/Course21640/ApplyHahnBanach.lean":
+    "BachelorsInMeasurementTheory/Course21640/ApplyHahnBanach.lean":
         "Application of dominated extension to the norm bound.",
-    "BSinMeasurementTheory/Course21640/PositiveExtension.lean":
+    "BachelorsInMeasurementTheory/Course21640/PositiveExtension.lean":
         "A dominated extension that fixes the unit is positive.",
-    "BSinMeasurementTheory/Course21640/Scott41.lean":
+    "BachelorsInMeasurementTheory/Course21640/Scott41.lean":
         "Restriction of the positive extension recovers the original assignment.",
-    "BSinMeasurementTheory/Course21410/StoneSpace.lean":
+    "BachelorsInMeasurementTheory/Course21410/StoneSpace.lean":
         "Stone space of a Boolean algebra and its basic clopens.",
-    "BSinMeasurementTheory/Course21410/StepFunctions.lean":
+    "BachelorsInMeasurementTheory/Course21410/StepFunctions.lean":
         "Stone indicators, the nonnegative cone, and preference differences.",
-    "BSinMeasurementTheory/Course21410/PositiveExtension.lean":
+    "BachelorsInMeasurementTheory/Course21410/PositiveExtension.lean":
         "Positivity and preference agreement for a Stone-space functional.",
-    "BSinMeasurementTheory/Course21410/RestrictToB.lean":
+    "BachelorsInMeasurementTheory/Course21410/RestrictToB.lean":
         "Restriction of a Stone-space functional back to B.",
-    "BSinMeasurementTheory/Course21410/Representation.lean":
+    "BachelorsInMeasurementTheory/Course21410/Representation.lean":
         "The restricted functional is a monotone assignment on B.",
-    "BSinMeasurementTheory/Course21410/Formalization.lean":
+    "BachelorsInMeasurementTheory/Course21410/Formalization.lean":
         "Umbrella importer for the infinite-algebra extension modules.",
-    "BSinMeasurementTheory/Course21241/PointV.lean":
+    "BachelorsInMeasurementTheory/Course21241/PointV.lean":
         "A concrete point v outside the non-negative orthant.",
-    "BSinMeasurementTheory/Course21241/SeparatingU.lean":
+    "BachelorsInMeasurementTheory/Course21241/SeparatingU.lean":
         "The standard-basis separating vector u = e_0.",
-    "BSinMeasurementTheory/Course21241/DotAtV.lean":
+    "BachelorsInMeasurementTheory/Course21241/DotAtV.lean":
         "Inner product of the separator with v.",
-    "BSinMeasurementTheory/Course21241/DotOnC.lean":
+    "BachelorsInMeasurementTheory/Course21241/DotOnC.lean":
         "Inner product of the separator on the orthant.",
-    "BSinMeasurementTheory/Course21241/PhiSeparates.lean":
+    "BachelorsInMeasurementTheory/Course21241/PhiSeparates.lean":
         "The linear functional associated to u separates v from C.",
-    "BSinMeasurementTheory/Course21355/TailExtremes.lean":
+    "BachelorsInMeasurementTheory/Course21355/TailExtremes.lean":
         "Tail supremum and tail infimum, and their monotonicity.",
-    "BSinMeasurementTheory/Course21355/LimsupLiminfExist.lean":
+    "BachelorsInMeasurementTheory/Course21355/LimsupLiminfExist.lean":
         "Existence of limsup and liminf for a bounded real sequence.",
-    "BSinMeasurementTheory/Course21355/AltSeqValues.lean":
+    "BachelorsInMeasurementTheory/Course21355/AltSeqValues.lean":
         "Even and odd values of the sequence (-1)^n.",
-    "BSinMeasurementTheory/Course21355/AltSeqDiverges.lean":
+    "BachelorsInMeasurementTheory/Course21355/AltSeqDiverges.lean":
         "Epsilon-argument that the alternating sequence diverges.",
-    "BSinMeasurementTheory/Course21228/SmallN2.lean":
+    "BachelorsInMeasurementTheory/Course21228/SmallN2.lean":
         "Exact pair count for n = 2.",
-    "BSinMeasurementTheory/Course21228/SmallN3.lean":
+    "BachelorsInMeasurementTheory/Course21228/SmallN3.lean":
         "Exact pair count for n = 3.",
-    "BSinMeasurementTheory/Course21640/Positivity.lean":
+    "BachelorsInMeasurementTheory/Course21640/Positivity.lean":
         "A norm-dominated linear functional is positive.",
-    "BSinMeasurementTheory/Course21127/NonzeroDenomInt.lean":
+    "BachelorsInMeasurementTheory/Course21127/NonzeroDenomInt.lean":
         "Integers with a nonzero denominator: the domain of the fraction relation.",
-    "BSinMeasurementTheory/Course21127/ToRat.lean":
+    "BachelorsInMeasurementTheory/Course21127/ToRat.lean":
         "The explicit map from a pair (a, b) to the rationals, and the induced bijection.",
-    "BSinMeasurementTheory/Course21127/WellOrder.lean":
+    "BachelorsInMeasurementTheory/Course21127/WellOrder.lean":
         "Well-ordered subsets of Q, and a refutation of the claimed well-order of the positives.",
-    "BSinMeasurementTheory/Course21228/Counting.lean":
+    "BachelorsInMeasurementTheory/Course21228/Counting.lean":
         "Count of permutation pairs that make two sequences agree termwise.",
-    "BSinMeasurementTheory/Course21228/SmallN.lean":
+    "BachelorsInMeasurementTheory/Course21228/SmallN.lean":
         "Exact pair counts for n = 2 and n = 3.",
-    "BSinMeasurementTheory/Course21228/Symmetric.lean":
+    "BachelorsInMeasurementTheory/Course21228/Symmetric.lean":
         "Symmetric conditions on length-n sequences and permutation invariance of sums.",
-    "BSinMeasurementTheory/Course21241/Basis.lean":
+    "BachelorsInMeasurementTheory/Course21241/Basis.lean":
         "Standard primal basis of three-space and the dual basis functionals.",
-    "BSinMeasurementTheory/Course21241/DualCone.lean":
+    "BachelorsInMeasurementTheory/Course21241/DualCone.lean":
         "The dual cone of the non-negative orthant.",
-    "BSinMeasurementTheory/Course21241/Numerical.lean":
+    "BachelorsInMeasurementTheory/Course21241/Numerical.lean":
         "Concrete separating functional for a point outside the orthant.",
-    "BSinMeasurementTheory/Course21241/Separation.lean":
+    "BachelorsInMeasurementTheory/Course21241/Separation.lean":
         "Euclidean inner product, Riesz identification, and a separating vector.",
-    "BSinMeasurementTheory/Course21241/Space.lean":
+    "BachelorsInMeasurementTheory/Course21241/Space.lean":
         "The non-negative orthant cone in three-space.",
-    "BSinMeasurementTheory/Course21292/Instance.lean":
+    "BachelorsInMeasurementTheory/Course21292/Instance.lean":
         "A concrete 3x3 Scott-type linear program.",
-    "BSinMeasurementTheory/Course21292/LinearProgram.lean":
+    "BachelorsInMeasurementTheory/Course21292/LinearProgram.lean":
         "Inequality-form linear programs over the rationals.",
-    "BSinMeasurementTheory/Course21292/WeakDuality.lean":
+    "BachelorsInMeasurementTheory/Course21292/WeakDuality.lean":
         "Weak duality for a primal/dual linear program.",
-    "BSinMeasurementTheory/Course21292/Numerical.lean":
+    "BachelorsInMeasurementTheory/Course21292/Numerical.lean":
         "Numerical checks of the four calculations in the 21-292 example.",
-    "BSinMeasurementTheory/Course21321/Kraft.lean":
+    "BachelorsInMeasurementTheory/Course21321/Kraft.lean":
         "Kraft difference vectors as a ScottPair with a cancellation witness.",
-    "BSinMeasurementTheory/Course21321/ScottPair.lean":
+    "BachelorsInMeasurementTheory/Course21321/ScottPair.lean":
         "Scott pairs, separating functionals, and the cancellation-witness class.",
-    "BSinMeasurementTheory/Course21321/Theorem11.lean":
+    "BachelorsInMeasurementTheory/Course21321/Theorem11.lean":
         "Scott's Theorem 1.1: a separable pair satisfies real non-cancellation.",
-    "BSinMeasurementTheory/Course21321/Theorem12.lean":
+    "BachelorsInMeasurementTheory/Course21321/Theorem12.lean":
         "Scott's Theorem 1.2: rational separability implies combinatorial non-cancellation.",
-    "BSinMeasurementTheory/Course21321/Theorem13.lean":
+    "BachelorsInMeasurementTheory/Course21321/Theorem13.lean":
         "Scott's Theorem 1.3 (one direction): rational non-cancellation implies real non-cancellation.",
-    "BSinMeasurementTheory/Course21322/AtomIso.lean":
+    "BachelorsInMeasurementTheory/Course21322/AtomIso.lean":
         "Canonical bijection between atoms and the Stone space of a finite algebra.",
-    "BSinMeasurementTheory/Course21322/Hom.lean":
+    "BachelorsInMeasurementTheory/Course21322/Hom.lean":
         "Boolean homomorphisms from a power set into Bool, and principal evaluations.",
-    "BSinMeasurementTheory/Course21322/MeasureCollapse.lean":
+    "BachelorsInMeasurementTheory/Course21322/MeasureCollapse.lean":
         "Collapse of Stone-space measure evaluation to the discrete atomic measure.",
-    "BSinMeasurementTheory/Course21322/Numerical.lean":
+    "BachelorsInMeasurementTheory/Course21322/Numerical.lean":
         "Direct calculation of the atomic measure on {0, 2}.",
-    "BSinMeasurementTheory/Course21322/StoneClopen.lean":
+    "BachelorsInMeasurementTheory/Course21322/StoneClopen.lean":
         "The Stone clopen associated with an element and preservation of membership.",
-    "BSinMeasurementTheory/Course21329/Cardinality.lean":
+    "BachelorsInMeasurementTheory/Course21329/Cardinality.lean":
         "Cardinal-arithmetic argument that the Stone space is large.",
-    "BSinMeasurementTheory/Course21329/Filter.lean":
+    "BachelorsInMeasurementTheory/Course21329/Filter.lean":
         "Filters, proper filters, and ultrafilters on a bounded lattice.",
-    "BSinMeasurementTheory/Course21329/StoneNonempty.lean":
+    "BachelorsInMeasurementTheory/Course21329/StoneNonempty.lean":
         "The principal filter generated by top, and non-emptiness of the Stone space.",
-    "BSinMeasurementTheory/Course21329/UltrafilterExtension.lean":
+    "BachelorsInMeasurementTheory/Course21329/UltrafilterExtension.lean":
         "Ultrafilter extension: a chain of proper filters unions to a proper filter.",
-    "BSinMeasurementTheory/Course21355/AltSeq.lean":
+    "BachelorsInMeasurementTheory/Course21355/AltSeq.lean":
         "The alternating sequence of plus and minus one, and an epsilon-argument that it diverges.",
-    "BSinMeasurementTheory/Course21355/BolzanoWeierstrass.lean":
+    "BachelorsInMeasurementTheory/Course21355/BolzanoWeierstrass.lean":
         "Bolzano-Weierstrass: a bounded real sequence has a convergent subsequence.",
-    "BSinMeasurementTheory/Course21355/CompactIcc.lean":
+    "BachelorsInMeasurementTheory/Course21355/CompactIcc.lean":
         "Closed bounded intervals in R are compact.",
-    "BSinMeasurementTheory/Course21355/LimsupLiminf.lean":
+    "BachelorsInMeasurementTheory/Course21355/LimsupLiminf.lean":
         "Tail supremum and tail infimum of a real sequence.",
-    "BSinMeasurementTheory/Course21355/Numerical.lean":
+    "BachelorsInMeasurementTheory/Course21355/Numerical.lean":
         "Computable alternating sequence used to inspect the example of (c).",
-    "BSinMeasurementTheory/Course21373/AtomJoin.lean":
+    "BachelorsInMeasurementTheory/Course21373/AtomJoin.lean":
         "Join and disjointness properties of Boolean atoms.",
-    "BSinMeasurementTheory/Course21373/BooleanAction.lean":
+    "BachelorsInMeasurementTheory/Course21373/BooleanAction.lean":
         "Boolean automorphisms and atoms of the fixed-point subalgebra.",
-    "BSinMeasurementTheory/Course21373/IsBooleanAtom.lean":
+    "BachelorsInMeasurementTheory/Course21373/IsBooleanAtom.lean":
         "Atoms in a Boolean algebra.",
-    "BSinMeasurementTheory/Course21373/Representation.lean":
+    "BachelorsInMeasurementTheory/Course21373/Representation.lean":
         "Canonical representation of an element as the join of the atoms below it.",
-    "BSinMeasurementTheory/Course21373/Numerical.lean":
+    "BachelorsInMeasurementTheory/Course21373/Numerical.lean":
         "Numerical example for the finite Boolean-algebra representation.",
-    "BSinMeasurementTheory/Course21410/Glue.lean":
+    "BachelorsInMeasurementTheory/Course21410/Glue.lean":
         "Glue lemmas: inclusion-exclusion, monotonicity, and preference preservation.",
-    "BSinMeasurementTheory/Course21410/Measure.lean":
+    "BachelorsInMeasurementTheory/Course21410/Measure.lean":
         "Finitely additive probability measures on a finite space.",
-    "BSinMeasurementTheory/Course21640/Numerical.lean":
+    "BachelorsInMeasurementTheory/Course21640/Numerical.lean":
         "Sup-norm example of a sublinear functional and a dominated extension on the plane.",
-    "BSinMeasurementTheory/Course21640/Sublinear.lean":
+    "BachelorsInMeasurementTheory/Course21640/Sublinear.lean":
         "Sublinear functionals and dominated linear extensions.",
-    "BSinMeasurementTheory/Course21651/BooleanHom.lean":
+    "BachelorsInMeasurementTheory/Course21651/BooleanHom.lean":
         "Boolean algebra homomorphisms from B to Bool.",
-    "BSinMeasurementTheory/Course21651/ClosedEmbedding.lean":
+    "BachelorsInMeasurementTheory/Course21651/ClosedEmbedding.lean":
         "The Stone space as an intersection of closed equalizer sets in B -> Bool.",
-    "BSinMeasurementTheory/Course21651/Separation.lean":
+    "BachelorsInMeasurementTheory/Course21651/Separation.lean":
         "Separation properties used by the Stone embedding argument.",
-    "BSinMeasurementTheory/Course21651/StoneMap.lean":
+    "BachelorsInMeasurementTheory/Course21651/StoneMap.lean":
         "The Stone clopen associated with an element of B.",
-    "BSinMeasurementTheory/Course21651/TwoAlgebra.lean":
+    "BachelorsInMeasurementTheory/Course21651/TwoAlgebra.lean":
         "Stone space of the four-element Boolean algebra on Fin 2.",
-    "BSinMeasurementTheory/Course21720/Boundedness.lean":
+    "BachelorsInMeasurementTheory/Course21720/Boundedness.lean":
         "Positive linear functionals on C(X, R) are bounded.",
-    "BSinMeasurementTheory/Course21720/Numerical.lean":
+    "BachelorsInMeasurementTheory/Course21720/Numerical.lean":
         "The concrete functional Lambda(f) = 3 f(0) + 2 f(1).",
-    "BSinMeasurementTheory/Course21720/StoneMeasure.lean":
+    "BachelorsInMeasurementTheory/Course21720/StoneMeasure.lean":
         "Finitely additive measures on a Boolean algebra from a positive functional.",
     "Numerical.lean": "Numerical checks reproducing the English example.",
 }
@@ -387,7 +387,7 @@ def is_import_only(code: str) -> bool:
 
 def describe_lean(rel: str) -> str:
     """One-line English for the appendix index; sources stay inlined in the notes."""
-    if rel == "BSinMeasurementTheory.lean":
+    if rel == "BachelorsInMeasurementTheory.lean":
         return "Root importer for the library."
     code = (ROOT / rel).read_text(encoding="utf-8")
     if is_import_only(code):
@@ -520,7 +520,7 @@ def main() -> None:
     parts.append(f"# {title} — narrative + Lean module index\n\n")
     parts.append(
         f"*Generated {date.today().isoformat()} from `arxiv.md`, `courses/`, "
-        "and `BSinMeasurementTheory/`.*\n\n"
+        "and `BachelorsInMeasurementTheory/`.*\n\n"
     )
     parts.append("---\n\n")
     parts.append("# Narrative (from arxiv.md)\n\n")

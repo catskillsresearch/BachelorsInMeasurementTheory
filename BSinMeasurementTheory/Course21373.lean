@@ -1,8 +1,0 @@
-module
-
-public import BSinMeasurementTheory.Course21373.IsBooleanAtom
-public import BSinMeasurementTheory.Course21373.AtomJoin
-public import BSinMeasurementTheory.Course21373.Representation
-public import BSinMeasurementTheory.Course21373.BooleanAction
-public import BSinMeasurementTheory.Course21373.Numerical
-

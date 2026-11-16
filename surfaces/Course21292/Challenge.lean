@@ -16,7 +16,7 @@ open scoped BigOperators
 /-!
 # Challenge — Course 21-292
 
-Imports match `BSinMeasurementTheory.Course21292.LinearProgram` so Zero/instance
+Imports match `BachelorsInMeasurementTheory.Course21292.LinearProgram` so Zero/instance
 paths in theorem types match Solution (Palomar Comparator).
 -/
 

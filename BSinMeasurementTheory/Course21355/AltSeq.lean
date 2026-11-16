@@ -1,5 +1,0 @@
-module
-
-public import BSinMeasurementTheory.Course21355.AltSeqValues
-public import BSinMeasurementTheory.Course21355.AltSeqDiverges
-

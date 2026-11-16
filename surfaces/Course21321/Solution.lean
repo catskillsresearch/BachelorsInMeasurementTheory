@@ -5,7 +5,7 @@ Authors: Lars Warren Ericson.
 -/
 module
 
-public import BSinMeasurementTheory.Course21321
+public import BachelorsInMeasurementTheory.Course21321
 
 @[expose] public section
 

@@ -28,8 +28,8 @@ The pin is `leanprover/lean4:v4.36.0-rc2`.
 | `arxiv.pdf` | Built CMU report PDF for cross-archival |
 | `docs/CMU_TECH_REPORT.md` | Report-number, build, and release checklist |
 | `courses/` | Per-course English solutions |
-| `BSinMeasurementTheory/` | Sorry-free Lean 4 formalizations |
-| `BSinMeasurementTheory.lean` | Root importer |
+| `BachelorsInMeasurementTheory/` | Sorry-free Lean 4 formalizations |
+| `BachelorsInMeasurementTheory.lean` | Root importer |
 | `surfaces/` | One Palomar Challenge/Solution package per course (preflight only) |
 
 ## Palomar preflight (surfaces)
@@ -260,6 +260,6 @@ lake build
 bash scripts/build_arxiv_pdf.sh
 ```
 
-`lake build` typechecks `BSinMeasurementTheory`. The PDF script regenerates
+`lake build` typechecks `BachelorsInMeasurementTheory`. The PDF script regenerates
 `arxiv.tex` from `arxiv.md` and the course notes, compiles the report
 with a standard article title page, and writes `dist/arxiv_submit.zip`.

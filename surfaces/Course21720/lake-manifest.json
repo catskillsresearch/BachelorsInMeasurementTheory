@@ -5,7 +5,7 @@
   {
    "type": "path",
    "scope": "",
-   "name": "BSinMeasurementTheory",
+   "name": "BachelorsInMeasurementTheory",
    "manifestFile": "lake-manifest.json",
    "inherited": false,
    "dir": "../..",
@@ -121,7 +121,7 @@
    "configFile": "lakefile.toml"
   }
  ],
- "name": "BSinMeasurementTheory",
+ "name": "BachelorsInMeasurementTheory",
  "lakeDir": ".lake",
  "fixedToolchain": false
 }

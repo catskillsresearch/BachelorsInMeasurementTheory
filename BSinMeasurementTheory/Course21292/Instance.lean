@@ -1,6 +1,0 @@
-module
-
-public import BSinMeasurementTheory.Course21292.ScottInstance
-public import BSinMeasurementTheory.Course21292.DualFormulation
-public import BSinMeasurementTheory.Course21292.Simplex
-

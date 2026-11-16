@@ -1,0 +1,6 @@
+module
+
+public import BachelorsInMeasurementTheory.Course21292.ScottInstance
+public import BachelorsInMeasurementTheory.Course21292.DualFormulation
+public import BachelorsInMeasurementTheory.Course21292.Simplex
+

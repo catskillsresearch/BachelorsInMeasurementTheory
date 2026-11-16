@@ -22,7 +22,7 @@ open Real intervalIntegral MeasureTheory
 Mathlib-only restatement of the calculus capstone headline theorems.
 Proofs are deliberate `sorry` holes for Palomar Comparator.
 
-Definitions match `BSinMeasurementTheory.Course21120.{FTC,TailBound,TaylorExpansion,TaylorError}`.
+Definitions match `BachelorsInMeasurementTheory.Course21120.{FTC,TailBound,TaylorExpansion,TaylorError}`.
 -/
 
 namespace Course21120FTC

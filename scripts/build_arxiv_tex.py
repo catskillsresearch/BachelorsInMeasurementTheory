@@ -198,7 +198,7 @@ HTML_COMMENT = re.compile(r"<!--.*?-->", re.DOTALL)
 FENCE_RE = re.compile(r"^```([^\n]*)\n(.*?)^```\s*$", re.MULTILINE | re.DOTALL)
 MANUAL_SECTION_NUM = re.compile(r"^(#{1,6})[ \t]+\d+(?:\.\d+)*\.?[ \t]+", re.MULTILINE)
 NARRATIVE_MARKER = "# Narrative (from arxiv.md)"
-LEAN_MODULE_RE = re.compile(r"^###\s+(BSinMeasurementTheory(?:\.lean|/[^\s{]+))\s*$", re.MULTILINE)
+LEAN_MODULE_RE = re.compile(r"^###\s+(BachelorsInMeasurementTheory(?:\.lean|/[^\s{]+))\s*$", re.MULTILINE)
 LEAN_PATH_RE = re.compile(r"<!--\s*lean:\s*(\S+?)\s*-->")
 FIGURE_CAPTION_RE = re.compile(
     r"<!--\s*figure-caption:\s*(.*?)\s*-->\s*\n(?:```mermaid|!\[)",
@@ -246,7 +246,7 @@ def write_listing(code: str, listing_name: str) -> tuple[str, int]:
     return listing_path.relative_to(ROOT).as_posix(), (len(source.splitlines()) if source else 0)
 
 
-LIB_PREFIX = "BSinMeasurementTheory/"
+LIB_PREFIX = "BachelorsInMeasurementTheory/"
 
 
 def github_blob_url(rel: str, first: int | None = None, last: int | None = None) -> str:
@@ -394,7 +394,7 @@ def replace_fences(
                 key = f"LEANINCLUDE{lean_idx:03d}"
                 module = lean_titles.get(key, f"module-{lean_idx}")
                 lean_idx += 1
-                github_rel = module if module.startswith("BSinMeasurementTheory") else None
+                github_rel = module if module.startswith("BachelorsInMeasurementTheory") else None
                 safe_name = module.replace("/", "-")
                 if not safe_name.endswith(".lean"):
                     safe_name += ".lean"

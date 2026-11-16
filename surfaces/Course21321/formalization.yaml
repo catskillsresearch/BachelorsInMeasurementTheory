@@ -24,7 +24,7 @@ classification:
 
 status:
   scope: >-
-    Sorry-free course development under BSinMeasurementTheory/Course21321/.
+    Sorry-free course development under BachelorsInMeasurementTheory/Course21321/.
     Challenge.lean holds deliberate Palomar proof holes; Solution.lean
     re-exports the course theorems. This packaging is for local / CI
     Palomar preflight only — not a registry submission.

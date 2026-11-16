@@ -1,0 +1,19 @@
+module
+
+public import Mathlib.Order.BooleanAlgebra.Basic
+public import BachelorsInMeasurementTheory.Course21410.RestrictToB
+
+@[expose] public section
+
+namespace Course21410
+
+variable {B : Type*} [BooleanAlgebra B]
+
+/-- Wrap-up of the infinite-algebra extension: restriction of a positive
+    preference-preserving functional is a monotone assignment on \(B\). -/
+theorem representation_on_B (Λ : StoneFunctional B) (hpos : IsPositive Λ)
+    {R : B → B → Prop} (hR : AgreesWith Λ R) {a b : B} (hab : R a b) :
+    0 ≤ restrictToB Λ a ∧ restrictToB Λ a ≤ restrictToB Λ b :=
+  ⟨positive_on_indicators Λ hpos a, restrict_mono Λ hR hab⟩
+
+end Course21410

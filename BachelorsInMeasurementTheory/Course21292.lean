@@ -1,0 +1,12 @@
+module
+
+public import BachelorsInMeasurementTheory.Course21292.LinearProgram
+public import BachelorsInMeasurementTheory.Course21292.WeakDuality
+public import BachelorsInMeasurementTheory.Course21292.StrongDuality
+public import BachelorsInMeasurementTheory.Course21292.ScottInstance
+public import BachelorsInMeasurementTheory.Course21292.DualFormulation
+public import BachelorsInMeasurementTheory.Course21292.Simplex
+public import BachelorsInMeasurementTheory.Course21292.Instance
+public import BachelorsInMeasurementTheory.Course21292.Scott11
+public import BachelorsInMeasurementTheory.Course21292.Numerical
+
