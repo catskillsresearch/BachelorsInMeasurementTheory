@@ -1,16 +1,14 @@
 module
 
-public import Mathlib.Algebra.BigOperators.Fin
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-public import Mathlib.Algebra.Module.LinearMap.Basic
-public import Mathlib.Algebra.Module.Submodule.LinearMap
-public import Mathlib.Algebra.Order.BigOperators.Group.Finset
-public import Mathlib.Basic.Real.Basic
-public import Mathlib.GroupTheory.GroupAction.Ring
-public import Mathlib.LinearAlgebra.Basis.Basic
-public import BachelorsInMeasurementTheory.Course21241.Basis
 import Mathlib.Tactic.FinCases
-import Mathlib.Tactic.Linarith
+public import BachelorsInMeasurementTheory.Course21241.DualBasis
+import Mathlib.Algebra.BigOperators.Fin
+import Mathlib.Algebra.Order.BigOperators.Group.Finset
+import Mathlib.Data.Rat.Cast.Order
+import Mathlib.Tactic.Linarith.Frontend
+import Mathlib.Tactic.NormNum.Abs
+import Mathlib.Tactic.NormNum.DivMod
+import Mathlib.Tactic.NormNum.OfScientific
 
 @[expose] public section
 

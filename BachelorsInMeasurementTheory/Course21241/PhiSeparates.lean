@@ -1,10 +1,14 @@
 module
 
-public import Mathlib.Algebra.Module.LinearMap.Basic
-public import Mathlib.Basic.Real.Basic
-public import BachelorsInMeasurementTheory.Course21241.DotAtV
-public import BachelorsInMeasurementTheory.Course21241.DotOnC
-import Mathlib.Tactic.NormNum
+public import BachelorsInMeasurementTheory.Course21241.PointV
+public import BachelorsInMeasurementTheory.Course21241.SeparatingU
+public import BachelorsInMeasurementTheory.Course21241.Separation
+import BachelorsInMeasurementTheory.Course21241.DotAtV
+import BachelorsInMeasurementTheory.Course21241.DotOnC
+import Mathlib.Data.Rat.Cast.Order
+import Mathlib.Tactic.NormNum.Abs
+import Mathlib.Tactic.NormNum.DivMod
+import Mathlib.Tactic.NormNum.OfScientific
 
 @[expose] public section
 

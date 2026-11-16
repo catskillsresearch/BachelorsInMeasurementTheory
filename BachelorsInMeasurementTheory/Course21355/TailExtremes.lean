@@ -1,9 +1,8 @@
 module
 
 public import Mathlib.Algebra.Order.Archimedean.Real.Basic
-public import Mathlib.Basic.Real.Basic
 public import Mathlib.Order.ConditionallyCompleteLattice.Basic
-public import Mathlib.Topology.Order.MonotoneConvergence
+public import Mathlib.Topology.Order.MonotoneConvergence -- shake: keep
 
 @[expose] public section
 

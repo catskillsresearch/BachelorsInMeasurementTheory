@@ -1,6 +1,7 @@
 module
 
-public import Mathlib.Data.Int.Basic
+public import Mathlib.Data.Int.Notation
+public import Mathlib.Data.Nat.Notation
 
 @[expose] public section
 

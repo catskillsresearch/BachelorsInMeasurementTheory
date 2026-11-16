@@ -22,7 +22,7 @@
 <text text-anchor="middle" x="769" y="-137.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Numerical</text>
 </g>
 <!-- LAlgebraBigOperatorsFin&#45;&gt;MNumerical -->
-<g id="edge8" class="edge">
+<g id="edge7" class="edge">
 <title>LAlgebraBigOperatorsFin&#45;&gt;MNumerical</title>
 <path fill="none" stroke="#334155" d="M683.19,-170.96C689.22,-168.99 695.24,-166.98 701,-165 709.07,-162.22 717.64,-159.13 725.85,-156.1"/>
 <polygon fill="#334155" stroke="#334155" points="726.95,-158.31 732.66,-153.57 725.24,-153.72 726.95,-158.31"/>
@@ -100,7 +100,7 @@
 <text text-anchor="middle" x="624" y="-137.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.NormNum</text>
 </g>
 <!-- LTacticNormNum&#45;&gt;MNumerical -->
-<g id="edge7" class="edge">
+<g id="edge8" class="edge">
 <title>LTacticNormNum&#45;&gt;MNumerical</title>
 <path fill="none" stroke="#334155" d="M677.84,-140C693.57,-140 710.59,-140 725.56,-140"/>
 <polygon fill="#334155" stroke="#334155" points="725.73,-142.45 732.73,-140 725.73,-137.55 725.73,-142.45"/>

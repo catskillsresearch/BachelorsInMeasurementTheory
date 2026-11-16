@@ -1,11 +1,8 @@
 module
 
 public import Mathlib.Basic.Real.Basic
-public import Mathlib.Data.Set.Finite.Basic
-public import Mathlib.Order.Interval.Finset.Defs
-public import Mathlib.Order.Interval.Finset.Nat
-public import Mathlib.Order.Interval.Set.Basic
-import Mathlib.Tactic.ByContra
+public import Mathlib.Basic.Finite.Defs
+import Mathlib.Order.Interval.Finset.Nat
 
 @[expose] public section
 

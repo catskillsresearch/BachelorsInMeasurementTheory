@@ -1,8 +1,7 @@
 module
 
-public import Mathlib.Algebra.Order.Archimedean.Real.Basic
 public import Mathlib.Basic.Real.Basic
-public import Mathlib.Order.ConditionallyCompleteLattice.Basic
+import Mathlib.Algebra.Order.Archimedean.Real.Basic
 
 @[expose] public section
 

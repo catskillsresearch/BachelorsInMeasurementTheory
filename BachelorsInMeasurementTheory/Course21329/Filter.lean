@@ -1,8 +1,9 @@
 module
 
 public import Mathlib.Order.BoundedOrder.Basic
-public import Mathlib.Order.Filter.Ultrafilter.Basic
-public import Mathlib.Order.Lattice
+public import Mathlib.Order.Defs.Lattice
+import Mathlib.Data.Finset.Attr
+import Mathlib.Tactic.SetLike
 
 @[expose] public section
 

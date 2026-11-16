@@ -1,7 +1,7 @@
 module
 
-public import Mathlib.Topology.ContinuousMap.Compact
 public import BachelorsInMeasurementTheory.Course21720.Boundedness
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

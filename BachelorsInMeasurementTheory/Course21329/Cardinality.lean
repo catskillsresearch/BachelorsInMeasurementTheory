@@ -1,7 +1,7 @@
 module
 
-public import Mathlib.SetTheory.Cardinal.Basic
-public import Mathlib.SetTheory.Cardinal.Arithmetic
+public import Mathlib.SetTheory.Cardinal.Order
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

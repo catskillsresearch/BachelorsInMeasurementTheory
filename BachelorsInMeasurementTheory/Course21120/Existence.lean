@@ -1,11 +1,8 @@
 module
 
-public import Mathlib.Algebra.Order.Star.Real
 public import Mathlib.Analysis.Complex.Trigonometric
-public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-public import Mathlib.Basic.Real.Basic
-public import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
-import Mathlib.Tactic.Linarith
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.MeasureTheory.Integral.Bochner.Basic
 
 @[expose] public section
 

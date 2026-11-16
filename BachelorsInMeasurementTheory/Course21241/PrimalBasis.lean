@@ -1,10 +1,8 @@
 module
 
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-public import Mathlib.Algebra.Module.Pi
-public import Mathlib.Basic.Real.Basic
-public import Mathlib.LinearAlgebra.StdBasis
 public import BachelorsInMeasurementTheory.Course21241.Space
+public import Mathlib.LinearAlgebra.LinearIndependent.Defs
+import Mathlib.LinearAlgebra.StdBasis
 
 @[expose] public section
 

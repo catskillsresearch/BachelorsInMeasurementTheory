@@ -1,8 +1,10 @@
 module
 
-public import BachelorsInMeasurementTheory.Course21241.PointV
-public import BachelorsInMeasurementTheory.Course21241.SeparatingU
-public import BachelorsInMeasurementTheory.Course21241.DotAtV
-public import BachelorsInMeasurementTheory.Course21241.DotOnC
-public import BachelorsInMeasurementTheory.Course21241.PhiSeparates
+import Mathlib.Algebra.Order.AbsoluteValue.Basic
+import Mathlib.Algebra.Order.Field.Basic
+import Mathlib.Data.Finset.Attr
+import Mathlib.Tactic.ContinuousFunctionalCalculus
+import Mathlib.Tactic.NormNum.Ineq
+import Mathlib.Tactic.NormNum.Pow
+import Mathlib.Tactic.SetLike
 

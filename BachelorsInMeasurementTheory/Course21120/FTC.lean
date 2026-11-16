@@ -1,17 +1,10 @@
 module
 
-public import Mathlib.Algebra.Order.Star.Real
 public import Mathlib.Analysis.Calculus.Deriv.Basic
-public import Mathlib.Analysis.Complex.Trigonometric
-public import Mathlib.Analysis.Normed.Group.Real
-public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-public import Mathlib.Basic.Real.Basic
-public import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
-public import Mathlib.MeasureTheory.Measure.MeasureSpaceDef
-public import Mathlib.Topology.Basic
-public import Mathlib.Topology.Continuous
-public import Mathlib.Topology.UniformSpace.Real
-import Mathlib.Tactic.Positivity
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
+import Mathlib.Tactic.Lemma
+import Mathlib.Tactic.Positivity.Finset
 
 @[expose] public section
 

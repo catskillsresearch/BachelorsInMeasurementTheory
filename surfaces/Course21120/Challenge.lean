@@ -17,9 +17,9 @@ public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 open Real intervalIntegral MeasureTheory
 
 /-!
-# Challenge — Course 21-120 / 21-122
+# Challenge — Courses 21-120 and 21-122
 
-Mathlib-only restatement of the calculus capstone headline theorems.
+Mathlib-only restatement of the calculus-sequence capstone headline theorems.
 Proofs are deliberate `sorry` holes for Palomar Comparator.
 
 Definitions match `BachelorsInMeasurementTheory.Course21120.{FTC,TailBound,TaylorExpansion,TaylorError}`.

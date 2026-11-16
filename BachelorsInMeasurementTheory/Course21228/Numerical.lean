@@ -1,6 +1,6 @@
 module
 
-public meta import Mathlib.Data.Nat.Factorial.Basic
+public meta import Mathlib.Data.Nat.Factorial.Basic -- shake: keep
 
 @[expose] public section
 

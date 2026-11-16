@@ -1,9 +1,10 @@
 module
 
-public import Mathlib.Algebra.Module.LinearMap.Basic
-public import Mathlib.Basic.Real.Basic
-public import Mathlib.Order.BooleanAlgebra.Basic
 public import BachelorsInMeasurementTheory.Course21410.StepFunctions
+public import Mathlib.Algebra.Module.Pi
+import Mathlib.Data.Finset.Attr
+import Mathlib.Tactic.SetLike
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

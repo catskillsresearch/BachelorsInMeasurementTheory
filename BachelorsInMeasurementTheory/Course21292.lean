@@ -9,4 +9,8 @@ public import BachelorsInMeasurementTheory.Course21292.Simplex
 public import BachelorsInMeasurementTheory.Course21292.Instance
 public import BachelorsInMeasurementTheory.Course21292.Scott11
 public import BachelorsInMeasurementTheory.Course21292.Numerical
+import Mathlib.Algebra.Order.Algebra
+import Mathlib.Algebra.Order.BigOperators.Expect
+import Mathlib.Analysis.Complex.Order
+import Mathlib.Tactic.ContinuousFunctionalCalculus
 

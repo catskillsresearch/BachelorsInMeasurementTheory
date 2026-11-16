@@ -1,5 +1,4 @@
 module
 
-public import BachelorsInMeasurementTheory.Course21355.AltSeqValues
-public import BachelorsInMeasurementTheory.Course21355.AltSeqDiverges
+import Mathlib.Topology.MetricSpace.Pseudo.Defs
 

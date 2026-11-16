@@ -23,13 +23,13 @@ digraph Course21373 {
   LDataFinsetLatticeFold -> MAtomJoin;
   MIsBooleanAtom -> MAtomJoin;
   MAtomJoin -> MBooleanAction;
-  LOrderBooleanAlgebraBasic -> MIsBooleanAtom;
   LOrderAtoms -> MIsBooleanAtom;
+  LOrderBooleanAlgebraBasic -> MIsBooleanAtom;
   LAlgebraBigOperatorsGroupFinsetBasic -> MNumerical;
   LDataFinsetInsert -> MNumerical;
+  LDataFinsetLatticeBasic -> MNumerical;
   LDataFinsetDefs -> MNumerical;
   LDataFinsetEmpty -> MNumerical;
-  LDataFinsetLatticeBasic -> MNumerical;
   LDataFintypeBasic -> MRepresentation;
   MAtomJoin -> MRepresentation;
 }

@@ -1,10 +1,7 @@
 module
 
-public import Mathlib.Algebra.Module.LinearMap.Basic
 public import Mathlib.Analysis.Normed.Module.Basic
-public import Mathlib.Basic.Real.Basic
-public import BachelorsInMeasurementTheory.Course21640.Sublinear
-import Mathlib.Tactic.Linarith
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

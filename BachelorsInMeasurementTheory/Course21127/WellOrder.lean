@@ -1,11 +1,11 @@
 module
 
 public import Mathlib.Algebra.Order.Ring.Unbundled.Rat
-public import Mathlib.Data.List.MinMax
-public import Mathlib.Data.Rat.Defs
-public import Mathlib.Data.Set.Finite.Basic
-public import Mathlib.Order.Interval.Set.Basic
-public import Mathlib.Order.WellFounded
+public import Mathlib.Basic.Finite.Defs
+public import Mathlib.Order.Interval.Set.Defs
+import Mathlib.Data.List.MinMax
+import Mathlib.Data.Set.Finite.Basic
+import Mathlib.Tactic.Lemma
 
 @[expose] public section
 

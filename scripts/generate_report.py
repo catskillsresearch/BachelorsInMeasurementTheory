@@ -369,46 +369,37 @@ def demote_headings(text: str, n: int = 2) -> str:
 
 
 GEMINI_LINE = re.compile(r"^\*\*Gemini[^*]*\*\*\.?[^\n]*$", re.MULTILINE)
-LEAN_INCLUDE = re.compile(
-    r"(?:\*\*\[[^\]]+\.lean\]\([^)]+\)\*\*\s*)?"
-    r"<!--\s*lean:\s*(\S+?)\s*-->(?:\s*```lean\n.*?^```)*",
-    re.MULTILINE | re.DOTALL,
+LEAN_IMPORT_RE = re.compile(
+    r'^@import\s+"([^"]+\.lean)"(?:\s*\{[^}]*\})?[ \t]*$',
+    re.MULTILINE,
 )
 
 
-def lean_source_link(rel: str) -> str:
-    """Markdown Preview Enhanced / editor link just above an inlined Lean file.
-
-    Course notes live under ``courses/``, so the href is one directory up from
-    the note, matching the nowakowska1982 ``**[path](local)`` convention.
-    """
-    return f"**[{rel}](../{rel})**"
-
-
-def expand_lean_includes(text: str) -> str:
-    """Replace `<!-- lean: path -->` with a clickable link and that file's source."""
+def expand_lean_imports(text: str, base: Path) -> str:
+    """Expand nowakowska-style ``@import "….lean"`` into fenced source for the PDF."""
 
     def repl(match: re.Match[str]) -> str:
-        rel = match.group(1)
-        path = ROOT / rel
+        path = (base / match.group(1)).resolve()
+        try:
+            rel = path.relative_to(ROOT).as_posix()
+        except ValueError as exc:
+            raise FileNotFoundError(
+                f"lean import escapes the repository: {match.group(1)}"
+            ) from exc
         if not path.is_file():
-            raise FileNotFoundError(f"lean include missing: {rel}")
+            raise FileNotFoundError(f"lean import missing: {rel}")
         code = path.read_text(encoding="utf-8").rstrip()
-        return f"{lean_source_link(rel)}\n\n<!-- lean: {rel} -->\n\n```lean\n{code}\n```\n"
+        # Keep a lean-path marker for build_tex title extraction; the clickable
+        # ``**[path](…)`` line already sits above the @import in the source.
+        return f"<!-- lean: {rel} -->\n\n```lean\n{code}\n```\n"
 
-    return LEAN_INCLUDE.sub(repl, text)
+    return LEAN_IMPORT_RE.sub(repl, text)
 
 
-def rewrite_lean_links(text: str) -> str:
+def rewrite_lean_links(text: str, base: Path) -> str:
     text = re.sub(r"^\[← Syllabus\]\([^)]+\)\s*\n+", "", text)
     text = GEMINI_LINE.sub("", text)
-    text = expand_lean_includes(text)
-    text = re.sub(
-        r"Lean 4 formalization: \[`([^`]+)`\]\([^)]+\)\.",
-        r"<!-- lean: \1 -->",
-        text,
-    )
-    text = expand_lean_includes(text)
+    text = expand_lean_imports(text, base)
     return text
 
 
@@ -432,11 +423,17 @@ def strip_part_letters(text: str) -> str:
     return re.sub(r"^(#{1,6}[ \t]+)\([a-z]\)[ \t]+", r"\1", text, flags=re.MULTILINE)
 
 
-def prepare_course(text: str) -> str:
-    text = rewrite_lean_links(text)
-    # Course notes link Lean sources with ``../``; the flattened report lives at root.
+def prepare_course(text: str, course_path: Path) -> str:
+    text = rewrite_lean_links(text, course_path.parent)
+    # Course notes use ``../`` for Lean sources and dep figures; the flattened
+    # report lives at the repo root.
     text = re.sub(
         r"\((?:\.\./)+(BachelorsInMeasurementTheory/[^)]+\.lean)\)",
+        r"(\1)",
+        text,
+    )
+    text = re.sub(
+        r"\((?:\.\./)+(figures/deps/[^)]+)\)",
         r"(\1)",
         text,
     )
@@ -511,9 +508,12 @@ def expand_imports(text: str, base: Path, stack: tuple[str, ...] = ()) -> str:
             raise FileNotFoundError(f"import missing: {rel}")
         if path.suffix.lower() == ".svg":
             return expand_svg_import(path, opts)
+        if path.suffix.lower() == ".lean":
+            code = path.read_text(encoding="utf-8").rstrip()
+            return f"<!-- lean: {rel} -->\n\n```lean\n{code}\n```\n\n"
         chunk = load_note(path)
         if rel.startswith("courses/"):
-            chunk = prepare_course(chunk)
+            chunk = prepare_course(chunk, path)
         else:
             chunk = expand_note(chunk, path, stack + (rel,))
         return chunk.strip() + "\n\n"
@@ -537,7 +537,7 @@ def expand_toc_links(text: str, base: Path, stack: tuple[str, ...] = ()) -> str:
             raise FileNotFoundError(f"TOC link missing: {rel}")
         chunk = load_note(path)
         if rel.startswith("courses/"):
-            chunk = prepare_course(chunk)
+            chunk = prepare_course(chunk, path)
         else:
             chunk = expand_note(chunk, path, stack + (rel,))
         return chunk.strip() + "\n\n"

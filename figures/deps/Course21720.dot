@@ -21,18 +21,18 @@ digraph Course21720 {
   MStoneMeasure [label="StoneMeasure", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
   LTopologyContinuousMapCompact -> MBoundedness;
-  LTacticNormNum -> MNumerical;
-  LTacticRing -> MNumerical;
   LBasicRealBasic -> MNumerical;
+  LTacticNormNum -> MNumerical;
   LAlgebraModuleProd -> MNumerical;
+  LTacticRing -> MNumerical;
   LAlgebraModuleLinearMapBasic -> MNumerical;
-  LAnalysisNormedModuleBasic -> MRiesz;
-  LBasicRealBasic -> MRiesz;
-  LTacticPositivity -> MRiesz;
-  LOrderConditionallyCompleteLatticeBasic -> MRiesz;
   LTopologyContinuousMapBasic -> MRiesz;
-  LAlgebraModuleLinearMapBasic -> MRiesz;
+  LBasicRealBasic -> MRiesz;
+  LAnalysisNormedModuleBasic -> MRiesz;
+  LOrderConditionallyCompleteLatticeBasic -> MRiesz;
+  LTacticPositivity -> MRiesz;
   LTopologyBasic -> MRiesz;
+  LAlgebraModuleLinearMapBasic -> MRiesz;
   MBoundedness -> MRiesz;
   MBoundedness -> MStoneMeasure;
 }

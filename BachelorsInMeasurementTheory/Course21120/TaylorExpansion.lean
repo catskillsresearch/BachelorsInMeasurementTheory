@@ -1,8 +1,11 @@
 module
 
 public import Mathlib.Data.Rat.Defs
-import Mathlib.Tactic.NormNum
-import Mathlib.Tactic.Ring
+import Mathlib.Data.Rat.Cast.Order
+import Mathlib.Tactic.NormNum.Abs
+import Mathlib.Tactic.NormNum.DivMod
+import Mathlib.Tactic.NormNum.OfScientific
+import Mathlib.Tactic.Ring.RingNF
 
 @[expose] public section
 

@@ -15,10 +15,10 @@ digraph Course21329 {
   MStoneNonempty [label="StoneNonempty", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MUltrafilterExtension [label="UltrafilterExtension", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
-  LSetTheoryCardinalBasic -> MCardinality;
   LSetTheoryCardinalArithmetic -> MCardinality;
-  LOrderBoundedOrderBasic -> MFilter;
+  LSetTheoryCardinalBasic -> MCardinality;
   LOrderLattice -> MFilter;
+  LOrderBoundedOrderBasic -> MFilter;
   LOrderFilterUltrafilterBasic -> MFilter;
   MUltrafilterExtension -> MStoneNonempty;
   LOrderZorn -> MUltrafilterExtension;

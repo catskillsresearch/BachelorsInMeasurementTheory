@@ -19,20 +19,20 @@ digraph Course21651 {
   MStoneMap [label="StoneMap", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MTwoAlgebra [label="TwoAlgebra", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
-  LDataSetBasic -> MBooleanHom;
-  LTopologyBasic -> MBooleanHom;
   LOrderBooleanAlgebraBasic -> MBooleanHom;
-  LTopologyContinuous -> MClosedEmbedding;
-  LTopologyOrder -> MClosedEmbedding;
+  LTopologyBasic -> MBooleanHom;
+  LDataSetBasic -> MBooleanHom;
   LTopologyConstructions -> MClosedEmbedding;
   LTopologySeparationHausdorff -> MClosedEmbedding;
+  LTopologyContinuous -> MClosedEmbedding;
+  LTopologyOrder -> MClosedEmbedding;
   MBooleanHom -> MClosedEmbedding;
-  LTopologyContinuousMapCompact -> MSeparation;
   LTopologyConnectedTotallyDisconnected -> MSeparation;
+  LTopologyContinuousMapCompact -> MSeparation;
   MBooleanHom -> MSeparation;
+  LTopologyConstructions -> MStoneMap;
   LTopologyContinuous -> MStoneMap;
   LTopologyOrder -> MStoneMap;
-  LTopologyConstructions -> MStoneMap;
   MBooleanHom -> MStoneMap;
   MStoneMap -> MTwoAlgebra;
 }

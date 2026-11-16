@@ -1,10 +1,13 @@
 module
 
-public import Mathlib.Algebra.Module.LinearMap.Basic
 public import Mathlib.Algebra.Module.Prod
 public import Mathlib.Basic.Real.Basic
-import Mathlib.Tactic.NormNum
-import Mathlib.Tactic.Ring
+public import Mathlib.Algebra.Module.LinearMap.Defs
+import Mathlib.Data.Rat.Cast.Order
+import Mathlib.Tactic.NormNum.Abs
+import Mathlib.Tactic.NormNum.DivMod
+import Mathlib.Tactic.NormNum.OfScientific
+import Mathlib.Tactic.Ring.RingNF
 
 @[expose] public section
 

@@ -1,8 +1,9 @@
 module
 
-public import Mathlib.Data.Int.Basic
-public import Mathlib.Order.Setoid.Basic
-import Mathlib.Tactic.Ring
+public import Mathlib.Data.Int.Notation
+public import Mathlib.Tactic.ToAdditive
+import Mathlib.Tactic.Lemma
+import Mathlib.Tactic.Ring.RingNF
 
 @[expose] public section
 

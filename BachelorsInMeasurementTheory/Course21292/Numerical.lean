@@ -1,10 +1,15 @@
 module
 
-public import Mathlib.Algebra.BigOperators.Fin
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
 public import Mathlib.Data.Rat.Defs
 import Mathlib.Tactic.FinCases
-import Mathlib.Tactic.NormNum
+public import Mathlib.Algebra.BigOperators.Group.Finset.Defs
+public import Mathlib.Data.Fintype.Basic
+import Mathlib.Algebra.BigOperators.Fin
+import Mathlib.Data.Rat.Cast.Order
+import Mathlib.Tactic.NormNum.Abs
+import Mathlib.Tactic.NormNum.DivMod
+import Mathlib.Tactic.NormNum.OfScientific
+import Mathlib.Tactic.NormNum.Pow
 
 @[expose] public section
 

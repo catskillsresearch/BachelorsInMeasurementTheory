@@ -1,14 +1,8 @@
 module
 
-public import Mathlib.Algebra.Module.LinearMap.Basic
-public import Mathlib.Analysis.Normed.Module.Basic
-public import Mathlib.Basic.Real.Basic
-public import Mathlib.Order.ConditionallyCompleteLattice.Basic
-public import Mathlib.Topology.Basic
-public import Mathlib.Topology.ContinuousMap.Basic
-public import Mathlib.Topology.ContinuousMap.Compact
 public import BachelorsInMeasurementTheory.Course21720.Boundedness
-import Mathlib.Tactic.Positivity
+import Mathlib.Tactic.Positivity.Finset
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

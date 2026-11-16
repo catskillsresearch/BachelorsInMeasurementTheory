@@ -1,12 +1,9 @@
 module
 
-public import Mathlib.Order.BooleanAlgebra.Basic
-public import Mathlib.Topology.Basic
 public import Mathlib.Topology.Constructions
-public import Mathlib.Topology.Continuous
-public import Mathlib.Topology.Order
-public import Mathlib.Topology.Separation.Hausdorff
 public import BachelorsInMeasurementTheory.Course21651.BooleanHom
+import Mathlib.Tactic.TypeStar
+import Mathlib.Topology.Separation.Hausdorff
 
 @[expose] public section
 

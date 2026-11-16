@@ -20,8 +20,8 @@ digraph Course21127 {
   MToRat [label="ToRat", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MWellOrder [label="WellOrder", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
-  LDataIntBasic -> MNonzeroDenomInt;
   LTacticRing -> MNonzeroDenomInt;
+  LDataIntBasic -> MNonzeroDenomInt;
   LOrderSetoidBasic -> MNonzeroDenomInt;
   LTacticNormNum -> MNumerical;
   MToRat -> MNumerical;
@@ -31,8 +31,8 @@ digraph Course21127 {
   MNonzeroDenomInt -> MToRat;
   LDataRatDefs -> MWellOrder;
   LOrderWellFounded -> MWellOrder;
-  LOrderIntervalSetBasic -> MWellOrder;
   LDataSetFiniteBasic -> MWellOrder;
   LDataListMinMax -> MWellOrder;
+  LOrderIntervalSetBasic -> MWellOrder;
   LAlgebraOrderRingUnbundledRat -> MWellOrder;
 }

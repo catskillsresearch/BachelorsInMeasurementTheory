@@ -1,27 +1,13 @@
 module
 
-public import Mathlib.Analysis.Calculus.Deriv.Add
 public import Mathlib.Analysis.Calculus.Deriv.Basic
-public import Mathlib.Analysis.Calculus.Deriv.Inv
-public import Mathlib.Analysis.Calculus.Deriv.Mul
-public import Mathlib.Analysis.Calculus.Deriv.Pow
-public import Mathlib.Analysis.Normed.Group.Real
-public import Mathlib.Analysis.Real.Pi.Bounds
-public import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
 public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Arctan
-public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-public import Mathlib.Basic.Real.Basic
 public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
-public import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
-public import Mathlib.MeasureTheory.Measure.MeasureSpaceDef
-public import Mathlib.Order.Filter.AtTopBot.Basic
-public import BachelorsInMeasurementTheory.Course21120.Existence
-public import BachelorsInMeasurementTheory.Course21120.FTC
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.NormNum
-import Mathlib.Tactic.Positivity
-import Mathlib.Tactic.Ring
+import BachelorsInMeasurementTheory.Course21120.Existence
+import BachelorsInMeasurementTheory.Course21120.FTC
+import Mathlib.Analysis.Real.Pi.Bounds
+import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+import Mathlib.Tactic.Lemma
 
 @[expose] public section
 

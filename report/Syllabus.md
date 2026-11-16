@@ -2,7 +2,8 @@
 
 | Phase | Course | Title | Role toward Scott (1964) |
 | :---: | :---: | :--- | :--- |
-| 1 | 21-120 / 21-122 | Differential and Integral Calculus / Integration and Approximation | FTC, comparison, integration by parts, Taylor remainder |
+| 1 | 21-120 | Differential and Integral Calculus | FTC and differentiation of the integral |
+| 1 | 21-122 | Integration and Approximation | Comparison, integration by parts, Taylor remainder |
 | 1 | 21-127 | Concepts of Mathematics | Equivalence relations, explicit bijections, induction |
 | 1 | 21-241 | Matrices and Linear Transformations | Bases, dual bases, and the vector-space language of Theorem 1.1 |
 | 1 | 21-228 | Discrete Mathematics | Permutations, multisets, and the counting behind Theorems 1.2 and 3.2 |
@@ -26,7 +27,8 @@ flowchart TB
   classDef course fill:#dbeafe,stroke:#1d4ed8,color:#1e3a8a,stroke-width:1.2px
 
   subgraph P1["Phase 1"]
-    C120["21-120 / 21-122<br/>Calculus"]:::course
+    C120["21-120<br/>Differential and Integral Calculus"]:::course
+    C122["21-122<br/>Integration and Approximation"]:::course
     C127["21-127<br/>Concepts of Mathematics"]:::course
     C241["21-241<br/>Matrices and Linear Transformations"]:::course
     C228["21-228<br/>Discrete Mathematics"]:::course
@@ -62,7 +64,8 @@ flowchart TB
   C228 --> C321
   C127 --> C321
   C292 --> C321
-  C120 --> C355
+  C120 --> C122
+  C122 --> C355
   C355 --> C720
   C373 --> C651
   C329 --> C651
@@ -77,7 +80,8 @@ flowchart TB
   C321 --> C322
   C410 --> C322
 
-  click C120 "courses/21-120-21-122.md" "21-120 / 21-122"
+  click C120 "courses/21-120.md" "21-120"
+  click C122 "courses/21-122.md" "21-122"
   click C127 "courses/21-127.md" "21-127"
   click C241 "courses/21-241.md" "21-241"
   click C228 "courses/21-228.md" "21-228"
@@ -128,7 +132,8 @@ flowchart LR
   subgraph CR["Courses"]
     direction TB
     style CR fill:#eff6ff,stroke:#1d4ed8,stroke-width:2px
-    C120["21-120 / 21-122<br/>Differential and Integral Calculus / Integration and Approximation"]:::course
+    C120["21-120<br/>Differential and Integral Calculus"]:::course
+    C122["21-122<br/>Integration and Approximation"]:::course
     C127["21-127<br/>Concepts of Mathematics"]:::course
     C241["21-241<br/>Matrices and Linear Transformations"]:::course
     C228["21-228<br/>Discrete Mathematics"]:::course
@@ -145,8 +150,11 @@ flowchart LR
   end
 
   mlCalc --> C120
+  mlCalc --> C122
   mlInt --> C120
+  mlInt --> C122
   mlTrig --> C120
+  mlTrig --> C122
   mlRat --> C127
   mlWF --> C127
   mlLin --> C241
@@ -181,7 +189,8 @@ flowchart LR
   mlCMap --> C322
   mlMeas --> C322
 
-  click C120 "courses/21-120-21-122.md" "21-120 / 21-122"
+  click C120 "courses/21-120.md" "21-120"
+  click C122 "courses/21-122.md" "21-122"
   click C127 "courses/21-127.md" "21-127"
   click C241 "courses/21-241.md" "21-241"
   click C228 "courses/21-228.md" "21-228"

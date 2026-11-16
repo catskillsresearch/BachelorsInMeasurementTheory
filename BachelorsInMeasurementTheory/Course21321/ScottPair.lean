@@ -1,9 +1,9 @@
 module
 
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-public import Mathlib.Algebra.Module.LinearMap.Basic
 public import Mathlib.Algebra.Order.Ring.Defs
-public import Mathlib.Data.Finset.Basic
+public import Mathlib.Algebra.BigOperators.Group.Finset.Defs
+public import Mathlib.Algebra.Module.LinearMap.Defs
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

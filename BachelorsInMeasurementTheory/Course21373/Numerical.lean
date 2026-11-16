@@ -1,10 +1,10 @@
 module
 
 public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-public meta import Mathlib.Data.Finset.Defs
-public meta import Mathlib.Data.Finset.Empty
-public meta import Mathlib.Data.Finset.Insert
-public meta import Mathlib.Data.Finset.Lattice.Basic
+public meta import Mathlib.Data.Finset.Defs -- shake: keep
+public meta import Mathlib.Data.Finset.Empty -- shake: keep
+public meta import Mathlib.Data.Finset.Insert -- shake: keep
+public meta import Mathlib.Data.Finset.Lattice.Basic -- shake: keep
 
 @[expose] public section
 

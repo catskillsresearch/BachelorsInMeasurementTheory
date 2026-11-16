@@ -1,6 +1,7 @@
 module
 
 public import Mathlib.Topology.ContinuousMap.Compact
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

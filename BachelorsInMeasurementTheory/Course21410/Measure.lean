@@ -1,14 +1,16 @@
 module
 
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-public import Mathlib.Algebra.Order.BigOperators.Group.Finset
-public import Mathlib.Data.Fintype.Basic
 public import Mathlib.Basic.Real.Basic
 public import Mathlib.Data.Set.BooleanAlgebra
-public import Mathlib.Data.Set.Disjoint
-public import Mathlib.Order.Disjoint
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
+public import Mathlib.Algebra.BigOperators.Group.Finset.Defs
+import Mathlib.Algebra.Order.BigOperators.Group.Finset
+import Mathlib.Data.Rat.Cast.Order
+import Mathlib.Tactic.Linarith.Frontend
+import Mathlib.Tactic.NormNum.Abs
+import Mathlib.Tactic.NormNum.DivMod
+import Mathlib.Tactic.NormNum.OfScientific
+import Mathlib.Tactic.Ring.RingNF
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

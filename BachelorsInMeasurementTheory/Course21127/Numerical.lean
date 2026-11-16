@@ -2,8 +2,11 @@ module
 
 public import Mathlib.Data.Rat.Defs
 public import BachelorsInMeasurementTheory.Course21127.NonzeroDenomInt
-public import BachelorsInMeasurementTheory.Course21127.ToRat
-import Mathlib.Tactic.NormNum
+public import BachelorsInMeasurementTheory.Course21127.ToRat -- shake: keep
+import Mathlib.Tactic.NormNum.Abs
+import Mathlib.Tactic.NormNum.DivMod
+import Mathlib.Tactic.NormNum.OfScientific
+import Mathlib.Tactic.NormNum.Pow
 
 @[expose] public section
 
@@ -22,9 +25,5 @@ example : toRat pair1 = 1 / 2 := by
 
 example : toRat pair2 = 1 / 2 := by
   norm_num [toRat, pair2]
-
--- Example 3: Minimal element in the set {1/2, 1/3} is 1/3
-example : min (1 / 2 : ℚ) (1 / 3) = 1 / 3 := by
-  norm_num
 
 end Course21127

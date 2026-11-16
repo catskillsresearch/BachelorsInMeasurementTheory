@@ -1,8 +1,9 @@
 module
 
-public import Mathlib.Basic.Real.Basic
-public import Mathlib.Order.BooleanAlgebra.Basic
 public import BachelorsInMeasurementTheory.Course21410.PositiveExtension
+import Mathlib.Data.Finset.Attr
+import Mathlib.Tactic.SetLike
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

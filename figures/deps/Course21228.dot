@@ -20,15 +20,15 @@ digraph Course21228 {
 
   LAlgebraBigOperatorsGroupFinsetBasic -> MCounting;
   LDataFintypeCard -> MCounting;
-  LDataFintypeProd -> MCounting;
   LDataFintypeBasic -> MCounting;
+  LDataFintypeProd -> MCounting;
   MGenericity -> MCounting;
   MValidPair -> MCounting;
   LDataFintypePerm -> MGenericity;
   LDataNatFactorialBasic -> MNumerical;
   MCounting -> MSmallN2;
   MCounting -> MSmallN3;
-  LDataFintypePerm -> MSymmetric;
   LAlgebraBigOperatorsGroupFinsetBasic -> MSymmetric;
+  LDataFintypePerm -> MSymmetric;
   LDataFintypePerm -> MValidPair;
 }

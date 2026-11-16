@@ -22,7 +22,7 @@
 <text text-anchor="middle" x="558" y="-431.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Numerical</text>
 </g>
 <!-- LAlgebraBigOperatorsFin&#45;&gt;MNumerical -->
-<g id="edge13" class="edge">
+<g id="edge12" class="edge">
 <title>LAlgebraBigOperatorsFin&#45;&gt;MNumerical</title>
 <path fill="none" stroke="#334155" d="M410.63,-489.9C416.51,-487.96 422.39,-485.97 428,-484 457.44,-473.66 490.21,-460.94 515.36,-450.92"/>
 <polygon fill="#334155" stroke="#334155" points="516.32,-453.17 521.91,-448.3 514.5,-448.62 516.32,-453.17"/>
@@ -82,7 +82,7 @@
 <text text-anchor="middle" x="121" y="-260.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Basic.Real.Basic</text>
 </g>
 <!-- LBasicRealBasic&#45;&gt;MMeasure -->
-<g id="edge4" class="edge">
+<g id="edge3" class="edge">
 <title>LBasicRealBasic&#45;&gt;MMeasure</title>
 <path fill="none" stroke="#334155" d="M174.53,-263.7C197.3,-266.43 223.04,-273.04 242,-288 268.22,-308.69 252.57,-330.38 274,-356 284.8,-368.92 299.38,-380.26 312.88,-389.17"/>
 <polygon fill="#334155" stroke="#334155" points="311.78,-391.37 318.99,-393.09 314.42,-387.25 311.78,-391.37"/>
@@ -106,7 +106,7 @@
 <text text-anchor="middle" x="121" y="-456.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Fintype.Basic</text>
 </g>
 <!-- LDataFintypeBasic&#45;&gt;MMeasure -->
-<g id="edge9" class="edge">
+<g id="edge7" class="edge">
 <title>LDataFintypeBasic&#45;&gt;MMeasure</title>
 <path fill="none" stroke="#334155" d="M180.67,-447.63C200.2,-443.75 222.06,-439.3 242,-435 265.22,-429.99 291.16,-424 311.8,-419.14"/>
 <polygon fill="#334155" stroke="#334155" points="312.61,-421.46 318.86,-417.47 311.49,-416.69 312.61,-421.46"/>
@@ -136,7 +136,7 @@
 <text text-anchor="middle" x="121" y="-407.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Set.BooleanAlgebra</text>
 </g>
 <!-- LDataSetBooleanAlgebra&#45;&gt;MMeasure -->
-<g id="edge10" class="edge">
+<g id="edge9" class="edge">
 <title>LDataSetBooleanAlgebra&#45;&gt;MMeasure</title>
 <path fill="none" stroke="#334155" d="M198.55,-410C236.64,-410 281,-410 311.82,-410"/>
 <polygon fill="#334155" stroke="#334155" points="311.97,-412.45 318.97,-410 311.97,-407.55 311.97,-412.45"/>
@@ -148,7 +148,7 @@
 <text text-anchor="middle" x="121" y="-358.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Set.Disjoint</text>
 </g>
 <!-- LDataSetDisjoint&#45;&gt;MMeasure -->
-<g id="edge7" class="edge">
+<g id="edge4" class="edge">
 <title>LDataSetDisjoint&#45;&gt;MMeasure</title>
 <path fill="none" stroke="#334155" d="M176.09,-372.11C196.73,-376.39 220.47,-381.36 242,-386 265.18,-390.99 291.12,-396.75 311.76,-401.37"/>
 <polygon fill="#334155" stroke="#334155" points="311.47,-403.82 318.83,-402.96 312.54,-399.04 311.47,-403.82"/>
@@ -160,7 +160,7 @@
 <text text-anchor="middle" x="121" y="-113.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Order.BooleanAlgebra.Basic</text>
 </g>
 <!-- LOrderBooleanAlgebraBasic&#45;&gt;MStoneSpace -->
-<g id="edge25" class="edge">
+<g id="edge22" class="edge">
 <title>LOrderBooleanAlgebraBasic&#45;&gt;MStoneSpace</title>
 <path fill="none" stroke="#334155" d="M206.25,-125.24C238.97,-128.83 275.21,-132.8 303.12,-135.86"/>
 <polygon fill="#334155" stroke="#334155" points="303.16,-138.33 310.39,-136.66 303.7,-133.46 303.16,-138.33"/>
@@ -172,7 +172,7 @@
 <text text-anchor="middle" x="121" y="-64.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Order.BoundedOrder.Basic</text>
 </g>
 <!-- LOrderBoundedOrderBasic&#45;&gt;MStoneSpace -->
-<g id="edge22" class="edge">
+<g id="edge25" class="edge">
 <title>LOrderBoundedOrderBasic&#45;&gt;MStoneSpace</title>
 <path fill="none" stroke="#334155" d="M202.72,-80.42C215.98,-83.4 229.48,-86.91 242,-91 265.22,-98.58 290.02,-109.82 310,-119.72"/>
 <polygon fill="#334155" stroke="#334155" points="308.95,-121.94 316.3,-122.89 311.14,-117.56 308.95,-121.94"/>
@@ -184,7 +184,7 @@
 <text text-anchor="middle" x="121" y="-309.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Order.Disjoint</text>
 </g>
 <!-- LOrderDisjoint&#45;&gt;MMeasure -->
-<g id="edge5" class="edge">
+<g id="edge10" class="edge">
 <title>LOrderDisjoint&#45;&gt;MMeasure</title>
 <path fill="none" stroke="#334155" d="M167.13,-317.16C190.18,-320.84 218.28,-326.98 242,-337 250.25,-340.49 289.56,-367.56 318.39,-387.72"/>
 <polygon fill="#334155" stroke="#334155" points="317.23,-389.9 324.37,-391.91 320.04,-385.88 317.23,-389.9"/>
@@ -196,7 +196,7 @@
 <text text-anchor="middle" x="121" y="-15.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Order.Filter.Ultrafilter.Basic</text>
 </g>
 <!-- LOrderFilterUltrafilterBasic&#45;&gt;MStoneSpace -->
-<g id="edge24" class="edge">
+<g id="edge23" class="edge">
 <title>LOrderFilterUltrafilterBasic&#45;&gt;MStoneSpace</title>
 <path fill="none" stroke="#334155" d="M204.06,-28.19C217.16,-31.56 230.25,-36.04 242,-42 278.17,-60.36 311.19,-94.27 330.95,-117.22"/>
 <polygon fill="#334155" stroke="#334155" points="329.28,-119.05 335.68,-122.81 333.02,-115.88 329.28,-119.05"/>
@@ -208,7 +208,7 @@
 <text text-anchor="middle" x="121" y="-211.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Order.Heyting.Basic</text>
 </g>
 <!-- LOrderHeytingBasic&#45;&gt;MStoneSpace -->
-<g id="edge23" class="edge">
+<g id="edge24" class="edge">
 <title>LOrderHeytingBasic&#45;&gt;MStoneSpace</title>
 <path fill="none" stroke="#334155" d="M184.67,-204.27C203.34,-200.62 223.7,-195.9 242,-190 264.71,-182.68 289,-171.95 308.77,-162.39"/>
 <polygon fill="#334155" stroke="#334155" points="310.09,-164.47 315.3,-159.2 307.93,-160.07 310.09,-164.47"/>
@@ -220,7 +220,7 @@
 <text text-anchor="middle" x="351" y="-456.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.FinCases</text>
 </g>
 <!-- LTacticFinCases&#45;&gt;MNumerical -->
-<g id="edge12" class="edge">
+<g id="edge11" class="edge">
 <title>LTacticFinCases&#45;&gt;MNumerical</title>
 <path fill="none" stroke="#334155" d="M401.1,-453.01C435.68,-448.79 481.51,-443.21 514.52,-439.18"/>
 <polygon fill="#334155" stroke="#334155" points="515.12,-441.58 521.78,-438.3 514.53,-436.71 515.12,-441.58"/>
@@ -232,7 +232,7 @@
 <text text-anchor="middle" x="121" y="-652.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.Linarith</text>
 </g>
 <!-- LTacticLinarith&#45;&gt;MMeasure -->
-<g id="edge8" class="edge">
+<g id="edge5" class="edge">
 <title>LTacticLinarith&#45;&gt;MMeasure</title>
 <path fill="none" stroke="#334155" d="M167.54,-657.69C192.88,-656.62 223.04,-650.64 242,-631 303.29,-567.49 216.64,-502.08 274,-435 283.45,-423.94 297.9,-417.75 311.66,-414.29"/>
 <polygon fill="#334155" stroke="#334155" points="312.46,-416.62 318.76,-412.72 311.4,-411.84 312.46,-416.62"/>
@@ -244,7 +244,7 @@
 <text text-anchor="middle" x="351" y="-328.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.NormNum</text>
 </g>
 <!-- LTacticNormNum&#45;&gt;MNumerical -->
-<g id="edge11" class="edge">
+<g id="edge13" class="edge">
 <title>LTacticNormNum&#45;&gt;MNumerical</title>
 <path fill="none" stroke="#334155" d="M377.41,-349.23C392.22,-359.88 411.22,-373.63 428,-386 442.31,-396.54 443.94,-402.38 460,-410 477.01,-418.07 497.02,-423.61 514.44,-427.31"/>
 <polygon fill="#334155" stroke="#334155" points="514.38,-429.8 521.73,-428.79 515.36,-425 514.38,-429.8"/>
@@ -262,7 +262,7 @@
 <text text-anchor="middle" x="121" y="-603.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.Ring</text>
 </g>
 <!-- LTacticRing&#45;&gt;MMeasure -->
-<g id="edge3" class="edge">
+<g id="edge8" class="edge">
 <title>LTacticRing&#45;&gt;MMeasure</title>
 <path fill="none" stroke="#334155" d="M159.12,-608.55C185.68,-608.26 220.41,-603.23 242,-582 289.68,-535.12 229.23,-484.66 274,-435 283.66,-424.28 298,-418.15 311.62,-414.64"/>
 <polygon fill="#334155" stroke="#334155" points="312.38,-416.98 318.66,-413.03 311.29,-412.2 312.38,-416.98"/>

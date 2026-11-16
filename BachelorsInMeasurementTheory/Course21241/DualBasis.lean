@@ -1,12 +1,10 @@
 module
 
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-public import Mathlib.Algebra.Module.LinearMap.Basic
-public import Mathlib.Algebra.Module.Submodule.LinearMap
-public import Mathlib.Basic.Real.Basic
-public import Mathlib.GroupTheory.GroupAction.Ring
 public import BachelorsInMeasurementTheory.Course21241.PrimalBasis
 import Mathlib.Tactic.FinCases
+public import Mathlib.Algebra.Algebra.Basic
+import Mathlib.Tactic.NormNum.Ineq
+import Mathlib.Tactic.NormNum.Pow
 
 @[expose] public section
 

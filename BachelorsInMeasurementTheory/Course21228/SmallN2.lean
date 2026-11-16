@@ -1,10 +1,10 @@
 module
 
-public import Mathlib.Data.Fintype.Basic
 public import Mathlib.Data.Fintype.Perm
-public import Mathlib.Data.Fintype.Card
 public import Mathlib.Data.Fintype.Prod
-public import BachelorsInMeasurementTheory.Course21228.Counting
+public import BachelorsInMeasurementTheory.Course21228.ValidPair
+import BachelorsInMeasurementTheory.Course21228.Counting
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

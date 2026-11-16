@@ -1,10 +1,8 @@
 module
 
 public import Mathlib.Analysis.Normed.Module.Basic
-public import Mathlib.Basic.Real.Basic
 public import BachelorsInMeasurementTheory.Course21640.Sublinear
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

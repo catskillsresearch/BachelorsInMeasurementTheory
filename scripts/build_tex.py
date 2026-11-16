@@ -38,7 +38,8 @@ COMPANY = "Catskills Research Company"
 
 # Mermaid course node id -> pandoc hypertarget for that course subsection.
 COURSE_ANCHORS = {
-    "C120": "differential-and-integral-calculus-integration-and-approximation",
+    "C120": "differential-and-integral-calculus",
+    "C122": "integration-and-approximation",
     "C127": "concepts-of-mathematics",
     "C241": "matrices-and-linear-transformations",
     "C228": "discrete-mathematics",

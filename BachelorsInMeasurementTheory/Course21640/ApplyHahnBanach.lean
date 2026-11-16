@@ -1,11 +1,9 @@
 module
 
-public import Mathlib.Algebra.Module.LinearMap.Basic
 public import Mathlib.Analysis.Normed.Module.Basic
-public import Mathlib.Basic.Real.Basic
 public import BachelorsInMeasurementTheory.Course21640.PreciseStatement
-public import BachelorsInMeasurementTheory.Course21640.NormSublinear
-public import BachelorsInMeasurementTheory.Course21640.Dominance
+import BachelorsInMeasurementTheory.Course21640.NormSublinear
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

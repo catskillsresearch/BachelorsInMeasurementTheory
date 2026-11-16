@@ -31,20 +31,20 @@ digraph Course21292 {
   LAlgebraBigOperatorsGroupFinsetBasic -> MLinearProgram;
   LAnalysisInnerProductSpaceBasic -> MLinearProgram;
   LDataRatDefs -> MNumerical;
-  LAlgebraBigOperatorsGroupFinsetBasic -> MNumerical;
-  LTacticNormNum -> MNumerical;
-  LTacticFinCases -> MNumerical;
   LAlgebraBigOperatorsFin -> MNumerical;
+  LAlgebraBigOperatorsGroupFinsetBasic -> MNumerical;
+  LTacticFinCases -> MNumerical;
+  LTacticNormNum -> MNumerical;
   MWeakDuality -> MScott11;
   MLinearProgram -> MScottInstance;
-  LTacticNormNum -> MSimplex;
   LTacticFinCases -> MSimplex;
+  LTacticNormNum -> MSimplex;
   MDualFormulation -> MSimplex;
   MWeakDuality -> MStrongDuality;
-  LTacticRing -> MWeakDuality;
-  LAlgebraOrderBigOperatorsGroupFinset -> MWeakDuality;
-  LTacticSimpRw -> MWeakDuality;
-  LAlgebraBigOperatorsRingFinset -> MWeakDuality;
   LTacticLinarith -> MWeakDuality;
+  LAlgebraOrderBigOperatorsGroupFinset -> MWeakDuality;
+  LAlgebraBigOperatorsRingFinset -> MWeakDuality;
+  LTacticRing -> MWeakDuality;
+  LTacticSimpRw -> MWeakDuality;
   MLinearProgram -> MWeakDuality;
 }

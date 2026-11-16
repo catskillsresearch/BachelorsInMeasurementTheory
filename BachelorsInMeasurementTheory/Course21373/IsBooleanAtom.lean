@@ -1,7 +1,8 @@
 module
 
-public import Mathlib.Order.Atoms
 public import Mathlib.Order.BooleanAlgebra.Basic
+import Mathlib.Tactic.SetLike
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

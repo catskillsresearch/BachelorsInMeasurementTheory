@@ -1,12 +1,13 @@
 module
 
-public import Mathlib.Algebra.Module.Basic
-public import Mathlib.Algebra.Module.LinearMap.Basic
-public import Mathlib.Analysis.Normed.Module.Basic
-public import Mathlib.Basic.Real.Basic
 public import BachelorsInMeasurementTheory.Course21640.Sublinear
-import Mathlib.Tactic.Abel
-import Mathlib.Tactic.Linarith
+public import Mathlib.Algebra.Module.LinearMap.Defs
+public import Mathlib.Algebra.Module.Submodule.Defs
+import Mathlib.Analysis.Normed.Group.Basic
+import Mathlib.Data.EReal.Operations
+import Mathlib.Tactic.TypeStar
+import Mathlib.Topology.Algebra.InfiniteSum.Order
+import Mathlib.Topology.MetricSpace.Bounded
 
 @[expose] public section
 

@@ -1,6 +1,7 @@
 module
 
-public import BachelorsInMeasurementTheory.Course21292.ScottInstance
-public import BachelorsInMeasurementTheory.Course21292.DualFormulation
-public import BachelorsInMeasurementTheory.Course21292.Simplex
+import Mathlib.Algebra.Order.Algebra
+import Mathlib.Algebra.Order.BigOperators.Expect
+import Mathlib.Analysis.Complex.Order
+import Mathlib.Tactic.ContinuousFunctionalCalculus
 

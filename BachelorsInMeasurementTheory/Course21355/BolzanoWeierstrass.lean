@@ -1,15 +1,10 @@
 module
 
-public import Mathlib.Algebra.Order.Group.Abs
-public import Mathlib.Basic.Real.Basic
-public import Mathlib.Order.Filter.AtTopBot.Basic
-public import Mathlib.Order.Interval.Set.Basic
-public import Mathlib.Topology.Defs.Filter
-public import Mathlib.Topology.Order.Compact
-public import Mathlib.Topology.Sequences
-public import Mathlib.Topology.UniformSpace.Real
-public import BachelorsInMeasurementTheory.Course21355.MonotoneConvergence
 public import BachelorsInMeasurementTheory.Course21355.PeakPoints
+public import Mathlib.Topology.MetricSpace.Pseudo.Defs
+import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
+import Mathlib.Topology.Order.Compact
+import Mathlib.Topology.Sequences
 
 @[expose] public section
 

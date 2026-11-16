@@ -1,7 +1,9 @@
 module
 
-public import Mathlib.Order.Zorn
-public import BachelorsInMeasurementTheory.Course21329.UltrafilterExtension
+public import BachelorsInMeasurementTheory.Course21329.Filter
+import BachelorsInMeasurementTheory.Course21329.UltrafilterExtension
+import Mathlib.Data.Finset.Attr
+import Mathlib.Tactic.Lemma
 
 @[expose] public section
 

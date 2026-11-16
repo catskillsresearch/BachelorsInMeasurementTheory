@@ -1,13 +1,10 @@
 module
 
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-public import Mathlib.Algebra.BigOperators.Ring.Finset
-public import Mathlib.Algebra.Order.BigOperators.Group.Finset
-public import Mathlib.Data.Rat.Defs
 public import BachelorsInMeasurementTheory.Course21292.LinearProgram
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.SimpRw
+import Mathlib.Algebra.Order.Algebra
+import Mathlib.Algebra.Order.BigOperators.Expect
+import Mathlib.Analysis.Complex.Order
+import Mathlib.Tactic.ContinuousFunctionalCalculus
 
 @[expose] public section
 

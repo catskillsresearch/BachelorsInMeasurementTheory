@@ -1,13 +1,8 @@
 module
 
-public import Mathlib.Algebra.Order.Archimedean.Real.Basic
-public import Mathlib.Basic.Real.Basic
-public import Mathlib.Order.ConditionallyCompleteLattice.Basic
-public import Mathlib.Order.Filter.AtTopBot.Basic
-public import Mathlib.Topology.Defs.Filter
-public import Mathlib.Topology.Order.MonotoneConvergence
-public import Mathlib.Topology.UniformSpace.Real
-public import BachelorsInMeasurementTheory.Course21355.Completeness
+public import Mathlib.Topology.MetricSpace.Pseudo.Defs
+import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
+import Mathlib.Topology.Order.MonotoneConvergence
 
 @[expose] public section
 

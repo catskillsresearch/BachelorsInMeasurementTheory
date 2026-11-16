@@ -1,10 +1,14 @@
 module
 
-public import Mathlib.Data.Int.Basic
-public import Mathlib.Data.Rat.Defs
-public import Mathlib.Order.Setoid.Basic
 public import BachelorsInMeasurementTheory.Course21127.NonzeroDenomInt
-import Mathlib.Tactic.Linarith
+public import Mathlib.Data.Rat.Init
+public import Mathlib.Logic.Equiv.Defs
+import Mathlib.Data.Rat.Cast.Order
+import Mathlib.Tactic.Lemma
+import Mathlib.Tactic.Linarith.Frontend
+import Mathlib.Tactic.NormNum.Abs
+import Mathlib.Tactic.NormNum.DivMod
+import Mathlib.Tactic.NormNum.OfScientific
 
 @[expose] public section
 

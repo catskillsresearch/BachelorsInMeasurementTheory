@@ -1,8 +1,8 @@
 module
 
-public import Mathlib.Data.Set.Basic
+public import Mathlib.Data.Set.Basic -- shake: keep
 public import Mathlib.Order.BooleanAlgebra.Basic
-public import Mathlib.Topology.Basic
+public import Mathlib.Topology.Basic -- shake: keep
 
 @[expose] public section
 

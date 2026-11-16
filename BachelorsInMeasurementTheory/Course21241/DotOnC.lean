@@ -1,11 +1,7 @@
 module
 
-public import Mathlib.Algebra.BigOperators.Fin
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-public import Mathlib.Basic.Real.Basic
 public import BachelorsInMeasurementTheory.Course21241.SeparatingU
 public import BachelorsInMeasurementTheory.Course21241.Separation
-import Mathlib.Tactic.Ring
 
 @[expose] public section
 

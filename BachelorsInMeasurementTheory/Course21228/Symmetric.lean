@@ -1,7 +1,9 @@
 module
 
-public import Mathlib.Data.Fintype.Perm
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Algebra.BigOperators.Group.Finset.Defs
+public import Mathlib.Algebra.Group.End
+public import Mathlib.Data.Fintype.Basic
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

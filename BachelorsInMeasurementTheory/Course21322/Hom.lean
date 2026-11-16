@@ -1,7 +1,7 @@
 module
 
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-public import Mathlib.Data.Fintype.Basic
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic -- shake: keep
+public import Mathlib.Data.Fintype.Basic -- shake: keep
 
 @[expose] public section
 

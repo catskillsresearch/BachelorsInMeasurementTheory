@@ -1,8 +1,7 @@
 module
 
-public import Mathlib.Data.Rat.Defs
-public import BachelorsInMeasurementTheory.Course21120.TaylorEstimate
 public import BachelorsInMeasurementTheory.Course21120.TaylorError
+import BachelorsInMeasurementTheory.Course21120.TaylorEstimate
 
 @[expose] public section
 

@@ -1,5 +1,4 @@
 module
 
-public import BachelorsInMeasurementTheory.Course21355.TailExtremes
-public import BachelorsInMeasurementTheory.Course21355.LimsupLiminfExist
+import Mathlib.Topology.MetricSpace.Pseudo.Defs
 

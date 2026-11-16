@@ -1,15 +1,8 @@
 module
 
-public import Mathlib.Basic.Real.Basic
-public import Mathlib.Order.Filter.AtTopBot.Basic
-public import Mathlib.Order.Lattice.Nat
-public import Mathlib.Topology.Defs.Filter
-public import Mathlib.Topology.MetricSpace.Basic
-public import Mathlib.Topology.Order.MonotoneConvergence
 public import BachelorsInMeasurementTheory.Course21355.AltSeqValues
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.NormNum
-import Mathlib.Tactic.Ring
+public import Mathlib.Topology.MetricSpace.Pseudo.Defs
+import Mathlib.Order.Lattice.Nat
 
 @[expose] public section
 

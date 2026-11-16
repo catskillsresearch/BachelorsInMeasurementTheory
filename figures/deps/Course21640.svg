@@ -22,7 +22,7 @@
 <text text-anchor="middle" x="316" y="-234.61" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Sublinear</text>
 </g>
 <!-- LAlgebraModuleBasic&#45;&gt;MSublinear -->
-<g id="edge29" class="edge">
+<g id="edge30" class="edge">
 <title>LAlgebraModuleBasic&#45;&gt;MSublinear</title>
 <path fill="none" stroke="#334155" d="M160.61,-219.95C197.83,-224.16 242.98,-229.26 274.81,-232.86"/>
 <polygon fill="#334155" stroke="#334155" points="274.57,-235.3 281.8,-233.65 275.12,-230.43 274.57,-235.3"/>
@@ -52,7 +52,7 @@
 <text text-anchor="middle" x="503" y="-234.61" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Positivity</text>
 </g>
 <!-- LAlgebraModuleLinearMapBasic&#45;&gt;MPositivity -->
-<g id="edge15" class="edge">
+<g id="edge16" class="edge">
 <title>LAlgebraModuleLinearMapBasic&#45;&gt;MPositivity</title>
 <path fill="none" stroke="#334155" d="M390.95,-268.39C398.74,-266.41 406.54,-264.39 414,-262.41 429.97,-258.17 447.5,-253.24 462.68,-248.89"/>
 <polygon fill="#334155" stroke="#334155" points="463.43,-251.23 469.48,-246.94 462.07,-246.52 463.43,-251.23"/>
@@ -88,7 +88,7 @@
 <text text-anchor="middle" x="93" y="-258.61" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Analysis.Normed.Module.Basic</text>
 </g>
 <!-- LAnalysisNormedModuleBasic&#45;&gt;MSublinear -->
-<g id="edge30" class="edge">
+<g id="edge28" class="edge">
 <title>LAnalysisNormedModuleBasic&#45;&gt;MSublinear</title>
 <path fill="none" stroke="#334155" d="M186.12,-251.41C217.06,-248.05 249.98,-244.47 274.8,-241.78"/>
 <polygon fill="#334155" stroke="#334155" points="275.21,-244.2 281.9,-241.01 274.68,-239.33 275.21,-244.2"/>
@@ -106,13 +106,13 @@
 <text text-anchor="middle" x="503" y="-63.61" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Numerical</text>
 </g>
 <!-- LBasicRealBasic&#45;&gt;MNumerical -->
-<g id="edge9" class="edge">
+<g id="edge10" class="edge">
 <title>LBasicRealBasic&#45;&gt;MNumerical</title>
 <path fill="none" stroke="#334155" d="M118.58,-65.33C142.56,-48.89 180.76,-25.83 218,-16.41 302.45,4.95 329.78,5.84 414,-16.41 434.7,-21.88 455.62,-33.47 471.88,-44.11"/>
 <polygon fill="#334155" stroke="#334155" points="470.91,-46.41 478.09,-48.28 473.64,-42.35 470.91,-46.41"/>
 </g>
 <!-- LBasicRealBasic&#45;&gt;MSublinear -->
-<g id="edge28" class="edge">
+<g id="edge29" class="edge">
 <title>LBasicRealBasic&#45;&gt;MSublinear</title>
 <path fill="none" stroke="#334155" d="M109.15,-101.66C136.19,-133.79 192.3,-198.5 218,-213.41 235.22,-223.4 256.5,-229.26 274.73,-232.68"/>
 <polygon fill="#334155" stroke="#334155" points="274.5,-235.13 281.81,-233.92 275.34,-230.3 274.5,-235.13"/>
@@ -124,7 +124,7 @@
 <text text-anchor="middle" x="316" y="-185.61" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.Abel</text>
 </g>
 <!-- LTacticAbel&#45;&gt;MRoleOfSublinear -->
-<g id="edge20" class="edge">
+<g id="edge22" class="edge">
 <title>LTacticAbel&#45;&gt;MRoleOfSublinear</title>
 <path fill="none" stroke="#334155" d="M354.44,-188.41C380.04,-188.41 414.48,-188.41 443.65,-188.41"/>
 <polygon fill="#334155" stroke="#334155" points="443.95,-190.86 450.95,-188.41 443.95,-185.96 443.95,-190.86"/>
@@ -142,7 +142,7 @@
 <text text-anchor="middle" x="503" y="-136.61" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">NormSublinear</text>
 </g>
 <!-- LTacticLinarith&#45;&gt;MNormSublinear -->
-<g id="edge7" class="edge">
+<g id="edge6" class="edge">
 <title>LTacticLinarith&#45;&gt;MNormSublinear</title>
 <path fill="none" stroke="#334155" d="M362.73,-139.41C388.17,-139.41 420.01,-139.41 446.83,-139.41"/>
 <polygon fill="#334155" stroke="#334155" points="446.89,-141.86 453.89,-139.41 446.89,-136.96 446.89,-141.86"/>
@@ -154,13 +154,13 @@
 <polygon fill="#334155" stroke="#334155" points="468.33,-90.16 473.15,-84.51 465.86,-85.93 468.33,-90.16"/>
 </g>
 <!-- LTacticLinarith&#45;&gt;MPositivity -->
-<g id="edge16" class="edge">
+<g id="edge15" class="edge">
 <title>LTacticLinarith&#45;&gt;MPositivity</title>
 <path fill="none" stroke="#334155" d="M362.94,-144.13C380.18,-147.65 399.16,-153.77 414,-164.41 435.14,-179.57 426.08,-196.68 446,-213.41 451,-217.61 456.84,-221.17 462.82,-224.17"/>
 <polygon fill="#334155" stroke="#334155" points="461.96,-226.48 469.35,-227.21 464.03,-222.03 461.96,-226.48"/>
 </g>
 <!-- LTacticLinarith&#45;&gt;MRoleOfSublinear -->
-<g id="edge22" class="edge">
+<g id="edge20" class="edge">
 <title>LTacticLinarith&#45;&gt;MRoleOfSublinear</title>
 <path fill="none" stroke="#334155" d="M362.92,-151.11C379.08,-155.26 397.36,-160 414,-164.41 423.7,-166.98 433.99,-169.75 443.99,-172.46"/>
 <polygon fill="#334155" stroke="#334155" points="443.45,-174.86 450.85,-174.33 444.73,-170.13 443.45,-174.86"/>
@@ -184,13 +184,13 @@
 <text text-anchor="middle" x="316" y="-87.61" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.Ring</text>
 </g>
 <!-- LTacticRing&#45;&gt;MNormSublinear -->
-<g id="edge6" class="edge">
+<g id="edge7" class="edge">
 <title>LTacticRing&#45;&gt;MNormSublinear</title>
 <path fill="none" stroke="#334155" d="M354.39,-99.34C372.44,-103.74 394.38,-109.2 414,-114.41 424.58,-117.22 435.84,-120.33 446.64,-123.37"/>
 <polygon fill="#334155" stroke="#334155" points="446.27,-125.81 453.67,-125.36 447.6,-121.1 446.27,-125.81"/>
 </g>
 <!-- LTacticRing&#45;&gt;MNumerical -->
-<g id="edge10" class="edge">
+<g id="edge9" class="edge">
 <title>LTacticRing&#45;&gt;MNumerical</title>
 <path fill="none" stroke="#334155" d="M354.44,-85.55C384.96,-81.59 428.07,-76 459.81,-71.88"/>
 <polygon fill="#334155" stroke="#334155" points="460.19,-74.31 466.81,-70.98 459.55,-69.45 460.19,-74.31"/>
@@ -220,7 +220,7 @@
 <text text-anchor="middle" x="948.5" y="-305.61" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Topology.ContinuousMap.Algebra</text>
 </g>
 <!-- LTopologyContinuousMapAlgebra&#45;&gt;MScott41 -->
-<g id="edge24" class="edge">
+<g id="edge25" class="edge">
 <title>LTopologyContinuousMapAlgebra&#45;&gt;MScott41</title>
 <path fill="none" stroke="#334155" d="M1047.32,-292.93C1055.84,-291.58 1064.05,-290.29 1071.52,-289.1"/>
 <polygon fill="#334155" stroke="#334155" points="1072.2,-291.48 1078.74,-287.96 1071.44,-286.64 1072.2,-291.48"/>
@@ -232,7 +232,7 @@
 <text text-anchor="middle" x="948.5" y="-256.61" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Topology.ContinuousMap.Basic</text>
 </g>
 <!-- LTopologyContinuousMapBasic&#45;&gt;MScott41 -->
-<g id="edge25" class="edge">
+<g id="edge24" class="edge">
 <title>LTopologyContinuousMapBasic&#45;&gt;MScott41</title>
 <path fill="none" stroke="#334155" d="M1041.41,-273.37C1052.12,-275 1062.51,-276.58 1071.76,-277.98"/>
 <polygon fill="#334155" stroke="#334155" points="1071.62,-280.44 1078.91,-279.07 1072.36,-275.59 1071.62,-280.44"/>
@@ -250,7 +250,7 @@
 <text text-anchor="middle" x="948.5" y="-207.61" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">PositiveExtension</text>
 </g>
 <!-- MApplyHahnBanach&#45;&gt;MPositiveExtension -->
-<g id="edge13" class="edge">
+<g id="edge14" class="edge">
 <title>MApplyHahnBanach&#45;&gt;MPositiveExtension</title>
 <path fill="none" stroke="#334155" d="M818.22,-197.24C839.29,-199.39 863.26,-201.83 884.79,-204.02"/>
 <polygon fill="#334155" stroke="#334155" points="884.77,-206.48 891.98,-204.75 885.27,-201.61 884.77,-206.48"/>
@@ -280,7 +280,7 @@
 <polygon fill="#334155" stroke="#334155" points="1082.16,-262.6 1089.04,-265.37 1085.39,-258.92 1082.16,-262.6"/>
 </g>
 <!-- MPositivity&#45;&gt;MPositiveExtension -->
-<g id="edge14" class="edge">
+<g id="edge13" class="edge">
 <title>MPositivity&#45;&gt;MPositiveExtension</title>
 <path fill="none" stroke="#334155" d="M536.61,-235.43C609.99,-230.96 789.13,-220.05 884.83,-214.23"/>
 <polygon fill="#334155" stroke="#334155" points="885.01,-216.67 891.85,-213.8 884.71,-211.78 885.01,-216.67"/>

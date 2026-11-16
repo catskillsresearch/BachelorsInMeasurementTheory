@@ -1,11 +1,9 @@
 module
 
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-public import Mathlib.Algebra.BigOperators.Ring.Finset
-public import Mathlib.Algebra.Order.Ring.Rat
-public import Mathlib.Data.Nat.Cast.Order.Ring
-public import BachelorsInMeasurementTheory.Course21321.ScottPair
 public import BachelorsInMeasurementTheory.Course21321.Theorem12
+import Mathlib.Algebra.BigOperators.Ring.Finset
+import Mathlib.Data.Nat.Cast.Order.Ring
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

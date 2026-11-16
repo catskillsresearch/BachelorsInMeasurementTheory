@@ -1,12 +1,10 @@
 module
 
-public import Mathlib.Data.Fintype.Basic
 public import Mathlib.Data.Fintype.Perm
-public import Mathlib.Data.Fintype.Card
 public import Mathlib.Data.Fintype.Prod
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
 public import BachelorsInMeasurementTheory.Course21228.ValidPair
 public import BachelorsInMeasurementTheory.Course21228.Genericity
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

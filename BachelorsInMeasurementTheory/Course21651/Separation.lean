@@ -1,9 +1,14 @@
 module
 
-public import Mathlib.Order.BooleanAlgebra.Basic
 public import Mathlib.Topology.Connected.TotallyDisconnected
-public import Mathlib.Topology.ContinuousMap.Compact
 public import BachelorsInMeasurementTheory.Course21651.BooleanHom
+import Mathlib.Algebra.Order.Algebra
+import Mathlib.Analysis.Normed.Group.Basic
+import Mathlib.Analysis.Real.Sqrt
+import Mathlib.Data.EReal.Inv
+import Mathlib.Tactic.ContinuousFunctionalCalculus
+import Mathlib.Tactic.TypeStar
+import Mathlib.Topology.NoetherianSpace
 
 @[expose] public section
 

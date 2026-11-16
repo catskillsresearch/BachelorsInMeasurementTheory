@@ -1,16 +1,20 @@
 module
 
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-public import Mathlib.Algebra.BigOperators.Pi
 public import Mathlib.Data.Fin.VecNotation
-public import Mathlib.Data.Fintype.Fin
-public import Mathlib.Data.Finset.Basic
 public import Mathlib.Basic.Real.Basic
 public import BachelorsInMeasurementTheory.Course21321.ScottPair
-public import BachelorsInMeasurementTheory.Course21321.Theorem11
 import Mathlib.Tactic.FinCases
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.NormNum
+public import Mathlib.Algebra.Module.Pi
+public import Mathlib.Data.Fintype.Basic
+import BachelorsInMeasurementTheory.Course21321.Theorem11
+import Mathlib.Algebra.BigOperators.Pi
+import Mathlib.Data.Rat.Cast.Order
+import Mathlib.Tactic.Lemma
+import Mathlib.Tactic.NormNum.Abs
+import Mathlib.Tactic.NormNum.DivMod
+import Mathlib.Tactic.NormNum.OfScientific
+import Mathlib.Tactic.NormNum.Pow
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

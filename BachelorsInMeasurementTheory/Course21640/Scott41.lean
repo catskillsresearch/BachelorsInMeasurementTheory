@@ -1,11 +1,10 @@
 module
 
-public import Mathlib.Algebra.Module.LinearMap.Basic
-public import Mathlib.Basic.Real.Basic
-public import Mathlib.Topology.Basic
 public import Mathlib.Topology.ContinuousMap.Algebra
-public import Mathlib.Topology.ContinuousMap.Basic
-public import BachelorsInMeasurementTheory.Course21640.PositiveExtension
+public import Mathlib.Topology.Algebra.Ring.Real
+import Mathlib.Analysis.Normed.Group.Basic
+import Mathlib.Tactic.TypeStar
+import Mathlib.Topology.Algebra.InfiniteSum.Order
 
 @[expose] public section
 

@@ -1,8 +1,8 @@
 module
 
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-public import Mathlib.Data.Fintype.Basic
 public import BachelorsInMeasurementTheory.Course21322.Hom
+import Mathlib.Data.Finset.Attr
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

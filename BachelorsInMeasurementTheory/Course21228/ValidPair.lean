@@ -1,6 +1,9 @@
 module
 
-public import Mathlib.Data.Fintype.Perm
+public import Mathlib.Algebra.Group.End
+import Mathlib.Data.Finset.Attr
+import Mathlib.Tactic.SetLike
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

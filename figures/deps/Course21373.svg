@@ -46,7 +46,7 @@
 <text text-anchor="middle" x="322.5" y="-162.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Finset.Defs</text>
 </g>
 <!-- LDataFinsetDefs&#45;&gt;MNumerical -->
-<g id="edge9" class="edge">
+<g id="edge10" class="edge">
 <title>LDataFinsetDefs&#45;&gt;MNumerical</title>
 <path fill="none" stroke="#334155" d="M376.22,-161.99C411.69,-159.96 457.84,-157.32 490.96,-155.43"/>
 <polygon fill="#334155" stroke="#334155" points="491.4,-157.86 498.24,-155.01 491.12,-152.97 491.4,-157.86"/>
@@ -58,7 +58,7 @@
 <text text-anchor="middle" x="322.5" y="-113.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Finset.Empty</text>
 </g>
 <!-- LDataFinsetEmpty&#45;&gt;MNumerical -->
-<g id="edge10" class="edge">
+<g id="edge11" class="edge">
 <title>LDataFinsetEmpty&#45;&gt;MNumerical</title>
 <path fill="none" stroke="#334155" d="M381.72,-126.26C416.48,-132.38 459.83,-140.02 491.29,-145.56"/>
 <polygon fill="#334155" stroke="#334155" points="490.9,-147.98 498.22,-146.78 491.75,-143.16 490.9,-147.98"/>
@@ -82,7 +82,7 @@
 <text text-anchor="middle" x="322.5" y="-15.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Finset.Lattice.Basic</text>
 </g>
 <!-- LDataFinsetLatticeBasic&#45;&gt;MNumerical -->
-<g id="edge11" class="edge">
+<g id="edge9" class="edge">
 <title>LDataFinsetLatticeBasic&#45;&gt;MNumerical</title>
 <path fill="none" stroke="#334155" d="M399.2,-21.35C415.06,-25.12 430.69,-31.49 443,-42 474.02,-68.47 446.86,-98.48 475,-128 479.8,-133.04 485.78,-137.11 492.07,-140.38"/>
 <polygon fill="#334155" stroke="#334155" points="491.06,-142.61 498.43,-143.4 493.16,-138.19 491.06,-142.61"/>
@@ -130,7 +130,7 @@
 <text text-anchor="middle" x="322.5" y="-260.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">IsBooleanAtom</text>
 </g>
 <!-- LOrderAtoms&#45;&gt;MIsBooleanAtom -->
-<g id="edge6" class="edge">
+<g id="edge5" class="edge">
 <title>LOrderAtoms&#45;&gt;MIsBooleanAtom</title>
 <path fill="none" stroke="#334155" d="M128.1,-282.71C166.5,-278.8 223.5,-272.99 265.68,-268.69"/>
 <polygon fill="#334155" stroke="#334155" points="266.13,-271.11 272.85,-267.96 265.64,-266.23 266.13,-271.11"/>
@@ -142,7 +142,7 @@
 <text text-anchor="middle" x="85" y="-235.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Order.BooleanAlgebra.Basic</text>
 </g>
 <!-- LOrderBooleanAlgebraBasic&#45;&gt;MIsBooleanAtom -->
-<g id="edge5" class="edge">
+<g id="edge6" class="edge">
 <title>LOrderBooleanAlgebraBasic&#45;&gt;MIsBooleanAtom</title>
 <path fill="none" stroke="#334155" d="M170.02,-246.92C201.81,-250.29 237.17,-254.05 265.73,-257.08"/>
 <polygon fill="#334155" stroke="#334155" points="265.62,-259.53 272.84,-257.83 266.14,-254.66 265.62,-259.53"/>

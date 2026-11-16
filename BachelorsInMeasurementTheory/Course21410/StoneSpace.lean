@@ -1,10 +1,10 @@
 module
 
-public import Mathlib.Data.Set.Basic
 public import Mathlib.Order.BooleanAlgebra.Basic
-public import Mathlib.Order.BoundedOrder.Basic
-public import Mathlib.Order.Filter.Ultrafilter.Basic
-public import Mathlib.Order.Heyting.Basic
+import Mathlib.Data.Finset.Attr
+import Mathlib.Data.Set.Basic
+import Mathlib.Tactic.SetLike
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

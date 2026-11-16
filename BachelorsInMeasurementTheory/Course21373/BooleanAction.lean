@@ -1,8 +1,9 @@
 module
 
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-public import Mathlib.Order.BooleanAlgebra.Basic
-public import BachelorsInMeasurementTheory.Course21373.AtomJoin
+public import BachelorsInMeasurementTheory.Course21373.IsBooleanAtom
+public import Mathlib.Data.Finset.Lattice.Fold
+import BachelorsInMeasurementTheory.Course21373.AtomJoin
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

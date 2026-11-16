@@ -1,9 +1,9 @@
 module
 
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-public import Mathlib.Data.Fintype.Basic
 public import BachelorsInMeasurementTheory.Course21322.Hom
-import Mathlib.Tactic.ByContra
+import Mathlib.Data.Finset.Insert
+import Mathlib.Order.SetNotation
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

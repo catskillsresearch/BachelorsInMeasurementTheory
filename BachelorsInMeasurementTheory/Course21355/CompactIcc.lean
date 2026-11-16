@@ -1,9 +1,8 @@
 module
 
-public import Mathlib.Basic.Real.Basic
-public import Mathlib.Order.Interval.Set.Basic
-public import Mathlib.Topology.Order.Compact
-public import Mathlib.Topology.UniformSpace.Real
+public import Mathlib.Topology.MetricSpace.Pseudo.Defs
+import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
+import Mathlib.Topology.Order.Compact
 
 @[expose] public section
 

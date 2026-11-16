@@ -1,11 +1,15 @@
 module
 
-public import Mathlib.Algebra.BigOperators.Fin
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-public import Mathlib.Basic.Real.Basic
 public import BachelorsInMeasurementTheory.Course21410.Measure
 import Mathlib.Tactic.FinCases
-import Mathlib.Tactic.NormNum
+public import Mathlib.Data.Fintype.Basic
+import Mathlib.Algebra.BigOperators.Fin
+import Mathlib.Data.Rat.Cast.Order
+import Mathlib.Tactic.Lemma
+import Mathlib.Tactic.NormNum.Abs
+import Mathlib.Tactic.NormNum.DivMod
+import Mathlib.Tactic.NormNum.OfScientific
+import Mathlib.Tactic.NormNum.Pow
 
 @[expose] public section
 

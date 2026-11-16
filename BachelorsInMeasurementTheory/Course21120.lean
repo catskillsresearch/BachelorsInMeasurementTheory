@@ -7,4 +7,6 @@ public import BachelorsInMeasurementTheory.Course21120.TaylorExpansion
 public import BachelorsInMeasurementTheory.Course21120.TaylorEstimate
 public import BachelorsInMeasurementTheory.Course21120.TaylorError
 public import BachelorsInMeasurementTheory.Course21120.Summary
+import Mathlib.MeasureTheory.Covering.Besicovitch
+import Mathlib.Tactic.Positivity.Finset
 

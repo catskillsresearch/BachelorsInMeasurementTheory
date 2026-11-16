@@ -16,7 +16,17 @@ ROOT = Path(__file__).resolve().parent.parent
 DEPS_DIR = ROOT / "figures" / "deps"
 
 COURSE_LEANS: list[tuple[str, str, str, list[str]]] = [
-    ("21-120-21-122.md", "21-120 / 21-122", "Course21120", ["BachelorsInMeasurementTheory/Course21120.lean"]),
+    ("21-120.md", "21-120", "Course21120", ["BachelorsInMeasurementTheory/Course21120/FTC.lean"]),
+    ("21-122.md", "21-122", "Course21122", [
+        # FTC is still under Course21120; include it because TailBound imports it.
+        "BachelorsInMeasurementTheory/Course21120/FTC.lean",
+        "BachelorsInMeasurementTheory/Course21120/Existence.lean",
+        "BachelorsInMeasurementTheory/Course21120/TailBound.lean",
+        "BachelorsInMeasurementTheory/Course21120/TaylorExpansion.lean",
+        "BachelorsInMeasurementTheory/Course21120/TaylorEstimate.lean",
+        "BachelorsInMeasurementTheory/Course21120/TaylorError.lean",
+        "BachelorsInMeasurementTheory/Course21120/Summary.lean",
+    ]),
     ("21-127.md", "21-127", "Course21127", ["BachelorsInMeasurementTheory/Course21127.lean"]),
     ("21-241.md", "21-241", "Course21241", ["BachelorsInMeasurementTheory/Course21241.lean"]),
     ("21-228.md", "21-228", "Course21228", ["BachelorsInMeasurementTheory/Course21228.lean"]),
@@ -301,7 +311,8 @@ def figure_block(course: str, stem: str) -> str:
         f"Lean module dependencies for the {course} solution. "
         "Amber fill: Mathlib imports. Blue fill: solution modules."
     )
-    rel = f"figures/deps/{stem}.svg"
+    # Course notes live under ``courses/``; href is relative to that directory.
+    rel = f"../figures/deps/{stem}.svg"
     return (
         "<!-- lean-dep-figure -->\n"
         f"<!-- figure-caption: {caption} -->\n"

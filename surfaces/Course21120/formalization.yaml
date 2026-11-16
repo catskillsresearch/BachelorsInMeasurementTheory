@@ -2,10 +2,10 @@
 version: "v0.4"
 
 project:
-  name: "Fabbro Course21120 — 21-120/21-122 Differential and Integral Calculus"
+  name: "Fabbro Course21120 — 21-120 / 21-122 calculus sequence"
   description: >-
-    Lean 4 / Mathlib formalization of the 21-120/21-122 Differential and Integral Calculus capstone from the
-    fabbro BS-in-Measurement-Theory curriculum. FTC for the Fresnel-type integral, a comparison tail bound at M=1, and a rational Taylor truncation-error estimate.
+    Lean 4 / Mathlib formalization of the 21-120 Differential and Integral Calculus and 21-122 Integration and Approximation
+    capstones from the fabbro BS-in-Measurement-Theory curriculum. FTC for the Fresnel-type integral, a comparison tail bound at M=1, and a rational Taylor truncation-error estimate.
     Drafted with AI-agent assistance under Lars Warren Ericson's direction
     and review. This surface is for local Palomar preflight only and is NOT
     a Palomar registry submission; see PROVENANCE.md.
@@ -44,14 +44,22 @@ fidelity:
     theorems.
 
 sources:
-  - title: "21-120/21-122 Differential and Integral Calculus course notes"
+  - title: "21-120 Differential and Integral Calculus course notes"
     authors: ["Lars Warren Ericson"]
     type: "notes"
-    location: "courses/21-120-21-122.md"
+    location: "courses/21-120.md"
     relationship: formalizes
     note: >-
-      English solution / problem statement for this course capstone inside
+      English solution / problem statement for the FTC capstone inside
       the fabbro curriculum.
+  - title: "21-122 Integration and Approximation course notes"
+    authors: ["Lars Warren Ericson"]
+    type: "notes"
+    location: "courses/21-122.md"
+    relationship: formalizes
+    note: >-
+      English solution / problem statement for the improper-integral and Taylor
+      capstone inside the fabbro curriculum.
   - title: "Measurement Structures and Linear Inequalities"
     authors: ["Dana S. Scott"]
     type: "paper"

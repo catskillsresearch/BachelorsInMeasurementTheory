@@ -1,13 +1,12 @@
 module
 
-public import Mathlib.Algebra.BigOperators.Fin
-public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-public import Mathlib.Basic.Real.Basic
 public import BachelorsInMeasurementTheory.Course21241.PointV
 public import BachelorsInMeasurementTheory.Course21241.SeparatingU
 public import BachelorsInMeasurementTheory.Course21241.Separation
-import Mathlib.Tactic.NormNum
-import Mathlib.Tactic.Ring
+import Mathlib.Data.Rat.Cast.Order
+import Mathlib.Tactic.NormNum.Abs
+import Mathlib.Tactic.NormNum.DivMod
+import Mathlib.Tactic.NormNum.OfScientific
 
 @[expose] public section
 

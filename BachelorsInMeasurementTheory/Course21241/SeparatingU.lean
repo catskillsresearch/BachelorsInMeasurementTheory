@@ -1,7 +1,9 @@
 module
 
-public import Mathlib.LinearAlgebra.Basis.Basic
-public import BachelorsInMeasurementTheory.Course21241.Basis
+public import BachelorsInMeasurementTheory.Course21241.PrimalBasis
+import Mathlib.Tactic.Lemma
+import Mathlib.Tactic.NormNum.Ineq
+import Mathlib.Tactic.NormNum.Pow
 
 @[expose] public section
 

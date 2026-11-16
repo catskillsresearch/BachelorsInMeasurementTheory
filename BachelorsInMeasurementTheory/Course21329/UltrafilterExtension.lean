@@ -1,7 +1,12 @@
 module
 
-public import Mathlib.Order.Zorn
 public import BachelorsInMeasurementTheory.Course21329.Filter
+public import Mathlib.Order.Preorder.Chain
+public import Mathlib.Order.SetNotation
+import Mathlib.Data.Finset.Attr
+import Mathlib.Order.ConditionallyCompleteLattice.Basic
+import Mathlib.Order.Zorn
+import Mathlib.Tactic.Lemma
 
 @[expose] public section
 

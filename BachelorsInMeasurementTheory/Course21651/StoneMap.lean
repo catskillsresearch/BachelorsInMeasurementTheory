@@ -1,11 +1,8 @@
 module
 
-public import Mathlib.Order.BooleanAlgebra.Basic
-public import Mathlib.Topology.Basic
 public import Mathlib.Topology.Constructions
-public import Mathlib.Topology.Continuous
-public import Mathlib.Topology.Order
 public import BachelorsInMeasurementTheory.Course21651.BooleanHom
+import Mathlib.Tactic.TypeStar
 
 @[expose] public section
 

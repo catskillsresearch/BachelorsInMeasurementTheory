@@ -14,4 +14,6 @@ public import BachelorsInMeasurementTheory.Course21410
 public import BachelorsInMeasurementTheory.Course21640
 public import BachelorsInMeasurementTheory.Course21651
 public import BachelorsInMeasurementTheory.Course21720
+import Mathlib.MeasureTheory.Covering.Besicovitch
+import Mathlib.Tactic.Positivity.Finset
 
