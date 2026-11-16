@@ -30,7 +30,7 @@ FIGURES_DIR = ROOT / "figures"
 PUPPETEER_CONFIG = SCRIPTS / "puppeteer-config.json"
 LISTING_CHUNK_LINES = 400
 
-GITHUB_URL = r"https://github.com/catskillsresearch/fabbro"
+GITHUB_URL = r"https://github.com/catskillsresearch/BachelorsInMeasurementTheory"
 REPORT_DATE = "September 2026"
 EMAIL = "lars.ericson@catskillsresearch.com"
 ORCID = "0000-0001-8299-9361"

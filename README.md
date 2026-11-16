@@ -1,4 +1,4 @@
-[![Lean 4](https://img.shields.io/github/actions/workflow/status/catskillsresearch/fabbro/build.yml?label=Lean%204)](https://github.com/catskillsresearch/fabbro/actions/workflows/build.yml)
+[![Lean 4](https://img.shields.io/github/actions/workflow/status/catskillsresearch/BachelorsInMeasurementTheory/build.yml?label=Lean%204)](https://github.com/catskillsresearch/BachelorsInMeasurementTheory/actions/workflows/build.yml)
 
 # Bachelors In Measurement Theory
 

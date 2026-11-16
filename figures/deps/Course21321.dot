@@ -25,27 +25,27 @@ digraph Course21321 {
   MTheorem12 [label="Theorem12", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MTheorem13 [label="Theorem13", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
-  LDataFintypeFin -> MKraft;
   LTacticNormNum -> MKraft;
-  LTacticFinCases -> MKraft;
   LAlgebraBigOperatorsPi -> MKraft;
   LDataFinVecNotation -> MKraft;
-  MTheorem11 -> MKraft;
+  LDataFintypeFin -> MKraft;
+  LTacticFinCases -> MKraft;
   MScottPair -> MKraft;
-  LAlgebraOrderRingDefs -> MScottPair;
+  MTheorem11 -> MKraft;
   LDataFinsetBasic -> MScottPair;
-  LAlgebraModuleLinearMapBasic -> MScottPair;
+  LAlgebraOrderRingDefs -> MScottPair;
   LAlgebraBigOperatorsGroupFinsetBasic -> MScottPair;
-  LTacticLinarith -> MTheorem11;
-  LAlgebraOrderBigOperatorsGroupFinset -> MTheorem11;
+  LAlgebraModuleLinearMapBasic -> MScottPair;
   LBasicRealBasic -> MTheorem11;
+  LAlgebraOrderBigOperatorsGroupFinset -> MTheorem11;
+  LTacticLinarith -> MTheorem11;
   MScottPair -> MTheorem11;
-  LAlgebraOrderRingRat -> MTheorem12;
-  LTacticLinarith -> MTheorem12;
   LDataNatCastOrderRing -> MTheorem12;
+  LAlgebraOrderRingRat -> MTheorem12;
   LAlgebraOrderBigOperatorsGroupFinset -> MTheorem12;
+  LTacticLinarith -> MTheorem12;
   MScottPair -> MTheorem12;
   LAlgebraBigOperatorsRingFinset -> MTheorem13;
-  MTheorem12 -> MTheorem13;
   MScottPair -> MTheorem13;
+  MTheorem12 -> MTheorem13;
 }

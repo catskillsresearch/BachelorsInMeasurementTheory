@@ -1,7 +1,7 @@
 # Provenance — Course21120
 
 This surface is part of the **fabbro** BS-in-Measurement-Theory curriculum
-formalization (`catskillsresearch/fabbro`). It packages the 21-120/21-122 Differential and Integral Calculus
+formalization (`catskillsresearch/BachelorsInMeasurementTheory`). It packages the 21-120/21-122 Differential and Integral Calculus
 capstone problem as a Palomar-style Challenge / Solution pair.
 
 It is a **sibling layout** to [`catskillsresearch/scott1964`](https://github.com/catskillsresearch/scott1964)

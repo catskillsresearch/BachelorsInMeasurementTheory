@@ -2,7 +2,7 @@
 
 This report presents a reconstructed Carnegie Mellon undergraduate path
 through the Mathematical Sciences 21-xxx catalog, sequenced so that Dana
-Scott's 1964 measurement theorems (1.1--4.1) and their extension to infinite
+Scott's 1964 measurement theorems (1.1--4.1) [@Scott64] and their extension to infinite
 Boolean algebras can be read for understanding after these courses are taken
 and proved end to end. Each course contributes one
 problem that requires the full toolkit of that course rather than a single

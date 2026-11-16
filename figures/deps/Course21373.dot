@@ -19,16 +19,16 @@ digraph Course21373 {
   MNumerical [label="Numerical", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MRepresentation [label="Representation", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
-  LDataFinsetLatticeFold -> MAtomJoin;
   LAlgebraBigOperatorsGroupFinsetBasic -> MAtomJoin;
+  LDataFinsetLatticeFold -> MAtomJoin;
   MIsBooleanAtom -> MAtomJoin;
   MAtomJoin -> MBooleanAction;
-  LOrderAtoms -> MIsBooleanAtom;
   LOrderBooleanAlgebraBasic -> MIsBooleanAtom;
-  LDataFinsetInsert -> MNumerical;
+  LOrderAtoms -> MIsBooleanAtom;
   LAlgebraBigOperatorsGroupFinsetBasic -> MNumerical;
-  LDataFinsetEmpty -> MNumerical;
+  LDataFinsetInsert -> MNumerical;
   LDataFinsetDefs -> MNumerical;
+  LDataFinsetEmpty -> MNumerical;
   LDataFinsetLatticeBasic -> MNumerical;
   LDataFintypeBasic -> MRepresentation;
   MAtomJoin -> MRepresentation;

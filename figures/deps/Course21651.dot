@@ -22,17 +22,17 @@ digraph Course21651 {
   LDataSetBasic -> MBooleanHom;
   LTopologyBasic -> MBooleanHom;
   LOrderBooleanAlgebraBasic -> MBooleanHom;
-  LTopologySeparationHausdorff -> MClosedEmbedding;
   LTopologyContinuous -> MClosedEmbedding;
-  LTopologyConstructions -> MClosedEmbedding;
   LTopologyOrder -> MClosedEmbedding;
+  LTopologyConstructions -> MClosedEmbedding;
+  LTopologySeparationHausdorff -> MClosedEmbedding;
   MBooleanHom -> MClosedEmbedding;
   LTopologyContinuousMapCompact -> MSeparation;
   LTopologyConnectedTotallyDisconnected -> MSeparation;
   MBooleanHom -> MSeparation;
   LTopologyContinuous -> MStoneMap;
-  LTopologyConstructions -> MStoneMap;
   LTopologyOrder -> MStoneMap;
+  LTopologyConstructions -> MStoneMap;
   MBooleanHom -> MStoneMap;
   MStoneMap -> MTwoAlgebra;
 }

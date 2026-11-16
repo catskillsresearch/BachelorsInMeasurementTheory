@@ -17,9 +17,9 @@ digraph Course21329 {
 
   LSetTheoryCardinalBasic -> MCardinality;
   LSetTheoryCardinalArithmetic -> MCardinality;
+  LOrderBoundedOrderBasic -> MFilter;
   LOrderLattice -> MFilter;
   LOrderFilterUltrafilterBasic -> MFilter;
-  LOrderBoundedOrderBasic -> MFilter;
   MUltrafilterExtension -> MStoneNonempty;
   LOrderZorn -> MUltrafilterExtension;
   MFilter -> MUltrafilterExtension;

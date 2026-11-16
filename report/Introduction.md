@@ -4,7 +4,7 @@
 
 Imagine that a first-year student at Carnegie Mellon told their faculty advisor that their goal 
 for their undergraduate degree was to be able to read a paper on Measurement Theory
-written by Dana Scott in 1964.  This report is an example of responsible answer to that question,
+written by Dana Scott in 1964 [@Scott64].  This report is an example of responsible answer to that question,
 generated with help of large language models. It turns out to be a map of Scott's own
 undergraduate training. It is a model of highly individually 
 tailored automated advisement to ensure that the student will master the skills
@@ -17,12 +17,14 @@ tool.  The tool idea is not a criticism of current advisement practices, just a 
 way to augment it.
 
 Measurement theory asks when qualitative comparisons can be represented by
-real numbers. Scott's 1964 paper organizes several such representation
+real numbers. Scott's 1964 paper [@Scott64] organizes several such representation
 questions around a finite theory of homogeneous linear inequalities, with
 applications to intransitive indifference, ordered utility differences, and
 subjective probability. The infinite direction, which Scott announced but
-did not carry out, runs through Stone spaces, positive functionals,
-Hahn--Banach extension, and Riesz representation.
+did not carry out, runs through the finite-cancellation setting of
+Kraft--Pratt--Seidenberg [@Kraft59], Kelley's measures on Boolean algebras
+[@Kelley59], Stone spaces, positive functionals, Hahn--Banach extension, and
+Riesz representation.
 
 The pedagogical claim of this report is that a complete undergraduate
 mathematics major at Carnegie Mellon already contains the pieces of that
@@ -32,7 +34,7 @@ Bachelor of Science in Measurement Theory: not a new degree program, but a
 reading of the existing catalog as a single connected proof.
 
 For each course, we propose and solve, in mathematical English and in Lean, a hypothetical capstone problem which
-exercises the key features of the course needed to read Scott 1964 for understanding.
+exercises the key features of the course needed to read Scott [@Scott64] for understanding.
 We highlight with diagrams exactly what features of Lean's Mathlib (and hence,
 exactly what mathematics) need to be mastered to solve each capstone problem.
 

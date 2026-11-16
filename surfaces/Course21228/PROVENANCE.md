@@ -1,7 +1,7 @@
 # Provenance — Course21228
 
 This surface is part of the **fabbro** BS-in-Measurement-Theory curriculum
-formalization (`catskillsresearch/fabbro`). It packages the 21-228 Discrete Mathematics
+formalization (`catskillsresearch/BachelorsInMeasurementTheory`). It packages the 21-228 Discrete Mathematics
 capstone problem as a Palomar-style Challenge / Solution pair.
 
 It is a **sibling layout** to [`catskillsresearch/scott1964`](https://github.com/catskillsresearch/scott1964)

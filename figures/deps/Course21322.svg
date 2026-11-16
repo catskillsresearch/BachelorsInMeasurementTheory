@@ -40,7 +40,7 @@
 <text text-anchor="middle" x="324.5" y="-39.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Hom</text>
 </g>
 <!-- LAlgebraBigOperatorsGroupFinsetBasic&#45;&gt;MHom -->
-<g id="edge4" class="edge">
+<g id="edge3" class="edge">
 <title>LAlgebraBigOperatorsGroupFinsetBasic&#45;&gt;MHom</title>
 <path fill="none" stroke="#334155" d="M241.05,-52.2C259.04,-49.98 276.22,-47.85 290.19,-46.12"/>
 <polygon fill="#334155" stroke="#334155" points="290.55,-48.55 297.19,-45.26 289.94,-43.68 290.55,-48.55"/>
@@ -70,7 +70,7 @@
 <text text-anchor="middle" x="120.5" y="-15.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Fintype.Basic</text>
 </g>
 <!-- LDataFintypeBasic&#45;&gt;MHom -->
-<g id="edge3" class="edge">
+<g id="edge4" class="edge">
 <title>LDataFintypeBasic&#45;&gt;MHom</title>
 <path fill="none" stroke="#334155" d="M180.2,-24.97C215.96,-29.22 260.35,-34.5 290.17,-38.04"/>
 <polygon fill="#334155" stroke="#334155" points="290.18,-40.51 297.42,-38.9 290.76,-35.64 290.18,-40.51"/>

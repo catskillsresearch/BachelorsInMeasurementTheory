@@ -94,7 +94,7 @@
 <text text-anchor="middle" x="530" y="-162.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">StoneMap</text>
 </g>
 <!-- LTopologyConstructions&#45;&gt;MStoneMap -->
-<g id="edge13" class="edge">
+<g id="edge14" class="edge">
 <title>LTopologyConstructions&#45;&gt;MStoneMap</title>
 <path fill="none" stroke="#334155" d="M393.19,-258.07C409.9,-254.45 426.93,-248.54 441,-239 462.53,-224.4 453.21,-206.88 473,-190 477.48,-186.18 482.65,-182.84 487.98,-179.95"/>
 <polygon fill="#334155" stroke="#334155" points="489.15,-182.11 494.3,-176.77 486.95,-177.73 489.15,-182.11"/>
@@ -106,7 +106,7 @@
 <text text-anchor="middle" x="321.5" y="-211.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Topology.Continuous</text>
 </g>
 <!-- LTopologyContinuous&#45;&gt;MClosedEmbedding -->
-<g id="edge5" class="edge">
+<g id="edge4" class="edge">
 <title>LTopologyContinuous&#45;&gt;MClosedEmbedding</title>
 <path fill="none" stroke="#334155" d="M385.58,-214C411.06,-214 440.4,-214 465.88,-214"/>
 <polygon fill="#334155" stroke="#334155" points="465.96,-216.45 472.96,-214 465.96,-211.55 465.96,-216.45"/>
@@ -136,13 +136,13 @@
 <text text-anchor="middle" x="321.5" y="-162.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Topology.Order</text>
 </g>
 <!-- LTopologyOrder&#45;&gt;MClosedEmbedding -->
-<g id="edge7" class="edge">
+<g id="edge5" class="edge">
 <title>LTopologyOrder&#45;&gt;MClosedEmbedding</title>
 <path fill="none" stroke="#334155" d="M370.79,-174.52C392.34,-178.94 418.01,-184.44 441,-190 449.06,-191.95 457.5,-194.1 465.83,-196.3"/>
 <polygon fill="#334155" stroke="#334155" points="465.4,-198.72 472.79,-198.15 466.66,-193.98 465.4,-198.72"/>
 </g>
 <!-- LTopologyOrder&#45;&gt;MStoneMap -->
-<g id="edge14" class="edge">
+<g id="edge13" class="edge">
 <title>LTopologyOrder&#45;&gt;MStoneMap</title>
 <path fill="none" stroke="#334155" d="M370.65,-165C405.89,-165 453.23,-165 486.94,-165"/>
 <polygon fill="#334155" stroke="#334155" points="487.35,-167.45 494.35,-165 487.35,-162.55 487.35,-167.45"/>
@@ -154,7 +154,7 @@
 <text text-anchor="middle" x="321.5" y="-309.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Topology.Separation.Hausdorff</text>
 </g>
 <!-- LTopologySeparationHausdorff&#45;&gt;MClosedEmbedding -->
-<g id="edge4" class="edge">
+<g id="edge7" class="edge">
 <title>LTopologySeparationHausdorff&#45;&gt;MClosedEmbedding</title>
 <path fill="none" stroke="#334155" d="M413.03,-298.61C422.7,-295.73 432.21,-292.24 441,-288 466.52,-275.69 490.8,-254.28 507.36,-237.64"/>
 <polygon fill="#334155" stroke="#334155" points="509.53,-238.92 512.67,-232.21 506.03,-235.5 509.53,-238.92"/>

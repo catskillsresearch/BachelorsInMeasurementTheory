@@ -1,7 +1,7 @@
 # Provenance — Course21355
 
 This surface is part of the **fabbro** BS-in-Measurement-Theory curriculum
-formalization (`catskillsresearch/fabbro`). It packages the 21-355 Principles of Real Analysis I
+formalization (`catskillsresearch/BachelorsInMeasurementTheory`). It packages the 21-355 Principles of Real Analysis I
 capstone problem as a Palomar-style Challenge / Solution pair.
 
 It is a **sibling layout** to [`catskillsresearch/scott1964`](https://github.com/catskillsresearch/scott1964)

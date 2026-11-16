@@ -46,7 +46,7 @@
 <text text-anchor="middle" x="332.5" y="-211.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Fintype.Basic</text>
 </g>
 <!-- LDataFintypeBasic&#45;&gt;MCounting -->
-<g id="edge2" class="edge">
+<g id="edge4" class="edge">
 <title>LDataFintypeBasic&#45;&gt;MCounting</title>
 <path fill="none" stroke="#334155" d="M379.1,-195.87C383.53,-193.7 387.9,-191.4 392,-189 404.89,-181.44 418.13,-171.61 429.16,-162.74"/>
 <polygon fill="#334155" stroke="#334155" points="430.84,-164.53 434.71,-158.21 427.74,-160.73 430.84,-164.53"/>
@@ -58,7 +58,7 @@
 <text text-anchor="middle" x="332.5" y="-162.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Fintype.Card</text>
 </g>
 <!-- LDataFintypeCard&#45;&gt;MCounting -->
-<g id="edge3" class="edge">
+<g id="edge2" class="edge">
 <title>LDataFintypeCard&#45;&gt;MCounting</title>
 <path fill="none" stroke="#334155" d="M390.57,-153.31C399.49,-151.48 408.51,-149.63 416.89,-147.91"/>
 <polygon fill="#334155" stroke="#334155" points="417.38,-150.31 423.75,-146.51 416.4,-145.51 417.38,-150.31"/>
@@ -106,7 +106,7 @@
 <text text-anchor="middle" x="332.5" y="-113.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Fintype.Prod</text>
 </g>
 <!-- LDataFintypeProd&#45;&gt;MCounting -->
-<g id="edge4" class="edge">
+<g id="edge3" class="edge">
 <title>LDataFintypeProd&#45;&gt;MCounting</title>
 <path fill="none" stroke="#334155" d="M390.21,-127.16C399.26,-128.94 408.42,-130.74 416.92,-132.41"/>
 <polygon fill="#334155" stroke="#334155" points="416.54,-134.83 423.88,-133.78 417.48,-130.02 416.54,-134.83"/>

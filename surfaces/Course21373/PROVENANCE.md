@@ -1,7 +1,7 @@
 # Provenance — Course21373
 
 This surface is part of the **fabbro** BS-in-Measurement-Theory curriculum
-formalization (`catskillsresearch/fabbro`). It packages the 21-373 Algebraic Structures
+formalization (`catskillsresearch/BachelorsInMeasurementTheory`). It packages the 21-373 Algebraic Structures
 capstone problem as a Palomar-style Challenge / Solution pair.
 
 It is a **sibling layout** to [`catskillsresearch/scott1964`](https://github.com/catskillsresearch/scott1964)

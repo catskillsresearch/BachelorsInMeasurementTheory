@@ -22,7 +22,7 @@
 <text text-anchor="middle" x="560.5" y="-407.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Numerical</text>
 </g>
 <!-- LAlgebraModuleLinearMapBasic&#45;&gt;MNumerical -->
-<g id="edge2" class="edge">
+<g id="edge6" class="edge">
 <title>LAlgebraModuleLinearMapBasic&#45;&gt;MNumerical</title>
 <path fill="none" stroke="#334155" d="M456.68,-326.93C465.11,-329.73 473.34,-333.05 481,-337 504.33,-349.03 525.79,-369.97 540.35,-386.34"/>
 <polygon fill="#334155" stroke="#334155" points="538.57,-388.03 545.01,-391.7 542.26,-384.81 538.57,-388.03"/>
@@ -34,7 +34,7 @@
 <text text-anchor="middle" x="560.5" y="-186.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Riesz</text>
 </g>
 <!-- LAlgebraModuleLinearMapBasic&#45;&gt;MRiesz -->
-<g id="edge9" class="edge">
+<g id="edge12" class="edge">
 <title>LAlgebraModuleLinearMapBasic&#45;&gt;MRiesz</title>
 <path fill="none" stroke="#334155" d="M456.71,-298.47C465.23,-295.38 473.47,-291.61 481,-287 510.4,-269.01 533.43,-235.85 546.75,-213.13"/>
 <polygon fill="#334155" stroke="#334155" points="548.89,-214.31 550.24,-207.02 544.64,-211.88 548.89,-214.31"/>
@@ -46,7 +46,7 @@
 <text text-anchor="middle" x="358.5" y="-505.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Algebra.Module.Prod</text>
 </g>
 <!-- LAlgebraModuleProd&#45;&gt;MNumerical -->
-<g id="edge4" class="edge">
+<g id="edge5" class="edge">
 <title>LAlgebraModuleProd&#45;&gt;MNumerical</title>
 <path fill="none" stroke="#334155" d="M424.18,-502.1C443.22,-498.58 463.6,-492.96 481,-484 504.64,-471.83 526.2,-450.4 540.72,-433.73"/>
 <polygon fill="#334155" stroke="#334155" points="542.69,-435.19 545.36,-428.28 538.96,-432.01 542.69,-435.19"/>
@@ -70,13 +70,13 @@
 <text text-anchor="middle" x="358.5" y="-358.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Basic.Real.Basic</text>
 </g>
 <!-- LBasicRealBasic&#45;&gt;MNumerical -->
-<g id="edge5" class="edge">
+<g id="edge4" class="edge">
 <title>LBasicRealBasic&#45;&gt;MNumerical</title>
 <path fill="none" stroke="#334155" d="M412.07,-370.7C433.55,-374.95 458.57,-380.28 481,-386 492.89,-389.03 505.66,-392.74 517.38,-396.33"/>
 <polygon fill="#334155" stroke="#334155" points="516.73,-398.69 524.14,-398.42 518.17,-394.01 516.73,-398.69"/>
 </g>
 <!-- LBasicRealBasic&#45;&gt;MRiesz -->
-<g id="edge11" class="edge">
+<g id="edge8" class="edge">
 <title>LBasicRealBasic&#45;&gt;MRiesz</title>
 <path fill="none" stroke="#334155" d="M412.02,-360.53C435.08,-357.98 461.33,-351.62 481,-337 522.13,-306.44 543.83,-247.85 553.36,-214.28"/>
 <polygon fill="#334155" stroke="#334155" points="555.83,-214.52 555.32,-207.12 551.11,-213.22 555.83,-214.52"/>
@@ -100,7 +100,7 @@
 <text text-anchor="middle" x="358.5" y="-456.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.NormNum</text>
 </g>
 <!-- LTacticNormNum&#45;&gt;MNumerical -->
-<g id="edge3" class="edge">
+<g id="edge2" class="edge">
 <title>LTacticNormNum&#45;&gt;MNumerical</title>
 <path fill="none" stroke="#334155" d="M412.12,-449.95C433.6,-445.91 458.61,-440.76 481,-435 492.93,-431.93 505.71,-428.1 517.43,-424.37"/>
 <polygon fill="#334155" stroke="#334155" points="518.28,-426.67 524.19,-422.18 516.77,-422 518.28,-426.67"/>
@@ -112,7 +112,7 @@
 <text text-anchor="middle" x="358.5" y="-260.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.Positivity</text>
 </g>
 <!-- LTacticPositivity&#45;&gt;MRiesz -->
-<g id="edge8" class="edge">
+<g id="edge9" class="edge">
 <title>LTacticPositivity&#45;&gt;MRiesz</title>
 <path fill="none" stroke="#334155" d="M409.73,-256.77C432.08,-252.97 458.4,-247.04 481,-238 498.1,-231.16 515.62,-220.62 529.76,-211.07"/>
 <polygon fill="#334155" stroke="#334155" points="531.23,-213.04 535.61,-207.05 528.45,-209 531.23,-213.04"/>
@@ -124,7 +124,7 @@
 <text text-anchor="middle" x="358.5" y="-407.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.Ring</text>
 </g>
 <!-- LTacticRing&#45;&gt;MNumerical -->
-<g id="edge6" class="edge">
+<g id="edge3" class="edge">
 <title>LTacticRing&#45;&gt;MNumerical</title>
 <path fill="none" stroke="#334155" d="M396.65,-410C430.71,-410 481.14,-410 516.84,-410"/>
 <polygon fill="#334155" stroke="#334155" points="517.23,-412.45 524.23,-410 517.23,-407.55 517.23,-412.45"/>
@@ -148,7 +148,7 @@
 <text text-anchor="middle" x="358.5" y="-162.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Topology.ContinuousMap.Basic</text>
 </g>
 <!-- LTopologyContinuousMapBasic&#45;&gt;MRiesz -->
-<g id="edge12" class="edge">
+<g id="edge11" class="edge">
 <title>LTopologyContinuousMapBasic&#45;&gt;MRiesz</title>
 <path fill="none" stroke="#334155" d="M451.01,-175.98C477.88,-179.21 505.57,-182.53 526.25,-185.01"/>
 <polygon fill="#334155" stroke="#334155" points="526.02,-187.45 533.26,-185.85 526.6,-182.58 526.02,-187.45"/>

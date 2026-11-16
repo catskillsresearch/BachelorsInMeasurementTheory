@@ -22,7 +22,7 @@
 <text text-anchor="middle" x="394" y="-260.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">ScottPair</text>
 </g>
 <!-- LAlgebraBigOperatorsGroupFinsetBasic&#45;&gt;MScottPair -->
-<g id="edge11" class="edge">
+<g id="edge10" class="edge">
 <title>LAlgebraBigOperatorsGroupFinsetBasic&#45;&gt;MScottPair</title>
 <path fill="none" stroke="#334155" d="M216.31,-317.99C224.69,-316.09 233.01,-314.08 241,-312 280.16,-301.79 324.08,-287.29 354.6,-276.72"/>
 <polygon fill="#334155" stroke="#334155" points="355.48,-279.01 361.28,-274.39 353.87,-274.38 355.48,-279.01"/>
@@ -40,7 +40,7 @@
 <text text-anchor="middle" x="817.5" y="-336.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Kraft</text>
 </g>
 <!-- LAlgebraBigOperatorsPi&#45;&gt;MKraft -->
-<g id="edge4" class="edge">
+<g id="edge2" class="edge">
 <title>LAlgebraBigOperatorsPi&#45;&gt;MKraft</title>
 <path fill="none" stroke="#334155" d="M721.14,-370.93C729.56,-368.72 737.99,-366.39 746,-364 758.38,-360.31 771.78,-355.71 783.55,-351.47"/>
 <polygon fill="#334155" stroke="#334155" points="784.52,-353.72 790.26,-349.02 782.85,-349.12 784.52,-353.72"/>
@@ -70,7 +70,7 @@
 <text text-anchor="middle" x="120.5" y="-284.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Algebra.Module.LinearMap.Basic</text>
 </g>
 <!-- LAlgebraModuleLinearMapBasic&#45;&gt;MScottPair -->
-<g id="edge10" class="edge">
+<g id="edge11" class="edge">
 <title>LAlgebraModuleLinearMapBasic&#45;&gt;MScottPair</title>
 <path fill="none" stroke="#334155" d="M218.75,-278.4C265.49,-274.27 318.86,-269.55 354.08,-266.44"/>
 <polygon fill="#334155" stroke="#334155" points="354.56,-268.86 361.32,-265.8 354.13,-263.98 354.56,-268.86"/>
@@ -100,7 +100,7 @@
 <text text-anchor="middle" x="646.5" y="-113.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Theorem12</text>
 </g>
 <!-- LAlgebraOrderBigOperatorsGroupFinset&#45;&gt;MTheorem12 -->
-<g id="edge19" class="edge">
+<g id="edge18" class="edge">
 <title>LAlgebraOrderBigOperatorsGroupFinset&#45;&gt;MTheorem12</title>
 <path fill="none" stroke="#334155" d="M515.11,-116C545.27,-116 575.82,-116 599.77,-116"/>
 <polygon fill="#334155" stroke="#334155" points="599.98,-118.45 606.98,-116 599.98,-113.55 599.98,-118.45"/>
@@ -112,7 +112,7 @@
 <text text-anchor="middle" x="120.5" y="-235.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Algebra.Order.Ring.Defs</text>
 </g>
 <!-- LAlgebraOrderRingDefs&#45;&gt;MScottPair -->
-<g id="edge8" class="edge">
+<g id="edge9" class="edge">
 <title>LAlgebraOrderRingDefs&#45;&gt;MScottPair</title>
 <path fill="none" stroke="#334155" d="M195.33,-244.8C246.58,-249.52 312.82,-255.62 354.11,-259.42"/>
 <polygon fill="#334155" stroke="#334155" points="354.08,-261.88 361.27,-260.08 354.53,-257 354.08,-261.88"/>
@@ -124,7 +124,7 @@
 <text text-anchor="middle" x="394" y="-64.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Algebra.Order.Ring.Rat</text>
 </g>
 <!-- LAlgebraOrderRingRat&#45;&gt;MTheorem12 -->
-<g id="edge16" class="edge">
+<g id="edge17" class="edge">
 <title>LAlgebraOrderRingRat&#45;&gt;MTheorem12</title>
 <path fill="none" stroke="#334155" d="M465.78,-80.84C508.64,-89.23 562.07,-99.68 599.49,-107"/>
 <polygon fill="#334155" stroke="#334155" points="599.41,-109.48 606.75,-108.42 600.35,-104.67 599.41,-109.48"/>
@@ -136,7 +136,7 @@
 <text text-anchor="middle" x="394" y="-211.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Basic.Real.Basic</text>
 </g>
 <!-- LBasicRealBasic&#45;&gt;MTheorem11 -->
-<g id="edge14" class="edge">
+<g id="edge12" class="edge">
 <title>LBasicRealBasic&#45;&gt;MTheorem11</title>
 <path fill="none" stroke="#334155" d="M447.51,-203.73C492.63,-194.9 557.02,-182.31 599.99,-173.9"/>
 <polygon fill="#334155" stroke="#334155" points="600.56,-176.29 606.96,-172.54 599.62,-171.48 600.56,-176.29"/>
@@ -148,7 +148,7 @@
 <text text-anchor="middle" x="646.5" y="-336.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Fin.VecNotation</text>
 </g>
 <!-- LDataFinVecNotation&#45;&gt;MKraft -->
-<g id="edge5" class="edge">
+<g id="edge3" class="edge">
 <title>LDataFinVecNotation&#45;&gt;MKraft</title>
 <path fill="none" stroke="#334155" d="M712.84,-339C736.83,-339 763,-339 783.04,-339"/>
 <polygon fill="#334155" stroke="#334155" points="783.13,-341.45 790.13,-339 783.13,-336.55 783.13,-341.45"/>
@@ -160,7 +160,7 @@
 <text text-anchor="middle" x="120.5" y="-186.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Finset.Basic</text>
 </g>
 <!-- LDataFinsetBasic&#45;&gt;MScottPair -->
-<g id="edge9" class="edge">
+<g id="edge8" class="edge">
 <title>LDataFinsetBasic&#45;&gt;MScottPair</title>
 <path fill="none" stroke="#334155" d="M176.71,-195.16C197.54,-198.85 221.01,-204.72 241,-214 257.37,-221.6 256.6,-231.47 273,-239 298.75,-250.82 330.23,-256.84 354.48,-259.89"/>
 <polygon fill="#334155" stroke="#334155" points="354.2,-262.32 361.44,-260.71 354.78,-257.46 354.2,-262.32"/>
@@ -172,7 +172,7 @@
 <text text-anchor="middle" x="646.5" y="-287.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Fintype.Fin</text>
 </g>
 <!-- LDataFintypeFin&#45;&gt;MKraft -->
-<g id="edge1" class="edge">
+<g id="edge4" class="edge">
 <title>LDataFintypeFin&#45;&gt;MKraft</title>
 <path fill="none" stroke="#334155" d="M699.09,-302.27C714.27,-306.1 730.86,-310.51 746,-315 758.33,-318.66 771.72,-323.1 783.49,-327.16"/>
 <polygon fill="#334155" stroke="#334155" points="782.8,-329.51 790.21,-329.5 784.41,-324.88 782.8,-329.51"/>
@@ -184,7 +184,7 @@
 <text text-anchor="middle" x="394" y="-15.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Nat.Cast.Order.Ring</text>
 </g>
 <!-- LDataNatCastOrderRing&#45;&gt;MTheorem12 -->
-<g id="edge18" class="edge">
+<g id="edge16" class="edge">
 <title>LDataNatCastOrderRing&#45;&gt;MTheorem12</title>
 <path fill="none" stroke="#334155" d="M472.6,-24.07C487.56,-27.77 502.46,-33.43 515,-42 536.78,-56.89 525.53,-76.66 547,-92 562.3,-102.93 581.98,-108.91 599.72,-112.18"/>
 <polygon fill="#334155" stroke="#334155" points="599.36,-114.61 606.67,-113.34 600.17,-109.77 599.36,-114.61"/>
@@ -196,7 +196,7 @@
 <text text-anchor="middle" x="646.5" y="-238.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.FinCases</text>
 </g>
 <!-- LTacticFinCases&#45;&gt;MKraft -->
-<g id="edge3" class="edge">
+<g id="edge5" class="edge">
 <title>LTacticFinCases&#45;&gt;MKraft</title>
 <path fill="none" stroke="#334155" d="M696.66,-247.9C713.1,-251.63 731.04,-257.32 746,-266 767.31,-278.36 786.37,-299 799.29,-315.18"/>
 <polygon fill="#334155" stroke="#334155" points="797.52,-316.91 803.76,-320.92 801.39,-313.89 797.52,-316.91"/>
@@ -208,13 +208,13 @@
 <text text-anchor="middle" x="394" y="-162.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.Linarith</text>
 </g>
 <!-- LTacticLinarith&#45;&gt;MTheorem11 -->
-<g id="edge12" class="edge">
+<g id="edge14" class="edge">
 <title>LTacticLinarith&#45;&gt;MTheorem11</title>
 <path fill="none" stroke="#334155" d="M440.65,-165C485.8,-165 554.49,-165 599.69,-165"/>
 <polygon fill="#334155" stroke="#334155" points="599.73,-167.45 606.73,-165 599.73,-162.55 599.73,-167.45"/>
 </g>
 <!-- LTacticLinarith&#45;&gt;MTheorem12 -->
-<g id="edge17" class="edge">
+<g id="edge19" class="edge">
 <title>LTacticLinarith&#45;&gt;MTheorem12</title>
 <path fill="none" stroke="#334155" d="M440.65,-156.07C485.8,-147.24 554.49,-133.8 599.69,-124.96"/>
 <polygon fill="#334155" stroke="#334155" points="600.33,-127.33 606.73,-123.58 599.39,-122.52 600.33,-127.33"/>
@@ -226,13 +226,13 @@
 <text text-anchor="middle" x="646.5" y="-461.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.NormNum</text>
 </g>
 <!-- LTacticNormNum&#45;&gt;MKraft -->
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 <title>LTacticNormNum&#45;&gt;MKraft</title>
 <path fill="none" stroke="#334155" d="M700.21,-455.85C715.92,-451.68 732.52,-445.42 746,-436 772.56,-417.45 792.89,-385.6 804.74,-363.48"/>
 <polygon fill="#334155" stroke="#334155" points="806.93,-364.58 808,-357.24 802.59,-362.31 806.93,-364.58"/>
 </g>
 <!-- MScottPair&#45;&gt;MKraft -->
-<g id="edge7" class="edge">
+<g id="edge6" class="edge">
 <title>MScottPair&#45;&gt;MKraft</title>
 <path fill="none" stroke="#334155" d="M406.23,-281.11C428.3,-314.74 480.97,-385.91 547,-413 628.82,-446.58 664.7,-447.83 746,-413 769.53,-402.92 788.93,-380.69 801.38,-363.22"/>
 <polygon fill="#334155" stroke="#334155" points="803.7,-364.18 805.65,-357.03 799.66,-361.4 803.7,-364.18"/>
@@ -250,19 +250,19 @@
 <polygon fill="#334155" stroke="#334155" points="600.12,-120.61 606.69,-117.17 599.4,-115.77 600.12,-120.61"/>
 </g>
 <!-- MScottPair&#45;&gt;MTheorem13 -->
-<g id="edge23" class="edge">
+<g id="edge22" class="edge">
 <title>MScottPair&#45;&gt;MTheorem13</title>
 <path fill="none" stroke="#334155" d="M426.6,-260.2C451.41,-257.18 486.43,-251.07 515,-239 530.9,-232.28 530.9,-223.22 547,-217 630.26,-184.84 666.51,-230.6 746,-190 768.38,-178.57 787.57,-157.14 800.25,-140.27"/>
 <polygon fill="#334155" stroke="#334155" points="802.47,-141.39 804.63,-134.29 798.52,-138.5 802.47,-141.39"/>
 </g>
 <!-- MTheorem11&#45;&gt;MKraft -->
-<g id="edge6" class="edge">
+<g id="edge7" class="edge">
 <title>MTheorem11&#45;&gt;MKraft</title>
 <path fill="none" stroke="#334155" d="M686.24,-179.38C705.83,-188.06 729,-200.64 746,-217 774.96,-244.87 795.79,-287.23 806.99,-313.99"/>
 <polygon fill="#334155" stroke="#334155" points="804.85,-315.22 809.77,-320.77 809.38,-313.36 804.85,-315.22"/>
 </g>
 <!-- MTheorem12&#45;&gt;MTheorem13 -->
-<g id="edge22" class="edge">
+<g id="edge23" class="edge">
 <title>MTheorem12&#45;&gt;MTheorem13</title>
 <path fill="none" stroke="#334155" d="M686.27,-116C711.39,-116 744.23,-116 770.64,-116"/>
 <polygon fill="#334155" stroke="#334155" points="770.91,-118.45 777.91,-116 770.91,-113.55 770.91,-118.45"/>

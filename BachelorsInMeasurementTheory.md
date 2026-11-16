@@ -1,10 +1,12 @@
+---
+bibliography: references.bib
+---
+
 # Bachelors In Measurement Theory
 
 **Authors.** Lars Warren Ericson (independent researcher, d/b/a Catskills
 Research Company; lars.ericson@catskillsresearch.com).
-**Source paper.** Dana S. Scott, *Measurement Structures and Linear
-Inequalities*, Journal of Mathematical Psychology 1 (1964), 233–247.
-**Repository.** https://github.com/catskillsresearch/fabbro
+**Repository.** https://github.com/catskillsresearch/BachelorsInMeasurementTheory
 
 ---
 

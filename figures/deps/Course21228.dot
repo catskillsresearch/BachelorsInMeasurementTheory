@@ -19,9 +19,9 @@ digraph Course21228 {
   MValidPair [label="ValidPair", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
   LAlgebraBigOperatorsGroupFinsetBasic -> MCounting;
-  LDataFintypeBasic -> MCounting;
   LDataFintypeCard -> MCounting;
   LDataFintypeProd -> MCounting;
+  LDataFintypeBasic -> MCounting;
   MGenericity -> MCounting;
   MValidPair -> MCounting;
   LDataFintypePerm -> MGenericity;
