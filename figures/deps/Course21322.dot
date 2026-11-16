@@ -6,24 +6,43 @@ digraph Course21322 {
 
   LAlgebraBigOperatorsFin [label="Algebra.BigOperators.Fin", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   LAlgebraBigOperatorsGroupFinsetBasic [label="Algebra.BigOperators.Group.Finset.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LAlgebraBigOperatorsGroupFinsetDefs [label="Algebra.BigOperators.Group.Finset.Defs", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   LBasicRealBasic [label="Basic.Real.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataFinsetAttr [label="Data.Finset.Attr", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataFinsetInsert [label="Data.Finset.Insert", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   LDataFintypeBasic [label="Data.Fintype.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LTacticByContra [label="Tactic.ByContra", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LTacticNormNum [label="Tactic.NormNum", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataRatCastOrder [label="Data.Rat.Cast.Order", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LOrderSetNotation [label="Order.SetNotation", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticLemma [label="Tactic.Lemma", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticNormNumAbs [label="Tactic.NormNum.Abs", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticNormNumDivMod [label="Tactic.NormNum.DivMod", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticNormNumOfScientific [label="Tactic.NormNum.OfScientific", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticNormNumPow [label="Tactic.NormNum.Pow", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticTypeStar [label="Tactic.TypeStar", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   MAtomIso [label="AtomIso", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MHom [label="Hom", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MMeasureCollapse [label="MeasureCollapse", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MNumerical [label="Numerical", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MStoneClopen [label="StoneClopen", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
-  LTacticByContra -> MAtomIso;
+  LTacticTypeStar -> MAtomIso;
+  LDataFinsetInsert -> MAtomIso;
+  LOrderSetNotation -> MAtomIso;
   MHom -> MAtomIso;
-  LAlgebraBigOperatorsGroupFinsetBasic -> MHom;
   LDataFintypeBasic -> MHom;
+  LAlgebraBigOperatorsGroupFinsetBasic -> MHom;
+  LAlgebraBigOperatorsGroupFinsetDefs -> MMeasureCollapse;
   LBasicRealBasic -> MMeasureCollapse;
   MStoneClopen -> MMeasureCollapse;
+  LTacticNormNumAbs -> MNumerical;
+  LTacticNormNumOfScientific -> MNumerical;
+  LTacticLemma -> MNumerical;
   LAlgebraBigOperatorsFin -> MNumerical;
-  LTacticNormNum -> MNumerical;
+  LTacticNormNumPow -> MNumerical;
+  LTacticNormNumDivMod -> MNumerical;
+  LDataRatCastOrder -> MNumerical;
   MMeasureCollapse -> MNumerical;
+  LTacticTypeStar -> MStoneClopen;
+  LDataFinsetAttr -> MStoneClopen;
   MHom -> MStoneClopen;
 }

@@ -5,31 +5,26 @@ digraph Course21373 {
   edge [color="#334155", arrowsize=0.7];
 
   LAlgebraBigOperatorsGroupFinsetBasic [label="Algebra.BigOperators.Group.Finset.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LDataFinsetDefs [label="Data.Finset.Defs", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LDataFinsetEmpty [label="Data.Finset.Empty", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LDataFinsetInsert [label="Data.Finset.Insert", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LDataFinsetLatticeBasic [label="Data.Finset.Lattice.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   LDataFinsetLatticeFold [label="Data.Finset.Lattice.Fold", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   LDataFintypeBasic [label="Data.Fintype.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LOrderAtoms [label="Order.Atoms", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   LOrderBooleanAlgebraBasic [label="Order.BooleanAlgebra.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticSetLike [label="Tactic.SetLike", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticTypeStar [label="Tactic.TypeStar", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   MAtomJoin [label="AtomJoin", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MBooleanAction [label="BooleanAction", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MIsBooleanAtom [label="IsBooleanAtom", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MNumerical [label="Numerical", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MRepresentation [label="Representation", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
-  LAlgebraBigOperatorsGroupFinsetBasic -> MAtomJoin;
   LDataFinsetLatticeFold -> MAtomJoin;
   MIsBooleanAtom -> MAtomJoin;
+  MIsBooleanAtom -> MBooleanAction;
   MAtomJoin -> MBooleanAction;
-  LOrderAtoms -> MIsBooleanAtom;
   LOrderBooleanAlgebraBasic -> MIsBooleanAtom;
+  LTacticTypeStar -> MIsBooleanAtom;
+  LTacticSetLike -> MIsBooleanAtom;
   LAlgebraBigOperatorsGroupFinsetBasic -> MNumerical;
-  LDataFinsetInsert -> MNumerical;
-  LDataFinsetLatticeBasic -> MNumerical;
-  LDataFinsetDefs -> MNumerical;
-  LDataFinsetEmpty -> MNumerical;
   LDataFintypeBasic -> MRepresentation;
+  MIsBooleanAtom -> MRepresentation;
   MAtomJoin -> MRepresentation;
 }

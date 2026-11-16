@@ -4,14 +4,16 @@ digraph Course21651 {
   node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11];
   edge [color="#334155", arrowsize=0.7];
 
-  LDataSetBasic [label="Data.Set.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LAlgebraOrderAlgebra [label="Algebra.Order.Algebra", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LAnalysisNormedGroupBasic [label="Analysis.Normed.Group.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LAnalysisRealSqrt [label="Analysis.Real.Sqrt", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataERealInv [label="Data.EReal.Inv", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   LOrderBooleanAlgebraBasic [label="Order.BooleanAlgebra.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LTopologyBasic [label="Topology.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticContinuousFunctionalCalculus [label="Tactic.ContinuousFunctionalCalculus", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticTypeStar [label="Tactic.TypeStar", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   LTopologyConnectedTotallyDisconnected [label="Topology.Connected.TotallyDisconnected", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   LTopologyConstructions [label="Topology.Constructions", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LTopologyContinuous [label="Topology.Continuous", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LTopologyContinuousMapCompact [label="Topology.ContinuousMap.Compact", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LTopologyOrder [label="Topology.Order", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTopologyNoetherianSpace [label="Topology.NoetherianSpace", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   LTopologySeparationHausdorff [label="Topology.Separation.Hausdorff", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   MBooleanHom [label="BooleanHom", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MClosedEmbedding [label="ClosedEmbedding", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
@@ -20,19 +22,21 @@ digraph Course21651 {
   MTwoAlgebra [label="TwoAlgebra", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
   LOrderBooleanAlgebraBasic -> MBooleanHom;
-  LTopologyBasic -> MBooleanHom;
-  LDataSetBasic -> MBooleanHom;
-  LTopologyConstructions -> MClosedEmbedding;
+  LTacticTypeStar -> MClosedEmbedding;
   LTopologySeparationHausdorff -> MClosedEmbedding;
-  LTopologyContinuous -> MClosedEmbedding;
-  LTopologyOrder -> MClosedEmbedding;
+  LTopologyConstructions -> MClosedEmbedding;
   MBooleanHom -> MClosedEmbedding;
+  LAlgebraOrderAlgebra -> MSeparation;
+  LAnalysisNormedGroupBasic -> MSeparation;
+  LTacticTypeStar -> MSeparation;
   LTopologyConnectedTotallyDisconnected -> MSeparation;
-  LTopologyContinuousMapCompact -> MSeparation;
+  LTacticContinuousFunctionalCalculus -> MSeparation;
+  LAnalysisRealSqrt -> MSeparation;
+  LTopologyNoetherianSpace -> MSeparation;
+  LDataERealInv -> MSeparation;
   MBooleanHom -> MSeparation;
+  LTacticTypeStar -> MStoneMap;
   LTopologyConstructions -> MStoneMap;
-  LTopologyContinuous -> MStoneMap;
-  LTopologyOrder -> MStoneMap;
   MBooleanHom -> MStoneMap;
   MStoneMap -> MTwoAlgebra;
 }

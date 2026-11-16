@@ -4,23 +4,34 @@ digraph Course21329 {
   node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11];
   edge [color="#334155", arrowsize=0.7];
 
+  LDataFinsetAttr [label="Data.Finset.Attr", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   LOrderBoundedOrderBasic [label="Order.BoundedOrder.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LOrderFilterUltrafilterBasic [label="Order.Filter.Ultrafilter.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LOrderLattice [label="Order.Lattice", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LOrderConditionallyCompleteLatticeBasic [label="Order.ConditionallyCompleteLattice.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LOrderDefsLattice [label="Order.Defs.Lattice", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LOrderPreorderChain [label="Order.Preorder.Chain", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LOrderSetNotation [label="Order.SetNotation", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   LOrderZorn [label="Order.Zorn", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LSetTheoryCardinalArithmetic [label="SetTheory.Cardinal.Arithmetic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LSetTheoryCardinalBasic [label="SetTheory.Cardinal.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LSetTheoryCardinalOrder [label="SetTheory.Cardinal.Order", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticLemma [label="Tactic.Lemma", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticSetLike [label="Tactic.SetLike", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticTypeStar [label="Tactic.TypeStar", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   MCardinality [label="Cardinality", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MFilter [label="Filter", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MStoneNonempty [label="StoneNonempty", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MUltrafilterExtension [label="UltrafilterExtension", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
-  LSetTheoryCardinalArithmetic -> MCardinality;
-  LSetTheoryCardinalBasic -> MCardinality;
-  LOrderLattice -> MFilter;
+  LTacticTypeStar -> MCardinality;
+  LSetTheoryCardinalOrder -> MCardinality;
+  LOrderDefsLattice -> MFilter;
+  LTacticSetLike -> MFilter;
   LOrderBoundedOrderBasic -> MFilter;
-  LOrderFilterUltrafilterBasic -> MFilter;
+  LDataFinsetAttr -> MFilter;
+  MFilter -> MStoneNonempty;
   MUltrafilterExtension -> MStoneNonempty;
+  LOrderPreorderChain -> MUltrafilterExtension;
   LOrderZorn -> MUltrafilterExtension;
+  LTacticLemma -> MUltrafilterExtension;
+  LOrderSetNotation -> MUltrafilterExtension;
+  LOrderConditionallyCompleteLatticeBasic -> MUltrafilterExtension;
   MFilter -> MUltrafilterExtension;
 }

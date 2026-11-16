@@ -4,30 +4,16 @@ digraph Course21120 {
   node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11];
   edge [color="#334155", arrowsize=0.7];
 
-  LAlgebraOrderStarReal [label="Algebra.Order.Star.Real", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   LAnalysisCalculusDerivBasic [label="Analysis.Calculus.Deriv.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LAnalysisComplexTrigonometric [label="Analysis.Complex.Trigonometric", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LAnalysisNormedGroupReal [label="Analysis.Normed.Group.Real", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LAnalysisSpecialFunctionsTrigonometricBasic [label="Analysis.SpecialFunctions.Trigonometric.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LBasicRealBasic [label="Basic.Real.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LMeasureTheoryIntegralIntervalIntegralBasic [label="MeasureTheory.Integral.IntervalIntegral.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   LMeasureTheoryIntegralIntervalIntegralFundThmCalculus [label="MeasureTheory.Integral.IntervalIntegral.FundThmCalculus", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LMeasureTheoryMeasureMeasureSpaceDef [label="MeasureTheory.Measure.MeasureSpaceDef", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LTacticPositivity [label="Tactic.Positivity", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LTopologyBasic [label="Topology.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LTopologyContinuous [label="Topology.Continuous", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LTopologyUniformSpaceReal [label="Topology.UniformSpace.Real", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticLemma [label="Tactic.Lemma", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticPositivityFinset [label="Tactic.Positivity.Finset", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   MFTC [label="FTC", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
-  LBasicRealBasic -> MFTC;
-  LMeasureTheoryIntegralIntervalIntegralFundThmCalculus -> MFTC;
-  LAlgebraOrderStarReal -> MFTC;
-  LTopologyUniformSpaceReal -> MFTC;
-  LAnalysisNormedGroupReal -> MFTC;
   LAnalysisCalculusDerivBasic -> MFTC;
-  LTopologyContinuous -> MFTC;
-  LTacticPositivity -> MFTC;
-  LAnalysisComplexTrigonometric -> MFTC;
-  LTopologyBasic -> MFTC;
-  LAnalysisSpecialFunctionsTrigonometricBasic -> MFTC;
-  LMeasureTheoryMeasureMeasureSpaceDef -> MFTC;
+  LMeasureTheoryIntegralIntervalIntegralBasic -> MFTC;
+  LTacticLemma -> MFTC;
+  LMeasureTheoryIntegralIntervalIntegralFundThmCalculus -> MFTC;
+  LTacticPositivityFinset -> MFTC;
 }
