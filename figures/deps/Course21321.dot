@@ -25,13 +25,13 @@ digraph Course21321 {
   MTheorem12 [label="Theorem12", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MTheorem13 [label="Theorem13", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
-  LTacticFinCases -> MKraft;
-  LTacticNormNum -> MKraft;
   LDataFintypeFin -> MKraft;
-  LDataFinVecNotation -> MKraft;
+  LTacticNormNum -> MKraft;
+  LTacticFinCases -> MKraft;
   LAlgebraBigOperatorsPi -> MKraft;
-  MScottPair -> MKraft;
+  LDataFinVecNotation -> MKraft;
   MTheorem11 -> MKraft;
+  MScottPair -> MKraft;
   LAlgebraOrderRingDefs -> MScottPair;
   LDataFinsetBasic -> MScottPair;
   LAlgebraModuleLinearMapBasic -> MScottPair;
@@ -46,6 +46,6 @@ digraph Course21321 {
   LAlgebraOrderBigOperatorsGroupFinset -> MTheorem12;
   MScottPair -> MTheorem12;
   LAlgebraBigOperatorsRingFinset -> MTheorem13;
-  MScottPair -> MTheorem13;
   MTheorem12 -> MTheorem13;
+  MScottPair -> MTheorem13;
 }

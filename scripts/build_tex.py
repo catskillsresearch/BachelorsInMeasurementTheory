@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convert arxiv_with_code.md to the report PDF.
+"""Convert BachelorsInMeasurementTheory.md to the report PDF.
 
 Syllabus Mermaid fences are rendered to PNG via mermaid-cli (mmdc).
 Per-course module dependency graphs are Graphviz SVG/PDF under figures/deps/
@@ -20,11 +20,11 @@ from xml.etree import ElementTree as ET
 ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPTS))
-from lean_listing_sanitize import chunk_line_ranges, sanitize_lean_for_arxiv
+from lean_listing_sanitize import chunk_line_ranges, sanitize_lean_listing
 
-SRC = ROOT / "arxiv_with_code.md"
+SRC = ROOT / "report-expanded.md"
 OUT = ROOT / "BachelorsInMeasurementTheory.tex"
-PREAMBLE = SCRIPTS / "tex_preamble_arxiv.tex"
+PREAMBLE = SCRIPTS / "tex_preamble.tex"
 LISTINGS_DIR = ROOT / "lean-listings"
 FIGURES_DIR = ROOT / "figures"
 PUPPETEER_CONFIG = SCRIPTS / "puppeteer-config.json"
@@ -186,7 +186,7 @@ def render_mermaid(code: str, idx: int) -> tuple[str, list[tuple[str, float, flo
 
 
 def extract_title() -> str:
-    first = (ROOT / "arxiv.md").read_text(encoding="utf-8").splitlines()[0]
+    first = (ROOT / "BachelorsInMeasurementTheory.md").read_text(encoding="utf-8").splitlines()[0]
     title = first[2:].strip() if first.startswith("# ") else first.strip()
     return re.sub(r"\*([^*]+)\*", r"\\emph{\1}", title)
 
@@ -197,7 +197,6 @@ GITHUB_INLINE_MATH = re.compile(r"\$`([^`\n]+?)`\$")
 HTML_COMMENT = re.compile(r"<!--.*?-->", re.DOTALL)
 FENCE_RE = re.compile(r"^```([^\n]*)\n(.*?)^```\s*$", re.MULTILINE | re.DOTALL)
 MANUAL_SECTION_NUM = re.compile(r"^(#{1,6})[ \t]+\d+(?:\.\d+)*\.?[ \t]+", re.MULTILINE)
-NARRATIVE_MARKER = "# Narrative (from arxiv.md)"
 LEAN_MODULE_RE = re.compile(r"^###\s+(BachelorsInMeasurementTheory(?:\.lean|/[^\s{]+))\s*$", re.MULTILINE)
 LEAN_PATH_RE = re.compile(r"<!--\s*lean:\s*(\S+?)\s*-->")
 FIGURE_CAPTION_RE = re.compile(
@@ -224,11 +223,12 @@ def strip_manual_section_numbers(text: str) -> str:
     return MANUAL_SECTION_NUM.sub(r"\1 ", text)
 
 
-def drop_github_nav(text: str) -> str:
-    idx = text.find(NARRATIVE_MARKER)
+def drop_title_block(text: str) -> str:
+    """Title and metadata in the Markdown become the LaTeX title page."""
+    idx = text.find("\n---\n")
     if idx == -1:
         return text
-    return text[idx + len(NARRATIVE_MARKER) :].lstrip("\n")
+    return text[idx + len("\n---\n") :].lstrip("\n")
 
 
 def extract_abstract(text: str) -> tuple[str, str]:
@@ -240,7 +240,7 @@ def extract_abstract(text: str) -> tuple[str, str]:
 
 def write_listing(code: str, listing_name: str) -> tuple[str, int]:
     LISTINGS_DIR.mkdir(parents=True, exist_ok=True)
-    source = sanitize_lean_for_arxiv(code.rstrip("\n"))
+    source = sanitize_lean_listing(code.rstrip("\n"))
     listing_path = LISTINGS_DIR / listing_name
     listing_path.write_text(source + "\n", encoding="utf-8")
     return listing_path.relative_to(ROOT).as_posix(), (len(source.splitlines()) if source else 0)
@@ -546,7 +546,7 @@ def build_title_page(abstract_latex: str) -> str:
 
 def main() -> int:
     if not SRC.is_file():
-        print(f"error: missing {SRC}; run scripts/generate_arxiv_with_code.sh first", file=sys.stderr)
+        print(f"error: missing {SRC}; run scripts/generate_report.sh first", file=sys.stderr)
         return 1
     if LISTINGS_DIR.exists():
         for path in LISTINGS_DIR.iterdir():
@@ -559,10 +559,11 @@ def main() -> int:
         if path.is_file() and path.name.startswith("figure-"):
             path.unlink()
 
-    body = drop_github_nav(SRC.read_text(encoding="utf-8"))
+    body = SRC.read_text(encoding="utf-8")
     figure_captions = parse_figure_captions(body)
     lean_titles = extract_lean_titles(body)
     body = strip_html_comments(body)
+    body = drop_title_block(body)
     abstract_md, body = extract_abstract(body)
     body = strip_manual_section_numbers(body)
     body = github_math_to_tex(body)

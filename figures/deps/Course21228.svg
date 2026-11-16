@@ -22,7 +22,7 @@
 <text text-anchor="middle" x="456.5" y="-137.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Counting</text>
 </g>
 <!-- LAlgebraBigOperatorsGroupFinsetBasic&#45;&gt;MCounting -->
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 <title>LAlgebraBigOperatorsGroupFinsetBasic&#45;&gt;MCounting</title>
 <path fill="none" stroke="#334155" d="M169.98,-294.04C227.88,-312.26 325.28,-331.98 392,-288 433.45,-260.68 447.95,-200.05 452.94,-165.47"/>
 <polygon fill="#334155" stroke="#334155" points="455.43,-165.36 453.92,-158.09 450.57,-164.71 455.43,-165.36"/>
@@ -46,7 +46,7 @@
 <text text-anchor="middle" x="332.5" y="-211.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Fintype.Basic</text>
 </g>
 <!-- LDataFintypeBasic&#45;&gt;MCounting -->
-<g id="edge1" class="edge">
+<g id="edge2" class="edge">
 <title>LDataFintypeBasic&#45;&gt;MCounting</title>
 <path fill="none" stroke="#334155" d="M379.1,-195.87C383.53,-193.7 387.9,-191.4 392,-189 404.89,-181.44 418.13,-171.61 429.16,-162.74"/>
 <polygon fill="#334155" stroke="#334155" points="430.84,-164.53 434.71,-158.21 427.74,-160.73 430.84,-164.53"/>

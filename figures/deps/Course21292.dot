@@ -24,27 +24,27 @@ digraph Course21292 {
   MStrongDuality [label="StrongDuality", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MWeakDuality [label="WeakDuality", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
-  LTacticRing -> MDualFormulation;
   LAlgebraBigOperatorsFin -> MDualFormulation;
+  LTacticRing -> MDualFormulation;
   MScottInstance -> MDualFormulation;
+  LAnalysisInnerProductSpaceBasic -> MLinearProgram;
   LDataRatDefs -> MLinearProgram;
   LAlgebraBigOperatorsGroupFinsetBasic -> MLinearProgram;
-  LAnalysisInnerProductSpaceBasic -> MLinearProgram;
-  LDataRatDefs -> MNumerical;
-  LTacticFinCases -> MNumerical;
-  LTacticNormNum -> MNumerical;
   LAlgebraBigOperatorsGroupFinsetBasic -> MNumerical;
   LAlgebraBigOperatorsFin -> MNumerical;
+  LTacticFinCases -> MNumerical;
+  LTacticNormNum -> MNumerical;
+  LDataRatDefs -> MNumerical;
   MWeakDuality -> MScott11;
   MLinearProgram -> MScottInstance;
   LTacticFinCases -> MSimplex;
   LTacticNormNum -> MSimplex;
   MDualFormulation -> MSimplex;
   MWeakDuality -> MStrongDuality;
-  LTacticLinarith -> MWeakDuality;
-  LAlgebraBigOperatorsRingFinset -> MWeakDuality;
   LTacticSimpRw -> MWeakDuality;
+  LTacticLinarith -> MWeakDuality;
   LAlgebraOrderBigOperatorsGroupFinset -> MWeakDuality;
+  LAlgebraBigOperatorsRingFinset -> MWeakDuality;
   LTacticRing -> MWeakDuality;
   MLinearProgram -> MWeakDuality;
 }

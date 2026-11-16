@@ -70,7 +70,7 @@
 <text text-anchor="middle" x="707.5" y="-162.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">DualBasis</text>
 </g>
 <!-- LAlgebraModuleLinearMapBasic&#45;&gt;MDualBasis -->
-<g id="edge9" class="edge">
+<g id="edge10" class="edge">
 <title>LAlgebraModuleLinearMapBasic&#45;&gt;MDualBasis</title>
 <path fill="none" stroke="#334155" d="M624.72,-245.52C630.02,-243.3 635.15,-240.81 640,-238 660.74,-225.98 678.66,-205.31 690.66,-189.03"/>
 <polygon fill="#334155" stroke="#334155" points="692.71,-190.37 694.8,-183.25 688.73,-187.51 692.71,-190.37"/>
@@ -106,13 +106,13 @@
 <text text-anchor="middle" x="260" y="-480.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Algebra.Order.BigOperators.Group.Finset</text>
 </g>
 <!-- LAlgebraOrderBigOperatorsGroupFinset&#45;&gt;MDualCone -->
-<g id="edge14" class="edge">
+<g id="edge16" class="edge">
 <title>LAlgebraOrderBigOperatorsGroupFinset&#45;&gt;MDualCone</title>
 <path fill="none" stroke="#334155" d="M381.25,-472.09C418.46,-468.71 456.94,-465.22 484.79,-462.69"/>
 <polygon fill="#334155" stroke="#334155" points="485.25,-465.11 492,-462.04 484.8,-460.23 485.25,-465.11"/>
 </g>
 <!-- LAlgebraOrderBigOperatorsGroupFinset&#45;&gt;MSeparation -->
-<g id="edge28" class="edge">
+<g id="edge30" class="edge">
 <title>LAlgebraOrderBigOperatorsGroupFinset&#45;&gt;MSeparation</title>
 <path fill="none" stroke="#334155" d="M381.25,-494.37C416.83,-497.73 453.58,-501.2 481.08,-503.8"/>
 <polygon fill="#334155" stroke="#334155" points="481.02,-506.26 488.22,-504.48 481.48,-501.38 481.02,-506.26"/>
@@ -142,7 +142,7 @@
 <text text-anchor="middle" x="260" y="-578.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Matrix.Mul</text>
 </g>
 <!-- LDataMatrixMul&#45;&gt;MSeparation -->
-<g id="edge27" class="edge">
+<g id="edge28" class="edge">
 <title>LDataMatrixMul&#45;&gt;MSeparation</title>
 <path fill="none" stroke="#334155" d="M312.73,-572.17C334.02,-568.15 358.84,-562.95 381,-557 415.34,-547.78 453.4,-534.76 481.84,-524.46"/>
 <polygon fill="#334155" stroke="#334155" points="482.74,-526.73 488.48,-522.03 481.07,-522.13 482.74,-526.73"/>
@@ -154,7 +154,7 @@
 <text text-anchor="middle" x="526.5" y="-162.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">GroupTheory.GroupAction.Ring</text>
 </g>
 <!-- LGroupTheoryGroupActionRing&#45;&gt;MDualBasis -->
-<g id="edge10" class="edge">
+<g id="edge8" class="edge">
 <title>LGroupTheoryGroupActionRing&#45;&gt;MDualBasis</title>
 <path fill="none" stroke="#334155" d="M619.1,-165C634.92,-165 650.65,-165 664.32,-165"/>
 <polygon fill="#334155" stroke="#334155" points="664.69,-167.45 671.69,-165 664.69,-162.55 664.69,-167.45"/>
@@ -166,7 +166,7 @@
 <text text-anchor="middle" x="260" y="-382.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">LinearAlgebra.Basis.Basic</text>
 </g>
 <!-- LLinearAlgebraBasisBasic&#45;&gt;MDualCone -->
-<g id="edge16" class="edge">
+<g id="edge14" class="edge">
 <title>LLinearAlgebraBasisBasic&#45;&gt;MDualCone</title>
 <path fill="none" stroke="#334155" d="M339.18,-395.87C353.47,-399.36 367.97,-403.96 381,-410 397.37,-417.59 396.65,-427.37 413,-435 435.53,-445.52 462.76,-451.48 484.79,-454.83"/>
 <polygon fill="#334155" stroke="#334155" points="484.47,-457.26 491.75,-455.83 485.17,-452.41 484.47,-457.26"/>
@@ -190,7 +190,7 @@
 <text text-anchor="middle" x="260" y="-627.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">LinearAlgebra.Matrix.Dual</text>
 </g>
 <!-- LLinearAlgebraMatrixDual&#45;&gt;MSeparation -->
-<g id="edge30" class="edge">
+<g id="edge26" class="edge">
 <title>LLinearAlgebraMatrixDual&#45;&gt;MSeparation</title>
 <path fill="none" stroke="#334155" d="M340.13,-618.84C354.04,-615.57 368.16,-611.38 381,-606 425.9,-587.19 471.32,-553.42 498.95,-530.86"/>
 <polygon fill="#334155" stroke="#334155" points="500.73,-532.57 504.57,-526.22 497.61,-528.79 500.73,-532.57"/>
@@ -214,7 +214,7 @@
 <text text-anchor="middle" x="526.5" y="-113.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.FinCases</text>
 </g>
 <!-- LTacticFinCases&#45;&gt;MDualBasis -->
-<g id="edge8" class="edge">
+<g id="edge9" class="edge">
 <title>LTacticFinCases&#45;&gt;MDualBasis</title>
 <path fill="none" stroke="#334155" d="M576.63,-124.82C596.47,-128.82 619.49,-133.99 640,-140 648.23,-142.41 656.9,-145.36 665.15,-148.37"/>
 <polygon fill="#334155" stroke="#334155" points="664.56,-150.76 671.97,-150.9 666.27,-146.17 664.56,-150.76"/>
@@ -232,7 +232,7 @@
 <polygon fill="#334155" stroke="#334155" points="484.42,-457.58 491.62,-455.8 484.88,-452.7 484.42,-457.58"/>
 </g>
 <!-- LTacticLinarith&#45;&gt;MSeparation -->
-<g id="edge26" class="edge">
+<g id="edge27" class="edge">
 <title>LTacticLinarith&#45;&gt;MSeparation</title>
 <path fill="none" stroke="#334155" d="M306.72,-438.53C329.79,-442.04 357.74,-448.21 381,-459 397.37,-466.59 396.65,-476.37 413,-484 434.38,-493.98 459.99,-499.86 481.37,-503.3"/>
 <polygon fill="#334155" stroke="#334155" points="481.15,-505.74 488.44,-504.37 481.89,-500.9 481.15,-505.74"/>
@@ -316,25 +316,25 @@
 <polygon fill="#334155" stroke="#334155" points="689.09,-142.45 695.11,-146.78 693.1,-139.64 689.09,-142.45"/>
 </g>
 <!-- MSeparatingU&#45;&gt;MDotAtV -->
-<g id="edge2" class="edge">
+<g id="edge4" class="edge">
 <title>MSeparatingU&#45;&gt;MDotAtV</title>
 <path fill="none" stroke="#334155" d="M568.75,-402.73C590.19,-398.57 616.71,-392.82 640,-386 650.78,-382.84 662.3,-378.77 672.68,-374.83"/>
 <polygon fill="#334155" stroke="#334155" points="673.66,-377.08 679.31,-372.27 671.9,-372.51 673.66,-377.08"/>
 </g>
 <!-- MSeparatingU&#45;&gt;MDotOnC -->
-<g id="edge6" class="edge">
+<g id="edge7" class="edge">
 <title>MSeparatingU&#45;&gt;MDotOnC</title>
 <path fill="none" stroke="#334155" d="M568.57,-410C599.4,-410 641.2,-410 670.68,-410"/>
 <polygon fill="#334155" stroke="#334155" points="670.89,-412.45 677.89,-410 670.89,-407.55 670.89,-412.45"/>
 </g>
 <!-- MSeparation&#45;&gt;MDotAtV -->
-<g id="edge4" class="edge">
+<g id="edge2" class="edge">
 <title>MSeparation&#45;&gt;MDotAtV</title>
 <path fill="none" stroke="#334155" d="M564.64,-509.13C588.87,-507.89 619.66,-502.3 640,-484 674.06,-453.35 645.02,-423.03 672,-386 672.72,-385.01 673.49,-384.05 674.3,-383.11"/>
 <polygon fill="#334155" stroke="#334155" points="676.16,-384.72 679.32,-378.01 672.67,-381.28 676.16,-384.72"/>
 </g>
 <!-- MSeparation&#45;&gt;MDotOnC -->
-<g id="edge7" class="edge">
+<g id="edge6" class="edge">
 <title>MSeparation&#45;&gt;MDotOnC</title>
 <path fill="none" stroke="#334155" d="M564.53,-505.91C587.54,-503.26 617.01,-497.3 640,-484 661.04,-471.83 679.04,-450.68 690.99,-434.1"/>
 <polygon fill="#334155" stroke="#334155" points="693.1,-435.36 695.11,-428.22 689.09,-432.55 693.1,-435.36"/>

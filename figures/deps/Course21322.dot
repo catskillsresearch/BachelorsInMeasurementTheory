@@ -22,8 +22,8 @@ digraph Course21322 {
   LAlgebraBigOperatorsGroupFinsetBasic -> MHom;
   LBasicRealBasic -> MMeasureCollapse;
   MStoneClopen -> MMeasureCollapse;
-  LAlgebraBigOperatorsFin -> MNumerical;
   LTacticNormNum -> MNumerical;
+  LAlgebraBigOperatorsFin -> MNumerical;
   MMeasureCollapse -> MNumerical;
   MHom -> MStoneClopen;
 }

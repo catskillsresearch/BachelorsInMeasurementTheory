@@ -63,7 +63,7 @@
 \makeatother
 
 % Source-to-Lean concordance cards.  The Markdown source remains readable on
-% GitHub; build_arxiv_tex.py turns hidden card markers into this breakable box.
+% GitHub; build_tex.py turns hidden card markers into this breakable box.
 % Scott writes a circled order relation; \textcircled is a text command.
 \newcommand{\scottcircledgeq}{\mathbin{\text{\normalfont\textcircled{\raisebox{-0.12ex}{$\scriptstyle\geqslant$}}}}}
 
@@ -94,8 +94,8 @@
 \let\origtextunderscore\_
 \renewcommand{\_}{\origtextunderscore\allowbreak}
 
-% Long inlined Lean listings can exhaust pdfTeX main memory; build locally with
-% LuaLaTeX (see .latexmkrc).  arXiv's AutoTeX has the headroom for pdfLaTeX.
+% Long inlined Lean listings can exhaust pdfTeX main memory. The repository
+% PDF is compiled with pdfLaTeX.
 %
 % The listings are kept as real UTF-8 Lean source: every Lean operator is rendered
 % through a `literate` replacement to a proper LaTeX symbol, so the code displays with

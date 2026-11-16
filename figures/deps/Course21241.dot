@@ -32,21 +32,21 @@ digraph Course21241 {
   MSpace [label="Space", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
   LTacticRing -> MDotAtV;
-  MSeparatingU -> MDotAtV;
-  MPointV -> MDotAtV;
   MSeparation -> MDotAtV;
+  MPointV -> MDotAtV;
+  MSeparatingU -> MDotAtV;
   LTacticRing -> MDotOnC;
-  MSeparatingU -> MDotOnC;
   MSeparation -> MDotOnC;
+  MSeparatingU -> MDotOnC;
+  LGroupTheoryGroupActionRing -> MDualBasis;
   LTacticFinCases -> MDualBasis;
   LAlgebraModuleLinearMapBasic -> MDualBasis;
-  LGroupTheoryGroupActionRing -> MDualBasis;
   LAlgebraModuleSubmoduleLinearMap -> MDualBasis;
   MPrimalBasis -> MDualBasis;
   LTacticLinarith -> MDualCone;
-  LAlgebraOrderBigOperatorsGroupFinset -> MDualCone;
-  LAlgebraBigOperatorsFin -> MDualCone;
   LLinearAlgebraBasisBasic -> MDualCone;
+  LAlgebraBigOperatorsFin -> MDualCone;
+  LAlgebraOrderBigOperatorsGroupFinset -> MDualCone;
   MDotOnC -> MPhiSeparates;
   MDotAtV -> MPhiSeparates;
   LTacticNormNum -> MPointV;
@@ -56,10 +56,10 @@ digraph Course21241 {
   LAlgebraBigOperatorsGroupFinsetBasic -> MPrimalBasis;
   MSpace -> MPrimalBasis;
   LLinearAlgebraBasisBasic -> MSeparatingU;
+  LLinearAlgebraMatrixDual -> MSeparation;
   LTacticLinarith -> MSeparation;
   LDataMatrixMul -> MSeparation;
-  LAlgebraOrderBigOperatorsGroupFinset -> MSeparation;
   LAlgebraBigOperatorsFin -> MSeparation;
-  LLinearAlgebraMatrixDual -> MSeparation;
+  LAlgebraOrderBigOperatorsGroupFinset -> MSeparation;
   LBasicRealBasic -> MSpace;
 }

@@ -18,8 +18,8 @@ digraph Course21228 {
   MSymmetric [label="Symmetric", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MValidPair [label="ValidPair", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
-  LDataFintypeBasic -> MCounting;
   LAlgebraBigOperatorsGroupFinsetBasic -> MCounting;
+  LDataFintypeBasic -> MCounting;
   LDataFintypeCard -> MCounting;
   LDataFintypeProd -> MCounting;
   MGenericity -> MCounting;

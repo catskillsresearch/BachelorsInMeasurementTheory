@@ -39,7 +39,7 @@ fidelity:
   divergences: >-
     Curriculum restatement of a CMU 21-xxx style capstone oriented toward
     Scott (1964) measurement theorems. Exact statement concordance lives in
-    courses/ and arxiv.md; this surface compares only the listed headline
+    courses/ and BachelorsInMeasurementTheory.md; this surface compares only the listed headline
     theorems.
 
 sources:

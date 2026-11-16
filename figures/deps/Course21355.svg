@@ -22,7 +22,7 @@
 <text text-anchor="middle" x="362.5" y="-510.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Completeness</text>
 </g>
 <!-- LAlgebraOrderArchimedeanRealBasic&#45;&gt;MCompleteness -->
-<g id="edge20" class="edge">
+<g id="edge21" class="edge">
 <title>LAlgebraOrderArchimedeanRealBasic&#45;&gt;MCompleteness</title>
 <path fill="none" stroke="#334155" d="M211.01,-413.06C223.15,-417.95 234.91,-424.14 245,-432 266.71,-448.91 255.5,-467.83 277,-485 286,-492.19 296.92,-497.56 307.89,-501.57"/>
 <polygon fill="#334155" stroke="#334155" points="307.28,-503.96 314.7,-503.9 308.86,-499.32 307.28,-503.96"/>
@@ -34,7 +34,7 @@
 <text text-anchor="middle" x="362.5" y="-336.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">TailExtremes</text>
 </g>
 <!-- LAlgebraOrderArchimedeanRealBasic&#45;&gt;MTailExtremes -->
-<g id="edge40" class="edge">
+<g id="edge41" class="edge">
 <title>LAlgebraOrderArchimedeanRealBasic&#45;&gt;MTailExtremes</title>
 <path fill="none" stroke="#334155" d="M200.11,-376.97C236.63,-368.38 279.26,-358.35 311.54,-350.76"/>
 <polygon fill="#334155" stroke="#334155" points="312.42,-353.07 318.67,-349.08 311.3,-348.3 312.42,-353.07"/>
@@ -52,7 +52,7 @@
 <text text-anchor="middle" x="728.5" y="-559.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">BolzanoWeierstrass</text>
 </g>
 <!-- LAlgebraOrderGroupAbs&#45;&gt;MBolzanoWeierstrass -->
-<g id="edge11" class="edge">
+<g id="edge13" class="edge">
 <title>LAlgebraOrderGroupAbs&#45;&gt;MBolzanoWeierstrass</title>
 <path fill="none" stroke="#334155" d="M623.88,-725.83C627.45,-723.79 630.86,-721.52 634,-719 678.02,-683.71 706.01,-621.68 718.99,-587.09"/>
 <polygon fill="#334155" stroke="#334155" points="721.42,-587.57 721.53,-580.15 716.82,-585.88 721.42,-587.57"/>
@@ -82,7 +82,7 @@
 <text text-anchor="middle" x="557" y="-597.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">CompactIcc</text>
 </g>
 <!-- LBasicRealBasic&#45;&gt;MCompactIcc -->
-<g id="edge19" class="edge">
+<g id="edge18" class="edge">
 <title>LBasicRealBasic&#45;&gt;MCompactIcc</title>
 <path fill="none" stroke="#334155" d="M152.47,-531.06C182.4,-548.67 231.08,-574.42 277,-586 356.88,-606.15 453.6,-605.72 509.64,-603.15"/>
 <polygon fill="#334155" stroke="#334155" points="510.06,-605.59 516.93,-602.8 509.82,-600.69 510.06,-605.59"/>
@@ -100,7 +100,7 @@
 <text text-anchor="middle" x="557" y="-692.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">PeakPoints</text>
 </g>
 <!-- LBasicRealBasic&#45;&gt;MPeakPoints -->
-<g id="edge38" class="edge">
+<g id="edge34" class="edge">
 <title>LBasicRealBasic&#45;&gt;MPeakPoints</title>
 <path fill="none" stroke="#334155" d="M135.77,-531.04C159.03,-563.58 212.95,-631.52 277,-662 297.73,-671.86 438.89,-685.07 512.12,-691.37"/>
 <polygon fill="#334155" stroke="#334155" points="512.23,-693.83 519.41,-691.99 512.65,-688.95 512.23,-693.83"/>
@@ -136,7 +136,7 @@
 <text text-anchor="middle" x="362.5" y="-711.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Set.Finite.Basic</text>
 </g>
 <!-- LDataSetFiniteBasic&#45;&gt;MPeakPoints -->
-<g id="edge33" class="edge">
+<g id="edge38" class="edge">
 <title>LDataSetFiniteBasic&#45;&gt;MPeakPoints</title>
 <path fill="none" stroke="#334155" d="M428.14,-707.62C455.77,-704.89 487.32,-701.78 512.16,-699.33"/>
 <polygon fill="#334155" stroke="#334155" points="512.59,-701.75 519.32,-698.62 512.11,-696.87 512.59,-701.75"/>
@@ -148,13 +148,13 @@
 <text text-anchor="middle" x="122.5" y="-454.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Order.ConditionallyCompleteLattice.Basic</text>
 </g>
 <!-- LOrderConditionallyCompleteLatticeBasic&#45;&gt;MCompleteness -->
-<g id="edge21" class="edge">
+<g id="edge20" class="edge">
 <title>LOrderConditionallyCompleteLatticeBasic&#45;&gt;MCompleteness</title>
 <path fill="none" stroke="#334155" d="M200.11,-475.03C235.24,-483.29 276.02,-492.89 307.81,-500.37"/>
 <polygon fill="#334155" stroke="#334155" points="307.48,-502.81 314.86,-502.02 308.6,-498.04 307.48,-502.81"/>
 </g>
 <!-- LOrderConditionallyCompleteLatticeBasic&#45;&gt;MTailExtremes -->
-<g id="edge41" class="edge">
+<g id="edge40" class="edge">
 <title>LOrderConditionallyCompleteLatticeBasic&#45;&gt;MTailExtremes</title>
 <path fill="none" stroke="#334155" d="M209.93,-438.9C222.5,-433.81 234.67,-427.31 245,-419 267.34,-401.03 254.43,-380.67 277,-363 287.13,-355.07 299.76,-349.76 312.15,-346.2"/>
 <polygon fill="#334155" stroke="#334155" points="312.84,-348.55 318.99,-344.4 311.59,-343.82 312.84,-348.55"/>
@@ -172,7 +172,7 @@
 <text text-anchor="middle" x="557" y="-164.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">AltSeqDiverges</text>
 </g>
 <!-- LOrderFilterAtTopBotBasic&#45;&gt;MAltSeqDiverges -->
-<g id="edge3" class="edge">
+<g id="edge2" class="edge">
 <title>LOrderFilterAtTopBotBasic&#45;&gt;MAltSeqDiverges</title>
 <path fill="none" stroke="#334155" d="M433.7,-271.96C438.65,-269.86 443.47,-267.55 448,-265 482.79,-245.44 515.69,-212.81 535.83,-190.62"/>
 <polygon fill="#334155" stroke="#334155" points="537.82,-192.07 540.67,-185.22 534.17,-188.8 537.82,-192.07"/>
@@ -196,7 +196,7 @@
 <text text-anchor="middle" x="557" y="-453.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">MonotoneConvergence</text>
 </g>
 <!-- LOrderFilterAtTopBotBasic&#45;&gt;MMonotoneConvergence -->
-<g id="edge27" class="edge">
+<g id="edge28" class="edge">
 <title>LOrderFilterAtTopBotBasic&#45;&gt;MMonotoneConvergence</title>
 <path fill="none" stroke="#334155" d="M440.29,-308.22C443,-309.97 445.59,-311.9 448,-314 474.7,-337.28 459.32,-358.24 480,-387 492.69,-404.65 510.55,-421.15 525.77,-433.59"/>
 <polygon fill="#334155" stroke="#334155" points="524.25,-435.51 531.24,-437.98 527.32,-431.69 524.25,-435.51"/>
@@ -232,13 +232,13 @@
 <text text-anchor="middle" x="362.5" y="-635.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Order.Interval.Set.Basic</text>
 </g>
 <!-- LOrderIntervalSetBasic&#45;&gt;MCompactIcc -->
-<g id="edge18" class="edge">
+<g id="edge16" class="edge">
 <title>LOrderIntervalSetBasic&#45;&gt;MCompactIcc</title>
 <path fill="none" stroke="#334155" d="M436.55,-623.58C461.22,-618.71 488.04,-613.41 510.01,-609.08"/>
 <polygon fill="#334155" stroke="#334155" points="510.57,-611.46 516.97,-607.71 509.62,-606.66 510.57,-611.46"/>
 </g>
 <!-- LOrderIntervalSetBasic&#45;&gt;MPeakPoints -->
-<g id="edge34" class="edge">
+<g id="edge33" class="edge">
 <title>LOrderIntervalSetBasic&#45;&gt;MPeakPoints</title>
 <path fill="none" stroke="#334155" d="M424.41,-656.04C453.02,-664.51 486.48,-674.41 512.49,-682.12"/>
 <polygon fill="#334155" stroke="#334155" points="511.87,-684.49 519.28,-684.13 513.27,-679.79 511.87,-684.49"/>
@@ -250,7 +250,7 @@
 <text text-anchor="middle" x="362.5" y="-15.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Order.Lattice.Nat</text>
 </g>
 <!-- LOrderLatticeNat&#45;&gt;MAltSeqDiverges -->
-<g id="edge1" class="edge">
+<g id="edge6" class="edge">
 <title>LOrderLatticeNat&#45;&gt;MAltSeqDiverges</title>
 <path fill="none" stroke="#334155" d="M418.62,-31.62C428.84,-35.41 439.09,-40.15 448,-46 487.39,-71.86 521.43,-115.62 540.28,-142.82"/>
 <polygon fill="#334155" stroke="#334155" points="538.33,-144.3 544.3,-148.69 542.37,-141.53 538.33,-144.3"/>
@@ -274,7 +274,7 @@
 <text text-anchor="middle" x="362.5" y="-189.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.Linarith</text>
 </g>
 <!-- LTacticLinarith&#45;&gt;MAltSeqDiverges -->
-<g id="edge2" class="edge">
+<g id="edge3" class="edge">
 <title>LTacticLinarith&#45;&gt;MAltSeqDiverges</title>
 <path fill="none" stroke="#334155" d="M409.12,-186.08C436.08,-182.57 470.44,-178.11 499.15,-174.38"/>
 <polygon fill="#334155" stroke="#334155" points="499.69,-176.78 506.32,-173.45 499.06,-171.92 499.69,-176.78"/>
@@ -322,7 +322,7 @@
 <polygon fill="#334155" stroke="#334155" points="492.34,-373.74 498.97,-370.41 491.71,-368.88 492.34,-373.74"/>
 </g>
 <!-- LTopologyDefsFilter&#45;&gt;MMonotoneConvergence -->
-<g id="edge28" class="edge">
+<g id="edge29" class="edge">
 <title>LTopologyDefsFilter&#45;&gt;MMonotoneConvergence</title>
 <path fill="none" stroke="#334155" d="M423.76,-404.24C431.95,-406.7 440.21,-409.32 448,-412 467.95,-418.87 489.55,-427.44 508.15,-435.18"/>
 <polygon fill="#334155" stroke="#334155" points="507.46,-437.55 514.86,-438 509.35,-433.03 507.46,-437.55"/>
@@ -352,7 +352,7 @@
 <polygon fill="#334155" stroke="#334155" points="658.89,-564.45 665.89,-562 658.89,-559.55 658.89,-564.45"/>
 </g>
 <!-- LTopologyOrderCompact&#45;&gt;MCompactIcc -->
-<g id="edge16" class="edge">
+<g id="edge19" class="edge">
 <title>LTopologyOrderCompact&#45;&gt;MCompactIcc</title>
 <path fill="none" stroke="#334155" d="M437.65,-576.64C461.92,-581.43 488.16,-586.61 509.76,-590.87"/>
 <polygon fill="#334155" stroke="#334155" points="509.55,-593.33 516.89,-592.28 510.5,-588.52 509.55,-593.33"/>
@@ -364,13 +364,13 @@
 <text text-anchor="middle" x="122.5" y="-336.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Topology.Order.MonotoneConvergence</text>
 </g>
 <!-- LTopologyOrderMonotoneConvergence&#45;&gt;MAltSeqDiverges -->
-<g id="edge6" class="edge">
+<g id="edge1" class="edge">
 <title>LTopologyOrderMonotoneConvergence&#45;&gt;MAltSeqDiverges</title>
 <path fill="none" stroke="#334155" d="M172.53,-320.96C198.14,-308.99 227.68,-290.71 245,-265 294.31,-191.79 209.75,-126.16 277,-69 305.95,-44.39 412.55,-55.31 448,-69 486.48,-83.86 519.73,-119.5 538.82,-143.45"/>
 <polygon fill="#334155" stroke="#334155" points="536.89,-144.97 543.13,-148.97 540.75,-141.95 536.89,-144.97"/>
 </g>
 <!-- LTopologyOrderMonotoneConvergence&#45;&gt;MMonotoneConvergence -->
-<g id="edge30" class="edge">
+<g id="edge27" class="edge">
 <title>LTopologyOrderMonotoneConvergence&#45;&gt;MMonotoneConvergence</title>
 <path fill="none" stroke="#334155" d="M226.53,-357.07C233.21,-360.66 239.46,-364.93 245,-370 276.62,-398.95 242.02,-436.22 277,-461 308.2,-483.1 406.97,-476.05 478.14,-467.39"/>
 <polygon fill="#334155" stroke="#334155" points="478.73,-469.79 485.38,-466.49 478.13,-464.92 478.73,-469.79"/>
@@ -388,7 +388,7 @@
 <text text-anchor="middle" x="557" y="-521.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Topology.Sequences</text>
 </g>
 <!-- LTopologySequences&#45;&gt;MBolzanoWeierstrass -->
-<g id="edge13" class="edge">
+<g id="edge11" class="edge">
 <title>LTopologySequences&#45;&gt;MBolzanoWeierstrass</title>
 <path fill="none" stroke="#334155" d="M620.15,-537.93C632.75,-540.76 646.06,-543.74 658.87,-546.61"/>
 <polygon fill="#334155" stroke="#334155" points="658.55,-549.05 665.92,-548.19 659.63,-544.27 658.55,-549.05"/>
@@ -412,7 +412,7 @@
 <polygon fill="#334155" stroke="#334155" points="514.26,-386.27 519.54,-381.06 512.17,-381.85 514.26,-386.27"/>
 </g>
 <!-- LTopologyUniformSpaceReal&#45;&gt;MMonotoneConvergence -->
-<g id="edge29" class="edge">
+<g id="edge30" class="edge">
 <title>LTopologyUniformSpaceReal&#45;&gt;MMonotoneConvergence</title>
 <path fill="none" stroke="#334155" d="M448.21,-445.36C458.2,-446.35 468.35,-447.35 478.23,-448.32"/>
 <polygon fill="#334155" stroke="#334155" points="478.17,-450.78 485.37,-449.03 478.65,-445.9 478.17,-450.78"/>
@@ -430,13 +430,13 @@
 <polygon fill="#334155" stroke="#334155" points="488.89,-478.43 494.91,-474.09 487.5,-473.73 488.89,-478.43"/>
 </g>
 <!-- MMonotoneConvergence&#45;&gt;MBolzanoWeierstrass -->
-<g id="edge15" class="edge">
+<g id="edge14" class="edge">
 <title>MMonotoneConvergence&#45;&gt;MBolzanoWeierstrass</title>
 <path fill="none" stroke="#334155" d="M591.25,-474.07C604.66,-481.56 620.2,-490.47 634,-499 654.94,-511.95 677.87,-527.38 695.79,-539.73"/>
 <polygon fill="#334155" stroke="#334155" points="694.51,-541.83 701.66,-543.8 697.3,-537.8 694.51,-541.83"/>
 </g>
 <!-- MPeakPoints&#45;&gt;MBolzanoWeierstrass -->
-<g id="edge14" class="edge">
+<g id="edge15" class="edge">
 <title>MPeakPoints&#45;&gt;MBolzanoWeierstrass</title>
 <path fill="none" stroke="#334155" d="M581.21,-676.79C611.81,-652.78 665.63,-610.55 698.76,-584.55"/>
 <polygon fill="#334155" stroke="#334155" points="700.3,-586.46 704.3,-580.21 697.28,-582.6 700.3,-586.46"/>

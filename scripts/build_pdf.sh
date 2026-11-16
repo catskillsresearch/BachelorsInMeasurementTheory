@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-# Regenerate BachelorsInMeasurementTheory.tex and compile the repo PDF.
+# Regenerate the report Markdown and TeX, then compile the repository PDF.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
 TEX="BachelorsInMeasurementTheory.tex"
 PDF="BachelorsInMeasurementTheory.pdf"
 
-echo "==> Regenerating ${TEX} + lean-listings/ + figures/"
-bash scripts/build_arxiv_tex.sh
+echo "==> Regenerating BachelorsInMeasurementTheory.md, ${TEX}, lean-listings/, and figures/"
+bash scripts/build_tex.sh
 
 echo "==> Compiling PDF (pdfLaTeX via latexmk)"
 latexmk -C "$TEX" >/dev/null 2>&1 || true

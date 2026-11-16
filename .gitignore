@@ -3,8 +3,8 @@
 __pycache__/
 *.pyc
 
-# Generated from arxiv.md by scripts/generate_arxiv_with_code.sh
-arxiv_with_code.md
+# Expanded barrel and generated LaTeX. The barrel itself is BachelorsInMeasurementTheory.md.
+report-expanded.md
 BachelorsInMeasurementTheory.tex
 lean-listings/
 # Generated mermaid/raster renders; keep Graphviz sources for module maps.

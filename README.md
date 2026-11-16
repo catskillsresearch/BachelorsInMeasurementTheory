@@ -5,8 +5,7 @@
 The accompanying report, *Bachelors In Measurement Theory*, is
 by **Lars Warren Ericson** (independent researcher, d/b/a Catskills Research
 Company). It is being prepared for the Carnegie Mellon University School of
-Computer Science Technical Report series as **CMU-CS-26-XXX**, with
-cross-archival to arXiv under cs.LO and math.LO.
+Computer Science Technical Report series as **CMU-CS-26-XXX**.
 
 This repository reconstructs an undergraduate path through the CMU 21-xxx
 catalog, sequenced so that Dana Scott's 1964 measurement theorems (1.1--4.1)
@@ -24,7 +23,8 @@ The pin is `leanprover/lean4:v4.36.0-rc2`.
 
 | File | Role |
 |---|---|
-| `arxiv.md` | CMU technical-report narrative and syllabus |
+| `BachelorsInMeasurementTheory.md` | Report barrel. Markdown Preview Enhanced expands its `@import`s |
+| `report/` | Report sections imported by the barrel |
 | `BachelorsInMeasurementTheory.pdf` | Built report PDF |
 | `docs/CMU_TECH_REPORT.md` | Report-number, build, and release checklist |
 | `courses/` | Per-course English solutions |
@@ -257,9 +257,9 @@ flowchart LR
 ```bash
 lake exe cache get
 lake build
-bash scripts/build_arxiv_pdf.sh
+bash scripts/build_pdf.sh
 ```
 
-`lake build` typechecks `BachelorsInMeasurementTheory`. The PDF script regenerates
-`BachelorsInMeasurementTheory.tex` from `arxiv.md` and the course notes, then
-compiles the report PDF with a standard article title page.
+`lake build` typechecks `BachelorsInMeasurementTheory`. The PDF script expands
+the `@import`s in `BachelorsInMeasurementTheory.md`, writes
+`BachelorsInMeasurementTheory.tex`, and compiles the report PDF.

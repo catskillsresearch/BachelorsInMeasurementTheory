@@ -32,18 +32,18 @@ digraph Course21410 {
   MStoneSpace [label="StoneSpace", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
   MMeasure -> MGlue;
-  LDataFintypeBasic -> MMeasure;
-  LDataSetBooleanAlgebra -> MMeasure;
-  LTacticLinarith -> MMeasure;
-  LOrderDisjoint -> MMeasure;
-  LDataSetDisjoint -> MMeasure;
   LAlgebraBigOperatorsGroupFinsetBasic -> MMeasure;
+  LDataSetBooleanAlgebra -> MMeasure;
+  LDataFintypeBasic -> MMeasure;
+  LTacticLinarith -> MMeasure;
   LAlgebraOrderBigOperatorsGroupFinset -> MMeasure;
-  LTacticRing -> MMeasure;
+  LDataSetDisjoint -> MMeasure;
   LBasicRealBasic -> MMeasure;
+  LOrderDisjoint -> MMeasure;
+  LTacticRing -> MMeasure;
+  LAlgebraBigOperatorsFin -> MNumerical;
   LTacticFinCases -> MNumerical;
   LTacticNormNum -> MNumerical;
-  LAlgebraBigOperatorsFin -> MNumerical;
   MMeasure -> MNumerical;
   LAlgebraModuleLinearMapBasic -> MPositiveExtension;
   MStepFunctions -> MPositiveExtension;
@@ -52,9 +52,9 @@ digraph Course21410 {
   LTacticNormNum -> MStepFunctions;
   LBasicRealBasic -> MStepFunctions;
   MStoneSpace -> MStepFunctions;
+  LOrderHeytingBasic -> MStoneSpace;
   LOrderBooleanAlgebraBasic -> MStoneSpace;
-  LOrderBoundedOrderBasic -> MStoneSpace;
   LDataSetBasic -> MStoneSpace;
   LOrderFilterUltrafilterBasic -> MStoneSpace;
-  LOrderHeytingBasic -> MStoneSpace;
+  LOrderBoundedOrderBasic -> MStoneSpace;
 }

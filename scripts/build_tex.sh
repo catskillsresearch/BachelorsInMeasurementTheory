@@ -3,7 +3,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 echo "==> Regenerating Graphviz module-dependency SVGs"
 python3 scripts/insert_solution_dep_figures.py
-echo "==> Regenerating arxiv_with_code.md"
-bash scripts/generate_arxiv_with_code.sh
+echo "==> Expanding BachelorsInMeasurementTheory.md"
+bash scripts/generate_report.sh
 echo "==> Building BachelorsInMeasurementTheory.tex + lean-listings/ + figures/"
-python3 scripts/build_arxiv_tex.py
+python3 scripts/build_tex.py

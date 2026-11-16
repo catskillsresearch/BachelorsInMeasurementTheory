@@ -27,17 +27,17 @@ digraph Course21640 {
   MSublinear [label="Sublinear", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
   MPreciseStatement -> MApplyHahnBanach;
-  MDominance -> MApplyHahnBanach;
   MNormSublinear -> MApplyHahnBanach;
+  MDominance -> MApplyHahnBanach;
   LAlgebraModuleLinearMapBasic -> MDominance;
   MNormSublinear -> MDominance;
-  LTacticRing -> MNormSublinear;
   LTacticLinarith -> MNormSublinear;
+  LTacticRing -> MNormSublinear;
   MSublinear -> MNormSublinear;
-  LTacticRing -> MNumerical;
   LTacticLinarith -> MNumerical;
-  LTacticPositivity -> MNumerical;
   LBasicRealBasic -> MNumerical;
+  LTacticPositivity -> MNumerical;
+  LTacticRing -> MNumerical;
   MPositivity -> MPositiveExtension;
   MApplyHahnBanach -> MPositiveExtension;
   LTacticLinarith -> MPositivity;
@@ -49,9 +49,9 @@ digraph Course21640 {
   LAlgebraModuleLinearMapBasic -> MRoleOfSublinear;
   LTacticAbel -> MRoleOfSublinear;
   MSublinear -> MRoleOfSublinear;
-  LTopologyBasic -> MScott41;
-  LTopologyContinuousMapBasic -> MScott41;
   LTopologyContinuousMapAlgebra -> MScott41;
+  LTopologyContinuousMapBasic -> MScott41;
+  LTopologyBasic -> MScott41;
   MPositiveExtension -> MScott41;
   LBasicRealBasic -> MSublinear;
   LAnalysisNormedModuleBasic -> MSublinear;

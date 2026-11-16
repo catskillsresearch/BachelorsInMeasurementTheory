@@ -22,7 +22,7 @@
 <text text-anchor="middle" x="442.5" y="-293.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">WellOrder</text>
 </g>
 <!-- LAlgebraOrderRingUnbundledRat&#45;&gt;MWellOrder -->
-<g id="edge13" class="edge">
+<g id="edge11" class="edge">
 <title>LAlgebraOrderRingUnbundledRat&#45;&gt;MWellOrder</title>
 <path fill="none" stroke="#334155" d="M345.8,-400.96C349.67,-399.16 353.43,-397.18 357,-395 387.51,-376.39 412.57,-343 427.27,-320.19"/>
 <polygon fill="#334155" stroke="#334155" points="429.48,-321.28 431.14,-314.05 425.33,-318.67 429.48,-321.28"/>
@@ -52,7 +52,7 @@
 <text text-anchor="middle" x="254" y="-367.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.List.MinMax</text>
 </g>
 <!-- LDataListMinMax&#45;&gt;MWellOrder -->
-<g id="edge10" class="edge">
+<g id="edge12" class="edge">
 <title>LDataListMinMax&#45;&gt;MWellOrder</title>
 <path fill="none" stroke="#334155" d="M310.74,-360.1C326.02,-356.52 342.4,-351.88 357,-346 375.29,-338.64 394.3,-327.72 409.64,-317.97"/>
 <polygon fill="#334155" stroke="#334155" points="411,-320.01 415.55,-314.16 408.34,-315.89 411,-320.01"/>
@@ -70,13 +70,13 @@
 <text text-anchor="middle" x="442.5" y="-132.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">ToRat</text>
 </g>
 <!-- LDataRatDefs&#45;&gt;MToRat -->
-<g id="edge7" class="edge">
+<g id="edge8" class="edge">
 <title>LDataRatDefs&#45;&gt;MToRat</title>
 <path fill="none" stroke="#334155" d="M301.1,-164.36C334.45,-157.38 378.73,-148.13 408.57,-141.89"/>
 <polygon fill="#334155" stroke="#334155" points="409.1,-144.28 415.45,-140.45 408.1,-139.48 409.1,-144.28"/>
 </g>
 <!-- LDataRatDefs&#45;&gt;MWellOrder -->
-<g id="edge11" class="edge">
+<g id="edge14" class="edge">
 <title>LDataRatDefs&#45;&gt;MWellOrder</title>
 <path fill="none" stroke="#334155" d="M301.25,-179.18C319.6,-182.76 340.26,-188.8 357,-199 386.99,-217.27 412.01,-249.69 426.86,-271.98"/>
 <polygon fill="#334155" stroke="#334155" points="424.9,-273.45 430.77,-277.98 429,-270.78 424.9,-273.45"/>
@@ -88,7 +88,7 @@
 <text text-anchor="middle" x="254" y="-318.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Set.Finite.Basic</text>
 </g>
 <!-- LDataSetFiniteBasic&#45;&gt;MWellOrder -->
-<g id="edge14" class="edge">
+<g id="edge15" class="edge">
 <title>LDataSetFiniteBasic&#45;&gt;MWellOrder</title>
 <path fill="none" stroke="#334155" d="M319.71,-312.33C346.21,-308.77 376.12,-304.76 399.67,-301.61"/>
 <polygon fill="#334155" stroke="#334155" points="400.15,-304.02 406.76,-300.66 399.5,-299.16 400.15,-304.02"/>
@@ -100,7 +100,7 @@
 <text text-anchor="middle" x="254" y="-269.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Order.Interval.Set.Basic</text>
 </g>
 <!-- LOrderIntervalSetBasic&#45;&gt;MWellOrder -->
-<g id="edge15" class="edge">
+<g id="edge10" class="edge">
 <title>LOrderIntervalSetBasic&#45;&gt;MWellOrder</title>
 <path fill="none" stroke="#334155" d="M328.17,-281.42C352.56,-284.55 378.87,-287.94 400,-290.66"/>
 <polygon fill="#334155" stroke="#334155" points="399.7,-293.09 406.95,-291.55 400.32,-288.23 399.7,-293.09"/>
@@ -112,7 +112,7 @@
 <text text-anchor="middle" x="59.5" y="-64.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Order.Setoid.Basic</text>
 </g>
 <!-- LOrderSetoidBasic&#45;&gt;MNonzeroDenomInt -->
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 <title>LOrderSetoidBasic&#45;&gt;MNonzeroDenomInt</title>
 <path fill="none" stroke="#334155" d="M119.04,-67C141,-67 166.07,-67 188.53,-67"/>
 <polygon fill="#334155" stroke="#334155" points="188.73,-69.45 195.73,-67 188.73,-64.55 188.73,-69.45"/>
@@ -124,7 +124,7 @@
 <text text-anchor="middle" x="254" y="-220.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Order.WellFounded</text>
 </g>
 <!-- LOrderWellFounded&#45;&gt;MWellOrder -->
-<g id="edge12" class="edge">
+<g id="edge13" class="edge">
 <title>LOrderWellFounded&#45;&gt;MWellOrder</title>
 <path fill="none" stroke="#334155" d="M314.66,-234.69C328.78,-238.26 343.62,-242.68 357,-248 374.56,-254.98 392.93,-265.04 408.04,-274.15"/>
 <polygon fill="#334155" stroke="#334155" points="407.05,-276.42 414.3,-277.98 409.61,-272.24 407.05,-276.42"/>
@@ -136,7 +136,7 @@
 <text text-anchor="middle" x="254" y="-122.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.Linarith</text>
 </g>
 <!-- LTacticLinarith&#45;&gt;MToRat -->
-<g id="edge8" class="edge">
+<g id="edge7" class="edge">
 <title>LTacticLinarith&#45;&gt;MToRat</title>
 <path fill="none" stroke="#334155" d="M300.62,-127.45C333.83,-129.23 378.04,-131.6 408.02,-133.2"/>
 <polygon fill="#334155" stroke="#334155" points="408.2,-135.67 415.32,-133.6 408.46,-130.77 408.2,-135.67"/>
@@ -166,7 +166,7 @@
 <text text-anchor="middle" x="59.5" y="-15.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.Ring</text>
 </g>
 <!-- LTacticRing&#45;&gt;MNonzeroDenomInt -->
-<g id="edge1" class="edge">
+<g id="edge2" class="edge">
 <title>LTacticRing&#45;&gt;MNonzeroDenomInt</title>
 <path fill="none" stroke="#334155" d="M97.62,-27.45C123.52,-34.04 158.75,-43.01 189.11,-50.74"/>
 <polygon fill="#334155" stroke="#334155" points="188.52,-53.12 195.91,-52.47 189.73,-48.37 188.52,-53.12"/>

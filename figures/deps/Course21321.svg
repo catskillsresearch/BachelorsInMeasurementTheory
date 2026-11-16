@@ -40,7 +40,7 @@
 <text text-anchor="middle" x="817.5" y="-336.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Kraft</text>
 </g>
 <!-- LAlgebraBigOperatorsPi&#45;&gt;MKraft -->
-<g id="edge5" class="edge">
+<g id="edge4" class="edge">
 <title>LAlgebraBigOperatorsPi&#45;&gt;MKraft</title>
 <path fill="none" stroke="#334155" d="M721.14,-370.93C729.56,-368.72 737.99,-366.39 746,-364 758.38,-360.31 771.78,-355.71 783.55,-351.47"/>
 <polygon fill="#334155" stroke="#334155" points="784.52,-353.72 790.26,-349.02 782.85,-349.12 784.52,-353.72"/>
@@ -148,7 +148,7 @@
 <text text-anchor="middle" x="646.5" y="-336.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Fin.VecNotation</text>
 </g>
 <!-- LDataFinVecNotation&#45;&gt;MKraft -->
-<g id="edge4" class="edge">
+<g id="edge5" class="edge">
 <title>LDataFinVecNotation&#45;&gt;MKraft</title>
 <path fill="none" stroke="#334155" d="M712.84,-339C736.83,-339 763,-339 783.04,-339"/>
 <polygon fill="#334155" stroke="#334155" points="783.13,-341.45 790.13,-339 783.13,-336.55 783.13,-341.45"/>
@@ -172,7 +172,7 @@
 <text text-anchor="middle" x="646.5" y="-287.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Fintype.Fin</text>
 </g>
 <!-- LDataFintypeFin&#45;&gt;MKraft -->
-<g id="edge3" class="edge">
+<g id="edge1" class="edge">
 <title>LDataFintypeFin&#45;&gt;MKraft</title>
 <path fill="none" stroke="#334155" d="M699.09,-302.27C714.27,-306.1 730.86,-310.51 746,-315 758.33,-318.66 771.72,-323.1 783.49,-327.16"/>
 <polygon fill="#334155" stroke="#334155" points="782.8,-329.51 790.21,-329.5 784.41,-324.88 782.8,-329.51"/>
@@ -196,7 +196,7 @@
 <text text-anchor="middle" x="646.5" y="-238.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.FinCases</text>
 </g>
 <!-- LTacticFinCases&#45;&gt;MKraft -->
-<g id="edge1" class="edge">
+<g id="edge3" class="edge">
 <title>LTacticFinCases&#45;&gt;MKraft</title>
 <path fill="none" stroke="#334155" d="M696.66,-247.9C713.1,-251.63 731.04,-257.32 746,-266 767.31,-278.36 786.37,-299 799.29,-315.18"/>
 <polygon fill="#334155" stroke="#334155" points="797.52,-316.91 803.76,-320.92 801.39,-313.89 797.52,-316.91"/>
@@ -232,7 +232,7 @@
 <polygon fill="#334155" stroke="#334155" points="806.93,-364.58 808,-357.24 802.59,-362.31 806.93,-364.58"/>
 </g>
 <!-- MScottPair&#45;&gt;MKraft -->
-<g id="edge6" class="edge">
+<g id="edge7" class="edge">
 <title>MScottPair&#45;&gt;MKraft</title>
 <path fill="none" stroke="#334155" d="M406.23,-281.11C428.3,-314.74 480.97,-385.91 547,-413 628.82,-446.58 664.7,-447.83 746,-413 769.53,-402.92 788.93,-380.69 801.38,-363.22"/>
 <polygon fill="#334155" stroke="#334155" points="803.7,-364.18 805.65,-357.03 799.66,-361.4 803.7,-364.18"/>
@@ -250,19 +250,19 @@
 <polygon fill="#334155" stroke="#334155" points="600.12,-120.61 606.69,-117.17 599.4,-115.77 600.12,-120.61"/>
 </g>
 <!-- MScottPair&#45;&gt;MTheorem13 -->
-<g id="edge22" class="edge">
+<g id="edge23" class="edge">
 <title>MScottPair&#45;&gt;MTheorem13</title>
 <path fill="none" stroke="#334155" d="M426.6,-260.2C451.41,-257.18 486.43,-251.07 515,-239 530.9,-232.28 530.9,-223.22 547,-217 630.26,-184.84 666.51,-230.6 746,-190 768.38,-178.57 787.57,-157.14 800.25,-140.27"/>
 <polygon fill="#334155" stroke="#334155" points="802.47,-141.39 804.63,-134.29 798.52,-138.5 802.47,-141.39"/>
 </g>
 <!-- MTheorem11&#45;&gt;MKraft -->
-<g id="edge7" class="edge">
+<g id="edge6" class="edge">
 <title>MTheorem11&#45;&gt;MKraft</title>
 <path fill="none" stroke="#334155" d="M686.24,-179.38C705.83,-188.06 729,-200.64 746,-217 774.96,-244.87 795.79,-287.23 806.99,-313.99"/>
 <polygon fill="#334155" stroke="#334155" points="804.85,-315.22 809.77,-320.77 809.38,-313.36 804.85,-315.22"/>
 </g>
 <!-- MTheorem12&#45;&gt;MTheorem13 -->
-<g id="edge23" class="edge">
+<g id="edge22" class="edge">
 <title>MTheorem12&#45;&gt;MTheorem13</title>
 <path fill="none" stroke="#334155" d="M686.27,-116C711.39,-116 744.23,-116 770.64,-116"/>
 <polygon fill="#334155" stroke="#334155" points="770.91,-118.45 777.91,-116 770.91,-113.55 770.91,-118.45"/>

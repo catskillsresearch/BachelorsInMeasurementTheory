@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""ASCII sanitization for Lean sources included via listings on arXiv (pdfLaTeX).
+"""ASCII sanitization for Lean sources included via listings in the report PDF.
 
-The arXiv AutoTeX pipeline runs pdfLaTeX, which chokes on arbitrary UTF-8 inside
-`lstinputlisting` files. We therefore render the logical/mathematical operators to
-readable ASCII and drop anything still non-ASCII to `?` rather than break the build.
+pdfLaTeX chokes on arbitrary UTF-8 inside `lstinputlisting` files. We therefore
+render the logical/mathematical operators to readable ASCII and drop anything
+still non-ASCII to `?` rather than break the build.
 """
 
 from __future__ import annotations
@@ -140,7 +140,7 @@ LEAN_UNICODE_REPLACEMENTS: tuple[tuple[str, str], ...] = (
 )
 
 
-def sanitize_lean_for_arxiv(text: str) -> str:
+def sanitize_lean_listing(text: str) -> str:
     out = text
     for src, dst in LEAN_UNICODE_REPLACEMENTS:
         out = out.replace(src, dst)
