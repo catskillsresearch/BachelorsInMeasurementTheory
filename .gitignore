@@ -5,7 +5,7 @@ __pycache__/
 
 # Generated from arxiv.md by scripts/generate_arxiv_with_code.sh
 arxiv_with_code.md
-arxiv.tex
+BachelorsInMeasurementTheory.tex
 lean-listings/
 # Generated mermaid/raster renders; keep Graphviz sources for module maps.
 figures/*

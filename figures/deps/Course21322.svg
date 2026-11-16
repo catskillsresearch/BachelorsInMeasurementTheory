@@ -22,7 +22,7 @@
 <text text-anchor="middle" x="769" y="-137.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Numerical</text>
 </g>
 <!-- LAlgebraBigOperatorsFin&#45;&gt;MNumerical -->
-<g id="edge8" class="edge">
+<g id="edge7" class="edge">
 <title>LAlgebraBigOperatorsFin&#45;&gt;MNumerical</title>
 <path fill="none" stroke="#334155" d="M683.19,-170.96C689.22,-168.99 695.24,-166.98 701,-165 709.07,-162.22 717.64,-159.13 725.85,-156.1"/>
 <polygon fill="#334155" stroke="#334155" points="726.95,-158.31 732.66,-153.57 725.24,-153.72 726.95,-158.31"/>
@@ -40,7 +40,7 @@
 <text text-anchor="middle" x="324.5" y="-39.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Hom</text>
 </g>
 <!-- LAlgebraBigOperatorsGroupFinsetBasic&#45;&gt;MHom -->
-<g id="edge3" class="edge">
+<g id="edge4" class="edge">
 <title>LAlgebraBigOperatorsGroupFinsetBasic&#45;&gt;MHom</title>
 <path fill="none" stroke="#334155" d="M241.05,-52.2C259.04,-49.98 276.22,-47.85 290.19,-46.12"/>
 <polygon fill="#334155" stroke="#334155" points="290.55,-48.55 297.19,-45.26 289.94,-43.68 290.55,-48.55"/>
@@ -70,7 +70,7 @@
 <text text-anchor="middle" x="120.5" y="-15.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Data.Fintype.Basic</text>
 </g>
 <!-- LDataFintypeBasic&#45;&gt;MHom -->
-<g id="edge4" class="edge">
+<g id="edge3" class="edge">
 <title>LDataFintypeBasic&#45;&gt;MHom</title>
 <path fill="none" stroke="#334155" d="M180.2,-24.97C215.96,-29.22 260.35,-34.5 290.17,-38.04"/>
 <polygon fill="#334155" stroke="#334155" points="290.18,-40.51 297.42,-38.9 290.76,-35.64 290.18,-40.51"/>
@@ -100,7 +100,7 @@
 <text text-anchor="middle" x="624" y="-137.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.NormNum</text>
 </g>
 <!-- LTacticNormNum&#45;&gt;MNumerical -->
-<g id="edge7" class="edge">
+<g id="edge8" class="edge">
 <title>LTacticNormNum&#45;&gt;MNumerical</title>
 <path fill="none" stroke="#334155" d="M677.84,-140C693.57,-140 710.59,-140 725.56,-140"/>
 <polygon fill="#334155" stroke="#334155" points="725.73,-142.45 732.73,-140 725.73,-137.55 725.73,-142.45"/>

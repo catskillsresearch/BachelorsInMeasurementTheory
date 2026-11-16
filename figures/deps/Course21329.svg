@@ -22,7 +22,7 @@
 <text text-anchor="middle" x="251.5" y="-64.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Filter</text>
 </g>
 <!-- LOrderBoundedOrderBasic&#45;&gt;MFilter -->
-<g id="edge4" class="edge">
+<g id="edge3" class="edge">
 <title>LOrderBoundedOrderBasic&#45;&gt;MFilter</title>
 <path fill="none" stroke="#334155" d="M161.05,-97.96C167.81,-96.02 174.55,-94.02 181,-92 193.07,-88.22 206.16,-83.64 217.69,-79.44"/>
 <polygon fill="#334155" stroke="#334155" points="218.55,-81.73 224.27,-77.02 216.86,-77.13 218.55,-81.73"/>
@@ -34,7 +34,7 @@
 <text text-anchor="middle" x="90.5" y="-64.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Order.Filter.Ultrafilter.Basic</text>
 </g>
 <!-- LOrderFilterUltrafilterBasic&#45;&gt;MFilter -->
-<g id="edge3" class="edge">
+<g id="edge5" class="edge">
 <title>LOrderFilterUltrafilterBasic&#45;&gt;MFilter</title>
 <path fill="none" stroke="#334155" d="M173.79,-67C189.12,-67 204.31,-67 217.08,-67"/>
 <polygon fill="#334155" stroke="#334155" points="217.3,-69.45 224.3,-67 217.3,-64.55 217.3,-69.45"/>
@@ -46,7 +46,7 @@
 <text text-anchor="middle" x="90.5" y="-15.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Order.Lattice</text>
 </g>
 <!-- LOrderLattice&#45;&gt;MFilter -->
-<g id="edge5" class="edge">
+<g id="edge4" class="edge">
 <title>LOrderLattice&#45;&gt;MFilter</title>
 <path fill="none" stroke="#334155" d="M135.41,-28.99C149.99,-32.85 166.26,-37.38 181,-42 193.07,-45.78 206.16,-50.36 217.69,-54.56"/>
 <polygon fill="#334155" stroke="#334155" points="216.86,-56.87 224.27,-56.98 218.55,-52.27 216.86,-56.87"/>
@@ -82,7 +82,7 @@
 <text text-anchor="middle" x="251.5" y="-186.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Cardinality</text>
 </g>
 <!-- LSetTheoryCardinalArithmetic&#45;&gt;MCardinality -->
-<g id="edge1" class="edge">
+<g id="edge2" class="edge">
 <title>LSetTheoryCardinalArithmetic&#45;&gt;MCardinality</title>
 <path fill="none" stroke="#334155" d="M181.22,-199.89C189.85,-198.54 198.32,-197.2 206.2,-195.96"/>
 <polygon fill="#334155" stroke="#334155" points="206.74,-198.36 213.27,-194.85 205.98,-193.52 206.74,-198.36"/>
@@ -94,7 +94,7 @@
 <text text-anchor="middle" x="90.5" y="-162.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">SetTheory.Cardinal.Basic</text>
 </g>
 <!-- LSetTheoryCardinalBasic&#45;&gt;MCardinality -->
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 <title>LSetTheoryCardinalBasic&#45;&gt;MCardinality</title>
 <path fill="none" stroke="#334155" d="M167.27,-176.44C180.65,-178.46 194.16,-180.5 206.3,-182.33"/>
 <polygon fill="#334155" stroke="#334155" points="205.98,-184.76 213.27,-183.38 206.72,-179.91 205.98,-184.76"/>

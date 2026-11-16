@@ -1,8 +1,8 @@
 [![Lean 4](https://img.shields.io/github/actions/workflow/status/catskillsresearch/fabbro/build.yml?label=Lean%204)](https://github.com/catskillsresearch/fabbro/actions/workflows/build.yml)
 
-# Formalization of a BS in Measurement Theory
+# Bachelors In Measurement Theory
 
-The accompanying report, *Formalization of a BS in Measurement Theory*, is
+The accompanying report, *Bachelors In Measurement Theory*, is
 by **Lars Warren Ericson** (independent researcher, d/b/a Catskills Research
 Company). It is being prepared for the Carnegie Mellon University School of
 Computer Science Technical Report series as **CMU-CS-26-XXX**, with
@@ -25,7 +25,7 @@ The pin is `leanprover/lean4:v4.36.0-rc2`.
 | File | Role |
 |---|---|
 | `arxiv.md` | CMU technical-report narrative and syllabus |
-| `arxiv.pdf` | Built CMU report PDF for cross-archival |
+| `BachelorsInMeasurementTheory.pdf` | Built report PDF |
 | `docs/CMU_TECH_REPORT.md` | Report-number, build, and release checklist |
 | `courses/` | Per-course English solutions |
 | `BachelorsInMeasurementTheory/` | Sorry-free Lean 4 formalizations |
@@ -261,5 +261,5 @@ bash scripts/build_arxiv_pdf.sh
 ```
 
 `lake build` typechecks `BachelorsInMeasurementTheory`. The PDF script regenerates
-`arxiv.tex` from `arxiv.md` and the course notes, compiles the report
-with a standard article title page, and writes `dist/arxiv_submit.zip`.
+`BachelorsInMeasurementTheory.tex` from `arxiv.md` and the course notes, then
+compiles the report PDF with a standard article title page.

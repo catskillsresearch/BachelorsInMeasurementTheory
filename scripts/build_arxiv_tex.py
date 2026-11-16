@@ -23,7 +23,7 @@ sys.path.insert(0, str(SCRIPTS))
 from lean_listing_sanitize import chunk_line_ranges, sanitize_lean_for_arxiv
 
 SRC = ROOT / "arxiv_with_code.md"
-OUT = ROOT / "arxiv.tex"
+OUT = ROOT / "BachelorsInMeasurementTheory.tex"
 PREAMBLE = SCRIPTS / "tex_preamble_arxiv.tex"
 LISTINGS_DIR = ROOT / "lean-listings"
 FIGURES_DIR = ROOT / "figures"

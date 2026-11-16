@@ -18,12 +18,12 @@ digraph Course21322 {
 
   LTacticByContra -> MAtomIso;
   MHom -> MAtomIso;
-  LAlgebraBigOperatorsGroupFinsetBasic -> MHom;
   LDataFintypeBasic -> MHom;
+  LAlgebraBigOperatorsGroupFinsetBasic -> MHom;
   LBasicRealBasic -> MMeasureCollapse;
   MStoneClopen -> MMeasureCollapse;
-  LTacticNormNum -> MNumerical;
   LAlgebraBigOperatorsFin -> MNumerical;
+  LTacticNormNum -> MNumerical;
   MMeasureCollapse -> MNumerical;
   MHom -> MStoneClopen;
 }

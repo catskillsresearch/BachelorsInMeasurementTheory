@@ -1,6 +1,6 @@
 # CMU School of Computer Science technical report
 
-Publication checklist for *Formalization of a BS in Measurement Theory*.
+Publication checklist for *Bachelors In Measurement Theory*.
 
 ## Report metadata
 
@@ -26,15 +26,12 @@ bash scripts/build_arxiv_pdf.sh
 
 The build produces:
 
-- `arxiv.pdf` — report PDF;
-- `arxiv.tex` — generated complete LaTeX source (gitignored);
+- `BachelorsInMeasurementTheory.pdf` — report PDF for the repository;
+- `BachelorsInMeasurementTheory.tex` — generated complete LaTeX source (gitignored);
 - `lean-listings/` — generated report inputs (gitignored);
-- `figures/` — live Mermaid diagrams rendered to PNG (gitignored; never PDF);
-- `dist/arxiv_submit.zip` — pdfLaTeX-ready cross-archive bundle, including
-  `figures/*.png`.
+- `figures/` — live Mermaid diagrams rendered to PNG (gitignored; never PDF).
 
-The title page is a standard `article` `\maketitle` followed by the abstract,
-matching the layout of `qlambda/arxiv.pdf`.
+The title page is a standard `article` `\maketitle` followed by the abstract.
 
 ## Before public release
 
@@ -45,5 +42,3 @@ matching the layout of `qlambda/arxiv.pdf`.
 4. Inspect the cover, abstract, table of contents, list of figures, numbered
    figure captions, syllabus, course chapters, acknowledgments, references,
    and Lean module index (filenames and GitHub links, not source reprints).
-5. Upload `dist/arxiv_submit.zip` only after deleting prior arXiv submission
-   files so the source set is replaced rather than merged.

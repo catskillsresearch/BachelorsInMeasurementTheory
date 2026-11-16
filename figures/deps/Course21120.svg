@@ -22,7 +22,7 @@
 <text text-anchor="middle" x="504" y="-407.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">Existence</text>
 </g>
 <!-- LAlgebraOrderStarReal&#45;&gt;MExistence -->
-<g id="edge2" class="edge">
+<g id="edge4" class="edge">
 <title>LAlgebraOrderStarReal&#45;&gt;MExistence</title>
 <path fill="none" stroke="#334155" d="M240.28,-562.8C272.27,-561.59 308.37,-554.56 334,-533 369.06,-503.5 331.49,-465.14 366,-435 392.05,-412.25 431.76,-407.12 461.73,-407.02"/>
 <polygon fill="#334155" stroke="#334155" points="461.71,-409.47 468.74,-407.09 461.76,-404.57 461.71,-409.47"/>
@@ -34,7 +34,7 @@
 <text text-anchor="middle" x="504" y="-358.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">FTC</text>
 </g>
 <!-- LAlgebraOrderStarReal&#45;&gt;MFTC -->
-<g id="edge11" class="edge">
+<g id="edge15" class="edge">
 <title>LAlgebraOrderStarReal&#45;&gt;MFTC</title>
 <path fill="none" stroke="#334155" d="M240.04,-563.99C272.57,-563.17 309.18,-556.12 334,-533 382.92,-487.42 317.93,-432.47 366,-386 393.28,-359.63 438.59,-356.2 469.58,-357.49"/>
 <polygon fill="#334155" stroke="#334155" points="469.61,-359.94 476.74,-357.88 469.88,-355.05 469.61,-359.94"/>
@@ -52,7 +52,7 @@
 <text text-anchor="middle" x="727" y="-431.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">TailBound</text>
 </g>
 <!-- LAnalysisCalculusDerivAdd&#45;&gt;MTailBound -->
-<g id="edge31" class="edge">
+<g id="edge22" class="edge">
 <title>LAnalysisCalculusDerivAdd&#45;&gt;MTailBound</title>
 <path fill="none" stroke="#334155" d="M588.56,-318.04C607,-321.83 625.83,-327.77 642,-337 672.42,-354.37 697.15,-386.99 711.72,-409.58"/>
 <polygon fill="#334155" stroke="#334155" points="709.75,-411.04 715.55,-415.66 713.89,-408.43 709.75,-411.04"/>
@@ -64,7 +64,7 @@
 <text text-anchor="middle" x="167" y="-113.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Analysis.Calculus.Deriv.Basic</text>
 </g>
 <!-- LAnalysisCalculusDerivBasic&#45;&gt;MFTC -->
-<g id="edge16" class="edge">
+<g id="edge17" class="edge">
 <title>LAnalysisCalculusDerivBasic&#45;&gt;MFTC</title>
 <path fill="none" stroke="#334155" d="M255.56,-109.8C284,-112.39 313.47,-120.72 334,-141 396.8,-203.03 303.95,-274.23 366,-337 392.72,-364.03 438.36,-366.89 469.57,-365.09"/>
 <polygon fill="#334155" stroke="#334155" points="469.97,-367.52 476.78,-364.58 469.62,-362.63 469.97,-367.52"/>
@@ -88,7 +88,7 @@
 <text text-anchor="middle" x="504" y="-211.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Analysis.Calculus.Deriv.Mul</text>
 </g>
 <!-- LAnalysisCalculusDerivMul&#45;&gt;MTailBound -->
-<g id="edge26" class="edge">
+<g id="edge31" class="edge">
 <title>LAnalysisCalculusDerivMul&#45;&gt;MTailBound</title>
 <path fill="none" stroke="#334155" d="M587.7,-215.91C607.1,-219.74 626.58,-226.73 642,-239 696.01,-281.99 715.95,-366.42 722.76,-408.67"/>
 <polygon fill="#334155" stroke="#334155" points="720.38,-409.25 723.85,-415.8 725.22,-408.51 720.38,-409.25"/>
@@ -100,7 +100,7 @@
 <text text-anchor="middle" x="504" y="-750.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Analysis.Calculus.Deriv.Pow</text>
 </g>
 <!-- LAnalysisCalculusDerivPow&#45;&gt;MTailBound -->
-<g id="edge21" class="edge">
+<g id="edge30" class="edge">
 <title>LAnalysisCalculusDerivPow&#45;&gt;MTailBound</title>
 <path fill="none" stroke="#334155" d="M589.16,-753.04C608.42,-749.3 627.47,-742.09 642,-729 682.76,-692.27 712.33,-523.54 722.31,-459.11"/>
 <polygon fill="#334155" stroke="#334155" points="724.74,-459.43 723.38,-452.14 719.9,-458.68 724.74,-459.43"/>
@@ -118,7 +118,7 @@
 <polygon fill="#334155" stroke="#334155" points="462.07,-411.64 468.99,-408.95 461.91,-406.74 462.07,-411.64"/>
 </g>
 <!-- LAnalysisComplexTrigonometric&#45;&gt;MFTC -->
-<g id="edge12" class="edge">
+<g id="edge14" class="edge">
 <title>LAnalysisComplexTrigonometric&#45;&gt;MFTC</title>
 <path fill="none" stroke="#334155" d="M263.74,-511.81C288.94,-508.4 314.5,-500.4 334,-484 369.06,-454.5 331.49,-416.14 366,-386 394.49,-361.12 439.33,-357.31 469.89,-358.11"/>
 <polygon fill="#334155" stroke="#334155" points="469.86,-360.56 476.95,-358.39 470.05,-355.67 469.86,-360.56"/>
@@ -142,7 +142,7 @@
 <text text-anchor="middle" x="504" y="-701.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Analysis.Real.Pi.Bounds</text>
 </g>
 <!-- LAnalysisRealPiBounds&#45;&gt;MTailBound -->
-<g id="edge28" class="edge">
+<g id="edge29" class="edge">
 <title>LAnalysisRealPiBounds&#45;&gt;MTailBound</title>
 <path fill="none" stroke="#334155" d="M578.01,-705.25C600.71,-702.21 624.38,-695.07 642,-680 708.87,-622.8 722.61,-510.02 725.36,-459.51"/>
 <polygon fill="#334155" stroke="#334155" points="727.82,-459.35 725.7,-452.24 722.92,-459.12 727.82,-459.35"/>
@@ -154,7 +154,7 @@
 <text text-anchor="middle" x="504" y="-652.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Analysis.SpecialFunctions.Integrals.Basic</text>
 </g>
 <!-- LAnalysisSpecialFunctionsIntegralsBasic&#45;&gt;MTailBound -->
-<g id="edge32" class="edge">
+<g id="edge24" class="edge">
 <title>LAnalysisSpecialFunctionsIntegralsBasic&#45;&gt;MTailBound</title>
 <path fill="none" stroke="#334155" d="M625.16,-641.63C631.13,-638.64 636.8,-635.13 642,-631 696.8,-587.53 716.42,-501.57 722.97,-459.04"/>
 <polygon fill="#334155" stroke="#334155" points="725.4,-459.39 723.98,-452.11 720.55,-458.68 725.4,-459.39"/>
@@ -166,7 +166,7 @@
 <text text-anchor="middle" x="504" y="-603.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Analysis.SpecialFunctions.Trigonometric.Arctan</text>
 </g>
 <!-- LAnalysisSpecialFunctionsTrigonometricArctan&#45;&gt;MTailBound -->
-<g id="edge29" class="edge">
+<g id="edge26" class="edge">
 <title>LAnalysisSpecialFunctionsTrigonometricArctan&#45;&gt;MTailBound</title>
 <path fill="none" stroke="#334155" d="M632.45,-587.96C635.75,-586.14 638.94,-584.16 642,-582 684.72,-551.89 708.51,-492.71 719.14,-459.02"/>
 <polygon fill="#334155" stroke="#334155" points="721.5,-459.65 721.2,-452.24 716.82,-458.22 721.5,-459.65"/>
@@ -178,13 +178,13 @@
 <text text-anchor="middle" x="167" y="-456.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Analysis.SpecialFunctions.Trigonometric.Basic</text>
 </g>
 <!-- LAnalysisSpecialFunctionsTrigonometricBasic&#45;&gt;MExistence -->
-<g id="edge5" class="edge">
+<g id="edge2" class="edge">
 <title>LAnalysisSpecialFunctionsTrigonometricBasic&#45;&gt;MExistence</title>
 <path fill="none" stroke="#334155" d="M293.09,-440.96C306.9,-438.96 320.75,-436.94 334,-435 377.56,-428.63 427.43,-421.24 461.64,-416.16"/>
 <polygon fill="#334155" stroke="#334155" points="462.13,-418.56 468.69,-415.11 461.41,-413.71 462.13,-418.56"/>
 </g>
 <!-- LAnalysisSpecialFunctionsTrigonometricBasic&#45;&gt;MFTC -->
-<g id="edge17" class="edge">
+<g id="edge18" class="edge">
 <title>LAnalysisSpecialFunctionsTrigonometricBasic&#45;&gt;MFTC</title>
 <path fill="none" stroke="#334155" d="M301.72,-450.1C313.11,-446.28 324.06,-441.34 334,-435 355.93,-421.01 344.33,-400.39 366,-386 396.91,-365.46 440.01,-360.57 469.56,-359.94"/>
 <polygon fill="#334155" stroke="#334155" points="469.79,-362.39 476.77,-359.86 469.74,-357.49 469.79,-362.39"/>
@@ -196,13 +196,13 @@
 <text text-anchor="middle" x="167" y="-407.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Basic.Real.Basic</text>
 </g>
 <!-- LBasicRealBasic&#45;&gt;MExistence -->
-<g id="edge4" class="edge">
+<g id="edge5" class="edge">
 <title>LBasicRealBasic&#45;&gt;MExistence</title>
 <path fill="none" stroke="#334155" d="M220.71,-410C287.46,-410 401.08,-410 461.82,-410"/>
 <polygon fill="#334155" stroke="#334155" points="461.96,-412.45 468.96,-410 461.96,-407.55 461.96,-412.45"/>
 </g>
 <!-- LBasicRealBasic&#45;&gt;MFTC -->
-<g id="edge15" class="edge">
+<g id="edge8" class="edge">
 <title>LBasicRealBasic&#45;&gt;MFTC</title>
 <path fill="none" stroke="#334155" d="M220.71,-402.42C253.35,-397.72 296.11,-391.54 334,-386 381.26,-379.09 435.94,-370.98 470,-365.91"/>
 <polygon fill="#334155" stroke="#334155" points="470.38,-368.33 476.95,-364.88 469.66,-363.49 470.38,-368.33"/>
@@ -232,7 +232,7 @@
 <text text-anchor="middle" x="504" y="-554.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">MeasureTheory.Integral.IntervalIntegral.Basic</text>
 </g>
 <!-- LMeasureTheoryIntegralIntervalIntegralBasic&#45;&gt;MTailBound -->
-<g id="edge25" class="edge">
+<g id="edge23" class="edge">
 <title>LMeasureTheoryIntegralIntervalIntegralBasic&#45;&gt;MTailBound</title>
 <path fill="none" stroke="#334155" d="M630.28,-538.94C634.31,-537.14 638.23,-535.16 642,-533 672.93,-515.28 697.7,-481.68 712.12,-458.57"/>
 <polygon fill="#334155" stroke="#334155" points="714.35,-459.61 715.91,-452.36 710.17,-457.06 714.35,-459.61"/>
@@ -250,7 +250,7 @@
 <polygon fill="#334155" stroke="#334155" points="461.58,-406.42 468.86,-405.01 462.29,-401.57 461.58,-406.42"/>
 </g>
 <!-- LMeasureTheoryIntegralIntervalIntegralFundThmCalculus&#45;&gt;MFTC -->
-<g id="edge18" class="edge">
+<g id="edge11" class="edge">
 <title>LMeasureTheoryIntegralIntervalIntegralFundThmCalculus&#45;&gt;MFTC</title>
 <path fill="none" stroke="#334155" d="M334.03,-361C385.73,-361 437.61,-361 469.99,-361"/>
 <polygon fill="#334155" stroke="#334155" points="469.99,-363.45 476.99,-361 469.99,-358.55 469.99,-363.45"/>
@@ -262,7 +262,7 @@
 <text text-anchor="middle" x="167" y="-15.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">MeasureTheory.Measure.MeasureSpaceDef</text>
 </g>
 <!-- LMeasureTheoryMeasureMeasureSpaceDef&#45;&gt;MFTC -->
-<g id="edge13" class="edge">
+<g id="edge10" class="edge">
 <title>LMeasureTheoryMeasureMeasureSpaceDef&#45;&gt;MFTC</title>
 <path fill="none" stroke="#334155" d="M294.15,-17.98C309.13,-22.94 322.98,-30.58 334,-42 425.58,-136.9 275.84,-240.75 366,-337 392.06,-364.82 438.06,-367.46 469.52,-365.39"/>
 <polygon fill="#334155" stroke="#334155" points="470,-367.81 476.78,-364.81 469.61,-362.92 470,-367.81"/>
@@ -274,7 +274,7 @@
 <text text-anchor="middle" x="504" y="-505.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Order.Filter.AtTopBot.Basic</text>
 </g>
 <!-- LOrderFilterAtTopBotBasic&#45;&gt;MTailBound -->
-<g id="edge30" class="edge">
+<g id="edge21" class="edge">
 <title>LOrderFilterAtTopBotBasic&#45;&gt;MTailBound</title>
 <path fill="none" stroke="#334155" d="M585.62,-498.89C604.47,-495.4 624.23,-490.59 642,-484 660.68,-477.07 679.9,-465.98 695.23,-456"/>
 <polygon fill="#334155" stroke="#334155" points="696.63,-458.01 701.12,-452.1 693.93,-453.92 696.63,-458.01"/>
@@ -286,7 +286,7 @@
 <text text-anchor="middle" x="504" y="-456.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.FieldSimp</text>
 </g>
 <!-- LTacticFieldSimp&#45;&gt;MTailBound -->
-<g id="edge24" class="edge">
+<g id="edge32" class="edge">
 <title>LTacticFieldSimp&#45;&gt;MTailBound</title>
 <path fill="none" stroke="#334155" d="M556.26,-453.2C595.47,-448.77 648.81,-442.73 685.16,-438.62"/>
 <polygon fill="#334155" stroke="#334155" points="685.51,-441.05 692.19,-437.82 684.96,-436.18 685.51,-441.05"/>
@@ -310,13 +310,13 @@
 <text text-anchor="middle" x="504" y="-113.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.NormNum</text>
 </g>
 <!-- LTacticNormNum&#45;&gt;MTailBound -->
-<g id="edge22" class="edge">
+<g id="edge25" class="edge">
 <title>LTacticNormNum&#45;&gt;MTailBound</title>
 <path fill="none" stroke="#334155" d="M557.64,-112.97C585.88,-114.17 619.42,-120.55 642,-141 720.63,-212.23 727.62,-351.61 726.96,-408.7"/>
 <polygon fill="#334155" stroke="#334155" points="724.5,-408.83 726.82,-415.88 729.4,-408.92 724.5,-408.83"/>
 </g>
 <!-- LTacticNormNum&#45;&gt;MTaylorExpansion -->
-<g id="edge37" class="edge">
+<g id="edge39" class="edge">
 <title>LTacticNormNum&#45;&gt;MTaylorExpansion</title>
 <path fill="none" stroke="#334155" d="M557.65,-116C590.43,-116 632.67,-116 666.63,-116"/>
 <polygon fill="#334155" stroke="#334155" points="666.75,-118.45 673.75,-116 666.75,-113.55 666.75,-118.45"/>
@@ -328,7 +328,7 @@
 <text text-anchor="middle" x="167" y="-309.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.Positivity</text>
 </g>
 <!-- LTacticPositivity&#45;&gt;MFTC -->
-<g id="edge7" class="edge">
+<g id="edge16" class="edge">
 <title>LTacticPositivity&#45;&gt;MFTC</title>
 <path fill="none" stroke="#334155" d="M218.15,-319.34C287.47,-329.47 410.67,-347.49 469.68,-356.13"/>
 <polygon fill="#334155" stroke="#334155" points="469.61,-358.59 476.89,-357.18 470.32,-353.74 469.61,-358.59"/>
@@ -340,13 +340,13 @@
 <text text-anchor="middle" x="504" y="-162.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Tactic.Ring</text>
 </g>
 <!-- LTacticRing&#45;&gt;MTailBound -->
-<g id="edge23" class="edge">
+<g id="edge28" class="edge">
 <title>LTacticRing&#45;&gt;MTailBound</title>
 <path fill="none" stroke="#334155" d="M542.17,-162.15C572.47,-161.87 614.59,-166.44 642,-190 708.26,-246.93 722.31,-358.7 725.25,-408.73"/>
 <polygon fill="#334155" stroke="#334155" points="722.81,-409.07 725.62,-415.93 727.71,-408.82 722.81,-409.07"/>
 </g>
 <!-- LTacticRing&#45;&gt;MTaylorExpansion -->
-<g id="edge39" class="edge">
+<g id="edge37" class="edge">
 <title>LTacticRing&#45;&gt;MTaylorExpansion</title>
 <path fill="none" stroke="#334155" d="M542.16,-159.68C569.85,-155.43 608.51,-148.89 642,-141 650.1,-139.09 658.57,-136.86 666.89,-134.53"/>
 <polygon fill="#334155" stroke="#334155" points="667.77,-136.82 673.83,-132.55 666.42,-132.11 667.77,-136.82"/>
@@ -358,7 +358,7 @@
 <text text-anchor="middle" x="167" y="-260.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Topology.Basic</text>
 </g>
 <!-- LTopologyBasic&#45;&gt;MFTC -->
-<g id="edge10" class="edge">
+<g id="edge12" class="edge">
 <title>LTopologyBasic&#45;&gt;MFTC</title>
 <path fill="none" stroke="#334155" d="M215.24,-260.15C250.58,-260.25 298.69,-265.32 334,-288 355.89,-302.06 344.28,-322.68 366,-337 396.94,-357.4 440.03,-361.97 469.58,-362.35"/>
 <polygon fill="#334155" stroke="#334155" points="469.78,-364.8 476.78,-362.36 469.79,-359.9 469.78,-364.8"/>
@@ -370,7 +370,7 @@
 <text text-anchor="middle" x="167" y="-211.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Topology.Continuous</text>
 </g>
 <!-- LTopologyContinuous&#45;&gt;MFTC -->
-<g id="edge14" class="edge">
+<g id="edge7" class="edge">
 <title>LTopologyContinuous&#45;&gt;MFTC</title>
 <path fill="none" stroke="#334155" d="M231.26,-208.44C265.32,-208.85 305.97,-215.28 334,-239 368.98,-268.6 331.38,-306.98 366,-337 394.54,-361.75 439.37,-365.21 469.91,-364.16"/>
 <polygon fill="#334155" stroke="#334155" points="470.09,-366.61 476.97,-363.83 469.86,-361.71 470.09,-366.61"/>
@@ -382,7 +382,7 @@
 <text text-anchor="middle" x="167" y="-162.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">Topology.UniformSpace.Real</text>
 </g>
 <!-- LTopologyUniformSpaceReal&#45;&gt;MFTC -->
-<g id="edge8" class="edge">
+<g id="edge13" class="edge">
 <title>LTopologyUniformSpaceReal&#45;&gt;MFTC</title>
 <path fill="none" stroke="#334155" d="M252.82,-159.22C281.85,-161.65 312.42,-169.77 334,-190 382.79,-235.72 317.76,-290.7 366,-337 393.34,-363.24 438.63,-366.33 469.6,-364.79"/>
 <polygon fill="#334155" stroke="#334155" points="469.93,-367.22 476.76,-364.34 469.62,-362.33 469.93,-367.22"/>

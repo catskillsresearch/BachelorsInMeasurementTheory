@@ -18,17 +18,17 @@ digraph Course21228 {
   MSymmetric [label="Symmetric", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
   MValidPair [label="ValidPair", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
-  LDataFintypeProd -> MCounting;
-  LDataFintypeCard -> MCounting;
   LDataFintypeBasic -> MCounting;
   LAlgebraBigOperatorsGroupFinsetBasic -> MCounting;
+  LDataFintypeCard -> MCounting;
+  LDataFintypeProd -> MCounting;
   MGenericity -> MCounting;
   MValidPair -> MCounting;
   LDataFintypePerm -> MGenericity;
   LDataNatFactorialBasic -> MNumerical;
   MCounting -> MSmallN2;
   MCounting -> MSmallN3;
-  LAlgebraBigOperatorsGroupFinsetBasic -> MSymmetric;
   LDataFintypePerm -> MSymmetric;
+  LAlgebraBigOperatorsGroupFinsetBasic -> MSymmetric;
   LDataFintypePerm -> MValidPair;
 }

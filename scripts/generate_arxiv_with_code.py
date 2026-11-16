@@ -416,7 +416,7 @@ def describe_lean(rel: str) -> str:
 
 
 def paper_title(arxiv_text: str) -> str:
-    first = arxiv_text.splitlines()[0] if arxiv_text else "# Formalization of a BS in Measurement Theory"
+    first = arxiv_text.splitlines()[0] if arxiv_text else "# Bachelors In Measurement Theory"
     return first[2:].strip() if first.startswith("# ") else first.strip()
 
 
