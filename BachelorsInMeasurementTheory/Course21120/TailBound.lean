@@ -7,7 +7,6 @@ import BachelorsInMeasurementTheory.Course21120.Existence
 import BachelorsInMeasurementTheory.Course21120.FTC
 import Mathlib.Analysis.Real.Pi.Bounds
 import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
-import Mathlib.Tactic.Lemma
 
 @[expose] public section
 

@@ -321,11 +321,17 @@ def figure_block(course: str, stem: str) -> str:
     )
 
 
-def insert_under_solution(text: str, block: str) -> str:
+def insert_figure(text: str, block: str) -> str:
+    """Place the dep figure under ``## Solution`` when present, else after the H1."""
     text = MARKER_RE.sub("", text)
     m = re.search(r"^## Solution\s*$", text, re.MULTILINE)
+    if m:
+        insert_at = m.end()
+        rest = text[insert_at:].lstrip("\n")
+        return text[:insert_at] + "\n\n" + block + "\n" + rest
+    m = re.search(r"^# .+$", text, re.MULTILINE)
     if not m:
-        raise RuntimeError("missing ## Solution heading")
+        raise RuntimeError("missing # title heading")
     insert_at = m.end()
     rest = text[insert_at:].lstrip("\n")
     return text[:insert_at] + "\n\n" + block + "\n" + rest
@@ -338,7 +344,7 @@ def main() -> None:
         block = figure_block(course, stem)
         path = ROOT / "courses" / md
         path.write_text(
-            insert_under_solution(path.read_text(encoding="utf-8"), block),
+            insert_figure(path.read_text(encoding="utf-8"), block),
             encoding="utf-8",
         )
         print(f"updated {md} -> figures/deps/{stem}.{{dot,svg,pdf,png}}")

@@ -7,13 +7,9 @@ digraph Course21120 {
   LAnalysisCalculusDerivBasic [label="Analysis.Calculus.Deriv.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   LMeasureTheoryIntegralIntervalIntegralBasic [label="MeasureTheory.Integral.IntervalIntegral.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   LMeasureTheoryIntegralIntervalIntegralFundThmCalculus [label="MeasureTheory.Integral.IntervalIntegral.FundThmCalculus", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LTacticLemma [label="Tactic.Lemma", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
-  LTacticPositivityFinset [label="Tactic.Positivity.Finset", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   MFTC [label="FTC", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
-  LAnalysisCalculusDerivBasic -> MFTC;
-  LMeasureTheoryIntegralIntervalIntegralBasic -> MFTC;
-  LTacticLemma -> MFTC;
   LMeasureTheoryIntegralIntervalIntegralFundThmCalculus -> MFTC;
-  LTacticPositivityFinset -> MFTC;
+  LMeasureTheoryIntegralIntervalIntegralBasic -> MFTC;
+  LAnalysisCalculusDerivBasic -> MFTC;
 }

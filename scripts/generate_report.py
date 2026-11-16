@@ -492,6 +492,12 @@ def expand_svg_import(path: Path, opts: str) -> str:
     return f"\n\n![{caption}]({rel})\n\n"
 
 
+def is_top_course(rel: str) -> bool:
+    """``courses/21-122.md`` is a top course; ``courses/21-122/Problem.md`` is not."""
+    parts = Path(rel).parts
+    return len(parts) == 2 and parts[0] == "courses" and parts[1].endswith(".md")
+
+
 def expand_imports(text: str, base: Path, stack: tuple[str, ...] = ()) -> str:
     """Resolve `@import` paths from the importing file, as Markdown Preview Enhanced does."""
 
@@ -512,8 +518,12 @@ def expand_imports(text: str, base: Path, stack: tuple[str, ...] = ()) -> str:
             code = path.read_text(encoding="utf-8").rstrip()
             return f"<!-- lean: {rel} -->\n\n```lean\n{code}\n```\n\n"
         chunk = load_note(path)
-        if rel.startswith("courses/"):
+        if is_top_course(rel):
+            chunk = expand_note(chunk, path, stack + (rel,))
             chunk = prepare_course(chunk, path)
+        elif rel.startswith("courses/"):
+            # Nested course-barrel section: expand, but demote once at the top course.
+            chunk = expand_note(chunk, path, stack + (rel,))
         else:
             chunk = expand_note(chunk, path, stack + (rel,))
         return chunk.strip() + "\n\n"
@@ -536,8 +546,11 @@ def expand_toc_links(text: str, base: Path, stack: tuple[str, ...] = ()) -> str:
         if not path.is_file():
             raise FileNotFoundError(f"TOC link missing: {rel}")
         chunk = load_note(path)
-        if rel.startswith("courses/"):
+        if is_top_course(rel):
+            chunk = expand_note(chunk, path, stack + (rel,))
             chunk = prepare_course(chunk, path)
+        elif rel.startswith("courses/"):
+            chunk = expand_note(chunk, path, stack + (rel,))
         else:
             chunk = expand_note(chunk, path, stack + (rel,))
         return chunk.strip() + "\n\n"

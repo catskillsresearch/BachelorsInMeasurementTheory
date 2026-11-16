@@ -1,8 +1,6 @@
 module
 
 public import Mathlib.Analysis.Complex.Trigonometric
-import Mathlib.Algebra.Order.Star.Real
-import Mathlib.MeasureTheory.Integral.Bochner.Basic
 
 @[expose] public section
 
