@@ -1,6 +1,7 @@
 module
 
 public import BachelorsInMeasurementTheory.Course21120
+public import BachelorsInMeasurementTheory.Course21122
 public import BachelorsInMeasurementTheory.Course21127
 public import BachelorsInMeasurementTheory.Course21228
 public import BachelorsInMeasurementTheory.Course21241

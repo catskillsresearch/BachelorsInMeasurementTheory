@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Insert a Graphviz SVG dependency figure under each course Solution heading.
 
-Mathlib imports use an amber node fill; solution modules use a blue fill.
-There are no subgraph boxes — color alone distinguishes the two kinds.
+Mathlib imports use an amber node fill; this course's solution modules use a
+blue fill; prior-course modules use a green fill with the course id under the
+name (no Mathlib edges for those). Color alone distinguishes the kinds.
 """
 
 from __future__ import annotations
@@ -18,14 +19,11 @@ DEPS_DIR = ROOT / "figures" / "deps"
 COURSE_LEANS: list[tuple[str, str, str, list[str]]] = [
     ("21-120.md", "21-120", "Course21120", ["BachelorsInMeasurementTheory/Course21120/FTC.lean"]),
     ("21-122.md", "21-122", "Course21122", [
-        # FTC is still under Course21120; include it because TailBound imports it.
-        "BachelorsInMeasurementTheory/Course21120/FTC.lean",
-        "BachelorsInMeasurementTheory/Course21120/Existence.lean",
-        "BachelorsInMeasurementTheory/Course21120/TailBound.lean",
-        "BachelorsInMeasurementTheory/Course21120/TaylorExpansion.lean",
-        "BachelorsInMeasurementTheory/Course21120/TaylorEstimate.lean",
-        "BachelorsInMeasurementTheory/Course21120/TaylorError.lean",
-        "BachelorsInMeasurementTheory/Course21120/Summary.lean",
+        "BachelorsInMeasurementTheory/Course21122/TailBound.lean",
+        "BachelorsInMeasurementTheory/Course21122/TaylorExpansion.lean",
+        "BachelorsInMeasurementTheory/Course21122/TaylorEstimate.lean",
+        "BachelorsInMeasurementTheory/Course21122/TaylorError.lean",
+        "BachelorsInMeasurementTheory/Course21122/Summary.lean",
     ]),
     ("21-127.md", "21-127", "Course21127", ["BachelorsInMeasurementTheory/Course21127.lean"]),
     ("21-241.md", "21-241", "Course21241", ["BachelorsInMeasurementTheory/Course21241.lean"]),
@@ -42,6 +40,15 @@ COURSE_LEANS: list[tuple[str, str, str, list[str]]] = [
     ("21-322.md", "21-322", "Course21322", ["BachelorsInMeasurementTheory/Course21322.lean"]),
 ]
 
+# Prior-course Lean modules shown as green external nodes (no Mathlib fan-in).
+# Map graph stem -> list of (lean path relative to repo, course label).
+PRIOR_MODULES: dict[str, list[tuple[str, str]]] = {
+    "Course21122": [
+        ("BachelorsInMeasurementTheory/Course21120/Existence.lean", "21-120"),
+        ("BachelorsInMeasurementTheory/Course21120/FTC.lean", "21-120"),
+    ],
+}
+
 IMPORT_RE = re.compile(
     r"^(?:public\s+(?:meta\s+)?)?import\s+(\S+)\s*$",
     re.MULTILINE,
@@ -51,13 +58,16 @@ MARKER_RE = re.compile(
     re.DOTALL,
 )
 
-# Amber Mathlib / blue local — same palette as the old Mermaid classDefs.
+# Amber Mathlib / blue local / green prior-course.
 MATHLIB_FILL = "#ffedd5"
 MATHLIB_STROKE = "#c2410c"
 MATHLIB_FONT = "#7c2d12"
 LOCAL_FILL = "#dbeafe"
 LOCAL_STROKE = "#1d4ed8"
 LOCAL_FONT = "#1e3a8a"
+PRIOR_FILL = "#dcfce7"
+PRIOR_STROKE = "#15803d"
+PRIOR_FONT = "#14532d"
 
 MATHLIB_HINTS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"\bHasDerivAt\b|\bDifferentiableAt\b|\bderiv\b"), "Analysis.Calculus.Deriv"),
@@ -153,6 +163,7 @@ def module_label(rel: str) -> str:
         return name
     for prefix in (
         "Course21120",
+        "Course21122",
         "Course21127",
         "Course21228",
         "Course21241",
@@ -208,33 +219,60 @@ def dot_escape(label: str) -> str:
     return label.replace("\\", "\\\\").replace('"', '\\"')
 
 
-def graph_for(rels: list[str], graph_name: str) -> str:
+def graph_for(
+    rels: list[str],
+    graph_name: str,
+    priors: list[tuple[str, str]] | None = None,
+) -> str:
+    priors = priors or []
+    prior_course = {rel: course for rel, course in priors if (ROOT / rel).is_file()}
     files = {rel: (ROOT / rel).read_text(encoding="utf-8") for rel in rels}
-    displayed = [rel for rel, code in files.items() if not is_import_only(code)]
-    if not displayed:
-        displayed = list(files)
+    for rel in prior_course:
+        if rel not in files:
+            files[rel] = (ROOT / rel).read_text(encoding="utf-8")
 
+    local = [rel for rel in rels if rel not in prior_course]
+    displayed_local = [rel for rel in local if not is_import_only(files[rel])]
+    if not displayed_local:
+        displayed_local = list(local)
+
+    # Only show prior modules that some local module imports.
     preds: dict[str, set[str]] = {rel: set() for rel in files}
     mathlib_of: dict[str, set[str]] = {}
     for rel, code in files.items():
-        mathlib_of[rel] = set(mathlib_names(code))
+        # Prior modules contribute no Mathlib fan-in.
+        mathlib_of[rel] = set() if rel in prior_course else set(mathlib_names(code))
         for imp in parse_imports(code):
             dest = lean_path(imp)
             if dest in files:
                 preds[rel].add(dest)
 
+    used_priors = sorted(
+        {
+            dest
+            for rel in displayed_local
+            for dest in preds[rel]
+            if dest in prior_course
+        },
+        key=lambda r: Path(r).stem,
+    )
+
     mathlib_ids = {
         ml: sid("L", ml)
-        for rel in displayed
+        for rel in displayed_local
         for ml in mathlib_of[rel]
     }
-    module_ids = {rel: sid("M", Path(rel).stem) for rel in displayed}
+    module_ids = {
+        rel: sid("M", Path(rel).stem) for rel in displayed_local + used_priors
+    }
 
     edges: list[tuple[str, str]] = []
-    for rel in displayed:
+    for rel in displayed_local:
         mid = module_ids[rel]
         inherited: set[str] = set()
         for anc in ancestors(rel, preds):
+            if anc in prior_course:
+                continue
             inherited |= mathlib_of.get(anc, set())
         for ml in mathlib_of[rel]:
             if ml not in inherited:
@@ -257,7 +295,16 @@ def graph_for(rels: list[str], graph_name: str) -> str:
             f' fillcolor="{MATHLIB_FILL}", color="{MATHLIB_STROKE}",'
             f' fontcolor="{MATHLIB_FONT}"];'
         )
-    for rel in displayed:
+    for rel in used_priors:
+        mid = module_ids[rel]
+        name = dot_escape(module_label(rel))
+        course = dot_escape(prior_course[rel])
+        lines.append(
+            f'  {mid} [label=<{name}<br/>{course}>,'
+            f' fillcolor="{PRIOR_FILL}", color="{PRIOR_STROKE}",'
+            f' fontcolor="{PRIOR_FONT}"];'
+        )
+    for rel in displayed_local:
         mid = module_ids[rel]
         label = module_label(rel)
         lines.append(
@@ -309,8 +356,14 @@ def write_assets(stem: str, dot_src: str) -> tuple[Path, Path, Path]:
 def figure_block(course: str, stem: str) -> str:
     caption = (
         f"Lean module dependencies for the {course} solution. "
-        "Amber fill: Mathlib imports. Blue fill: solution modules."
+        "Amber fill: Mathlib imports. Blue fill: this course's modules. "
+        "Green fill: prior-course modules."
     )
+    if stem not in PRIOR_MODULES:
+        caption = (
+            f"Lean module dependencies for the {course} solution. "
+            "Amber fill: Mathlib imports. Blue fill: solution modules."
+        )
     # Course notes live under ``courses/``; href is relative to that directory.
     rel = f"../figures/deps/{stem}.svg"
     return (
@@ -340,7 +393,7 @@ def insert_figure(text: str, block: str) -> str:
 def main() -> None:
     for md, course, stem, seeds in COURSE_LEANS:
         rels = course_files(seeds)
-        write_assets(stem, graph_for(rels, stem))
+        write_assets(stem, graph_for(rels, stem, PRIOR_MODULES.get(stem)))
         block = figure_block(course, stem)
         path = ROOT / "courses" / md
         path.write_text(

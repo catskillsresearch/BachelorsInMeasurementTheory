@@ -127,15 +127,15 @@ FILE_BLURBS: dict[str, str] = {
         "Fundamental theorem of calculus for the Fresnel-type integrand.",
     "BachelorsInMeasurementTheory/Course21120/Existence.lean":
         "Comparison bound that gives absolute convergence of the improper integral.",
-    "BachelorsInMeasurementTheory/Course21120/TailBound.lean":
+    "BachelorsInMeasurementTheory/Course21122/TailBound.lean":
         "Arctan comparison bound for the tail integral.",
-    "BachelorsInMeasurementTheory/Course21120/TaylorExpansion.lean":
+    "BachelorsInMeasurementTheory/Course21122/TaylorExpansion.lean":
         "Degree-9 Taylor polynomial of the integrated expansion.",
-    "BachelorsInMeasurementTheory/Course21120/TaylorEstimate.lean":
+    "BachelorsInMeasurementTheory/Course21122/TaylorEstimate.lean":
         "Exact value and four-decimal rounding of T9 at 1/2.",
-    "BachelorsInMeasurementTheory/Course21120/TaylorError.lean":
+    "BachelorsInMeasurementTheory/Course21122/TaylorError.lean":
         "Alternating-series tail bound for the degree-9 truncation.",
-    "BachelorsInMeasurementTheory/Course21120/Summary.lean":
+    "BachelorsInMeasurementTheory/Course21122/Summary.lean":
         "Summary of the four Lean checks for the degree-9 estimate.",
     "BachelorsInMeasurementTheory/Course21241/PrimalBasis.lean":
         "Standard primal basis of three-space: spanning and independence.",

@@ -82,6 +82,6 @@ $\bigl|\int_0^M \sin(t^2)/(1+t^2)\,dt\bigr| + \bigl(\texttt{ibpWeight}(M)+\int_M
 
 **Proof.** Rewrite with `limAbsBound_one`, bound $\pi$ by a rational, and close with `nlinarith`.
 
-**[BachelorsInMeasurementTheory/Course21120/TailBound.lean](../../BachelorsInMeasurementTheory/Course21120/TailBound.lean)**
+**[BachelorsInMeasurementTheory/Course21122/TailBound.lean](../../BachelorsInMeasurementTheory/Course21122/TailBound.lean)**
 
-@import "../../BachelorsInMeasurementTheory/Course21120/TailBound.lean"
+@import "../../BachelorsInMeasurementTheory/Course21122/TailBound.lean"

@@ -22,7 +22,8 @@ open Real intervalIntegral MeasureTheory
 Mathlib-only restatement of the calculus-sequence capstone headline theorems.
 Proofs are deliberate `sorry` holes for Palomar Comparator.
 
-Definitions match `BachelorsInMeasurementTheory.Course21120.{FTC,TailBound,TaylorExpansion,TaylorError}`.
+Definitions match `BachelorsInMeasurementTheory.Course21120.FTC` and
+`BachelorsInMeasurementTheory.Course21122.{TailBound,TaylorExpansion,TaylorError}`.
 -/
 
 namespace Course21120FTC
@@ -36,7 +37,7 @@ theorem part_a_deriv (x : ℝ) : deriv f x = sin (x ^ 2) / (1 + x ^ 2) := by
 
 end Course21120FTC
 
-namespace Course21120
+namespace Course21122
 
 /-- Combined comparison + integration-by-parts bound:
 $|f(\infty)| \le \arctan M + 1/(M(1+M^2))$. -/
@@ -47,9 +48,9 @@ noncomputable def limAbsBound (M : ℝ) : ℝ :=
 theorem limAbsBound_one : limAbsBound 1 = π / 4 + 1 / 2 := by
   sorry
 
-end Course21120
+end Course21122
 
-namespace Course21120Taylor
+namespace Course21122Taylor
 
 /-- Formal indefinite integral of a monomial $c\,t^n$, evaluated at $x$
 (vanishing at $0$). -/
@@ -64,4 +65,4 @@ def truncation_error : ℚ := integrateMonomial (101 / 120) 10 (1 / 2)
 theorem truncation_error_lt : truncation_error < 1 / 10000 := by
   sorry
 
-end Course21120Taylor
+end Course21122Taylor

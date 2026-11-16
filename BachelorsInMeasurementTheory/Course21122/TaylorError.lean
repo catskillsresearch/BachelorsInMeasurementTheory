@@ -1,15 +1,13 @@
 module
 
-public import BachelorsInMeasurementTheory.Course21120.TaylorExpansion
-import Mathlib.Data.Rat.Cast.Order
-import Mathlib.Tactic.NormNum.Abs
-import Mathlib.Tactic.NormNum.DivMod
-import Mathlib.Tactic.NormNum.OfScientific
+public import BachelorsInMeasurementTheory.Course21122.TaylorExpansion
 import Mathlib.Tactic.Ring.RingNF
+import Mathlib.Tactic.NormNum.DivMod
+import Mathlib.Data.Rat.Cast.Order
 
 @[expose] public section
 
-namespace Course21120Taylor
+namespace Course21122Taylor
 
 /-! ### Integrand truncation error from the series
 
@@ -100,4 +98,4 @@ theorem truncation_error_lt : truncation_error < 1 / 10000 := by
 
 #eval ((101 / 2703360 : Float))
 
-end Course21120Taylor
+end Course21122Taylor

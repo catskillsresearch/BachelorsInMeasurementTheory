@@ -33,6 +33,6 @@ Expanding the integrand around $t=0$:
 
 **Proof.** From `T9_eq_sum`, rewrite the $x^7$ and $x^9$ terms using `integrate_coeff_t6` and `integrate_coeff_t8`.
 
-**[BachelorsInMeasurementTheory/Course21120/TaylorExpansion.lean](../../BachelorsInMeasurementTheory/Course21120/TaylorExpansion.lean)**
+**[BachelorsInMeasurementTheory/Course21122/TaylorExpansion.lean](../../BachelorsInMeasurementTheory/Course21122/TaylorExpansion.lean)**
 
-@import "../../BachelorsInMeasurementTheory/Course21120/TaylorExpansion.lean"
+@import "../../BachelorsInMeasurementTheory/Course21122/TaylorExpansion.lean"

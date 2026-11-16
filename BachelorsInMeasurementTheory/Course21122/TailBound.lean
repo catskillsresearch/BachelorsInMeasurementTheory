@@ -13,7 +13,7 @@ import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
 open Real intervalIntegral Filter Topology MeasureTheory
 open scoped Interval
 
-namespace Course21120
+namespace Course21122
 
 /-! ### Comparison majorant on a finite interval -/
 
@@ -39,7 +39,7 @@ theorem abs_integral_le_arctan (M : ℝ) (hM : 0 ≤ M) :
     hg.continuousOn.intervalIntegrable
   have h2 : ∫ t in (0 : ℝ)..M, |sin (t ^ 2) / (1 + t ^ 2)| ≤
       ∫ t in (0 : ℝ)..M, (1 : ℝ) / (1 + t ^ 2) :=
-    integral_mono_on hM hintf hintg fun t _ => abs_integrand_le t
+    integral_mono_on hM hintf hintg fun t _ => Course21120.abs_integrand_le t
   have h3 : ∫ t in (0 : ℝ)..M, (1 : ℝ) / (1 + t ^ 2) = arctan M := by
     rw [majorant_integral 0 M, arctan_zero, sub_zero]
   linarith
@@ -182,4 +182,4 @@ theorem limAbsBound_one_lt : limAbsBound 1 < 12854 / 10000 := by
     norm_num
   nlinarith
 
-end Course21120
+end Course21122

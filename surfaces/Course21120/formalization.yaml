@@ -24,17 +24,17 @@ classification:
 
 status:
   scope: >-
-    Sorry-free course development under BachelorsInMeasurementTheory/Course21120/.
-    Challenge.lean holds deliberate Palomar proof holes; Solution.lean
-    re-exports the course theorems. This packaging is for local / CI
-    Palomar preflight only — not a registry submission.
+    Sorry-free course development under BachelorsInMeasurementTheory/Course21120/
+    and Course21122/. Challenge.lean holds deliberate Palomar proof holes;
+    Solution.lean re-exports the course theorems. This packaging is for local /
+    CI Palomar preflight only — not a registry submission.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: ["propext", "Classical.choice", "Quot.sound"]
   main_results:
     - "Course21120FTC.part_a_deriv"
-    - "Course21120.limAbsBound_one"
-    - "Course21120Taylor.truncation_error_lt"
+    - "Course21122.limAbsBound_one"
+    - "Course21122Taylor.truncation_error_lt"
 
 fidelity:
   divergences: >-

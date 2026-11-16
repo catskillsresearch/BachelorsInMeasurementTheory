@@ -9,7 +9,7 @@ digraph Course21120 {
   LMeasureTheoryIntegralIntervalIntegralFundThmCalculus [label="MeasureTheory.Integral.IntervalIntegral.FundThmCalculus", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
   MFTC [label="FTC", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
 
-  LMeasureTheoryIntegralIntervalIntegralFundThmCalculus -> MFTC;
   LMeasureTheoryIntegralIntervalIntegralBasic -> MFTC;
+  LMeasureTheoryIntegralIntervalIntegralFundThmCalculus -> MFTC;
   LAnalysisCalculusDerivBasic -> MFTC;
 }

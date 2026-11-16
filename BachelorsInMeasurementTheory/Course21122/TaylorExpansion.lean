@@ -4,7 +4,7 @@ import Mathlib.Tactic.Ring.RingNF
 
 @[expose] public section
 
-namespace Course21120Taylor
+namespace Course21122Taylor
 
 /-! ### Truncated expansions of the factors
 
@@ -101,4 +101,4 @@ theorem T9_simplified (x : ℚ) :
       _ = 5 * x ^ 9 / 54 := by ring
   rw [h6, h8]
 
-end Course21120Taylor
+end Course21122Taylor

@@ -1,6 +1,6 @@
 module
 
-public import BachelorsInMeasurementTheory.Course21120.TaylorExpansion
+public import BachelorsInMeasurementTheory.Course21122.TaylorExpansion
 import Mathlib.Data.Rat.Cast.Order
 import Mathlib.Tactic.NormNum.Abs
 import Mathlib.Tactic.NormNum.DivMod
@@ -9,7 +9,7 @@ import Mathlib.Tactic.NormNum.Pow
 
 @[expose] public section
 
-namespace Course21120Taylor
+namespace Course21122Taylor
 
 /-! ### Estimation at $x = 1/2$
 
@@ -67,4 +67,4 @@ theorem T9_half_close_to_0_0362 :
 #eval -((5 / 27648 : Float))
 #eval (((1 : Float) / 24 - 1 / 160 + 5 / 5376 - 5 / 27648))
 
-end Course21120Taylor
+end Course21122Taylor

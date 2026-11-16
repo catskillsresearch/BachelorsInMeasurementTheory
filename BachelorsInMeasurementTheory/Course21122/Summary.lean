@@ -1,12 +1,12 @@
 module
 
 public import Mathlib.Data.Rat.Defs
-public import BachelorsInMeasurementTheory.Course21120.TaylorError
-import BachelorsInMeasurementTheory.Course21120.TaylorEstimate
+public import BachelorsInMeasurementTheory.Course21122.TaylorError
+import BachelorsInMeasurementTheory.Course21122.TaylorEstimate
 
 @[expose] public section
 
-namespace Course21120Taylor
+namespace Course21122Taylor
 
 /-- Term-by-term values used in the degree-9 estimate at \(1/2\). -/
 theorem summary_terms :
@@ -29,4 +29,4 @@ theorem summary_rounding :
 theorem summary_error : truncation_error = 101 / 2703360 ∧ truncation_error < 1 / 10000 :=
   ⟨truncation_error_eq, truncation_error_lt⟩
 
-end Course21120Taylor
+end Course21122Taylor
