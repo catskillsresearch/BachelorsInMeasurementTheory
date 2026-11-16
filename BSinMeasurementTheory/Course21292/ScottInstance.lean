@@ -1,6 +1,10 @@
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Data.Rat.Defs
-import BSinMeasurementTheory.Course21292.LinearProgram
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Data.Rat.Defs
+public import BSinMeasurementTheory.Course21292.LinearProgram
+
+@[expose] public section
 
 open scoped BigOperators
 

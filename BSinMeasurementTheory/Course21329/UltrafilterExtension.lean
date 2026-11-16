@@ -1,5 +1,9 @@
-import Mathlib.Order.Zorn
-import BSinMeasurementTheory.Course21329.Filter
+module
+
+public import Mathlib.Order.Zorn
+public import BSinMeasurementTheory.Course21329.Filter
+
+@[expose] public section
 
 universe u
 

@@ -1,8 +1,12 @@
-import Mathlib.Algebra.Module.LinearMap.Basic
-import Mathlib.Algebra.Module.Prod
-import Mathlib.Basic.Real.Basic
+module
+
+public import Mathlib.Algebra.Module.LinearMap.Basic
+public import Mathlib.Algebra.Module.Prod
+public import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic.NormNum
 import Mathlib.Tactic.Ring
+
+@[expose] public section
 
 namespace Course21720
 

@@ -1,7 +1,11 @@
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Data.Fintype.Basic
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Data.Fintype.Basic
+public import BSinMeasurementTheory.Course21322.Hom
 import Mathlib.Tactic.ByContra
-import BSinMeasurementTheory.Course21322.Hom
+
+@[expose] public section
 
 open scoped BigOperators Classical
 

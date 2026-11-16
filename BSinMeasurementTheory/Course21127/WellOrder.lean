@@ -1,8 +1,13 @@
-import Mathlib.Algebra.Order.Ring.Unbundled.Rat
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Set.Finite.Basic
-import Mathlib.Order.Interval.Set.Basic
-import Mathlib.Order.WellFounded
+module
+
+public import Mathlib.Algebra.Order.Ring.Unbundled.Rat
+public import Mathlib.Data.List.MinMax
+public import Mathlib.Data.Rat.Defs
+public import Mathlib.Data.Set.Finite.Basic
+public import Mathlib.Order.Interval.Set.Basic
+public import Mathlib.Order.WellFounded
+
+@[expose] public section
 
 namespace Course21127
 
@@ -47,39 +52,12 @@ theorem false_claim_is_false : ¬ FalseClaim := by
   | inr h_inf =>
     exact h_inf (Set.finite_singleton 0)
 
-/-- Correct positive statement proved by induction:
+/-- Correct positive statement:
     Every nonempty finite list of rationals contains a least element. -/
-lemma list_has_min : ∀ (a : ℚ) (l : List ℚ), ∃ m ∈ a :: l, ∀ x ∈ a :: l, m ≤ x
-  | a, [] => by
-    refine ⟨a, List.mem_cons.mpr (Or.inl rfl), ?_⟩
-    intro x hx
-    rcases List.mem_cons.mp hx with hxa | hx_nil
-    · rw [hxa]
-    · cases hx_nil
-  | a, b :: l => by
-    rcases list_has_min (min a b) l with ⟨m, hm, hle⟩
-    have hm_orig : m ∈ a :: b :: l := by
-      rcases List.mem_cons.mp hm with hm_eq | h_in
-      · rw [hm_eq]
-        cases le_total a b with
-        | inl hab =>
-          rw [min_eq_left hab]
-          exact List.mem_cons.mpr (Or.inl rfl)
-        | inr hba =>
-          rw [min_eq_right hba]
-          exact List.mem_cons.mpr (Or.inr (List.mem_cons.mpr (Or.inl rfl)))
-      · exact List.mem_cons.mpr (Or.inr (List.mem_cons.mpr (Or.inr h_in)))
-    refine ⟨m, hm_orig, ?_⟩
-    intro x hx
-    rcases List.mem_cons.mp hx with hxa | hx1
-    · rw [hxa]
-      have h_min_in : min a b ∈ (min a b) :: l := List.mem_cons.mpr (Or.inl rfl)
-      exact le_trans (hle (min a b) h_min_in) (min_le_left a b)
-    · rcases List.mem_cons.mp hx1 with hxb | hx2
-      · rw [hxb]
-        have h_min_in : min a b ∈ (min a b) :: l := List.mem_cons.mpr (Or.inl rfl)
-        exact le_trans (hle (min a b) h_min_in) (min_le_right a b)
-      · have hx_in : x ∈ (min a b) :: l := List.mem_cons.mpr (Or.inr hx2)
-        exact hle x hx_in
+lemma list_has_min (a : ℚ) (l : List ℚ) : ∃ m ∈ a :: l, ∀ x ∈ a :: l, m ≤ x := by
+  have hlen : 0 < (a :: l).length := by simp
+  refine ⟨List.minimum_of_length_pos hlen, List.minimum_of_length_pos_mem hlen, ?_⟩
+  intro x hx
+  exact List.minimum_of_length_pos_le_of_mem hx hlen
 
 end Course21127

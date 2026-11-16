@@ -1,7 +1,11 @@
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Data.Rat.Defs
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Data.Rat.Defs
+public import BSinMeasurementTheory.Course21292.WeakDuality
 import Mathlib.Tactic.Linarith
-import BSinMeasurementTheory.Course21292.WeakDuality
+
+@[expose] public section
 
 open scoped BigOperators
 

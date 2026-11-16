@@ -1,10 +1,14 @@
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Algebra.Module.LinearMap.Basic
-import Mathlib.Algebra.Module.Submodule.LinearMap
-import Mathlib.Basic.Real.Basic
-import Mathlib.GroupTheory.GroupAction.Ring
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Algebra.Module.LinearMap.Basic
+public import Mathlib.Algebra.Module.Submodule.LinearMap
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.GroupTheory.GroupAction.Ring
+public import BSinMeasurementTheory.Course21241.PrimalBasis
 import Mathlib.Tactic.FinCases
-import BSinMeasurementTheory.Course21241.PrimalBasis
+
+@[expose] public section
 
 open BigOperators
 open Finset

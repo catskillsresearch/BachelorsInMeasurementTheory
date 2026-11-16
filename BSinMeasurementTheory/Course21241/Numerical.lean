@@ -1,5 +1,8 @@
-import BSinMeasurementTheory.Course21241.PointV
-import BSinMeasurementTheory.Course21241.SeparatingU
-import BSinMeasurementTheory.Course21241.DotAtV
-import BSinMeasurementTheory.Course21241.DotOnC
-import BSinMeasurementTheory.Course21241.PhiSeparates
+module
+
+public import BSinMeasurementTheory.Course21241.PointV
+public import BSinMeasurementTheory.Course21241.SeparatingU
+public import BSinMeasurementTheory.Course21241.DotAtV
+public import BSinMeasurementTheory.Course21241.DotOnC
+public import BSinMeasurementTheory.Course21241.PhiSeparates
+

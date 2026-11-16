@@ -1,5 +1,9 @@
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Data.Fintype.Basic
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Data.Fintype.Basic
+
+@[expose] public section
 
 open scoped BigOperators Classical
 

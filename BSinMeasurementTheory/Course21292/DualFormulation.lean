@@ -1,8 +1,12 @@
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Data.Rat.Defs
+module
+
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Data.Rat.Defs
+public import BSinMeasurementTheory.Course21292.ScottInstance
 import Mathlib.Tactic.Ring
-import BSinMeasurementTheory.Course21292.ScottInstance
+
+@[expose] public section
 
 open scoped BigOperators
 

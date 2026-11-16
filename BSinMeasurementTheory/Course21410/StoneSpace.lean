@@ -1,8 +1,12 @@
-import Mathlib.Data.Set.Basic
-import Mathlib.Order.BooleanAlgebra.Basic
-import Mathlib.Order.BoundedOrder.Basic
-import Mathlib.Order.Filter.Ultrafilter.Basic
-import Mathlib.Order.Heyting.Basic
+module
+
+public import Mathlib.Data.Set.Basic
+public import Mathlib.Order.BooleanAlgebra.Basic
+public import Mathlib.Order.BoundedOrder.Basic
+public import Mathlib.Order.Filter.Ultrafilter.Basic
+public import Mathlib.Order.Heyting.Basic
+
+@[expose] public section
 
 namespace Course21410
 

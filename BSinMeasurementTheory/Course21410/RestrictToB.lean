@@ -1,6 +1,10 @@
-import Mathlib.Basic.Real.Basic
-import Mathlib.Order.BooleanAlgebra.Basic
-import BSinMeasurementTheory.Course21410.PositiveExtension
+module
+
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Order.BooleanAlgebra.Basic
+public import BSinMeasurementTheory.Course21410.PositiveExtension
+
+@[expose] public section
 
 namespace Course21410
 

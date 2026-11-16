@@ -1,12 +1,16 @@
-import Mathlib.Algebra.Module.LinearMap.Basic
-import Mathlib.Analysis.Normed.Module.Basic
-import Mathlib.Basic.Real.Basic
-import Mathlib.Order.ConditionallyCompleteLattice.Basic
+module
+
+public import Mathlib.Algebra.Module.LinearMap.Basic
+public import Mathlib.Analysis.Normed.Module.Basic
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Order.ConditionallyCompleteLattice.Basic
+public import Mathlib.Topology.Basic
+public import Mathlib.Topology.ContinuousMap.Basic
+public import Mathlib.Topology.ContinuousMap.Compact
+public import BSinMeasurementTheory.Course21720.Boundedness
 import Mathlib.Tactic.Positivity
-import Mathlib.Topology.Basic
-import Mathlib.Topology.ContinuousMap.Basic
-import Mathlib.Topology.ContinuousMap.Compact
-import BSinMeasurementTheory.Course21720.Boundedness
+
+@[expose] public section
 
 namespace Course21720
 

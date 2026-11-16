@@ -1,6 +1,10 @@
-import Mathlib.Data.Rat.Defs
-import BSinMeasurementTheory.Course21120.TaylorEstimate
-import BSinMeasurementTheory.Course21120.TaylorError
+module
+
+public import Mathlib.Data.Rat.Defs
+public import BSinMeasurementTheory.Course21120.TaylorEstimate
+public import BSinMeasurementTheory.Course21120.TaylorError
+
+@[expose] public section
 
 namespace Course21120Taylor
 

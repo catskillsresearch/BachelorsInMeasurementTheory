@@ -1,7 +1,11 @@
-import Mathlib.Algebra.Module.LinearMap.Basic
-import Mathlib.Basic.Real.Basic
-import Mathlib.Order.BooleanAlgebra.Basic
-import BSinMeasurementTheory.Course21410.StepFunctions
+module
+
+public import Mathlib.Algebra.Module.LinearMap.Basic
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Order.BooleanAlgebra.Basic
+public import BSinMeasurementTheory.Course21410.StepFunctions
+
+@[expose] public section
 
 namespace Course21410
 

@@ -1,7 +1,11 @@
-import Mathlib.Order.BooleanAlgebra.Basic
-import Mathlib.Topology.Connected.TotallyDisconnected
-import Mathlib.Topology.ContinuousMap.Compact
-import BSinMeasurementTheory.Course21651.BooleanHom
+module
+
+public import Mathlib.Order.BooleanAlgebra.Basic
+public import Mathlib.Topology.Connected.TotallyDisconnected
+public import Mathlib.Topology.ContinuousMap.Compact
+public import BSinMeasurementTheory.Course21651.BooleanHom
+
+@[expose] public section
 
 set_option linter.unusedSectionVars false
 

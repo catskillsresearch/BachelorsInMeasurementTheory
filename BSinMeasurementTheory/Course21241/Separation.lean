@@ -1,88 +1,59 @@
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Algebra.BigOperators.Ring.Finset
-import Mathlib.Algebra.Module.LinearMap.Basic
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Basic.Real.Basic
-import Mathlib.LinearAlgebra.Basis.Basic
-import Mathlib.Tactic.FinCases
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
-import BSinMeasurementTheory.Course21241.Basis
+module
 
-open BigOperators
-open Finset
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Algebra.Module.LinearMap.Basic
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Data.Matrix.Mul
+public import Mathlib.LinearAlgebra.Matrix.Dual
+public import BSinMeasurementTheory.Course21241.Basis
+import Mathlib.Tactic.Linarith
+
+@[expose] public section
+
+open BigOperators Matrix
 
 namespace Course21241
 
-/-- Standard Euclidean inner product on V -/
-def dot (u v : V) : ℝ := ∑ i : Fin 3, u i * v i
+/-- Standard Euclidean inner product on V. -/
+def dot (u v : V) : ℝ := u ⬝ᵥ v
 
-lemma dot_comm (u v : V) : dot u v = dot v u := by
-  dsimp [dot]
-  apply Finset.sum_congr rfl
-  intro i _
-  ring
+lemma dot_comm (u v : V) : dot u v = dot v u :=
+  dotProduct_comm u v
 
 lemma dot_e (u : V) (i : Fin 3) : dot u (e i) = u i := by
-  dsimp [dot]
-  rw [Fin.sum_univ_three]
-  fin_cases i <;> { dsimp [e]; ring }
+  simp [dot, e, dotProduct_single]
 
-/-- Riesz map from V to V* -/
-def toDual (u : V) : V →ₗ[ℝ] ℝ where
-  toFun v := dot u v
-  map_add' v w := by
-    dsimp [dot]
-    rw [← Finset.sum_add_distrib]
-    apply Finset.sum_congr rfl
-    intro i _
-    ring
-  map_smul' c v := by
-    dsimp [dot]
-    rw [Finset.mul_sum]
-    apply Finset.sum_congr rfl
-    intro i _
-    ring
+/-- Riesz map from V to V*. -/
+def toDual (u : V) : V →ₗ[ℝ] ℝ :=
+  (dotProductEquiv ℝ (Fin 3)) u
 
-/-- Inverse Riesz map from V* to V -/
-def toVec (φ : V →ₗ[ℝ] ℝ) : V := fun i => φ (e i)
+/-- Inverse Riesz map from V* to V. -/
+def toVec (φ : V →ₗ[ℝ] ℝ) : V :=
+  (dotProductEquiv ℝ (Fin 3)).symm φ
 
-theorem toDual_toVec (φ : V →ₗ[ℝ] ℝ) : toDual (toVec φ) = φ := by
-  apply LinearMap.ext
-  intro x
-  have hx : x = ∑ i : Fin 3, x i • e i := vector_eq_sum x
-  conv_rhs => rw [hx]
-  rw [map_sum]
-  change (∑ i : Fin 3, φ (e i) * x i) = ∑ i : Fin 3, φ (x i • e i)
-  apply Finset.sum_congr rfl
-  intro i _
-  rw [LinearMap.map_smul, smul_eq_mul, mul_comm]
+theorem toDual_toVec (φ : V →ₗ[ℝ] ℝ) : toDual (toVec φ) = φ :=
+  (dotProductEquiv ℝ (Fin 3)).apply_symm_apply φ
 
-theorem toVec_toDual (u : V) : toVec (toDual u) = u := by
-  ext i
-  exact dot_e u i
+theorem toVec_toDual (u : V) : toVec (toDual u) = u :=
+  (dotProductEquiv ℝ (Fin 3)).symm_apply_apply u
 
-/-- Characterization of functionals nonnegative on C -/
+/-- Characterization of functionals nonnegative on C. -/
 theorem nonneg_on_C_iff (u : V) :
     (∀ c ∈ C, 0 ≤ dot u c) ↔ ∀ i : Fin 3, 0 ≤ u i := by
   constructor
   · intro h i
     have hei : e i ∈ C := by
       intro j
-      dsimp [e]
+      simp [e, Pi.single_apply]
       split_ifs <;> linarith
-    have h_dot := h (e i) hei
-    rw [dot_e] at h_dot
-    exact h_dot
+    simpa [dot_e] using h (e i) hei
   · intro hu c hc
     dsimp [dot]
-    apply Finset.sum_nonneg
-    intro i _
-    exact mul_nonneg (hu i) (hc i)
+    exact Finset.sum_nonneg fun i _ => mul_nonneg (hu i) (hc i)
 
-/-- Existence of a separating vector under the inner product for any v ∉ C -/
+/-- Existence of a separating vector under the inner product for any v ∉ C. -/
 theorem exists_separating_vector (v : V) (hv : v ∉ C) :
     ∃ u : V, (∀ c ∈ C, 0 ≤ dot u c) ∧ dot u v < 0 := by
   change ¬ (∀ i : Fin 3, 0 ≤ v i) at hv
@@ -92,7 +63,7 @@ theorem exists_separating_vector (v : V) (hv : v ∉ C) :
   constructor
   · rw [nonneg_on_C_iff]
     intro j
-    dsimp [e]
+    simp [e, Pi.single_apply]
     split_ifs <;> linarith
   · rw [dot_comm, dot_e]
     exact hi

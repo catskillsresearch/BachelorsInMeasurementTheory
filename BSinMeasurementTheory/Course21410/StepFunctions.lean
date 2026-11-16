@@ -1,7 +1,11 @@
-import Mathlib.Basic.Real.Basic
-import Mathlib.Order.BooleanAlgebra.Basic
+module
+
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Order.BooleanAlgebra.Basic
+public import BSinMeasurementTheory.Course21410.StoneSpace
 import Mathlib.Tactic.NormNum
-import BSinMeasurementTheory.Course21410.StoneSpace
+
+@[expose] public section
 
 namespace Course21410
 

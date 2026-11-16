@@ -3,10 +3,14 @@ Copyright (c) 2026 Lars Warren Ericson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Lars Warren Ericson.
 -/
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Fintype.Card
-import Mathlib.Data.Fintype.Perm
-import Mathlib.Data.Fintype.Prod
+module
+
+public import Mathlib.Data.Fintype.Basic
+public import Mathlib.Data.Fintype.Card
+public import Mathlib.Data.Fintype.Perm
+public import Mathlib.Data.Fintype.Prod
+
+@[expose] public section
 
 open Equiv
 

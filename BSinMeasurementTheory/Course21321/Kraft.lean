@@ -1,14 +1,18 @@
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Algebra.BigOperators.Pi
-import Mathlib.Data.Fin.VecNotation
-import Mathlib.Data.Fintype.Fin
-import Mathlib.Data.Finset.Basic
-import Mathlib.Basic.Real.Basic
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Algebra.BigOperators.Pi
+public import Mathlib.Data.Fin.VecNotation
+public import Mathlib.Data.Fintype.Fin
+public import Mathlib.Data.Finset.Basic
+public import Mathlib.Basic.Real.Basic
+public import BSinMeasurementTheory.Course21321.ScottPair
+public import BSinMeasurementTheory.Course21321.Theorem11
 import Mathlib.Tactic.FinCases
 import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.NormNum
-import BSinMeasurementTheory.Course21321.ScottPair
-import BSinMeasurementTheory.Course21321.Theorem11
+
+@[expose] public section
 
 namespace Course21321
 

@@ -1,5 +1,9 @@
-import Mathlib.Data.Fintype.Perm
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+module
+
+public import Mathlib.Data.Fintype.Perm
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+
+@[expose] public section
 
 open Equiv
 

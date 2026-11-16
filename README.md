@@ -18,7 +18,7 @@ The student of record for the problem set is Giovanni Fabbro. The capstone
 source is Dana S. Scott, *Measurement Structures and Linear Inequalities*
 (J. Math. Psychology 1 (1964), 233–247).
 
-The pin is `leanprover/lean4:v4.35.0-rc3`.
+The pin is `leanprover/lean4:v4.36.0-rc2`.
 
 ## Report and archival files
 

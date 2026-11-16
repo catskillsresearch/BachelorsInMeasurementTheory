@@ -1,9 +1,13 @@
-import Mathlib.Algebra.Module.LinearMap.Basic
-import Mathlib.Analysis.Normed.Module.Basic
-import Mathlib.Basic.Real.Basic
-import BSinMeasurementTheory.Course21640.PreciseStatement
-import BSinMeasurementTheory.Course21640.NormSublinear
-import BSinMeasurementTheory.Course21640.Dominance
+module
+
+public import Mathlib.Algebra.Module.LinearMap.Basic
+public import Mathlib.Analysis.Normed.Module.Basic
+public import Mathlib.Basic.Real.Basic
+public import BSinMeasurementTheory.Course21640.PreciseStatement
+public import BSinMeasurementTheory.Course21640.NormSublinear
+public import BSinMeasurementTheory.Course21640.Dominance
+
+@[expose] public section
 
 namespace Course21640
 

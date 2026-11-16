@@ -1,13 +1,17 @@
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Basic.Real.Basic
+module
+
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Basic.Real.Basic
+public import BSinMeasurementTheory.Course21241.PointV
+public import BSinMeasurementTheory.Course21241.SeparatingU
+public import BSinMeasurementTheory.Course21241.Separation
 import Mathlib.Tactic.NormNum
 import Mathlib.Tactic.Ring
-import BSinMeasurementTheory.Course21241.PointV
-import BSinMeasurementTheory.Course21241.SeparatingU
-import BSinMeasurementTheory.Course21241.Separation
 
-open BigOperators
+@[expose] public section
+
+open BigOperators Matrix
 open Finset
 
 namespace Course21241
@@ -17,9 +21,8 @@ theorem dot_u_v_sum :
 
 theorem dot_u_v_expansion :
     dot u v = (1 : ℝ) * (-1) + 0 * 1 + 0 * 1 := by
-  dsimp [dot]
-  rw [Fin.sum_univ_three]
-  rw [u_zero, u_one, u_two, v_zero, v_one, v_two]
+  simp [dot, dotProduct, Fin.sum_univ_three, u_zero, u_one, u_two,
+    v_zero, v_one, v_two]
 
 theorem dot_u_v_eval : dot u v = -1 := by
   rw [dot_u_v_expansion]

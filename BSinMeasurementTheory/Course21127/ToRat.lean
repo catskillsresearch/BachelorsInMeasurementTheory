@@ -1,8 +1,12 @@
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Setoid.Basic
+module
+
+public import Mathlib.Data.Int.Basic
+public import Mathlib.Data.Rat.Defs
+public import Mathlib.Order.Setoid.Basic
+public import BSinMeasurementTheory.Course21127.NonzeroDenomInt
 import Mathlib.Tactic.Linarith
-import BSinMeasurementTheory.Course21127.NonzeroDenomInt
+
+@[expose] public section
 
 namespace Course21127
 

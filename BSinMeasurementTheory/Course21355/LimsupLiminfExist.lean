@@ -1,11 +1,15 @@
-import Mathlib.Algebra.Order.Archimedean.Real.Basic
-import Mathlib.Basic.Real.Basic
-import Mathlib.Order.ConditionallyCompleteLattice.Basic
-import Mathlib.Order.Filter.AtTopBot.Basic
-import Mathlib.Topology.Defs.Filter
-import Mathlib.Topology.Order.MonotoneConvergence
-import Mathlib.Topology.UniformSpace.Real
-import BSinMeasurementTheory.Course21355.TailExtremes
+module
+
+public import Mathlib.Algebra.Order.Archimedean.Real.Basic
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Order.ConditionallyCompleteLattice.Basic
+public import Mathlib.Order.Filter.AtTopBot.Basic
+public import Mathlib.Topology.Defs.Filter
+public import Mathlib.Topology.Order.MonotoneConvergence
+public import Mathlib.Topology.UniformSpace.Real
+public import BSinMeasurementTheory.Course21355.TailExtremes
+
+@[expose] public section
 
 open Filter Topology
 

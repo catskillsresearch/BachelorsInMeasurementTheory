@@ -1,4 +1,8 @@
-import Mathlib.Data.Nat.Factorial.Basic
+module
+
+public meta import Mathlib.Data.Nat.Factorial.Basic
+
+@[expose] public section
 
 namespace Course21228
 

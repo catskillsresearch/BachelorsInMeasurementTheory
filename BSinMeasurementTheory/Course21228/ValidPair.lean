@@ -1,4 +1,8 @@
-import Mathlib.Data.Fintype.Perm
+module
+
+public import Mathlib.Data.Fintype.Perm
+
+@[expose] public section
 
 open Equiv
 

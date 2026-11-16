@@ -1,10 +1,13 @@
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
-import Mathlib.Algebra.Order.Ring.Defs
-import Mathlib.Data.Nat.Cast.Order.Ring
-import Mathlib.Data.Rat.Defs
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Algebra.Order.Ring.Rat
+public import Mathlib.Data.Nat.Cast.Order.Ring
+public import BSinMeasurementTheory.Course21321.ScottPair
 import Mathlib.Tactic.Linarith
-import BSinMeasurementTheory.Course21321.ScottPair
+
+@[expose] public section
 
 namespace Course21321
 

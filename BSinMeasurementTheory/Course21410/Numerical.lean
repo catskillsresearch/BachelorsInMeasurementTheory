@@ -1,9 +1,13 @@
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Basic.Real.Basic
+module
+
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Basic.Real.Basic
+public import BSinMeasurementTheory.Course21410.Measure
 import Mathlib.Tactic.FinCases
 import Mathlib.Tactic.NormNum
-import BSinMeasurementTheory.Course21410.Measure
+
+@[expose] public section
 
 open scoped BigOperators Classical
 

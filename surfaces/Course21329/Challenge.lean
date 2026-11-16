@@ -3,9 +3,13 @@ Copyright (c) 2026 Lars Warren Ericson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Lars Warren Ericson.
 -/
-import Mathlib.Data.Set.Basic
-import Mathlib.Order.BoundedOrder.Basic
-import Mathlib.Order.Lattice
+module
+
+public import Mathlib.Data.Set.Basic
+public import Mathlib.Order.BoundedOrder.Basic
+public import Mathlib.Order.Lattice
+
+@[expose] public section
 
 universe u
 

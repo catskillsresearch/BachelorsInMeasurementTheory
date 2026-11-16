@@ -3,15 +3,19 @@ Copyright (c) 2026 Lars Warren Ericson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Lars Warren Ericson.
 -/
-import Mathlib.Algebra.Order.Ring.Unbundled.Rat
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Set.Finite.Basic
-import Mathlib.Data.Setoid.Basic
-import Mathlib.Order.Interval.Set.Basic
-import Mathlib.Order.WellFounded
+module
+
+public import Mathlib.Algebra.Order.Ring.Unbundled.Rat
+public import Mathlib.Data.Int.Basic
+public import Mathlib.Data.Rat.Defs
+public import Mathlib.Data.Set.Finite.Basic
+public import Mathlib.Order.Setoid.Basic
+public import Mathlib.Order.Interval.Set.Basic
+public import Mathlib.Order.WellFounded
 import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.Ring
+
+@[expose] public section
 
 /-!
 # Challenge — Course 21-127

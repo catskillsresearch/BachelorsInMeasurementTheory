@@ -1,5 +1,9 @@
-import Mathlib.Order.Atoms
-import Mathlib.Order.BooleanAlgebra.Basic
+module
+
+public import Mathlib.Order.Atoms
+public import Mathlib.Order.BooleanAlgebra.Basic
+
+@[expose] public section
 
 namespace Course21373
 

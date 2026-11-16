@@ -1,7 +1,11 @@
-import Mathlib.Basic.Real.Basic
+module
+
+public import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.Positivity
 import Mathlib.Tactic.Ring
+
+@[expose] public section
 
 namespace Course21640
 

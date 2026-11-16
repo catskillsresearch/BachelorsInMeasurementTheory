@@ -1,25 +1,29 @@
-import Mathlib.Analysis.Calculus.Deriv.Add
-import Mathlib.Analysis.Calculus.Deriv.Basic
-import Mathlib.Analysis.Calculus.Deriv.Inv
-import Mathlib.Analysis.Calculus.Deriv.Mul
-import Mathlib.Analysis.Calculus.Deriv.Pow
-import Mathlib.Analysis.Normed.Group.Real
-import Mathlib.Analysis.Real.Pi.Bounds
-import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Arctan
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Basic.Real.Basic
-import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
-import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
-import Mathlib.MeasureTheory.Measure.MeasureSpaceDef
-import Mathlib.Order.Filter.AtTopBot.Basic
+module
+
+public import Mathlib.Analysis.Calculus.Deriv.Add
+public import Mathlib.Analysis.Calculus.Deriv.Basic
+public import Mathlib.Analysis.Calculus.Deriv.Inv
+public import Mathlib.Analysis.Calculus.Deriv.Mul
+public import Mathlib.Analysis.Calculus.Deriv.Pow
+public import Mathlib.Analysis.Normed.Group.Real
+public import Mathlib.Analysis.Real.Pi.Bounds
+public import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Arctan
+public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
+public import Mathlib.MeasureTheory.Measure.MeasureSpaceDef
+public import Mathlib.Order.Filter.AtTopBot.Basic
+public import BSinMeasurementTheory.Course21120.Existence
+public import BSinMeasurementTheory.Course21120.FTC
 import Mathlib.Tactic.FieldSimp
 import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.NormNum
 import Mathlib.Tactic.Positivity
 import Mathlib.Tactic.Ring
-import BSinMeasurementTheory.Course21120.Existence
-import BSinMeasurementTheory.Course21120.FTC
+
+@[expose] public section
 
 open Real intervalIntegral Filter Topology MeasureTheory
 open scoped Interval
@@ -88,23 +92,17 @@ lemma den_deriv (t : ℝ) :
 theorem hasDerivAt_ibpWeight (t : ℝ) (ht : 0 < t) :
     HasDerivAt ibpWeight (-ibpDensity t) t := by
   have hden : 2 * t * (1 + t ^ 2) ≠ 0 := by positivity
-  have hd := (den_deriv t).inv hden
   have hfun : ibpWeight = fun s : ℝ => (2 * s * (1 + s ^ 2))⁻¹ := by
     ext s; simp [ibpWeight, one_div]
   rw [hfun]
-  have hderiv : -(2 + 6 * t ^ 2) / (2 * t * (1 + t ^ 2)) ^ 2 = -ibpDensity t := by
-    unfold ibpDensity
-    have hsq : (2 * t * (1 + t ^ 2)) ^ 2 = 4 * t ^ 2 * (1 + t ^ 2) ^ 2 := by ring
-    rw [hsq]
-    have hnum : 2 + 6 * t ^ 2 = 2 * (1 + 3 * t ^ 2) := by ring
-    rw [hnum]
-    field_simp
-    ring
-  rwa [hderiv] at hd
+  convert (den_deriv t).inv hden using 1
+  unfold ibpDensity
+  field_simp
+  ring
 
 theorem ibpDensity_nonneg (t : ℝ) (ht : 0 < t) : 0 ≤ ibpDensity t := by
   unfold ibpDensity
-  apply div_nonneg <;> positivity
+  positivity
 
 theorem ibpWeight_pos (t : ℝ) (ht : 0 < t) : 0 < ibpWeight t := by
   simp [ibpWeight]
@@ -118,16 +116,14 @@ theorem two_ibpWeight (t : ℝ) (_ht : t ≠ 0) :
 
 theorem continuousOn_ibpDensity {M X : ℝ} (hM : 0 < M) (hMX : M ≤ X) :
     ContinuousOn ibpDensity (Set.uIcc M X) := by
-  have hne : ∀ t ∈ Set.uIcc M X, 2 * t ^ 2 * (1 + t ^ 2) ^ 2 ≠ 0 := by
-    intro t ht
-    have : t ∈ Set.Icc M X := by rwa [Set.uIcc_of_le hMX] at ht
-    have ht0 : 0 < t := lt_of_lt_of_le hM this.1
-    positivity
-  exact ContinuousOn.div
+  refine ContinuousOn.div
     (continuous_const.add ((continuous_pow 2).const_mul (3 : ℝ))).continuousOn
     ((((continuous_pow 2).const_mul (2 : ℝ)).mul
-        ((continuous_const.add (continuous_pow 2)).pow 2))).continuousOn
-    hne
+        ((continuous_const.add (continuous_pow 2)).pow 2))).continuousOn ?_
+  intro t ht
+  have : t ∈ Set.Icc M X := by rwa [Set.uIcc_of_le hMX] at ht
+  have : 0 < t := lt_of_lt_of_le hM this.1
+  positivity
 
 /-- On a finite interval, $\int_M^X (-u')\,dt = u(X)-u(M)$, hence
 $\int_M^X$ `ibpDensity` $= u(M)-u(X)$. -/

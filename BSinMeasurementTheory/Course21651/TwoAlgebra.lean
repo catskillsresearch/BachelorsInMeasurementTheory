@@ -1,4 +1,8 @@
-import BSinMeasurementTheory.Course21651.StoneMap
+module
+
+public import BSinMeasurementTheory.Course21651.StoneMap
+
+@[expose] public section
 
 set_option linter.unusedSectionVars false
 

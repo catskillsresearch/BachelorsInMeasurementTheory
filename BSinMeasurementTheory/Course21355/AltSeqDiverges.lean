@@ -1,13 +1,17 @@
-import Mathlib.Basic.Real.Basic
-import Mathlib.Order.Filter.AtTopBot.Basic
-import Mathlib.Order.Lattice.Nat
+module
+
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Order.Filter.AtTopBot.Basic
+public import Mathlib.Order.Lattice.Nat
+public import Mathlib.Topology.Defs.Filter
+public import Mathlib.Topology.MetricSpace.Basic
+public import Mathlib.Topology.Order.MonotoneConvergence
+public import BSinMeasurementTheory.Course21355.AltSeqValues
 import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.NormNum
 import Mathlib.Tactic.Ring
-import Mathlib.Topology.Defs.Filter
-import Mathlib.Topology.MetricSpace.Basic
-import Mathlib.Topology.Order.MonotoneConvergence
-import BSinMeasurementTheory.Course21355.AltSeqValues
+
+@[expose] public section
 
 open Filter Topology
 

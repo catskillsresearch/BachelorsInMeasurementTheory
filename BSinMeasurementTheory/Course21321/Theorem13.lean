@@ -1,9 +1,13 @@
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Algebra.BigOperators.Ring.Finset
-import Mathlib.Data.Nat.Cast.Order.Ring
-import Mathlib.Data.Rat.Defs
-import BSinMeasurementTheory.Course21321.ScottPair
-import BSinMeasurementTheory.Course21321.Theorem12
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Algebra.BigOperators.Ring.Finset
+public import Mathlib.Algebra.Order.Ring.Rat
+public import Mathlib.Data.Nat.Cast.Order.Ring
+public import BSinMeasurementTheory.Course21321.ScottPair
+public import BSinMeasurementTheory.Course21321.Theorem12
+
+@[expose] public section
 
 namespace Course21321
 

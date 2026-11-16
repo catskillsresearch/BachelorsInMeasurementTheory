@@ -1,4 +1,8 @@
-import Mathlib.Topology.ContinuousMap.Compact
+module
+
+public import Mathlib.Topology.ContinuousMap.Compact
+
+@[expose] public section
 
 namespace Course21720
 

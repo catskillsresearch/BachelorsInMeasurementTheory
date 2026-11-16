@@ -1,7 +1,11 @@
-import Mathlib.Algebra.Order.Archimedean.Real.Basic
-import Mathlib.Basic.Real.Basic
-import Mathlib.Order.ConditionallyCompleteLattice.Basic
-import Mathlib.Topology.Order.MonotoneConvergence
+module
+
+public import Mathlib.Algebra.Order.Archimedean.Real.Basic
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Order.ConditionallyCompleteLattice.Basic
+public import Mathlib.Topology.Order.MonotoneConvergence
+
+@[expose] public section
 
 open Filter Topology
 

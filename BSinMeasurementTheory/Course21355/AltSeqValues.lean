@@ -1,5 +1,9 @@
-import Mathlib.Basic.Real.Basic
+module
+
+public import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic.NormNum
+
+@[expose] public section
 
 namespace Course21355
 

@@ -1,8 +1,11 @@
-import BSinMeasurementTheory.Course21228.Symmetric
-import BSinMeasurementTheory.Course21228.ValidPair
-import BSinMeasurementTheory.Course21228.Genericity
-import BSinMeasurementTheory.Course21228.Counting
-import BSinMeasurementTheory.Course21228.SmallN2
-import BSinMeasurementTheory.Course21228.SmallN3
-import BSinMeasurementTheory.Course21228.SmallN
-import BSinMeasurementTheory.Course21228.Numerical
+module
+
+public import BSinMeasurementTheory.Course21228.Symmetric
+public import BSinMeasurementTheory.Course21228.ValidPair
+public import BSinMeasurementTheory.Course21228.Genericity
+public import BSinMeasurementTheory.Course21228.Counting
+public import BSinMeasurementTheory.Course21228.SmallN2
+public import BSinMeasurementTheory.Course21228.SmallN3
+public import BSinMeasurementTheory.Course21228.SmallN
+public import BSinMeasurementTheory.Course21228.Numerical
+

@@ -1,8 +1,12 @@
-import Mathlib.Analysis.Normed.Module.Basic
-import Mathlib.Basic.Real.Basic
+module
+
+public import Mathlib.Analysis.Normed.Module.Basic
+public import Mathlib.Basic.Real.Basic
+public import BSinMeasurementTheory.Course21640.Sublinear
 import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.Ring
-import BSinMeasurementTheory.Course21640.Sublinear
+
+@[expose] public section
 
 namespace Course21640
 

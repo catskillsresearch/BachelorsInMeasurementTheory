@@ -3,14 +3,18 @@ Copyright (c) 2026 Lars Warren Ericson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Lars Warren Ericson.
 -/
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Algebra.BigOperators.Pi
-import Mathlib.Algebra.Module.LinearMap.Basic
-import Mathlib.Algebra.Order.Ring.Defs
-import Mathlib.Data.Fin.VecNotation
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Fin
-import Mathlib.Basic.Real.Basic
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Algebra.BigOperators.Pi
+public import Mathlib.Algebra.Module.LinearMap.Basic
+public import Mathlib.Algebra.Order.Ring.Defs
+public import Mathlib.Data.Fin.VecNotation
+public import Mathlib.Data.Finset.Basic
+public import Mathlib.Data.Fintype.Fin
+public import Mathlib.Basic.Real.Basic
+
+@[expose] public section
 
 /-!
 # Challenge — Course 21-321

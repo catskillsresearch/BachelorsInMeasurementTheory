@@ -3,9 +3,13 @@ Copyright (c) 2026 Lars Warren Ericson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Lars Warren Ericson.
 -/
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Basic.Real.Basic
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Data.Fintype.Basic
+public import Mathlib.Basic.Real.Basic
+
+@[expose] public section
 
 open scoped BigOperators Classical
 

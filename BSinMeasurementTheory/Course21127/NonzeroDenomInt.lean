@@ -1,6 +1,10 @@
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Setoid.Basic
+module
+
+public import Mathlib.Data.Int.Basic
+public import Mathlib.Order.Setoid.Basic
 import Mathlib.Tactic.Ring
+
+@[expose] public section
 
 namespace Course21127
 

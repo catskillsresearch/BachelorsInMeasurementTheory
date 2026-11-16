@@ -1,7 +1,11 @@
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Basic.Real.Basic
-import BSinMeasurementTheory.Course21322.StoneClopen
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Data.Fintype.Basic
+public import Mathlib.Basic.Real.Basic
+public import BSinMeasurementTheory.Course21322.StoneClopen
+
+@[expose] public section
 
 open scoped BigOperators Classical
 

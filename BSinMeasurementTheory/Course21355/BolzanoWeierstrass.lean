@@ -1,13 +1,17 @@
-import Mathlib.Algebra.Order.Group.Abs
-import Mathlib.Basic.Real.Basic
-import Mathlib.Order.Filter.AtTopBot.Basic
-import Mathlib.Order.Interval.Set.Basic
-import Mathlib.Topology.Defs.Filter
-import Mathlib.Topology.Order.Compact
-import Mathlib.Topology.Sequences
-import Mathlib.Topology.UniformSpace.Real
-import BSinMeasurementTheory.Course21355.MonotoneConvergence
-import BSinMeasurementTheory.Course21355.PeakPoints
+module
+
+public import Mathlib.Algebra.Order.Group.Abs
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Order.Filter.AtTopBot.Basic
+public import Mathlib.Order.Interval.Set.Basic
+public import Mathlib.Topology.Defs.Filter
+public import Mathlib.Topology.Order.Compact
+public import Mathlib.Topology.Sequences
+public import Mathlib.Topology.UniformSpace.Real
+public import BSinMeasurementTheory.Course21355.MonotoneConvergence
+public import BSinMeasurementTheory.Course21355.PeakPoints
+
+@[expose] public section
 
 open Filter Topology
 

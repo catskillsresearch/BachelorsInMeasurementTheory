@@ -1,6 +1,10 @@
-import Mathlib.Data.Rat.Defs
+module
+
+public import Mathlib.Data.Rat.Defs
 import Mathlib.Tactic.NormNum
 import Mathlib.Tactic.Ring
+
+@[expose] public section
 
 namespace Course21120Taylor
 

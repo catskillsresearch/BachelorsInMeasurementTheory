@@ -3,11 +3,15 @@ Copyright (c) 2026 Lars Warren Ericson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Lars Warren Ericson.
 -/
-import Mathlib.Order.BooleanAlgebra.Basic
-import Mathlib.Topology.Basic
-import Mathlib.Topology.Constructions
-import Mathlib.Topology.Continuous
-import Mathlib.Topology.Order
+module
+
+public import Mathlib.Order.BooleanAlgebra.Basic
+public import Mathlib.Topology.Basic
+public import Mathlib.Topology.Constructions
+public import Mathlib.Topology.Continuous
+public import Mathlib.Topology.Order
+
+@[expose] public section
 
 set_option linter.unusedSectionVars false
 

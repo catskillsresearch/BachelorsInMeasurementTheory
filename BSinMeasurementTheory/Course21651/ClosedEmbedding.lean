@@ -1,10 +1,14 @@
-import Mathlib.Order.BooleanAlgebra.Basic
-import Mathlib.Topology.Basic
-import Mathlib.Topology.Constructions
-import Mathlib.Topology.Continuous
-import Mathlib.Topology.Order
-import Mathlib.Topology.Separation.Hausdorff
-import BSinMeasurementTheory.Course21651.BooleanHom
+module
+
+public import Mathlib.Order.BooleanAlgebra.Basic
+public import Mathlib.Topology.Basic
+public import Mathlib.Topology.Constructions
+public import Mathlib.Topology.Continuous
+public import Mathlib.Topology.Order
+public import Mathlib.Topology.Separation.Hausdorff
+public import BSinMeasurementTheory.Course21651.BooleanHom
+
+@[expose] public section
 
 set_option linter.unusedSectionVars false
 

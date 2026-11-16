@@ -1,14 +1,18 @@
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Algebra.Module.LinearMap.Basic
-import Mathlib.Algebra.Module.Submodule.LinearMap
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
-import Mathlib.Basic.Real.Basic
-import Mathlib.GroupTheory.GroupAction.Ring
-import Mathlib.LinearAlgebra.Basis.Basic
+module
+
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Algebra.Module.LinearMap.Basic
+public import Mathlib.Algebra.Module.Submodule.LinearMap
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.GroupTheory.GroupAction.Ring
+public import Mathlib.LinearAlgebra.Basis.Basic
+public import BSinMeasurementTheory.Course21241.Basis
 import Mathlib.Tactic.FinCases
 import Mathlib.Tactic.Linarith
-import BSinMeasurementTheory.Course21241.Basis
+
+@[expose] public section
 
 open BigOperators
 open Finset
@@ -44,7 +48,7 @@ theorem mem_dualCone_iff (φ : V →ₗ[ℝ] ℝ) :
   · intro hφ i
     have hei : e i ∈ C := by
       intro j
-      dsimp [e]
+      simp [e, Pi.single_apply]
       split_ifs <;> linarith
     exact hφ (e i) hei
   · intro hφ c hc

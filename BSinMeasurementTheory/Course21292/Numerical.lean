@@ -1,8 +1,12 @@
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Data.Rat.Defs
+module
+
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Data.Rat.Defs
 import Mathlib.Tactic.FinCases
 import Mathlib.Tactic.NormNum
+
+@[expose] public section
 
 open scoped BigOperators
 
@@ -89,6 +93,5 @@ theorem complementary_slackness_and_optimality :
           dual_slack_is_zero⟩
 
 end LPDualityCalculations
-
 
 end Course21292Numerical

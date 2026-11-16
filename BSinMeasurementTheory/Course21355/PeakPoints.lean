@@ -1,9 +1,13 @@
-import Mathlib.Basic.Real.Basic
-import Mathlib.Data.Set.Finite.Basic
-import Mathlib.Order.Interval.Finset.Defs
-import Mathlib.Order.Interval.Finset.Nat
-import Mathlib.Order.Interval.Set.Basic
+module
+
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Data.Set.Finite.Basic
+public import Mathlib.Order.Interval.Finset.Defs
+public import Mathlib.Order.Interval.Finset.Nat
+public import Mathlib.Order.Interval.Set.Basic
 import Mathlib.Tactic.ByContra
+
+@[expose] public section
 
 namespace Course21355
 

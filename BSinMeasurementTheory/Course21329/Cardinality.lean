@@ -1,5 +1,9 @@
-import Mathlib.SetTheory.Cardinal.Basic
-import Mathlib.SetTheory.Cardinal.Arithmetic
+module
+
+public import Mathlib.SetTheory.Cardinal.Basic
+public import Mathlib.SetTheory.Cardinal.Arithmetic
+
+@[expose] public section
 
 namespace Course21329
 

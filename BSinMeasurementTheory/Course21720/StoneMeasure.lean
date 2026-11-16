@@ -1,5 +1,9 @@
-import Mathlib.Topology.ContinuousMap.Compact
-import BSinMeasurementTheory.Course21720.Boundedness
+module
+
+public import Mathlib.Topology.ContinuousMap.Compact
+public import BSinMeasurementTheory.Course21720.Boundedness
+
+@[expose] public section
 
 namespace Course21720
 

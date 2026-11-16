@@ -1,4 +1,13 @@
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public meta import Mathlib.Data.Finset.Defs
+public meta import Mathlib.Data.Finset.Empty
+public meta import Mathlib.Data.Finset.Insert
+public meta import Mathlib.Data.Finset.Lattice.Basic
+
+@[expose] public section
+
 namespace Course21373Numerical
 
 /-! ### Numerical / Computational Example -/
@@ -15,7 +24,5 @@ def fixed_elements : List (Finset (Fin 3)) :=
   [∅, orbit1, orbit2, orbit1 ∪ orbit2]
 
 #eval fixed_elements.length                      -- 4
-
-
 
 end Course21373Numerical

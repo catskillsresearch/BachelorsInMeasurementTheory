@@ -3,9 +3,13 @@ Copyright (c) 2026 Lars Warren Ericson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Lars Warren Ericson.
 -/
-import Mathlib.Algebra.Module.LinearMap.Basic
-import Mathlib.Basic.Real.Basic
-import Mathlib.Order.BooleanAlgebra.Basic
+module
+
+public import Mathlib.Algebra.Module.LinearMap.Basic
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Order.BooleanAlgebra.Basic
+
+@[expose] public section
 
 /-!
 # Challenge — Course 21-410 / 21-599

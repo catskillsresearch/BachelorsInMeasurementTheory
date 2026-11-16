@@ -3,12 +3,16 @@ Copyright (c) 2026 Lars Warren Ericson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Lars Warren Ericson.
 -/
-import Mathlib.Algebra.Module.LinearMap.Basic
-import Mathlib.Analysis.Normed.Module.Basic
-import Mathlib.Basic.Real.Basic
-import Mathlib.Order.ConditionallyCompleteLattice.Basic
-import Mathlib.Topology.ContinuousMap.Basic
-import Mathlib.Topology.ContinuousMap.Compact
+module
+
+public import Mathlib.Algebra.Module.LinearMap.Basic
+public import Mathlib.Analysis.Normed.Module.Basic
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Order.ConditionallyCompleteLattice.Basic
+public import Mathlib.Topology.ContinuousMap.Basic
+public import Mathlib.Topology.ContinuousMap.Compact
+
+@[expose] public section
 
 /-!
 # Challenge — Course 21-720

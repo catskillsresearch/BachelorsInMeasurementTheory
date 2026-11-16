@@ -1,11 +1,15 @@
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Algebra.BigOperators.Ring.Finset
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
-import Mathlib.Data.Rat.Defs
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Algebra.BigOperators.Ring.Finset
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Data.Rat.Defs
+public import BSinMeasurementTheory.Course21292.LinearProgram
 import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.Ring
 import Mathlib.Tactic.SimpRw
-import BSinMeasurementTheory.Course21292.LinearProgram
+
+@[expose] public section
 
 open scoped BigOperators
 

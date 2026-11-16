@@ -1,7 +1,11 @@
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Algebra.Module.LinearMap.Basic
-import Mathlib.Algebra.Order.Ring.Defs
-import Mathlib.Data.Finset.Basic
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Algebra.Module.LinearMap.Basic
+public import Mathlib.Algebra.Order.Ring.Defs
+public import Mathlib.Data.Finset.Basic
+
+@[expose] public section
 
 namespace Course21321
 

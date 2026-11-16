@@ -1,6 +1,10 @@
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Order.BooleanAlgebra.Basic
-import BSinMeasurementTheory.Course21373.AtomJoin
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Order.BooleanAlgebra.Basic
+public import BSinMeasurementTheory.Course21373.AtomJoin
+
+@[expose] public section
 
 open Finset
 open Classical

@@ -1,7 +1,11 @@
-import Mathlib.Data.Rat.Defs
+module
+
+public import Mathlib.Data.Rat.Defs
+public import BSinMeasurementTheory.Course21120.TaylorExpansion
 import Mathlib.Tactic.NormNum
 import Mathlib.Tactic.Ring
-import BSinMeasurementTheory.Course21120.TaylorExpansion
+
+@[expose] public section
 
 namespace Course21120Taylor
 

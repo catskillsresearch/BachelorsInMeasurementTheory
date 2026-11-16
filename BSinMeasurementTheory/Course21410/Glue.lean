@@ -1,13 +1,17 @@
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Basic.Real.Basic
-import Mathlib.Data.Set.BooleanAlgebra
-import Mathlib.Data.Set.Disjoint
-import Mathlib.Order.Disjoint
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Data.Fintype.Basic
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Data.Set.BooleanAlgebra
+public import Mathlib.Data.Set.Disjoint
+public import Mathlib.Order.Disjoint
+public import BSinMeasurementTheory.Course21410.Measure
 import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.Ring
-import BSinMeasurementTheory.Course21410.Measure
+
+@[expose] public section
 
 open scoped BigOperators Classical
 

@@ -1,8 +1,12 @@
-import Mathlib.Algebra.Module.LinearMap.Basic
-import Mathlib.Analysis.Normed.Module.Basic
-import Mathlib.Basic.Real.Basic
-import BSinMeasurementTheory.Course21640.ApplyHahnBanach
-import BSinMeasurementTheory.Course21640.Positivity
+module
+
+public import Mathlib.Algebra.Module.LinearMap.Basic
+public import Mathlib.Analysis.Normed.Module.Basic
+public import Mathlib.Basic.Real.Basic
+public import BSinMeasurementTheory.Course21640.ApplyHahnBanach
+public import BSinMeasurementTheory.Course21640.Positivity
+
+@[expose] public section
 
 namespace Course21640
 

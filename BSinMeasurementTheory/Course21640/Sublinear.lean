@@ -1,6 +1,10 @@
-import Mathlib.Algebra.Module.Basic
-import Mathlib.Analysis.Normed.Module.Basic
-import Mathlib.Basic.Real.Basic
+module
+
+public import Mathlib.Algebra.Module.Basic
+public import Mathlib.Analysis.Normed.Module.Basic
+public import Mathlib.Basic.Real.Basic
+
+@[expose] public section
 
 namespace Course21640
 

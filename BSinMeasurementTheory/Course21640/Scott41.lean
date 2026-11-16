@@ -1,9 +1,13 @@
-import Mathlib.Algebra.Module.LinearMap.Basic
-import Mathlib.Basic.Real.Basic
-import Mathlib.Topology.Basic
-import Mathlib.Topology.ContinuousMap.Algebra
-import Mathlib.Topology.ContinuousMap.Basic
-import BSinMeasurementTheory.Course21640.PositiveExtension
+module
+
+public import Mathlib.Algebra.Module.LinearMap.Basic
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Topology.Basic
+public import Mathlib.Topology.ContinuousMap.Algebra
+public import Mathlib.Topology.ContinuousMap.Basic
+public import BSinMeasurementTheory.Course21640.PositiveExtension
+
+@[expose] public section
 
 namespace Course21640
 

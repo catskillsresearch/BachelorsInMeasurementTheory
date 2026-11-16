@@ -1,7 +1,11 @@
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Data.Finset.Lattice.Fold
-import Mathlib.Order.BooleanAlgebra.Basic
-import BSinMeasurementTheory.Course21373.IsBooleanAtom
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Data.Finset.Lattice.Fold
+public import Mathlib.Order.BooleanAlgebra.Basic
+public import BSinMeasurementTheory.Course21373.IsBooleanAtom
+
+@[expose] public section
 
 open Finset
 open Classical

@@ -1,8 +1,12 @@
-import Mathlib.Algebra.Module.LinearMap.Basic
-import Mathlib.Basic.Real.Basic
+module
+
+public import Mathlib.Algebra.Module.LinearMap.Basic
+public import Mathlib.Basic.Real.Basic
+public import BSinMeasurementTheory.Course21241.DotAtV
+public import BSinMeasurementTheory.Course21241.DotOnC
 import Mathlib.Tactic.NormNum
-import BSinMeasurementTheory.Course21241.DotAtV
-import BSinMeasurementTheory.Course21241.DotOnC
+
+@[expose] public section
 
 namespace Course21241
 

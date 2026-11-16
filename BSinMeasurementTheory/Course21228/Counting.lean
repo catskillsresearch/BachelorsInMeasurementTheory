@@ -1,10 +1,14 @@
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Fintype.Perm
-import Mathlib.Data.Fintype.Card
-import Mathlib.Data.Fintype.Prod
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import BSinMeasurementTheory.Course21228.ValidPair
-import BSinMeasurementTheory.Course21228.Genericity
+module
+
+public import Mathlib.Data.Fintype.Basic
+public import Mathlib.Data.Fintype.Perm
+public import Mathlib.Data.Fintype.Card
+public import Mathlib.Data.Fintype.Prod
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import BSinMeasurementTheory.Course21228.ValidPair
+public import BSinMeasurementTheory.Course21228.Genericity
+
+@[expose] public section
 
 open Equiv
 

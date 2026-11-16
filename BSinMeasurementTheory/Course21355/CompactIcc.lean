@@ -1,7 +1,11 @@
-import Mathlib.Basic.Real.Basic
-import Mathlib.Order.Interval.Set.Basic
-import Mathlib.Topology.Order.Compact
-import Mathlib.Topology.UniformSpace.Real
+module
+
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Order.Interval.Set.Basic
+public import Mathlib.Topology.Order.Compact
+public import Mathlib.Topology.UniformSpace.Real
+
+@[expose] public section
 
 namespace Course21355
 

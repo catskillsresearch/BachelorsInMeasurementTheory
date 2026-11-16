@@ -1,7 +1,11 @@
-import Mathlib.Data.Rat.Defs
+module
+
+public import Mathlib.Data.Rat.Defs
+public import BSinMeasurementTheory.Course21127.NonzeroDenomInt
+public import BSinMeasurementTheory.Course21127.ToRat
 import Mathlib.Tactic.NormNum
-import BSinMeasurementTheory.Course21127.NonzeroDenomInt
-import BSinMeasurementTheory.Course21127.ToRat
+
+@[expose] public section
 
 namespace Course21127
 

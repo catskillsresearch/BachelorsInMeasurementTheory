@@ -1,6 +1,10 @@
-import Mathlib.Data.Set.Basic
-import Mathlib.Order.BooleanAlgebra.Basic
-import Mathlib.Topology.Basic
+module
+
+public import Mathlib.Data.Set.Basic
+public import Mathlib.Order.BooleanAlgebra.Basic
+public import Mathlib.Topology.Basic
+
+@[expose] public section
 
 set_option linter.unusedSectionVars false
 

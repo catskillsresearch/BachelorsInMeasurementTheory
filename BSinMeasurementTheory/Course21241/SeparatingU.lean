@@ -1,5 +1,9 @@
-import Mathlib.LinearAlgebra.Basis.Basic
-import BSinMeasurementTheory.Course21241.Basis
+module
+
+public import Mathlib.LinearAlgebra.Basis.Basic
+public import BSinMeasurementTheory.Course21241.Basis
+
+@[expose] public section
 
 namespace Course21241
 

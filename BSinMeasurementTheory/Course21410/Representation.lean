@@ -1,5 +1,9 @@
-import Mathlib.Order.BooleanAlgebra.Basic
-import BSinMeasurementTheory.Course21410.RestrictToB
+module
+
+public import Mathlib.Order.BooleanAlgebra.Basic
+public import BSinMeasurementTheory.Course21410.RestrictToB
+
+@[expose] public section
 
 namespace Course21410
 

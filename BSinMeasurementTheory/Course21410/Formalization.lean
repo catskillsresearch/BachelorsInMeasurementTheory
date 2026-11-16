@@ -1,8 +1,11 @@
-import BSinMeasurementTheory.Course21410.Measure
-import BSinMeasurementTheory.Course21410.StoneSpace
-import BSinMeasurementTheory.Course21410.StepFunctions
-import BSinMeasurementTheory.Course21410.PositiveExtension
-import BSinMeasurementTheory.Course21410.RestrictToB
-import BSinMeasurementTheory.Course21410.Representation
-import BSinMeasurementTheory.Course21410.Glue
-import BSinMeasurementTheory.Course21410.Numerical
+module
+
+public import BSinMeasurementTheory.Course21410.Measure
+public import BSinMeasurementTheory.Course21410.StoneSpace
+public import BSinMeasurementTheory.Course21410.StepFunctions
+public import BSinMeasurementTheory.Course21410.PositiveExtension
+public import BSinMeasurementTheory.Course21410.RestrictToB
+public import BSinMeasurementTheory.Course21410.Representation
+public import BSinMeasurementTheory.Course21410.Glue
+public import BSinMeasurementTheory.Course21410.Numerical
+

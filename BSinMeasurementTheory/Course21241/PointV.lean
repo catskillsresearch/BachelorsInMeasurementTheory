@@ -1,5 +1,9 @@
+module
+
+public import BSinMeasurementTheory.Course21241.Space
 import Mathlib.Tactic.NormNum
-import BSinMeasurementTheory.Course21241.Space
+
+@[expose] public section
 
 namespace Course21241
 

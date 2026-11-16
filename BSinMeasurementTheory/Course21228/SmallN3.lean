@@ -1,8 +1,12 @@
-import Mathlib.Data.Fintype.Basic
-import Mathlib.Data.Fintype.Perm
-import Mathlib.Data.Fintype.Card
-import Mathlib.Data.Fintype.Prod
-import BSinMeasurementTheory.Course21228.Counting
+module
+
+public import Mathlib.Data.Fintype.Basic
+public import Mathlib.Data.Fintype.Perm
+public import Mathlib.Data.Fintype.Card
+public import Mathlib.Data.Fintype.Prod
+public import BSinMeasurementTheory.Course21228.Counting
+
+@[expose] public section
 
 open Equiv
 

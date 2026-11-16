@@ -1,6 +1,10 @@
-import Mathlib.Algebra.Order.Archimedean.Real.Basic
-import Mathlib.Basic.Real.Basic
-import Mathlib.Order.ConditionallyCompleteLattice.Basic
+module
+
+public import Mathlib.Algebra.Order.Archimedean.Real.Basic
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Order.ConditionallyCompleteLattice.Basic
+
+@[expose] public section
 
 namespace Course21355
 
