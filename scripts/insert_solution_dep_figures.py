@@ -19,6 +19,7 @@ DEPS_DIR = ROOT / "figures" / "deps"
 COURSE_LEANS: list[tuple[str, str, str, list[str]]] = [
     ("21-120.md", "21-120", "Course21120", ["BachelorsInMeasurementTheory/Course21120/FTC.lean"]),
     ("21-122.md", "21-122", "Course21122", [
+        "BachelorsInMeasurementTheory/Course21122/Existence.lean",
         "BachelorsInMeasurementTheory/Course21122/TailBound.lean",
         "BachelorsInMeasurementTheory/Course21122/TaylorExpansion.lean",
         "BachelorsInMeasurementTheory/Course21122/TaylorEstimate.lean",
@@ -44,7 +45,6 @@ COURSE_LEANS: list[tuple[str, str, str, list[str]]] = [
 # Map graph stem -> list of (lean path relative to repo, course label).
 PRIOR_MODULES: dict[str, list[tuple[str, str]]] = {
     "Course21122": [
-        ("BachelorsInMeasurementTheory/Course21120/Existence.lean", "21-120"),
         ("BachelorsInMeasurementTheory/Course21120/FTC.lean", "21-120"),
     ],
 }

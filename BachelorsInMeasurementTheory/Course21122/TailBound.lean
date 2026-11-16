@@ -3,7 +3,7 @@ module
 public import Mathlib.Analysis.Calculus.Deriv.Basic
 public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Arctan
 public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
-import BachelorsInMeasurementTheory.Course21120.Existence
+import BachelorsInMeasurementTheory.Course21122.Existence
 import BachelorsInMeasurementTheory.Course21120.FTC
 import Mathlib.Analysis.Real.Pi.Bounds
 import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
@@ -39,7 +39,7 @@ theorem abs_integral_le_arctan (M : ℝ) (hM : 0 ≤ M) :
     hg.continuousOn.intervalIntegrable
   have h2 : ∫ t in (0 : ℝ)..M, |sin (t ^ 2) / (1 + t ^ 2)| ≤
       ∫ t in (0 : ℝ)..M, (1 : ℝ) / (1 + t ^ 2) :=
-    integral_mono_on hM hintf hintg fun t _ => Course21120.abs_integrand_le t
+    integral_mono_on hM hintf hintg fun t _ => abs_integrand_le t
   have h3 : ∫ t in (0 : ℝ)..M, (1 : ℝ) / (1 + t ^ 2) = arctan M := by
     rw [majorant_integral 0 M, arctan_zero, sub_zero]
   linarith

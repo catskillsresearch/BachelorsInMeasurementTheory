@@ -125,7 +125,7 @@ def _looks_like_identifier(text: str) -> bool:
 FILE_BLURBS: dict[str, str] = {
     "BachelorsInMeasurementTheory/Course21120/FTC.lean":
         "Fundamental theorem of calculus for the Fresnel-type integrand.",
-    "BachelorsInMeasurementTheory/Course21120/Existence.lean":
+    "BachelorsInMeasurementTheory/Course21122/Existence.lean":
         "Comparison bound that gives absolute convergence of the improper integral.",
     "BachelorsInMeasurementTheory/Course21122/TailBound.lean":
         "Arctan comparison bound for the tail integral.",

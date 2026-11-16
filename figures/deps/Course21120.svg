@@ -22,7 +22,7 @@
 <text text-anchor="middle" x="393" y="-64.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#1e3a8a">FTC</text>
 </g>
 <!-- LAnalysisCalculusDerivBasic&#45;&gt;MFTC -->
-<g id="edge3" class="edge">
+<g id="edge2" class="edge">
 <title>LAnalysisCalculusDerivBasic&#45;&gt;MFTC</title>
 <path fill="none" stroke="#334155" d="M255.92,-107.68C281.4,-104.09 309.06,-99.04 334,-92 342.41,-89.62 351.2,-86.31 359.33,-82.86"/>
 <polygon fill="#334155" stroke="#334155" points="360.54,-85.01 365.97,-79.96 358.58,-80.52 360.54,-85.01"/>
@@ -34,7 +34,7 @@
 <text text-anchor="middle" x="167" y="-64.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">MeasureTheory.Integral.IntervalIntegral.Basic</text>
 </g>
 <!-- LMeasureTheoryIntegralIntervalIntegralBasic&#45;&gt;MFTC -->
-<g id="edge1" class="edge">
+<g id="edge3" class="edge">
 <title>LMeasureTheoryIntegralIntervalIntegralBasic&#45;&gt;MFTC</title>
 <path fill="none" stroke="#334155" d="M300.57,-67C322.19,-67 342.76,-67 358.89,-67"/>
 <polygon fill="#334155" stroke="#334155" points="358.98,-69.45 365.98,-67 358.98,-64.55 358.98,-69.45"/>
@@ -46,7 +46,7 @@
 <text text-anchor="middle" x="167" y="-15.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#7c2d12">MeasureTheory.Integral.IntervalIntegral.FundThmCalculus</text>
 </g>
 <!-- LMeasureTheoryIntegralIntervalIntegralFundThmCalculus&#45;&gt;MFTC -->
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 <title>LMeasureTheoryIntegralIntervalIntegralFundThmCalculus&#45;&gt;MFTC</title>
 <path fill="none" stroke="#334155" d="M305.34,-36C315.1,-38.1 324.73,-40.43 334,-43 342.37,-45.32 351.15,-48.53 359.27,-51.84"/>
 <polygon fill="#334155" stroke="#334155" points="358.51,-54.17 365.91,-54.62 360.41,-49.66 358.51,-54.17"/>

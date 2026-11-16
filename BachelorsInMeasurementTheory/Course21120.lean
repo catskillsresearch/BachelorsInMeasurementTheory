@@ -1,4 +1,3 @@
 module
 
 public import BachelorsInMeasurementTheory.Course21120.FTC
-public import BachelorsInMeasurementTheory.Course21120.Existence
