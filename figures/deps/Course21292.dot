@@ -1,0 +1,50 @@
+digraph Course21292 {
+  rankdir=LR;
+  graph [nodesep=0.18, ranksep=0.45, pad=0.12, bgcolor="white"];
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11];
+  edge [color="#334155", arrowsize=0.7];
+
+  LAlgebraBigOperatorsFin [label="Algebra.BigOperators.Fin", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LAlgebraBigOperatorsGroupFinsetBasic [label="Algebra.BigOperators.Group.Finset.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LAlgebraBigOperatorsRingFinset [label="Algebra.BigOperators.Ring.Finset", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LAlgebraOrderBigOperatorsGroupFinset [label="Algebra.Order.BigOperators.Group.Finset", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LAnalysisInnerProductSpaceBasic [label="Analysis.InnerProductSpace.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataRatDefs [label="Data.Rat.Defs", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticFinCases [label="Tactic.FinCases", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticLinarith [label="Tactic.Linarith", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticNormNum [label="Tactic.NormNum", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticRing [label="Tactic.Ring", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticSimpRw [label="Tactic.SimpRw", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  MDualFormulation [label="DualFormulation", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MLinearProgram [label="LinearProgram", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MNumerical [label="Numerical", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MScott11 [label="Scott11", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MScottInstance [label="ScottInstance", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MSimplex [label="Simplex", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MStrongDuality [label="StrongDuality", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MWeakDuality [label="WeakDuality", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+
+  LTacticRing -> MDualFormulation;
+  LAlgebraBigOperatorsFin -> MDualFormulation;
+  MScottInstance -> MDualFormulation;
+  LDataRatDefs -> MLinearProgram;
+  LAnalysisInnerProductSpaceBasic -> MLinearProgram;
+  LAlgebraBigOperatorsGroupFinsetBasic -> MLinearProgram;
+  LTacticNormNum -> MNumerical;
+  LDataRatDefs -> MNumerical;
+  LTacticFinCases -> MNumerical;
+  LAlgebraBigOperatorsGroupFinsetBasic -> MNumerical;
+  LAlgebraBigOperatorsFin -> MNumerical;
+  MWeakDuality -> MScott11;
+  MLinearProgram -> MScottInstance;
+  LTacticNormNum -> MSimplex;
+  LTacticFinCases -> MSimplex;
+  MDualFormulation -> MSimplex;
+  MWeakDuality -> MStrongDuality;
+  LAlgebraOrderBigOperatorsGroupFinset -> MWeakDuality;
+  LAlgebraBigOperatorsRingFinset -> MWeakDuality;
+  LTacticLinarith -> MWeakDuality;
+  LTacticRing -> MWeakDuality;
+  LTacticSimpRw -> MWeakDuality;
+  MLinearProgram -> MWeakDuality;
+}

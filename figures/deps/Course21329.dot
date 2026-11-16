@@ -1,0 +1,26 @@
+digraph Course21329 {
+  rankdir=LR;
+  graph [nodesep=0.18, ranksep=0.45, pad=0.12, bgcolor="white"];
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11];
+  edge [color="#334155", arrowsize=0.7];
+
+  LOrderBoundedOrderBasic [label="Order.BoundedOrder.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LOrderFilterUltrafilterBasic [label="Order.Filter.Ultrafilter.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LOrderLattice [label="Order.Lattice", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LOrderZorn [label="Order.Zorn", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LSetTheoryCardinalArithmetic [label="SetTheory.Cardinal.Arithmetic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LSetTheoryCardinalBasic [label="SetTheory.Cardinal.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  MCardinality [label="Cardinality", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MFilter [label="Filter", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MStoneNonempty [label="StoneNonempty", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MUltrafilterExtension [label="UltrafilterExtension", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+
+  LSetTheoryCardinalArithmetic -> MCardinality;
+  LSetTheoryCardinalBasic -> MCardinality;
+  LOrderFilterUltrafilterBasic -> MFilter;
+  LOrderBoundedOrderBasic -> MFilter;
+  LOrderLattice -> MFilter;
+  MUltrafilterExtension -> MStoneNonempty;
+  LOrderZorn -> MUltrafilterExtension;
+  MFilter -> MUltrafilterExtension;
+}

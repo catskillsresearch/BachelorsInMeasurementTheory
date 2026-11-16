@@ -7,7 +7,12 @@ __pycache__/
 arxiv_with_code.md
 arxiv.tex
 lean-listings/
-figures/
+# Generated mermaid/raster renders; keep Graphviz sources for module maps.
+figures/*
+!figures/deps/
+figures/deps/*
+!figures/deps/*.dot
+!figures/deps/*.svg
 dist/
 00README.json
 

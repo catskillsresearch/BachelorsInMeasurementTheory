@@ -1,0 +1,35 @@
+digraph Course21373 {
+  rankdir=LR;
+  graph [nodesep=0.18, ranksep=0.45, pad=0.12, bgcolor="white"];
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11];
+  edge [color="#334155", arrowsize=0.7];
+
+  LAlgebraBigOperatorsGroupFinsetBasic [label="Algebra.BigOperators.Group.Finset.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataFinsetDefs [label="Data.Finset.Defs", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataFinsetEmpty [label="Data.Finset.Empty", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataFinsetInsert [label="Data.Finset.Insert", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataFinsetLatticeBasic [label="Data.Finset.Lattice.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataFinsetLatticeFold [label="Data.Finset.Lattice.Fold", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataFintypeBasic [label="Data.Fintype.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LOrderAtoms [label="Order.Atoms", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LOrderBooleanAlgebraBasic [label="Order.BooleanAlgebra.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  MAtomJoin [label="AtomJoin", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MBooleanAction [label="BooleanAction", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MIsBooleanAtom [label="IsBooleanAtom", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MNumerical [label="Numerical", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MRepresentation [label="Representation", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+
+  LDataFinsetLatticeFold -> MAtomJoin;
+  LAlgebraBigOperatorsGroupFinsetBasic -> MAtomJoin;
+  MIsBooleanAtom -> MAtomJoin;
+  MAtomJoin -> MBooleanAction;
+  LOrderAtoms -> MIsBooleanAtom;
+  LOrderBooleanAlgebraBasic -> MIsBooleanAtom;
+  LDataFinsetDefs -> MNumerical;
+  LDataFinsetLatticeBasic -> MNumerical;
+  LDataFinsetEmpty -> MNumerical;
+  LDataFinsetInsert -> MNumerical;
+  LAlgebraBigOperatorsGroupFinsetBasic -> MNumerical;
+  LDataFintypeBasic -> MRepresentation;
+  MAtomJoin -> MRepresentation;
+}

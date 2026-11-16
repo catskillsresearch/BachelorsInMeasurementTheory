@@ -1,0 +1,34 @@
+digraph Course21228 {
+  rankdir=LR;
+  graph [nodesep=0.18, ranksep=0.45, pad=0.12, bgcolor="white"];
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11];
+  edge [color="#334155", arrowsize=0.7];
+
+  LAlgebraBigOperatorsGroupFinsetBasic [label="Algebra.BigOperators.Group.Finset.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataFintypeBasic [label="Data.Fintype.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataFintypeCard [label="Data.Fintype.Card", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataFintypePerm [label="Data.Fintype.Perm", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataFintypeProd [label="Data.Fintype.Prod", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataNatFactorialBasic [label="Data.Nat.Factorial.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  MCounting [label="Counting", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MGenericity [label="Genericity", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MNumerical [label="Numerical", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MSmallN2 [label="SmallN2", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MSmallN3 [label="SmallN3", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MSymmetric [label="Symmetric", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MValidPair [label="ValidPair", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+
+  LDataFintypeProd -> MCounting;
+  LDataFintypeCard -> MCounting;
+  LDataFintypeBasic -> MCounting;
+  LAlgebraBigOperatorsGroupFinsetBasic -> MCounting;
+  MGenericity -> MCounting;
+  MValidPair -> MCounting;
+  LDataFintypePerm -> MGenericity;
+  LDataNatFactorialBasic -> MNumerical;
+  MCounting -> MSmallN2;
+  MCounting -> MSmallN3;
+  LAlgebraBigOperatorsGroupFinsetBasic -> MSymmetric;
+  LDataFintypePerm -> MSymmetric;
+  LDataFintypePerm -> MValidPair;
+}

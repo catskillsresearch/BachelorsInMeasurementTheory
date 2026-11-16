@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Convert arxiv_with_code.md to the report PDF.
 
-Mermaid fences are rendered live to PNG via mermaid-cli (mmdc), never PDF.
+Syllabus Mermaid fences are rendered to PNG via mermaid-cli (mmdc).
+Per-course module dependency graphs are Graphviz SVG/PDF under figures/deps/
+(amber fill = Mathlib, blue fill = local modules; no subgraph boxes).
 """
 
 from __future__ import annotations
@@ -199,8 +201,11 @@ NARRATIVE_MARKER = "# Narrative (from arxiv.md)"
 LEAN_MODULE_RE = re.compile(r"^###\s+(BSinMeasurementTheory(?:\.lean|/[^\s{]+))\s*$", re.MULTILINE)
 LEAN_PATH_RE = re.compile(r"<!--\s*lean:\s*(\S+?)\s*-->")
 FIGURE_CAPTION_RE = re.compile(
-    r"<!--\s*figure-caption:\s*(.*?)\s*-->\s*\n```mermaid",
+    r"<!--\s*figure-caption:\s*(.*?)\s*-->\s*\n(?:```mermaid|!\[)",
     re.IGNORECASE | re.DOTALL,
+)
+DEP_IMAGE_RE = re.compile(
+    r"!\[([^\]]*)\]\((figures/deps/[^)\s]+\.(?:svg|pdf|png))\)",
 )
 
 
@@ -292,6 +297,20 @@ def parse_figure_captions(text: str) -> list[str]:
     return [m.group(1).strip() for m in FIGURE_CAPTION_RE.finditer(text)]
 
 
+def prefer_dep_pdf(rel: str) -> str:
+    """Prefer the Graphviz PDF sibling of a deps SVG/PNG for crisp LaTeX."""
+    path = ROOT / rel
+    pdf = path.with_suffix(".pdf")
+    if pdf.is_file():
+        return pdf.relative_to(ROOT).as_posix()
+    png = path.with_suffix(".png")
+    if png.is_file():
+        return png.relative_to(ROOT).as_posix()
+    if path.is_file():
+        return rel
+    raise FileNotFoundError(f"missing dependency figure: {rel}")
+
+
 def escape_latex_caption(text: str) -> str:
     out: list[str] = []
     for ch in text:
@@ -330,55 +349,84 @@ def extract_lean_titles(text: str) -> dict[str, str]:
 def replace_fences(
     text: str, figure_captions: list[str], lean_titles: dict[str, str] | None = None
 ) -> tuple[str, dict[str, str]]:
+    """Replace lean/mermaid fences and figures/deps images in document order."""
     lean_titles = lean_titles if lean_titles is not None else extract_lean_titles(text)
     placeholders: dict[str, str] = {}
     lean_idx = 0
     other_idx = 0
     figure_idx = 0
 
-    def repl(match: re.Match[str]) -> str:
-        nonlocal lean_idx, other_idx, figure_idx
-        lang = match.group(1).strip().lower()
-        body = match.group(2)
-        if lang == "lean":
-            key = f"LEANINCLUDE{lean_idx:03d}"
-            module = lean_titles.get(key, f"module-{lean_idx}")
-            lean_idx += 1
-            github_rel = module if module.startswith("BSinMeasurementTheory") else None
-            safe_name = module.replace("/", "-")
-            if not safe_name.endswith(".lean"):
-                safe_name += ".lean"
-            placeholders[key] = lean_block_latex(body, safe_name, github_rel)
-            return f"\n\n{key}\n\n"
-        if lang == "mermaid":
+    events: list[tuple[int, int, str, re.Match[str]]] = []
+    for m in FENCE_RE.finditer(text):
+        events.append((m.start(), m.end(), "fence", m))
+    for m in DEP_IMAGE_RE.finditer(text):
+        events.append((m.start(), m.end(), "dep", m))
+    events.sort(key=lambda e: e[0])
+
+    out: list[str] = []
+    cursor = 0
+    for start, end, kind, match in events:
+        out.append(text[cursor:start])
+        if kind == "dep":
+            alt = match.group(1).strip()
+            rel = match.group(2)
             key = f"FIGINCLUDE{other_idx:03d}"
-            rel_path, hotspots = render_mermaid(body, figure_idx)
             if figure_idx < len(figure_captions):
                 caption = figure_captions[figure_idx]
             else:
-                caption = f"Syllabus diagram {figure_idx + 1}."
+                caption = alt or f"Module dependency diagram {figure_idx + 1}."
             label = f"fig:bsmt-{figure_idx + 1:02d}"
             figure_idx += 1
             other_idx += 1
-            cap = escape_latex_caption(caption)
-            # Keep syllabus Figure 1 (and every other mermaid) from floating
-            # past the next heading; solution maps stay under Solution.
-            placement = "H"
+            asset = prefer_dep_pdf(rel)
             placeholders[key] = (
-                f"\\begin{{figure}}[{placement}]\n\\centering\n"
-                f"{figure_include_latex(rel_path, hotspots)}"
-                f"\\caption{{{cap}}}\n"
+                "\\begin{figure}[H]\n\\centering\n"
+                f"{figure_include_latex(asset, [])}"
+                f"\\caption{{{escape_latex_caption(caption)}}}\n"
                 f"\\label{{{label}}}\n"
                 "\\end{figure}\n"
             )
-            return f"\n\n{key}\n\n"
-        key = f"CODEINCLUDE{other_idx:03d}"
-        rel_path, _ = write_listing(body, f"snippet-{other_idx:03d}.txt")
-        other_idx += 1
-        placeholders[key] = f"\\lstinputlisting[style=leanbox]{{{rel_path}}}\n"
-        return f"\n\n{key}\n\n"
-
-    return FENCE_RE.sub(repl, text), placeholders
+            out.append(f"\n\n{key}\n\n")
+        else:
+            lang = match.group(1).strip().lower()
+            body = match.group(2)
+            if lang == "lean":
+                key = f"LEANINCLUDE{lean_idx:03d}"
+                module = lean_titles.get(key, f"module-{lean_idx}")
+                lean_idx += 1
+                github_rel = module if module.startswith("BSinMeasurementTheory") else None
+                safe_name = module.replace("/", "-")
+                if not safe_name.endswith(".lean"):
+                    safe_name += ".lean"
+                placeholders[key] = lean_block_latex(body, safe_name, github_rel)
+                out.append(f"\n\n{key}\n\n")
+            elif lang == "mermaid":
+                key = f"FIGINCLUDE{other_idx:03d}"
+                rel_path, hotspots = render_mermaid(body, figure_idx)
+                if figure_idx < len(figure_captions):
+                    caption = figure_captions[figure_idx]
+                else:
+                    caption = f"Syllabus diagram {figure_idx + 1}."
+                label = f"fig:bsmt-{figure_idx + 1:02d}"
+                figure_idx += 1
+                other_idx += 1
+                placeholders[key] = (
+                    "\\begin{figure}[H]\n\\centering\n"
+                    f"{figure_include_latex(rel_path, hotspots)}"
+                    f"\\caption{{{escape_latex_caption(caption)}}}\n"
+                    f"\\label{{{label}}}\n"
+                    "\\end{figure}\n"
+                )
+                out.append(f"\n\n{key}\n\n")
+            else:
+                key = f"CODEINCLUDE{other_idx:03d}"
+                rel_path, _ = write_listing(body, f"snippet-{other_idx:03d}.txt")
+                other_idx += 1
+                placeholders[key] = f"\\lstinputlisting[style=leanbox]{{{rel_path}}}\n"
+                out.append(f"\n\n{key}\n\n")
+        cursor = end
+    out.append(text[cursor:])
+    return "".join(out), placeholders
 
 
 def pandoc_to_latex(markdown: str, shift: bool = True) -> str:
@@ -500,12 +548,16 @@ def main() -> int:
     if not SRC.is_file():
         print(f"error: missing {SRC}; run scripts/generate_arxiv_with_code.sh first", file=sys.stderr)
         return 1
-    for d in (LISTINGS_DIR, FIGURES_DIR):
-        if d.exists():
-            for path in d.iterdir():
-                if path.is_file():
-                    path.unlink()
-        d.mkdir(parents=True, exist_ok=True)
+    if LISTINGS_DIR.exists():
+        for path in LISTINGS_DIR.iterdir():
+            if path.is_file():
+                path.unlink()
+    LISTINGS_DIR.mkdir(parents=True, exist_ok=True)
+    FIGURES_DIR.mkdir(parents=True, exist_ok=True)
+    # Clear only top-level mermaid renders; keep figures/deps Graphviz assets.
+    for path in FIGURES_DIR.iterdir():
+        if path.is_file() and path.name.startswith("figure-"):
+            path.unlink()
 
     body = drop_github_nav(SRC.read_text(encoding="utf-8"))
     figure_captions = parse_figure_captions(body)
@@ -534,10 +586,11 @@ def main() -> int:
     )
     OUT.write_text(document, encoding="utf-8")
     n_listings = sum(1 for p in LISTINGS_DIR.iterdir() if p.is_file())
-    n_figures = sum(1 for p in FIGURES_DIR.glob("*.png"))
+    n_mermaid = sum(1 for p in FIGURES_DIR.glob("figure-*.png"))
+    n_deps = sum(1 for p in (FIGURES_DIR / "deps").glob("*.pdf")) if (FIGURES_DIR / "deps").is_dir() else 0
     print(
         f"wrote {OUT.relative_to(ROOT)} ({OUT.stat().st_size:,} bytes, "
-        f"{n_listings} listings, {n_figures} mermaid figures)"
+        f"{n_listings} listings, {n_mermaid} mermaid + {n_deps} dep figures)"
     )
     return 0
 

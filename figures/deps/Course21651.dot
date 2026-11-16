@@ -1,0 +1,38 @@
+digraph Course21651 {
+  rankdir=LR;
+  graph [nodesep=0.18, ranksep=0.45, pad=0.12, bgcolor="white"];
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11];
+  edge [color="#334155", arrowsize=0.7];
+
+  LDataSetBasic [label="Data.Set.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LOrderBooleanAlgebraBasic [label="Order.BooleanAlgebra.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTopologyBasic [label="Topology.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTopologyConnectedTotallyDisconnected [label="Topology.Connected.TotallyDisconnected", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTopologyConstructions [label="Topology.Constructions", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTopologyContinuous [label="Topology.Continuous", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTopologyContinuousMapCompact [label="Topology.ContinuousMap.Compact", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTopologyOrder [label="Topology.Order", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTopologySeparationHausdorff [label="Topology.Separation.Hausdorff", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  MBooleanHom [label="BooleanHom", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MClosedEmbedding [label="ClosedEmbedding", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MSeparation [label="Separation", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MStoneMap [label="StoneMap", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MTwoAlgebra [label="TwoAlgebra", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+
+  LOrderBooleanAlgebraBasic -> MBooleanHom;
+  LTopologyBasic -> MBooleanHom;
+  LDataSetBasic -> MBooleanHom;
+  LTopologySeparationHausdorff -> MClosedEmbedding;
+  LTopologyContinuous -> MClosedEmbedding;
+  LTopologyConstructions -> MClosedEmbedding;
+  LTopologyOrder -> MClosedEmbedding;
+  MBooleanHom -> MClosedEmbedding;
+  LTopologyConnectedTotallyDisconnected -> MSeparation;
+  LTopologyContinuousMapCompact -> MSeparation;
+  MBooleanHom -> MSeparation;
+  LTopologyContinuous -> MStoneMap;
+  LTopologyConstructions -> MStoneMap;
+  LTopologyOrder -> MStoneMap;
+  MBooleanHom -> MStoneMap;
+  MStoneMap -> MTwoAlgebra;
+}

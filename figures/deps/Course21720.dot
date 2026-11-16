@@ -1,0 +1,38 @@
+digraph Course21720 {
+  rankdir=LR;
+  graph [nodesep=0.18, ranksep=0.45, pad=0.12, bgcolor="white"];
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11];
+  edge [color="#334155", arrowsize=0.7];
+
+  LAlgebraModuleLinearMapBasic [label="Algebra.Module.LinearMap.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LAlgebraModuleProd [label="Algebra.Module.Prod", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LAnalysisNormedModuleBasic [label="Analysis.Normed.Module.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LBasicRealBasic [label="Basic.Real.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LOrderConditionallyCompleteLatticeBasic [label="Order.ConditionallyCompleteLattice.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticNormNum [label="Tactic.NormNum", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticPositivity [label="Tactic.Positivity", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticRing [label="Tactic.Ring", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTopologyBasic [label="Topology.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTopologyContinuousMapBasic [label="Topology.ContinuousMap.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTopologyContinuousMapCompact [label="Topology.ContinuousMap.Compact", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  MBoundedness [label="Boundedness", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MNumerical [label="Numerical", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MRiesz [label="Riesz", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MStoneMeasure [label="StoneMeasure", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+
+  LTopologyContinuousMapCompact -> MBoundedness;
+  LTacticNormNum -> MNumerical;
+  LAlgebraModuleLinearMapBasic -> MNumerical;
+  LTacticRing -> MNumerical;
+  LBasicRealBasic -> MNumerical;
+  LAlgebraModuleProd -> MNumerical;
+  LTacticPositivity -> MRiesz;
+  LAlgebraModuleLinearMapBasic -> MRiesz;
+  LTopologyContinuousMapBasic -> MRiesz;
+  LTopologyBasic -> MRiesz;
+  LOrderConditionallyCompleteLatticeBasic -> MRiesz;
+  LAnalysisNormedModuleBasic -> MRiesz;
+  LBasicRealBasic -> MRiesz;
+  MBoundedness -> MRiesz;
+  MBoundedness -> MStoneMeasure;
+}

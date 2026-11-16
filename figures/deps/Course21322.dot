@@ -1,0 +1,29 @@
+digraph Course21322 {
+  rankdir=LR;
+  graph [nodesep=0.18, ranksep=0.45, pad=0.12, bgcolor="white"];
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11];
+  edge [color="#334155", arrowsize=0.7];
+
+  LAlgebraBigOperatorsFin [label="Algebra.BigOperators.Fin", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LAlgebraBigOperatorsGroupFinsetBasic [label="Algebra.BigOperators.Group.Finset.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LBasicRealBasic [label="Basic.Real.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataFintypeBasic [label="Data.Fintype.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticByContra [label="Tactic.ByContra", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticNormNum [label="Tactic.NormNum", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  MAtomIso [label="AtomIso", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MHom [label="Hom", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MMeasureCollapse [label="MeasureCollapse", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MNumerical [label="Numerical", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MStoneClopen [label="StoneClopen", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+
+  LTacticByContra -> MAtomIso;
+  MHom -> MAtomIso;
+  LAlgebraBigOperatorsGroupFinsetBasic -> MHom;
+  LDataFintypeBasic -> MHom;
+  LBasicRealBasic -> MMeasureCollapse;
+  MStoneClopen -> MMeasureCollapse;
+  LTacticNormNum -> MNumerical;
+  LAlgebraBigOperatorsFin -> MNumerical;
+  MMeasureCollapse -> MNumerical;
+  MHom -> MStoneClopen;
+}

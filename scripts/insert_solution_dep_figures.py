@@ -1,38 +1,53 @@
 #!/usr/bin/env python3
-"""Insert a Mermaid dependency figure under each course Solution heading.
+"""Insert a Graphviz SVG dependency figure under each course Solution heading.
 
-Mathlib lives in an amber box; solution modules live in a blue box.
+Mathlib imports use an amber node fill; solution modules use a blue fill.
+There are no subgraph boxes — color alone distinguishes the two kinds.
 """
 
 from __future__ import annotations
 
 import re
+import shutil
+import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+DEPS_DIR = ROOT / "figures" / "deps"
 
-COURSE_LEANS: list[tuple[str, str, list[str]]] = [
-    ("21-120-21-122.md", "21-120 / 21-122", ["BSinMeasurementTheory/Course21120.lean"]),
-    ("21-127.md", "21-127", ["BSinMeasurementTheory/Course21127.lean"]),
-    ("21-241.md", "21-241", ["BSinMeasurementTheory/Course21241.lean"]),
-    ("21-228.md", "21-228", ["BSinMeasurementTheory/Course21228.lean"]),
-    ("21-355.md", "21-355", ["BSinMeasurementTheory/Course21355.lean"]),
-    ("21-373.md", "21-373", ["BSinMeasurementTheory/Course21373.lean"]),
-    ("21-321.md", "21-321", ["BSinMeasurementTheory/Course21321.lean"]),
-    ("21-292.md", "21-292", ["BSinMeasurementTheory/Course21292.lean"]),
-    ("21-329.md", "21-329", ["BSinMeasurementTheory/Course21329.lean"]),
-    ("21-651.md", "21-651", ["BSinMeasurementTheory/Course21651.lean"]),
-    ("21-720.md", "21-720", ["BSinMeasurementTheory/Course21720.lean"]),
-    ("21-640.md", "21-640", ["BSinMeasurementTheory/Course21640.lean"]),
-    ("21-410-21-599.md", "21-410 / 21-599", ["BSinMeasurementTheory/Course21410.lean"]),
-    ("21-322.md", "21-322", ["BSinMeasurementTheory/Course21322.lean"]),
+COURSE_LEANS: list[tuple[str, str, str, list[str]]] = [
+    ("21-120-21-122.md", "21-120 / 21-122", "Course21120", ["BSinMeasurementTheory/Course21120.lean"]),
+    ("21-127.md", "21-127", "Course21127", ["BSinMeasurementTheory/Course21127.lean"]),
+    ("21-241.md", "21-241", "Course21241", ["BSinMeasurementTheory/Course21241.lean"]),
+    ("21-228.md", "21-228", "Course21228", ["BSinMeasurementTheory/Course21228.lean"]),
+    ("21-355.md", "21-355", "Course21355", ["BSinMeasurementTheory/Course21355.lean"]),
+    ("21-373.md", "21-373", "Course21373", ["BSinMeasurementTheory/Course21373.lean"]),
+    ("21-321.md", "21-321", "Course21321", ["BSinMeasurementTheory/Course21321.lean"]),
+    ("21-292.md", "21-292", "Course21292", ["BSinMeasurementTheory/Course21292.lean"]),
+    ("21-329.md", "21-329", "Course21329", ["BSinMeasurementTheory/Course21329.lean"]),
+    ("21-651.md", "21-651", "Course21651", ["BSinMeasurementTheory/Course21651.lean"]),
+    ("21-720.md", "21-720", "Course21720", ["BSinMeasurementTheory/Course21720.lean"]),
+    ("21-640.md", "21-640", "Course21640", ["BSinMeasurementTheory/Course21640.lean"]),
+    ("21-410-21-599.md", "21-410 / 21-599", "Course21410", ["BSinMeasurementTheory/Course21410.lean"]),
+    ("21-322.md", "21-322", "Course21322", ["BSinMeasurementTheory/Course21322.lean"]),
 ]
 
-IMPORT_RE = re.compile(r"^import\s+(\S+)\s*$", re.MULTILINE)
+IMPORT_RE = re.compile(
+    r"^(?:public\s+(?:meta\s+)?)?import\s+(\S+)\s*$",
+    re.MULTILINE,
+)
 MARKER_RE = re.compile(
     r"\n?<!-- lean-dep-figure -->.*?<!-- /lean-dep-figure -->\n?",
     re.DOTALL,
 )
+
+# Amber Mathlib / blue local — same palette as the old Mermaid classDefs.
+MATHLIB_FILL = "#ffedd5"
+MATHLIB_STROKE = "#c2410c"
+MATHLIB_FONT = "#7c2d12"
+LOCAL_FILL = "#dbeafe"
+LOCAL_STROKE = "#1d4ed8"
+LOCAL_FONT = "#1e3a8a"
 
 MATHLIB_HINTS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"\bHasDerivAt\b|\bDifferentiableAt\b|\bderiv\b"), "Analysis.Calculus.Deriv"),
@@ -67,13 +82,26 @@ MATHLIB_HINTS: list[tuple[re.Pattern[str], str]] = [
 ]
 
 
+def is_import_line(ln: str) -> bool:
+    s = ln.strip()
+    return (
+        s.startswith("import ")
+        or s.startswith("public import ")
+        or s.startswith("public meta import ")
+    )
+
+
 def is_import_only(code: str) -> bool:
-    lines = [
-        ln.strip()
-        for ln in code.splitlines()
-        if ln.strip() and not ln.strip().startswith("--")
-    ]
-    return bool(lines) and all(ln.startswith("import ") for ln in lines)
+    """True for barrel files: module header + imports, no declarations."""
+    lines = []
+    for ln in code.splitlines():
+        s = ln.strip()
+        if not s or s.startswith("--") or s.startswith("/-"):
+            continue
+        if s == "module" or s.startswith("module ") or s.startswith("@[expose]"):
+            continue
+        lines.append(s)
+    return bool(lines) and all(is_import_line(ln) for ln in lines)
 
 
 def course_files(seeds: list[str]) -> list[str]:
@@ -166,7 +194,11 @@ def ancestors(node: str, preds: dict[str, set[str]]) -> set[str]:
     return seen
 
 
-def mermaid_for(rels: list[str]) -> str:
+def dot_escape(label: str) -> str:
+    return label.replace("\\", "\\\\").replace('"', '\\"')
+
+
+def graph_for(rels: list[str], graph_name: str) -> str:
     files = {rel: (ROOT / rel).read_text(encoding="utf-8") for rel in rels}
     displayed = [rel for rel, code in files.items() if not is_import_only(code)]
     if not displayed:
@@ -191,7 +223,7 @@ def mermaid_for(rels: list[str]) -> str:
     edges: list[tuple[str, str]] = []
     for rel in displayed:
         mid = module_ids[rel]
-        inherited = set()
+        inherited: set[str] = set()
         for anc in ancestors(rel, preds):
             inherited |= mathlib_of.get(anc, set())
         for ml in mathlib_of[rel]:
@@ -202,27 +234,27 @@ def mermaid_for(rels: list[str]) -> str:
                 edges.append((module_ids[dest], mid))
 
     lines = [
-        "%%{init: {\"flowchart\": {\"htmlLabels\": false, \"nodeSpacing\": 16, \"rankSpacing\": 36}}}%%",
-        "flowchart LR",
-        "  classDef course fill:#dbeafe,stroke:#1d4ed8,color:#1e3a8a,stroke-width:1.2px",
-        "  classDef mathlib fill:#ffedd5,stroke:#c2410c,color:#7c2d12,stroke-width:1.2px",
+        f"digraph {graph_name} {{",
+        "  rankdir=LR;",
+        '  graph [nodesep=0.18, ranksep=0.45, pad=0.12, bgcolor="white"];',
+        '  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11];',
+        '  edge [color="#334155", arrowsize=0.7];',
         "",
-        "  subgraph ML[\"Mathlib\"]",
-        "    direction TB",
-        "    style ML fill:#fff7ed,stroke:#c2410c,stroke-width:2px",
     ]
     for ml, lid in sorted(mathlib_ids.items(), key=lambda kv: kv[0].lower()):
-        lines.append(f"    {lid}[\"{ml}\"]:::mathlib")
-    lines += [
-        "  end",
-        "",
-        "  subgraph SOL[\"Solution modules\"]",
-        "    direction TB",
-        "    style SOL fill:#eff6ff,stroke:#1d4ed8,stroke-width:2px",
-    ]
+        lines.append(
+            f'  {lid} [label="{dot_escape(ml)}",'
+            f' fillcolor="{MATHLIB_FILL}", color="{MATHLIB_STROKE}",'
+            f' fontcolor="{MATHLIB_FONT}"];'
+        )
     for rel in displayed:
-        lines.append(f"    {module_ids[rel]}[\"{module_label(rel)}\"]:::course")
-    lines.append("  end")
+        mid = module_ids[rel]
+        label = module_label(rel)
+        lines.append(
+            f'  {mid} [label="{dot_escape(label)}",'
+            f' fillcolor="{LOCAL_FILL}", color="{LOCAL_STROKE}",'
+            f' fontcolor="{LOCAL_FONT}"];'
+        )
     lines.append("")
     seen_e: set[tuple[str, str]] = set()
     known = set(mathlib_ids.values()) | set(module_ids.values())
@@ -230,21 +262,50 @@ def mermaid_for(rels: list[str]) -> str:
         if src == dst or (src, dst) in seen_e or src not in known or dst not in known:
             continue
         seen_e.add((src, dst))
-        lines.append(f"  {src} --> {dst}")
+        lines.append(f"  {src} -> {dst};")
+    lines.append("}")
     return "\n".join(lines) + "\n"
 
 
-def figure_block(course: str, mermaid: str) -> str:
+def run_dot(dot_path: Path, out_path: Path, fmt: str) -> None:
+    exe = shutil.which("dot")
+    if not exe:
+        raise RuntimeError("graphviz `dot` not found; install graphviz")
+    proc = subprocess.run(
+        [exe, f"-T{fmt}", str(dot_path), "-o", str(out_path)],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if proc.returncode != 0 or not out_path.is_file():
+        raise RuntimeError(
+            f"dot -T{fmt} failed for {dot_path.name}: {proc.stderr.strip()}"
+        )
+
+
+def write_assets(stem: str, dot_src: str) -> tuple[Path, Path, Path]:
+    DEPS_DIR.mkdir(parents=True, exist_ok=True)
+    dot_path = DEPS_DIR / f"{stem}.dot"
+    svg_path = DEPS_DIR / f"{stem}.svg"
+    pdf_path = DEPS_DIR / f"{stem}.pdf"
+    png_path = DEPS_DIR / f"{stem}.png"
+    dot_path.write_text(dot_src, encoding="utf-8")
+    run_dot(dot_path, svg_path, "svg")
+    run_dot(dot_path, pdf_path, "pdf")
+    run_dot(dot_path, png_path, "png")
+    return dot_path, svg_path, pdf_path
+
+
+def figure_block(course: str, stem: str) -> str:
     caption = (
         f"Lean module dependencies for the {course} solution. "
-        "Amber box: Mathlib imports. Blue box: solution modules."
+        "Amber fill: Mathlib imports. Blue fill: solution modules."
     )
+    rel = f"figures/deps/{stem}.svg"
     return (
         "<!-- lean-dep-figure -->\n"
         f"<!-- figure-caption: {caption} -->\n"
-        "```mermaid\n"
-        f"{mermaid}"
-        "```\n"
+        f"![{caption}]({rel})\n"
         "<!-- /lean-dep-figure -->\n"
     )
 
@@ -260,12 +321,16 @@ def insert_under_solution(text: str, block: str) -> str:
 
 
 def main() -> None:
-    for md, course, seeds in COURSE_LEANS:
+    for md, course, stem, seeds in COURSE_LEANS:
         rels = course_files(seeds)
-        block = figure_block(course, mermaid_for(rels))
+        write_assets(stem, graph_for(rels, stem))
+        block = figure_block(course, stem)
         path = ROOT / "courses" / md
-        path.write_text(insert_under_solution(path.read_text(encoding="utf-8"), block), encoding="utf-8")
-        print(f"updated {md}")
+        path.write_text(
+            insert_under_solution(path.read_text(encoding="utf-8"), block),
+            encoding="utf-8",
+        )
+        print(f"updated {md} -> figures/deps/{stem}.{{dot,svg,pdf,png}}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,38 @@
+digraph Course21127 {
+  rankdir=LR;
+  graph [nodesep=0.18, ranksep=0.45, pad=0.12, bgcolor="white"];
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11];
+  edge [color="#334155", arrowsize=0.7];
+
+  LAlgebraOrderRingUnbundledRat [label="Algebra.Order.Ring.Unbundled.Rat", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataIntBasic [label="Data.Int.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataListMinMax [label="Data.List.MinMax", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataRatDefs [label="Data.Rat.Defs", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LDataSetFiniteBasic [label="Data.Set.Finite.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LOrderIntervalSetBasic [label="Order.Interval.Set.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LOrderSetoidBasic [label="Order.Setoid.Basic", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LOrderWellFounded [label="Order.WellFounded", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticLinarith [label="Tactic.Linarith", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticNormNum [label="Tactic.NormNum", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  LTacticRing [label="Tactic.Ring", fillcolor="#ffedd5", color="#c2410c", fontcolor="#7c2d12"];
+  MNonzeroDenomInt [label="NonzeroDenomInt", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MNumerical [label="Numerical", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MToRat [label="ToRat", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+  MWellOrder [label="WellOrder", fillcolor="#dbeafe", color="#1d4ed8", fontcolor="#1e3a8a"];
+
+  LDataIntBasic -> MNonzeroDenomInt;
+  LOrderSetoidBasic -> MNonzeroDenomInt;
+  LTacticRing -> MNonzeroDenomInt;
+  LTacticNormNum -> MNumerical;
+  MToRat -> MNumerical;
+  MNonzeroDenomInt -> MNumerical;
+  LDataRatDefs -> MToRat;
+  LTacticLinarith -> MToRat;
+  MNonzeroDenomInt -> MToRat;
+  LDataSetFiniteBasic -> MWellOrder;
+  LOrderIntervalSetBasic -> MWellOrder;
+  LOrderWellFounded -> MWellOrder;
+  LDataListMinMax -> MWellOrder;
+  LDataRatDefs -> MWellOrder;
+  LAlgebraOrderRingUnbundledRat -> MWellOrder;
+}
