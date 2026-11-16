@@ -2,20 +2,11 @@
 
 # Bachelors In Measurement Theory
 
-The accompanying report, *Bachelors In Measurement Theory*, is
-by **Lars Warren Ericson** (independent researcher, d/b/a Catskills Research
-Company). It is being prepared for the Carnegie Mellon University School of
-Computer Science Technical Report series as **CMU-CS-26-XXX**.
+The accompanying report, *Bachelors In Measurement Theory*, is by **Lars Warren Ericson** (independent researcher, d/b/a Catskills Research Company). It is being prepared for the Carnegie Mellon University School of Computer Science Technical Report series as **CMU-CS-26-XXX**.
 
-This repository reconstructs an undergraduate path through the CMU 21-xxx
-catalog, sequenced so that Dana Scott's 1964 measurement theorems (1.1--4.1)
-and their extension to infinite Boolean algebras can be proved end to end.
-Each course contributes one problem that requires the full toolkit of that
-course. Solutions are written in English and formalized in Lean 4 / Mathlib.
+This repository reconstructs an undergraduate path through the CMU 21-xxx catalog, sequenced so that Dana Scott's 1964 measurement theorems (1.1--4.1) and their extension to infinite Boolean algebras can be proved end to end. Each course contributes one problem that requires the full toolkit of that course. Solutions are written in English and formalized in Lean 4 / Mathlib.
 
-The student of record for the problem set is Giovanni Fabbro. The capstone
-source is Dana S. Scott, *Measurement Structures and Linear Inequalities*
-(J. Math. Psychology 1 (1964), 233–247).
+The student of record for the problem set is Giovanni Fabbro. The capstone source is Dana S. Scott, *Measurement Structures and Linear Inequalities* (J. Math. Psychology 1 (1964), 233–247).
 
 The pin is `leanprover/lean4:v4.36.0-rc2`.
 
@@ -34,11 +25,8 @@ The pin is `leanprover/lean4:v4.36.0-rc2`.
 
 ## Palomar preflight (surfaces)
 
-Each course has a Palomar-style front under `surfaces/CourseXXXXX/`
-(`Challenge.lean` holes + `Solution.lean` import). These packages are for
-**local / CI mechanical preflight only** — they are **not** submitted to the
-Palomar registry (that role belongs to
-[`scott1964`](https://github.com/catskillsresearch/scott1964)).
+Each course has a Palomar-style front under `surfaces/CourseXXXXX/` (`Challenge.lean` holes + `Solution.lean` import). These packages are for
+**local / CI mechanical preflight only** — they are **not** submitted to the Palomar registry (that role belongs to [`scott1964`](https://github.com/catskillsresearch/scott1964)).
 
 ```bash
 # build one surface
@@ -48,8 +36,7 @@ cd surfaces/Course21127 && lake update && lake build Challenge Solution
 bash scripts/palomar_preflight.sh --mechanical-only
 ```
 
-See [`surfaces/README.md`](surfaces/README.md) and
-[`docs/PALOMAR_EDITORIAL_AUDIT.md`](docs/PALOMAR_EDITORIAL_AUDIT.md).
+See [`surfaces/README.md`](surfaces/README.md) and [`docs/PALOMAR_EDITORIAL_AUDIT.md`](docs/PALOMAR_EDITORIAL_AUDIT.md).
 
 ## Syllabus
 
@@ -70,9 +57,7 @@ See [`surfaces/README.md`](surfaces/README.md) and
 | 6 | [21-410 / 21-599](courses/21-410-21-599.md) | Independent Study | Full reconstruction of the infinite-algebra extension of Theorem 4.1 |
 | 6 | [21-322](courses/21-322.md) | Topics in Formal Mathematics | Proof that the finite atomic picture is what the infinite machinery reduces to |
 
-The conceptual buildup of that sequence is Figure 1. The Mathlib
-subsections required to read each course's Lean are Figure 2. The Lean
-library does not import across courses.
+The conceptual buildup of that sequence is Figure 1. The Mathlib subsections required to read each course's Lean are Figure 2. The Lean library does not import across courses.
 
 <!-- figure-caption: Conceptual buildup of the reconstructed 21-xxx syllabus toward Scott (1964). Blue nodes are courses, grouped by phase. Course nodes are hyperlinked to the corresponding course notes. -->
 ```mermaid
@@ -260,6 +245,4 @@ lake build
 bash scripts/build_pdf.sh
 ```
 
-`lake build` typechecks `BachelorsInMeasurementTheory`. The PDF script flattens
-the TOC-linked note tree from `BachelorsInMeasurementTheory.md`, writes
-`BachelorsInMeasurementTheory.tex`, and compiles the report PDF.
+`lake build` typechecks `BachelorsInMeasurementTheory`. The PDF script flattens the TOC-linked note tree from `BachelorsInMeasurementTheory.md`, writes `BachelorsInMeasurementTheory.tex`, and compiles the report PDF.

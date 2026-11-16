@@ -1,7 +1,6 @@
 # Palomar surfaces (one per course)
 
-Each subdirectory under `surfaces/` is a **Palomar-style Challenge / Solution
-package** for one BS-in-Measurement-Theory course capstone.
+Each subdirectory under `surfaces/` is a **Palomar-style Challenge / Solution package** for one BS-in-Measurement-Theory course capstone.
 
 ```
 surfaces/CourseXXXXX/
@@ -16,10 +15,7 @@ surfaces/CourseXXXXX/
 
 ## Important: preflight only
 
-These surfaces exist so you can run **local / CI mechanical Palomar preflight**
-for fun and regression. They are **not** submitted to the Palomar registry.
-The Scott 1964 paper surface [`scott1964`](https://github.com/catskillsresearch/scott1964)
-is the registry submission; fabbro is the curriculum packaging.
+These surfaces exist so you can run **local / CI mechanical Palomar preflight** for fun and regression. They are **not** submitted to the Palomar registry. The Scott 1964 paper surface [`scott1964`](https://github.com/catskillsresearch/scott1964) is the registry submission; fabbro is the curriculum packaging.
 
 ## How to build one surface
 
@@ -32,14 +28,11 @@ cd surfaces/Course21127
 lake build Challenge Solution
 ```
 
-Committed `lake-manifest.json` files pin the same mathlib rev as the fabbro root.
-After a root `lake exe cache get` / `lake build`, symlink `.lake/packages` as above
-before building surfaces.
+Committed `lake-manifest.json` files pin the same mathlib rev as the fabbro root. After a root `lake exe cache get` / `lake build`, symlink `.lake/packages` as above before building surfaces.
 
 ## How to run mechanical preflight
 
-From the fabbro root (requires sibling `../palomar-preflight` or
-`PALOMAR_PREFLIGHT_ROOT`):
+From the fabbro root (requires sibling `../palomar-preflight` or `PALOMAR_PREFLIGHT_ROOT`):
 
 ```bash
 # all surfaces

@@ -17,9 +17,7 @@
 | 6 | 21-410 / 21-599 | Independent Study | Full reconstruction of the infinite-algebra extension of Theorem 4.1 |
 | 6 | 21-322 | Topics in Formal Mathematics | Proof that the finite atomic picture is what the infinite machinery reduces to |
 
-The conceptual buildup of that sequence is Figure 1. The Mathlib
-subsections required to read each course's Lean are Figure 2. The Lean
-library does not import across courses.
+The conceptual buildup of that sequence is Figure 1. The Mathlib subsections required to read each course's Lean are Figure 2. The Lean library does not import across courses.
 
 <!-- figure-caption: Conceptual buildup of the reconstructed 21-xxx syllabus toward Scott (1964). Blue nodes are courses, grouped by phase. Course nodes are hyperlinked to the corresponding section. -->
 ```mermaid
@@ -199,11 +197,6 @@ flowchart LR
   click C322 "courses/21-322.md" "21-322"
 ```
 
-Every course problem is solved in two layers: an English mathematical
-argument, and a Lean 4 formalization using Mathlib, with numerical examples
-re-checked in Lean when they appear. Course 21-322 is opportunistic: it
-should be taken in a term that overlaps real analysis or order theory in
-Lean, but the standing problem is independent of that term's advertised
-topic.
+Every course problem is solved in two layers: an English mathematical argument, and a Lean 4 formalization using Mathlib, with numerical examples re-checked in Lean when they appear. Course 21-322 is opportunistic: it should be taken in a term that overlaps real analysis or order theory in Lean, but the standing problem is independent of that term's advertised topic.
 
 The remainder of this report is the problem set itself, in syllabus order.

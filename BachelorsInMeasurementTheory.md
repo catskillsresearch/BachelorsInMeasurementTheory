@@ -4,8 +4,7 @@ bibliography: references.bib
 
 # Bachelors In Measurement Theory
 
-**Authors.** Lars Warren Ericson (independent researcher, d/b/a Catskills
-Research Company; lars.ericson@catskillsresearch.com).
+**Authors.** Lars Warren Ericson (independent researcher, d/b/a Catskills Research Company; lars.ericson@catskillsresearch.com).
 **Repository.** https://github.com/catskillsresearch/BachelorsInMeasurementTheory
 
 ---

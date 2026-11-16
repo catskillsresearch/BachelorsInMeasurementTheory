@@ -1,20 +1,12 @@
 # Palomar editorial audit (fabbro surfaces — local dry-run only)
 
-Fabbro packages **one Palomar-style Challenge / Solution surface per course**
-under `surfaces/CourseXXXXX/`. These surfaces exist so you can run the same
-mechanical (and optionally editorial) Palomar preflight toolkit used by
-[`scott1964`](https://github.com/catskillsresearch/scott1964) **locally and in
-CI**.
+Fabbro packages **one Palomar-style Challenge / Solution surface per course** under `surfaces/CourseXXXXX/`. These surfaces exist so you can run the same mechanical (and optionally editorial) Palomar preflight toolkit used by [`scott1964`](https://github.com/catskillsresearch/scott1964) **locally and in CI**.
 
 ## Not a registry submission
 
-**Fabbro surfaces are not submitted to the Palomar registry.** They are
-curriculum packaging for preflight-for-fun / regression. The Scott 1964 paper
-surface (`scott1964`) is the standalone registry submission. Each surface
-`PROVENANCE.md` and `formalization.yaml` state this explicitly.
+**Fabbro surfaces are not submitted to the Palomar registry.** They are curriculum packaging for preflight-for-fun / regression. The Scott 1964 paper surface (`scott1964`) is the standalone registry submission. Each surface `PROVENANCE.md` and `formalization.yaml` state this explicitly.
 
-Do not treat a green fabbro surface preflight as authorization to register
-that course package with Palomar.
+Do not treat a green fabbro surface preflight as authorization to register that course package with Palomar.
 
 ## Full preflight (optional, local)
 
@@ -23,12 +15,9 @@ that course package with Palomar.
 bash scripts/palomar_preflight.sh
 ```
 
-Runs mechanical Comparator checks for **every** `surfaces/Course*/` directory,
-then (unless `--mechanical-only`) policy sync and LLM editorial audit via the
-shared toolkit in `../palomar-preflight`.
+Runs mechanical Comparator checks for **every** `surfaces/Course*/` directory, then (unless `--mechanical-only`) policy sync and LLM editorial audit via the shared toolkit in `../palomar-preflight`.
 
-Toolkit pin: `vendor/PALOMAR_PREFLIGHT_PIN`
-(`de7e8b926342c75358801c609efd1296af4ed412`).
+Toolkit pin: `vendor/PALOMAR_PREFLIGHT_PIN` (`de7e8b926342c75358801c609efd1296af4ed412`).
 
 ## Mechanical-only (CI / day-to-day)
 
@@ -43,13 +32,10 @@ GitHub Actions uses mechanical-only after `lake build` of the root project.
 
 ## Packaging checklist (local only)
 
-1. Compared theorems are the course headline results listed in each
-   `comparator.json`.
-2. Challenge definitions are sorry-free; only compared theorem *proofs* use
-   `sorry`.
+1. Compared theorems are the course headline results listed in each `comparator.json`.
+2. Challenge definitions are sorry-free; only compared theorem *proofs* use `sorry`.
 3. `formalization.yaml` `main_results` match `comparator.json` `theorem_names`.
 4. `Solution.lean` only imports the course development (no new proofs).
 5. Mechanical green: `bash scripts/palomar_preflight_one.sh surfaces/CourseXXXXX --mechanical-only`.
 
-Again: green preflight here means the curriculum surface typechecks and
-matches Challenge/Solution — **not** that the package should be registered.
+Again: green preflight here means the curriculum surface typechecks and matches Challenge/Solution — **not** that the package should be registered.

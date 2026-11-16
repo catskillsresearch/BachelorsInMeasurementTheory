@@ -1,8 +1,8 @@
 ### How Scott's likely undergraduate curriculum aligns with the proposed syllabus
 
-While his official transcript is not available, we can construct a highly educated, historically grounded **speculative course schedule** for Dana Scott’s eight semesters at UC Berkeley (Fall 1950 to Spring 1954). 
+While his official transcript is not available, we can construct a highly educated, historically grounded **speculative course schedule** for Dana Scott’s eight semesters at UC Berkeley (Fall 1950 to Spring 1954).
 
-This reconstruction is based on the standard requirements for a B.A. in Mathematics in the College of Letters and Science during the early 1950s, combined with specific historical records from Scott’s own Turing Award interviews and accounts from logicians like Patrick Suppes and Paolo Mancosu. 
+This reconstruction is based on the standard requirements for a B.A. in Mathematics in the College of Letters and Science during the early 1950s, combined with specific historical records from Scott’s own Turing Award interviews and accounts from logicians like Patrick Suppes and Paolo Mancosu.
 
 Here is a guess at what his 8-semester progression of 4–5 courses a term might have looked like:
 
@@ -69,41 +69,8 @@ Back in the 1950s, the pathway for a math major was quite rigid in the first two
 
 #### How this compares to our Scott 1964-derived curriculum
 
-The reconstructed Berkeley years and the 21-xxx syllabus are the same argument
-read in two catalogs. Freshman calculus is 21-120 / 21-122. Sophomore linear
-algebra is 21-241. Junior abstract algebra and real analysis are 21-373 and
-21-355. Junior topology is 21-651. Senior set theory with Tarski is 21-329.
-The independent reading of McKinsey--Tarski, and the senior research term, are
-21-410 / 21-599. Formal logic, foundations, symbolic logic, and the
-metamathematics seminars are what 21-127 and 21-321 are for: first the
-language of proof, then the ability to write Scott's Theorems 1.1 and 1.2 as
-checked declarations. The Suppes philosophy-of-science semester is the
-nearest 1952 analogue of the paper itself---measurement as a problem about
-when qualitative comparisons become numbers---rather than of any single
-21-xxx listing.
+The reconstructed Berkeley years and the 21-xxx syllabus are the same argument read in two catalogs. Freshman calculus is 21-120 / 21-122. Sophomore linear algebra is 21-241. Junior abstract algebra and real analysis are 21-373 and 21-355. Junior topology is 21-651. Senior set theory with Tarski is 21-329. The independent reading of McKinsey--Tarski, and the senior research term, are 21-410 / 21-599. Formal logic, foundations, symbolic logic, and the metamathematics seminars are what 21-127 and 21-321 are for: first the language of proof, then the ability to write Scott's Theorems 1.1 and 1.2 as checked declarations. The Suppes philosophy-of-science semester is the nearest 1952 analogue of the paper itself---measurement as a problem about when qualitative comparisons become numbers---rather than of any single 21-xxx listing.
 
-What the 1950s schedule does not contain, and what this syllabus therefore
-has to add, are the pieces Scott used or announced without packaging them as
-undergraduate courses. Operations research (21-292) is the modern home of
-the homogeneous linear inequalities and the dual that yield Theorem 1.1;
-Dantzig's simplex method was new in Scott's student years and would not have
-been a Berkeley mathematics requirement. Measure and integration (21-720)
-and functional analysis (21-640) are the Hahn--Banach and Riesz steps he
-cites and leaves unproved; they are absent from the reconstructed
-transcript, which is consistent with their being the missing infinite
-direction of Theorem 4.1. Discrete mathematics (21-228) isolates the
-permutation counting behind Theorems 1.2 and 3.2 that a 1950s algebra course
-would have treated only in passing. Topics in formal mathematics (21-322) is
-the Lean-era counterpart of the metamathematics seminar: a check that the
-finite atomic picture is what the infinite machinery reduces to.
+What the 1950s schedule does not contain, and what this syllabus therefore has to add, are the pieces Scott used or announced without packaging them as undergraduate courses. Operations research (21-292) is the modern home of the homogeneous linear inequalities and the dual that yield Theorem 1.1; Dantzig's simplex method was new in Scott's student years and would not have been a Berkeley mathematics requirement. Measure and integration (21-720) and functional analysis (21-640) are the Hahn--Banach and Riesz steps he cites and leaves unproved; they are absent from the reconstructed transcript, which is consistent with their being the missing infinite direction of Theorem 4.1. Discrete mathematics (21-228) isolates the permutation counting behind Theorems 1.2 and 3.2 that a 1950s algebra course would have treated only in passing. Topics in formal mathematics (21-322) is the Lean-era counterpart of the metamathematics seminar: a check that the finite atomic picture is what the infinite machinery reduces to.
 
-The comparison also says what to omit. Physics, German, composition, and
-American Institutions are college requirements, not steps toward the 1964
-paper. Multivariable calculus, differential equations, complex analysis, and
-differential geometry are real mathematics Scott almost certainly took, and
-none of them is needed to read the measurement theorems. Philosophy of
-language points forward to Scott--Montague semantics, not back to linear
-inequalities. The 21-xxx list is therefore not a reconstruction of a full
-Berkeley B.A. It is the subsequence that remains when the goal is fixed as
-Scott 1964: the courses he would have recognized, plus the dual, measure,
-and extension theorems that his undergraduate years left unnamed.
+The comparison also says what to omit. Physics, German, composition, and American Institutions are college requirements, not steps toward the 1964 paper. Multivariable calculus, differential equations, complex analysis, and differential geometry are real mathematics Scott almost certainly took, and none of them is needed to read the measurement theorems. Philosophy of language points forward to Scott--Montague semantics, not back to linear inequalities. The 21-xxx list is therefore not a reconstruction of a full Berkeley B.A. It is the subsequence that remains when the goal is fixed as Scott 1964: the courses he would have recognized, plus the dual, measure, and extension theorems that his undergraduate years left unnamed.
